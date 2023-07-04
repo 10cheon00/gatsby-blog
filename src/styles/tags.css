@@ -1,0 +1,25 @@
+:root {
+  --tags-background-color: #00bf4c;
+  --tags-background-color-hover: #006c2b;
+}
+
+div.tags li{
+  display: inline-block;
+  background: var(--tags-background-color);
+  padding: 0 0.5rem;
+  margin-right: 0.25rem;
+  transition: background-color 0.25s linear;
+}
+
+div.tags li:hover {
+  background: var(--tags-background-color-hover);
+}
+
+div.tags li:last-child {
+  margin-right: 0;
+}
+
+div.tags li a {
+  color: white;
+  text-decoration: none;
+}
