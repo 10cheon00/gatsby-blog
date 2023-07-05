@@ -1,0 +1,16 @@
+header.global-header h1 a {
+  text-decoration: none;
+  color: var(--color-heading-black);
+}
+
+header.global-header h1 a:hover {
+  text-decoration: none;
+}
+
+a.bio-icons {
+  color: var(--color-heading-black);
+}
+
+.bio {
+  align-items: center;
+}

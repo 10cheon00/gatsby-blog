@@ -130,3 +130,16 @@ dl dd {
   padding: 0 var(--spacing-4);
   margin-inline-start: 0;
 }
+
+pre[class*="language-"],
+code[class*="language-"] {
+  letter-spacing: -0.5px; 
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  background: none !important;
+}

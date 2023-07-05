@@ -9,6 +9,8 @@ import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
+import { FaGithub } from "react-icons/fa6";
+
 const Bio = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
@@ -19,7 +21,7 @@ const Bio = () => {
             summary
           }
           social {
-            twitter
+            github
           }
         }
       }
@@ -36,7 +38,7 @@ const Bio = () => {
         className="bio-avatar"
         layout="fixed"
         formats={["auto", "webp", "avif"]}
-        src="../images/profile-pic.png"
+        src="../images/profile-icon.png"
         width={50}
         height={50}
         quality={95}
@@ -44,10 +46,10 @@ const Bio = () => {
       />
       {author?.name && (
         <p>
-          Written by <strong>{author.name}</strong> {author?.summary || null}
-          {` `}
-          <a href={`https://twitter.com/${social?.twitter || ``}`}>
-            You should follow them on Twitter
+          Written by <strong>{author.name}</strong> {author?.summary || null}<br/>
+          
+          <a className="bio-icons" href={`${social?.github || ``}`}>
+            <FaGithub size="1.5rem"></FaGithub>
           </a>
         </p>
       )}

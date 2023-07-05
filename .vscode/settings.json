@@ -3,6 +3,9 @@
     "editor.tabSize": 2,
     "editor.defaultFormatter": "vscode.css-language-features"
   },
+  "[scss]": {
+    "editor.tabSize": 2,
+  },
   "[js]": {
     "editor.tabSize": 2,
     "editor.defaultFormatter": "vscode.css-language-features"
