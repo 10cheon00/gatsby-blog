@@ -1,4 +1,7 @@
 :root {
   --color-blockquote-border: #d0d7de;
   --color-text-light: #656d76;
+  --color-header-border-bottom: #d8dee4;
+  --color-table-border: #d8dee4;
+  --color-table-evenRow-background: #f6f8fa;
 }

@@ -12,12 +12,12 @@ h5,
 h6 {
   margin-top: var(--spacing-6);
   margin-bottom: var(--spacing-4);
-  font-weight: 600;
 }
 
 h1,
 h2 {
-  border-bottom: 1px solid rgb(180, 180, 180);
+  border-bottom: 1px solid var(--color-header-border-bottom);
+  font-weight: var(--fontWeight-semiBold);
 }
 
 h1 {
@@ -82,4 +82,51 @@ ol li:first-child {
 li > ul {
   margin-left: 0;
   margin-top: 0;
+}
+
+ul.contains-task-list {
+  padding-left: var(--spacing-4);
+}
+
+li.task-list-item {
+  list-style-type: none;
+}
+
+a {
+  text-decoration-line: none;
+}
+
+a:hover {
+  text-decoration-line: underline;
+}
+
+table {
+  width: auto;
+  border: 1px solid var(--color-table-border);
+}
+
+table thead tr th {
+  text-align: center;
+  font-weight: var(--fontWeight-semiBold);
+}
+
+table thead tr th,
+table tbody tr td {
+  padding: var(--spacing-2) var(--spacing-3);
+  border: 1px solid var(--color-table-border);
+}
+
+table tbody tr:nth-child(even) {
+  background-color: var(--color-table-evenRow-background);
+}
+
+dl dt {
+  padding: 0;
+  font-weight: var(--fontWeight-semiBold);
+  font-style: italic;
+}
+
+dl dd {
+  padding: 0 var(--spacing-4);
+  margin-inline-start: 0;
 }
