@@ -3,6 +3,10 @@
   --tags-background-color-hover: #006c2b;
 }
 
+div.tags ul {
+  padding-left: 0;
+}
+
 div.tags li{
   display: inline-block;
   background: var(--tags-background-color);
