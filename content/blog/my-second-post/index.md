@@ -331,7 +331,7 @@ Inline `code` has `back-ticks around` it.
 
 Inline `code` has `back-ticks around` it.
 
-```c#
+```csharp
 using System.IO.Compression;
 
 #pragma warning disable 414, 3021
