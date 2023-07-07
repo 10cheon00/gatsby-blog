@@ -19,10 +19,10 @@ const Tags = ({ pageContext, data, location }) => {
       <ul>
         {edges.map(({ node }) => {
           const { slug } = node.fields
-          const { title } = node.frontmatter
+          const { title, date } = node.frontmatter
           return (
             <li key={slug}>
-              <Link to={slug}>{title}</Link>
+              <Link to={slug}>{title} | {date}</Link>
             </li>
           )
         })}
@@ -54,6 +54,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+            date(formatString: "MMMM DD, YYYY")
           }
         }
       }

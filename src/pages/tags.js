@@ -3,6 +3,8 @@ import Layout from "../components/layout"
 import { Link, graphql } from "gatsby"
 import Seo from "../components/seo"
 
+import stringToRGB from "../helpers/string-to-rgb";
+
 var kebabCase = require("lodash.kebabcase")
 
 const TagsPage = ({
@@ -19,11 +21,16 @@ const TagsPage = ({
       title="all tags"
       keywords={[`blog`, `gatsby`, `javascript`, `react`]}
     />
-    <div>
+    <div className="tags">
       <h1>Tags</h1>
-      <ul>
+      <ul className="tags-list">
         {group.map(tag => (
-          <li key={tag.fieldValue}>
+          <li 
+            className="tags-list-item" 
+            key={tag.fieldValue} 
+            style={{
+              backgroundColor:`#${stringToRGB(tag.fieldValue)}`
+            }}>
             <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
               {tag.fieldValue} ({tag.totalCount})
             </Link>

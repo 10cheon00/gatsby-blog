@@ -6,6 +6,8 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
+import stringToRGB from "../helpers/string-to-rgb"
+
 const BlogPostTemplate = ({
   data: { previous, next, site, markdownRemark: post },
   location,
@@ -27,7 +29,10 @@ const BlogPostTemplate = ({
           <ul>
             {post.frontmatter.tags
               ? post.frontmatter.tags.map(tag => (
-                  <li key={kebabCase(tag)}>
+                  <li key={kebabCase(tag)} 
+                    style={{
+                      backgroundColor:`#${stringToRGB(tag)}`
+                    }}>
                     <Link to={`/tags/${kebabCase(tag)}`}>{kebabCase(tag)}</Link>
                   </li>
                 ))
