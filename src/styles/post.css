@@ -131,11 +131,15 @@ dl dd {
   margin-inline-start: 0;
 }
 
-pre[class*="language-"],
+:not(pre) > pre[class*="language-"],
 code[class*="language-"] {
   font-size: 14px ;
   line-height: 1.45;
   font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+}
+
+:not(pre) > code[class*="language-"] {
+  padding: 0.2em 0.4em;
 }
 
 .token.operator,
