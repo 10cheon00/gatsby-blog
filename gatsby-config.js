@@ -14,7 +14,7 @@ module.exports = {
       name: `김택천, Kim taekcheon`,
       summary: ``,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `A Blog archiving what I learned.`,
     siteUrl: `https://10cheon00.github.io/`,
     social: {
       github: `https://github.com/10cheon00`
@@ -108,7 +108,7 @@ module.exports = {
               }
             }`,
             output: "/rss.xml",
-            title: "Gatsby Starter Blog RSS Feed",
+            title: "10cheon00의 Archive RSS Feed",
           },
         ],
       },
@@ -116,8 +116,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `Gatsby`,
+        name: `10cheon00의 Archive`,
+        short_name: `10cheon00's archive`,
         start_url: `/`,
         background_color: `#ffffff`,
         // This will impact how browsers show your PWA/website
