@@ -34,7 +34,7 @@ gh-pages 명령어를 실행하기 전에 `gh-pages-clean`을 한 번 실행한 
 
 추가로 기본 브랜치가 아닌 다른 브랜치에 정적 파일을 배포하니까 github.io에 나타나지 않았는데 리포지토리에 Settings>Pages에서 다른 브랜치를 선택하니까 배포된 페이지가 나타났다.
 
-![Github Pages]](image.png)
+![Github Pages](image.png)
 
 # 태그 추가하기
 
