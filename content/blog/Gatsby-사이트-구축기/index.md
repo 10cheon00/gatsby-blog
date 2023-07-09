@@ -28,7 +28,7 @@ tags: ["gatsby", "blog"]
 
 source 브랜치를 기본 브랜치로 변경하고 gh-pages로 배포가 되도록 했더니, 블로그를 빌드한 후에 저런 에러가 발생했다.
 
-['fatal: Couldn't find remote ref refs/heads/gh-pages' after running:git push origin :gh-pages | Stack Overflow](https://stackoverflow.com/a/71871326)
+[fatal: Couldn't find remote ref refs/heads/gh-pages after running:git push origin :gh-pages | Stack Overflow](https://stackoverflow.com/a/71871326)
 
 gh-pages 명령어를 실행하기 전에 `gh-pages-clean`을 한 번 실행한 후에 다시 원래대로 돌려놓으면 된다고 한다. 이렇게 하니까 제대로 배포가 되었다.
 
