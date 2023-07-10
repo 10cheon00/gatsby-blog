@@ -2,19 +2,16 @@ div.tags ul {
   padding-left: 0;
 }
 
-div.tags li{
+div.tags ul li,
+div.tags ul li:first-child {
   display: inline-block;
   padding: 0 0.5rem;
-  margin-right: 0.25rem;
+  margin: 0.125rem;
   transition: filter 0.25s linear;
 }
 
 div.tags li:hover {
   filter: brightness(75%);
-}
-
-div.tags li:last-child {
-  margin-right: 0;
 }
 
 div.tags li a {
