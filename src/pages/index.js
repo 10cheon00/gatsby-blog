@@ -5,6 +5,9 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
+import stringToRGB from "../helpers/string-to-rgb"
+import kebabCase from "lodash.kebabcase"
+
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
@@ -42,7 +45,25 @@ const BlogIndex = ({ data, location }) => {
                       <span itemProp="headline">{title}</span>
                     </Link>
                   </h2>
-                  <small>{post.frontmatter.date}</small>
+                  <div className="tags">
+                    <ul>
+                      {post.frontmatter.tags
+                        ? post.frontmatter.tags.map(tag => (
+                            <li
+                              key={kebabCase(tag)}
+                              style={{
+                                backgroundColor: `#${stringToRGB(tag)}`,
+                              }}
+                            >
+                              <Link to={`/tags/${kebabCase(tag)}`}>
+                                {kebabCase(tag)}
+                              </Link>
+                            </li>
+                          ))
+                        : null}
+                    </ul>
+                  </div>
+                  <small className="post-date">{post.frontmatter.date}</small>
                 </header>
                 <section>
                   <p
@@ -87,6 +108,7 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
+          tags
         }
       }
     }

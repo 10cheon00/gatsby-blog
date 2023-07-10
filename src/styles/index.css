@@ -1,0 +1,12 @@
+div.tags.ul {
+  height: auto;
+}
+
+div.tags ul li {
+  margin-top: 0;
+}
+
+small.post-date {
+  color: var(--color-text-light);
+  margin-left: var(--spacing-1);
+}
