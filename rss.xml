@@ -1,4 +1,147 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[10cheon00의 Archive RSS Feed]]></title><description><![CDATA[A Blog archiving what I learned.]]></description><link>https://10cheon00.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 10 Jul 2023 08:24:34 GMT</lastBuildDate><item><title><![CDATA[백준 24723]]></title><description><![CDATA[24723 녹색거탑 바닥까지 내려오는 경로의 개수를 구하는 문제다. 먼저 A지점에서 B…]]></description><link>https://10cheon00.github.io/백준-24723/</link><guid isPermaLink="false">https://10cheon00.github.io/백준-24723/</guid><pubDate>Mon, 10 Jul 2023 07:11:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;24723-녹색거탑&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#24723-%EB%85%B9%EC%83%89%EA%B1%B0%ED%83%91&quot; aria-label=&quot;24723 녹색거탑 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/24723&quot;&gt;24723 녹색거탑&lt;/a&gt;&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[10cheon00의 Archive RSS Feed]]></title><description><![CDATA[A Blog archiving what I learned.]]></description><link>https://10cheon00.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 11 Jul 2023 04:40:47 GMT</lastBuildDate><item><title><![CDATA[백준 3063]]></title><description><![CDATA[3063 게시판 포스터가 드러나는 영역을 구하는 문제다. AABB를 사용하는 문제인데, 보통 AABB는 판별만 하지 영역의 넓이를 구하진 않아서 조금 골치 아픈 문제였다. 두 포스터가 겹쳐졌는지는 간단한 AABB…]]></description><link>https://10cheon00.github.io/백준-3063/</link><guid isPermaLink="false">https://10cheon00.github.io/백준-3063/</guid><pubDate>Tue, 11 Jul 2023 04:04:52 GMT</pubDate><content:encoded>&lt;h1 id=&quot;3063-게시판&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#3063-%EA%B2%8C%EC%8B%9C%ED%8C%90&quot; aria-label=&quot;3063 게시판 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/3063&quot;&gt;3063 게시판&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;포스터가 드러나는 영역을 구하는 문제다.&lt;/p&gt;
+&lt;p&gt;AABB를 사용하는 문제인데, 보통 AABB는 판별만 하지 영역의 넓이를 구하진 않아서 조금 골치 아픈 문제였다.&lt;/p&gt;
+&lt;p&gt;두 포스터가 겹쳐졌는지는 간단한 AABB검사만으로도 확인할 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 480px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/006b64bef1ef364230fa6140d00b3566/e85cb/3063.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75.31645569620254%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAIAAABr+ngCAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABx0lEQVR42n2S2W4bMQxF8/9fVfSlD00D1CjsIEiNBPF4vMwmiYskUmIx47gomuU+EKCoA5FXvLE3QkQAiMhEBMNQfLAPdPNfrqrOuVJKA0efIBFPfa+qOSciylk+g0UVkYrVL8fbLe5MbZwmmZWZWeRTWEXCMGgtDZyiJGYGhEtHpZSiKiIlJav1HdhEuT1M3gcXONDP/ebgz5al6ztEDAAI6Jq9qc5wrVVVQwhENEdEWAxDoszp4Lth7Py+RSIz+3q6u/dPiZOWMsPOOUScpsk7570fD4epbauZVHUZrhZ6Ijazx/DSckeA5QJ77y+nj2FnZszc972ZneLwo1+bWa31brc6Ns/MMXOKyM67V8MgQLX67bxajQ9mBozN/qVkSTLfFJEUU3NqpqGfp13arItby8t9r6VQ4iTZSm38cfu8+dVuujAkikyEgJGjVbu485ec4Xg+w+LhHABCmPdp3f8+uy7FNBcImSNMUx5HW8b48J8vFQghxphFHsan+3ErKpE5jNMbeElqreUqMwsIRUuu+n1Y3w7rYnPDAPD+botIgICIMTLHGE5n9J4i71wLBHP/14k+W8+LClIiTnkxPb1Kl636F/4DZZZm0VFmu9wAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;3063&quot;
+        title=&quot;&quot;
+        src=&quot;/static/006b64bef1ef364230fa6140d00b3566/e85cb/3063.png&quot;
+        srcset=&quot;/static/006b64bef1ef364230fa6140d00b3566/c26ae/3063.png 158w,
+/static/006b64bef1ef364230fa6140d00b3566/6bdcf/3063.png 315w,
+/static/006b64bef1ef364230fa6140d00b3566/e85cb/3063.png 480w&quot;
+        sizes=&quot;(max-width: 480px) 100vw, 480px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;두 사각형이 충돌하지 않았을 때는 총 4가지 경우뿐이다.&lt;/p&gt;
+&lt;p&gt;만약 포스터가 겹쳐졌다면 포스터를 나타내는 좌표값을 이용해 겹쳐진 넓이를 구해야한다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 480px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/bc719a540a6be5cb8d4455f9266bb75c/e85cb/3063_1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75.31645569620254%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAIAAABr+ngCAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABgUlEQVR42r2SX8+aMBSH3+//cbYLjCyjcZpsybIr805FRCfW0tIKHDzYUuiisJfs782yPdd92t85/T25v+Dpf8ht29qRpm3bQe66Tmt9e6C1Nj9gdWObW32DEgDger0CgNFmkAEgiqKUpyxlx+MxDMPtQLiL4o/PH47ZobiUmRBSZlJKIUXjmkEuikJK2cfbbDae5xFC3j4IAvJ68mqfxEqqLMu44DKTB7qnKhnksih5Jg5X6pxbrVb+G3+xWLx7MJ/P/alfVVV/9brcf6mZRs05/xa7hJOgM/4Jnd6ut77/nTz1p73cdq3P3sd4MqhTno4vCylMdx/jc/g8mU5msxkhJAgCQojneUqpxjRYIyAYY5RSXIhxZqVU55xt7DlP1ttVvNtFUXSilDG2XC7jOOacM8buK2XsfD5rrUf5oi7OOUSEAhCxRrzV9f1E5zjnLzP/oiR5caHpyWjT/2FPVVV5niNikiQA0NfhhVGuLR543EdKf4JSaq39Z93u/sjv5K+4lVNHizWpAgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;3063_1&quot;
+        title=&quot;&quot;
+        src=&quot;/static/bc719a540a6be5cb8d4455f9266bb75c/e85cb/3063_1.png&quot;
+        srcset=&quot;/static/bc719a540a6be5cb8d4455f9266bb75c/c26ae/3063_1.png 158w,
+/static/bc719a540a6be5cb8d4455f9266bb75c/6bdcf/3063_1.png 315w,
+/static/bc719a540a6be5cb8d4455f9266bb75c/e85cb/3063_1.png 480w&quot;
+        sizes=&quot;(max-width: 480px) 100vw, 480px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;두 사각형의 각 좌표값에 &lt;code class=&quot;language-text&quot;&gt;max&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;min&lt;/code&gt;을 적용한다. right와 top은 &lt;code class=&quot;language-text&quot;&gt;min&lt;/code&gt;, left와 bottom은 &lt;code class=&quot;language-text&quot;&gt;max&lt;/code&gt;를 적용한다.&lt;/p&gt;
+&lt;p&gt;기하학적으로 왜 이렇게 해야되는지 설명하고 싶은데 내 지식이 딸려서 잘 안된다. 겹쳐진 사각형은 두 사각형에 공통되는 영역이라서 되나보다.&lt;/p&gt;
+&lt;p&gt;이렇게 겹쳐진 영역을 구했는데, &lt;em&gt;다른 포스터가 우리 포스터를 완전히 덮어씌워서 결과적으로 포스터가 보이지 않는 경우&lt;/em&gt;도 생각해야한다.&lt;/p&gt;
+&lt;p&gt;우리 포스터의 크기에서 겹쳐진 영역의 크기를 뺐을 때 음수가 나온다면 &lt;strong&gt;완전히 덮어씌워졌음&lt;/strong&gt;을 의미하므로 그런 케이스는 0을 반환하도록 구성하면 된다.&lt;/p&gt;
+&lt;h1 id=&quot;내-제출&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%82%B4-%EC%A0%9C%EC%B6%9C&quot; aria-label=&quot;내 제출 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;내 제출&lt;/h1&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;cpp&quot;&gt;&lt;pre class=&quot;language-cpp&quot;&gt;&lt;code class=&quot;language-cpp&quot;&gt;&lt;span class=&quot;token macro property&quot;&gt;&lt;span class=&quot;token directive-hash&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;token directive keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&amp;lt;stdio.h&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;AABB&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; b&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; l&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; t&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; r&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;abs&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; n&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; n &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; n &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;n&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; a&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; b&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; a &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; b &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; a &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; b&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; a&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; b&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; a &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; b &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; a &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; b&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;aabb&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;AABB&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; a&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; AABB&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; b&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;a&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;l &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; b&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;r &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt;
+		a&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;r &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; b&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;l &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt;
+		a&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;b &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; b&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;t &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt;
+		a&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;t &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; b&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;b&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;a&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;r &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; a&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;l&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;a&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;t &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; a&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;b&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+	AABB res&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+	res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;l &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;a&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;l&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; b&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;l&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+	res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;b &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;a&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;b&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; b&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;b&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+	res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;r &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;a&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;r&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; b&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;r&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+	res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;t &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;a&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;t&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; b&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;t&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; area &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; 
+        &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;a&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;r&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;a&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;l&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;a&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;t &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; a&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;b&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; 
+        &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;r &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;l&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;t &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;b&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; area &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; area &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; N&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;token function&quot;&gt;scanf&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;%d&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt;N&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; i &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; i &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; N&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; i&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+		AABB a&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; b&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;token function&quot;&gt;scanf&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;%d%d%d%d%d%d%d%d&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+			&lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt;a&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;l&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt;a&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;b&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt;a&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;r&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt;a&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;t&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt;b&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;l&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt;b&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;b&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt;b&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;r&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt;b&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;t&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;token function&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;%d\n&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;aabb&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt;a&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt;b&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/8bc7dcb6bc95d503870e4a503e3994c3/6e9ba/image.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 8.860759493670885%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAcElEQVR42iXNywrCMBQA0f7/N4qIIEqjps19p4sR6nI2Z5bWVnZRXl0RS66PJ/f+5vZZubQnGs6ck4hgbBtmRshgmPMdhnqw906Y0jZjcXciE48kayJqJyJuDDeyinkcVAQh8u9MxAL1pKrOWWWdxg93P5oeKsP61wAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;solved&quot;
+        title=&quot;&quot;
+        src=&quot;/static/8bc7dcb6bc95d503870e4a503e3994c3/f058b/image.png&quot;
+        srcset=&quot;/static/8bc7dcb6bc95d503870e4a503e3994c3/c26ae/image.png 158w,
+/static/8bc7dcb6bc95d503870e4a503e3994c3/6bdcf/image.png 315w,
+/static/8bc7dcb6bc95d503870e4a503e3994c3/f058b/image.png 630w,
+/static/8bc7dcb6bc95d503870e4a503e3994c3/6e9ba/image.png 731w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;충돌체크에서 penetrationDepth를 구하는 공식을 썼었는데 그것 때문에 문제의 핵심을 놓쳐서 1시간이나 걸렸다. :(&lt;/p&gt;</content:encoded></item><item><title><![CDATA[백준 24723]]></title><description><![CDATA[24723 녹색거탑 바닥까지 내려오는 경로의 개수를 구하는 문제다. 먼저 A지점에서 B…]]></description><link>https://10cheon00.github.io/백준-24723/</link><guid isPermaLink="false">https://10cheon00.github.io/백준-24723/</guid><pubDate>Mon, 10 Jul 2023 07:11:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;24723-녹색거탑&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#24723-%EB%85%B9%EC%83%89%EA%B1%B0%ED%83%91&quot; aria-label=&quot;24723 녹색거탑 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/24723&quot;&gt;24723 녹색거탑&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;바닥까지 내려오는 경로의 개수를 구하는 문제다.&lt;/p&gt;
 &lt;p&gt;먼저 A지점에서 B지점까지 최단 거리로 가는 길의 개수를 구하는 방법을 생각했었다.&lt;/p&gt;
 &lt;p&gt;그 방법을 생각하니 곧바로 &lt;strong&gt;조합론&lt;/strong&gt;이 떠올랐고, 문제에서 제시한 박스 모형이 &lt;strong&gt;파스칼 삼각형&lt;/strong&gt;을 의미함을 깨달았다.&lt;/p&gt;
