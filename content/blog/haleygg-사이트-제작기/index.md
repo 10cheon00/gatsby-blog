@@ -220,3 +220,9 @@ class PlayerTuple(models.Model):
 Git에도 그날 한 내용을 한 번의 커밋으로 올려버렸더니, 나중에 커밋 로그를 읽을 때 매우 이해하기 힘들었다. 이후 협업할 때 사용하는 컨벤션을 적용해 여러 개로 쪼개 커밋하니 어떤 기능을 개발했는지 눈에 확 들어왔다. 
 
 이제 다른 사람들이 따라가는 **규칙이나 암묵적인 룰**이 있다면 나도 그것을 지켜야 개발속도가 올라간다는 것을 깨달았다.
+
+# 프로젝트 리포지토리
+
+[서버](https://github.com/10cheon00/-deprecated--haleygg_server_v2)
+
+[클라이언트](https://github.com/10cheon00/-deprecated--haleygg_client_v2)
