@@ -1,4 +1,284 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[10cheon00의 Archive RSS Feed]]></title><description><![CDATA[A Blog archiving what I learned.]]></description><link>https://10cheon00.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 16 Jul 2023 14:28:46 GMT</lastBuildDate><item><title><![CDATA[추상 팩토리 패턴]]></title><description><![CDATA[…]]></description><link>https://10cheon00.github.io/추상-팩토리-패턴/</link><guid isPermaLink="false">https://10cheon00.github.io/추상-팩토리-패턴/</guid><pubDate>Sun, 16 Jul 2023 14:15:59 GMT</pubDate><content:encoded>&lt;h1 id=&quot;의도&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9D%98%EB%8F%84&quot; aria-label=&quot;의도 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;의도&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[10cheon00의 Archive RSS Feed]]></title><description><![CDATA[A Blog archiving what I learned.]]></description><link>https://10cheon00.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 17 Jul 2023 07:24:52 GMT</lastBuildDate><item><title><![CDATA[Csharp에서 데이터 swap하기]]></title><description><![CDATA[문제 유니티로 게임을 개발하기 위해 스크립트를 짜고 있었다. 리스트에 들어있는 인스턴스와 다른 인스턴스를 교환(swap…]]></description><link>https://10cheon00.github.io/Csharp에서-데이터-swap하기/</link><guid isPermaLink="false">https://10cheon00.github.io/Csharp에서-데이터-swap하기/</guid><pubDate>Mon, 17 Jul 2023 07:15:37 GMT</pubDate><content:encoded>&lt;h1 id=&quot;문제&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%AC%B8%EC%A0%9C&quot; aria-label=&quot;문제 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;문제&lt;/h1&gt;
+&lt;p&gt;유니티로 게임을 개발하기 위해 스크립트를 짜고 있었다. 리스트에 들어있는 인스턴스와 다른 인스턴스를 교환(swap)하는 코드를 짜고 있었는데, 아무리 해도 바뀌지 않는 것이었다.&lt;/p&gt;
+&lt;p&gt;변수의 형식에 대해 어렴풋이 이해를 하고 있어서 교환이 제대로 안되는 이유를 몰랐다. 참조 형식이면 포인터 아닌가? 라고 생각해, 교환이 될 것이라고 생각했었지만 되지 않았다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;csharp&quot;&gt;&lt;pre class=&quot;language-csharp&quot;&gt;&lt;code class=&quot;language-csharp&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Program&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;A&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt;&lt;/span&gt; data &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;data &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; data&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt;&lt;/span&gt; data&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token return-type class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/span&gt; args&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token class-name&quot;&gt;A&lt;/span&gt; a1 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token constructor-invocation class-name&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; a2 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token constructor-invocation class-name&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token comment&quot;&gt;// a1.data = 0, a2.data = 10&lt;/span&gt;
+        &lt;span class=&quot;token function&quot;&gt;Swap&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;a1&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; a2&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token comment&quot;&gt;// a1.data = 10, a2.data = 0 ...?&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token return-type class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Swap&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;A&lt;/span&gt; a1&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;A&lt;/span&gt; a2&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token class-name&quot;&gt;A&lt;/span&gt; t &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; a1&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        a1 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; a2&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        a2 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; t&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token comment&quot;&gt;// for test&lt;/span&gt;
+        Console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;WriteLine&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token interpolation-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;$&quot;&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token expression language-csharp&quot;&gt;a1&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;data&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token expression language-csharp&quot;&gt;a2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;data&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; 
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이전에 형식에 대해 잠깐 읽었던 기억에 의존하면, 클래스는 &lt;strong&gt;참조 형식&lt;/strong&gt;이어서 인스턴스를 생성하면 실제 데이터는 힙에 저장되고, 변수는 그 메모리를 참조하게 된다고 이해했었다.&lt;/p&gt;
+&lt;p&gt;그래서 저 코드대로 실행하면 Swap 메소드의 파라미터는 main 함수 안에 있는 a1, a2가 가리키는 메모리를 참조하는 변수가 될 것이라고 생각했고, swap과정을 통해 서로 참조하는 메모리가 교환될 것이라고 이해했었다.&lt;/p&gt;
+&lt;h1 id=&quot;디버깅-해보기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%94%94%EB%B2%84%EA%B9%85-%ED%95%B4%EB%B3%B4%EA%B8%B0&quot; aria-label=&quot;디버깅 해보기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;디버깅 해보기&lt;/h1&gt;
+&lt;p&gt;이 코드를 그대로 vs의 디버거로 확인해보면 예상했던 대로 &lt;em&gt;동작하기는 한다.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 560px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/0288135dc844c495b64c3c715fe72f59/b06ae/image.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75.9493670886076%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAADB0lEQVR42nWT205bRxSG/QZt7IiC2eeZ2eftbe+Dj4BxCIEgHIMhTS8Q6oFgoJVaqb3oi7RSo5C0yoN+lTehbSR68WktaTT/rMM/NdM0cIQgSjP8KMESCkf55HmbKI4xhYvjRdiOgykVliNY1zQ0XX+QmmEYSOWh4gJT+FgyRAYJ482SLOtgqIh2VnD4ZMTmoM9G1iL3LNpSf5CaaZo4joNh6Fi+h3BdTFvQlBFeHOF5y2oLzq9/Ids5pj2ZVTEcHVQEw+f4g/1/8krQNC0M0yTJY7JBRjrs0OrntIoU4Rokkz28H25ZWfxJ4/Ut9Yu3NF6/o37xjpWrv1i7+cCjb9/wxeL9vaDJsvVn+1ucvJqxdzRlfzZlvLONbuu0fMGzyTaDLKXlKVJf0Q7cKnbTmFGZ0w598iS6ExRCYNsWmqWjCx07MDGlgSkMLM8mDSz6u3MG39+y8eMHiqu3ZJdvKtoXf5Bd/M7Bz++Z3Pz27wxty6iq1DUdramx3tTQ1jWaTY3IMQiTDp2tKZtPp/jtPk6YI6ICEea4SclwvEdvY+dOcGmJsJXhBXFlG1t5BIGLF7hVnviCIAiJ2zndvIMrHSxDwzZ1bFPDsUzyTodOq7UUNLAdiR2kGNLHciNsN6TIY9IsQcYpndgnTlL8qIWrXJRykVJ9QtbJKIsuNV3X6ZYlRd5BKYGSEj9pYwuJ1myiaRqhMPGUREhZXVYfRf+L44hqdDVD1+mPRhyMt/kqKkk1hZP0WF3ReNxY41F9Danr+K5XfQDX9R9k6dclNW19nbwsmQyG/Dp/wk+Xu3x3/ZyzswFn5xucf73J6Yse460Jw+GIKEyIotb/Ui1FVq1I5vOSxfU2l4sxl4ttFlcTFjcTvnnVZ28yYXvylCLv0usOKPIeZdmnLHvkeZei6FVnNaVU5cNl649XmtTrq9TrazTqqzQaa3z2+SqRpbM7HnE4Pebl6Ze8OJwxnR5zenKXHx+dcDSbM3sxp7YcpGVZFbZt4zifYjs2obKrZS0fv0fe5/Ijy+VIxd8+g9Rl8xaI7AAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/0288135dc844c495b64c3c715fe72f59/b06ae/image.png&quot;
+        srcset=&quot;/static/0288135dc844c495b64c3c715fe72f59/c26ae/image.png 158w,
+/static/0288135dc844c495b64c3c715fe72f59/6bdcf/image.png 315w,
+/static/0288135dc844c495b64c3c715fe72f59/b06ae/image.png 560w&quot;
+        sizes=&quot;(max-width: 560px) 100vw, 560px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Swap 메소드 내에서 a1의 참조 값과 a2의 참조 값이 교환되었다. 하지만 Swap 메소드 스코프에서 잠깐 벗어나 Main 함수의 스코프로 돌아가보면,&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 560px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/82b304e023e979903b428ed792504042/b06ae/image-1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75.9493670886076%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC/UlEQVR42n2TWW/bRhSF+QdaIA5QKIlEkbORHJKiKFEktVmWLae1ZHmJa9RL35o8pC2aoAsK9LlP/dNfQTkJXBTtw4d7MMAc4My54+jAEucVJkrwlMWmPWbTEXGa0dUxJu6hTICMEnwhaLfbdDqd/8TRQYQIE1xf4euY0MaMqxybpHRESL8YM50fMKjn9PMhURQTRfYfhOEDNghxhO/jum1MGuGLLs+7gpZvCG1AYGOKesJif0nWyymKmsGgJMsGO9K0T6/X6CG9Xk6SlQ+G0hhEtWRxecHFd9+wvbtmMK3wA5/xbMp8dvBglo/I89HOtJnT6YJyNCbrDSiLgmL16qNhSHey5fj2nrd/vOf1b++pjvbxpEuaZSwPDun3c5IkJY4fsDZhOBzRLyu0TehlfSZViaOUwvM9Om6LKDGM9yvKaogvuwgjUFowrBfM5kuiMCKKkp1ZY6pMyHma88PxmsVkSn+8wpFCIDwPt91BS4mWhkAluG2X9osXSN+nmK14ubnmaHm0e68mos2GrOOMi6Lm6+Uxb5bHLFZf4aggwuYlOopxpSXKAw6uNElhkaHFGEOY5OTVjOEgx/cFvufT9ny+dD2iIGKe9blMMtJ8gKNMhGcsrifpSkuYBRyeJ8QDi9qtQ4SUCpv06Gc5WhuU0vhKU0nNaYPSBEKim7XRSmICTToqaHSSlzxvNXHbdLsdmjduDJSUiOaSNp8Q2mC1RmuNbM6UxqnriqvrG9aX93iqR1elPH3aYm+vxZMnLYQwWBvvFvrjAj/GhJbgg26m0zR3/PKQP/96zS+/n/Hzrye8/X7Jjz+tePfuiM12wXx+yHBYEIZNw+n/4jQxpOhydVVwc1Nzezfm7n7C/f2U22+nXG0qDg+W7O8vqMqayXjyYU6pyjGjUUVdjynLmrqe4Pi7r+eyt/dsF/Exn33+BcUgZ7lccXKy5Xx7yfrklPX6jLPtJafrM9YnW043F2w252zWZzie59EghP8vZDOVIgwMgQk+lWEe66b1R0X9DRVw0WiTpubeAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/82b304e023e979903b428ed792504042/b06ae/image-1.png&quot;
+        srcset=&quot;/static/82b304e023e979903b428ed792504042/c26ae/image-1.png 158w,
+/static/82b304e023e979903b428ed792504042/6bdcf/image-1.png 315w,
+/static/82b304e023e979903b428ed792504042/b06ae/image-1.png 560w&quot;
+        sizes=&quot;(max-width: 560px) 100vw, 560px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Main 함수 내에서는 참조가 바뀌지 않았다. 이 이유를 그림으로 그리면 이렇다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 400px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/ca3a72af40cf46593ea20a2b97480544/e17e5/image-2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAACCklEQVR42q2VWW/aQBRG8/9/QN6Sh1ZqpapSKrVPfSCETRQKPCQQQWjZg+Nig/dt7FONgykIGoHESFee9cyde78ZX3DmcrHdcGyL2XSGoqiEYXRwQZIk6VfTNXrdLqPRmDhO9oFxHPM8nZDP5bjNF3lR/xAE/kGo63mMp2MqlRLFUgVtudxstAE6joNt25tFnuexWq12vMqKZVgk4l+ftbKIomgfKCFZkRNM09x3L4Z7tUdD69BUOzQXj5RnTfzIPw0ovfR9P51zpzQYmDOuPr8jXy9S0FvovnEaUMKCIEjr38YFrvtfuGx+5PrxhsvuJ6zQOR4ovZNjQoj0W1AajOw5N7mv1Dst7rQWy8A8HihB0kNpsRC01A517YHCsM7Plza3zzXc0DseKCXluu7myI5pk2xpT7ZFJE4DyvEMuDIMIiGI13JK2wdl48rAJqlFYYBpGAeBhmGkfVmRG28BX3dxXBfP93c8NExrA5SiPw64djswFoS/a6C0Yf6AGNRw5/21ZLwUKJOTAf4P1CdgaTBswKTBatjGmvZA6SD6ZfyY9PgyvhnkbaA2QVryqwqVK9zye/zqh7Qet7/Lm0boe6lkMk2+DcwuvtqHpzxmr4r99AMGFeJ+CU9I4O6ro+t6CpFhkMlSVXU/KcQhWCo4i1czFQicg8+XjKVM0LYdfGDZiOZML/Y5fgF/AfXsEBVCCW64AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/ca3a72af40cf46593ea20a2b97480544/e17e5/image-2.png&quot;
+        srcset=&quot;/static/ca3a72af40cf46593ea20a2b97480544/c26ae/image-2.png 158w,
+/static/ca3a72af40cf46593ea20a2b97480544/6bdcf/image-2.png 315w,
+/static/ca3a72af40cf46593ea20a2b97480544/e17e5/image-2.png 400w&quot;
+        sizes=&quot;(max-width: 400px) 100vw, 400px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Swap()&lt;/code&gt;을 호출하기 전에는 메모리에 이렇게 저장되어 있다. 힙 메모리에 실제 인스턴스가 저장되어있고, 그 메모리에 대한 참조가 스택에 저장되어 있다.(a1, a2에 각각 담긴다.)&lt;/p&gt;
+&lt;p&gt;이제 Swap 메소드를 호출하면 어떻게 될까?&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 400px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7af6188d8d975ef7d7a474f2d30b9bcd/e17e5/image-3.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAACcUlEQVR42q2VaU8TURSG+f+fDR9MhATXGBcSMTFgSimltEKLoGVpC9jpYjudpZ19f8ydLoBUkchNTmbuZO5z33vOmXcWeOCxcH1iWyaddodeTyYIwrkLkiRJr6qmUjs7o9mUiOPkNjCOY7rtFtlMhs3sNn15gO97c6GO6yK1JQqFPNv5AqquzzaaAW3bxrKs2SLXdRkOhzdUpfckmCOTJLp6Zg5NwjC8DRSQ6RAvGIYxV+E3uUZZPaYiH1NRTtjpVPBC79+BU4VCcbvdZkPa5YfV5cmbFbJ72+S0AzRvdD+FjuOkMDHWpBxLjVUWKy9ZOnnP4tlrzMC+H1DXdVRVRVEUNpoFJKfHu8wH9o4P2FIP0H3jfkfu9/u0Wi10VaPSr7KvVsld7rHfr7LZ/YITuBPgJD+2ZWEOOkSmkoajdhlqygQYp8dtNptEUYRj2CRxfNW/hkUURr8BO3WG37cYXhyhNb5i1oqo1Tx+DANZptvtIsvyuDijEWEUEU+LJebTtrHOD3GkU9TSR/rrj5Eyz5EyLxhklvmZf4sdgueOCzIajSsprvE1hSI1M2DkmMSuyei0iFJcpXe4Rf8oh1b5RK+0huVHqUKhLgiCu4HTI3vtE0brj9C3VhjmnmJ8XsQoryEQjm2lRRP5uxuotcBUSJplOC+g18sYF0fQLBPVd/ATCAM/7YApRAD+DFRbiEjOi1BYwik8wyu9gt1l4uoGYlnguXieN2uhvwOnH77cgHoWo1bEqpfgskDcyONGAnjTdTRNSyHCTEQqRH6vmcMEGAdgymAr4zB64NtzzUHk0vf9GzHXYMf2NNvi/x37IX4BvwCZegBpSyXcQQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/7af6188d8d975ef7d7a474f2d30b9bcd/e17e5/image-3.png&quot;
+        srcset=&quot;/static/7af6188d8d975ef7d7a474f2d30b9bcd/c26ae/image-3.png 158w,
+/static/7af6188d8d975ef7d7a474f2d30b9bcd/6bdcf/image-3.png 315w,
+/static/7af6188d8d975ef7d7a474f2d30b9bcd/e17e5/image-3.png 400w&quot;
+        sizes=&quot;(max-width: 400px) 100vw, 400px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Swap의 파라미터인 a1, a2에 Main에서 생성했었던 a1과 a2의 참조가 복사되어 넘어간다. 이제 Swap 메소드 내에서도 같은 객체를 참조할 수 있다.&lt;/p&gt;
+&lt;p&gt;하지만 교환하는 코드를 실행하고 나면 이렇게 된다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 400px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4ecbc44cf303251f238b96b3c98ab97b/e17e5/image-4.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAACdElEQVR42q2VaU/bQBCG+f+fKz5UKpXoqQq1SKhSRVEgB2lSSFIQhCMcjeOkSbAd2+szPp5qDUlDSWlRGWnkXcv77Lszs+MFHtkWZieuI+iqXfr9IeNxNHdBmqbZUzd0Tk9OaLcVkiS9C0yShJ7aYSuXY3OryGB4RRgGc6Ge76OoCuVyiWKpjD4aTTeaAl3XxXGc6SLf9zFN85aqbEyKsARp/OudMAVRFN0FSsjE5Ae2bc9VeHB1Sk1vUh82qWtHbHfrBFHwMKBUORwOUVWVjU6F76LHs5VltnaKFIwGRmA9DKjrOpqmZeM1Jc/S2SqL9TcsHX1g8eQdYuw+DDgYDLIYS2hOraK4fd7n1thpNsjrDUah/e/AOI4zYLfbxfc8aoNDdvVDCpc77A4O2ex9xRv7N8CbDLqOg7jqEgstc0/vYRratKTa7Ta9Xi+bOzLLM7Xn2g5xFP8G7LYwD/KYF/sYZ98Qp1W0gyIJYOg6zWYTz/Oyb03LIopjkpu12XxSNs75Hp5yjF79yGD9KUruFUruNVe55/RKK9hBhNpRMnXy6NIsy8pUT0yGZgqMPUHiC6zjClpllf5ensF+AaPxiR+VNWx/jDkaZTEOw/DvwMmRA/UIa/0Jo/wyZuEFYmMRa3cNqSkKA4QQU4US8Geg0QGhkbZrcF5m1KphX+xDu0bc2iZMJTDMKmACuR+od5CenlegvIRXfklQfQtfnpMcfs6SMg58giCY3pj7gZOLPzyD1hb2aQWnVYXLMslZCT+WwNtdxzCMDCILXcZWXsmZ5nADTMYghuBq1273IXTnNgcZS5mgWZ/bYK/b03SL/+/Yj/EL+An1swCQBlkilAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/4ecbc44cf303251f238b96b3c98ab97b/e17e5/image-4.png&quot;
+        srcset=&quot;/static/4ecbc44cf303251f238b96b3c98ab97b/c26ae/image-4.png 158w,
+/static/4ecbc44cf303251f238b96b3c98ab97b/6bdcf/image-4.png 315w,
+/static/4ecbc44cf303251f238b96b3c98ab97b/e17e5/image-4.png 400w&quot;
+        sizes=&quot;(max-width: 400px) 100vw, 400px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Swap 메소드의 스코프 내에서 a1과 a2가 각각 참조값을 교환했을 뿐&lt;/strong&gt;&lt;/em&gt;, Main 함수에 있는 변수의 참조값은 바뀌지 않았다.&lt;/p&gt;
+&lt;p&gt;이 이유는 파라미터로 넘겨줄 때 &lt;strong&gt;참조값이 복사되어 새로운 변수에 저장되었기 때문이다&lt;/strong&gt;. 이를 해결하기 위해 &lt;code class=&quot;language-text&quot;&gt;ref&lt;/code&gt; 키워드를 사용하여야 한다.&lt;/p&gt;
+&lt;h1 id=&quot;ref&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#ref&quot; aria-label=&quot;ref permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;ref&lt;/h1&gt;
+&lt;p&gt;파라미터에 전달되는 값이 참조임을 나타낸다. 파라미터에 &lt;code class=&quot;language-text&quot;&gt;ref&lt;/code&gt;가 사용되었으면 함수를 호출할 때에도 &lt;code class=&quot;language-text&quot;&gt;ref&lt;/code&gt;키워드를 사용하여 참조가 전달되도록 해야한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;csharp&quot;&gt;&lt;pre class=&quot;language-csharp&quot;&gt;&lt;code class=&quot;language-csharp&quot;&gt;&lt;span class=&quot;token return-type class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;ref&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt;&lt;/span&gt; A&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt;&lt;/span&gt; data &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;ref&lt;/span&gt; data&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;주의할 점은 &lt;code class=&quot;language-text&quot;&gt;ref&lt;/code&gt;키워드가 사용된 변수는 선언과 동시에 초기화되어야 한다는 점이다. 게다가 &lt;code class=&quot;language-text&quot;&gt;null&lt;/code&gt;을 가질 수 없다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;ref&lt;/code&gt;로 전달된 파라미터는 인자로 전달되는 변수와 &lt;strong&gt;똑같은 모습으로 작동한다&lt;/strong&gt;. 같은 인스턴스를 가리킬 뿐만 아니라, 변수에 다른 인스턴스의 참조가 저장되었을 경우 인자로 전달되었던 변수도 다른 인스턴스를 가리키게 된다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;C++의 레퍼런스&lt;/strong&gt;(&lt;code class=&quot;language-text&quot;&gt;&amp;amp;&lt;/code&gt;)와 매우 유사한 개념이다. 같은 변수를 다른 이름으로 부르는 것으로 보면 될 것 같다.&lt;/p&gt;
+&lt;p&gt;또다른 효과는 반환에 의한 복사나 함수 호출에 의한 복사가 일어나지 않는다는 점이다. 단순히 변수의 별칭을 만들어 전달하기 때문에 값을 복사하는데 드는 비용을 줄일 수 있다.&lt;/p&gt;
+&lt;h1 id=&quot;결과&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B2%B0%EA%B3%BC&quot; aria-label=&quot;결과 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;결과&lt;/h1&gt;
+&lt;p&gt;종합해보면, 어떤 두 변수의 참조값을 다른 스코프에서 교환하고 싶을 때에는 &lt;code class=&quot;language-text&quot;&gt;ref&lt;/code&gt;키워드로 참조로 전달해야한다. &lt;code class=&quot;language-text&quot;&gt;ref&lt;/code&gt;키워드를 사용하지 않으면 값으로 전달된다.&lt;/p&gt;
+&lt;p&gt;Main 함수에 선언된 a1과 a2가 가진 참조를 Swap 메소드를 통해 교환하려면 &lt;strong&gt;a1과 a2의 별칭을 인자로 받도록&lt;/strong&gt; 만들면 된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;csharp&quot;&gt;&lt;pre class=&quot;language-csharp&quot;&gt;&lt;code class=&quot;language-csharp&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Program&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;A&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt;&lt;/span&gt; data &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;data &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; data&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt;&lt;/span&gt; data&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token return-type class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/span&gt; args&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token class-name&quot;&gt;A&lt;/span&gt; a1 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token constructor-invocation class-name&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; a2 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token constructor-invocation class-name&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        Console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;WriteLine&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token interpolation-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;$&quot;&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token expression language-csharp&quot;&gt;a1&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;data&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token expression language-csharp&quot;&gt;a2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;data&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 0, 10&lt;/span&gt;
+        &lt;span class=&quot;token function&quot;&gt;Swap&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;ref&lt;/span&gt; a1&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;ref&lt;/span&gt; a2&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        Console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;WriteLine&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token interpolation-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;$&quot;&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token expression language-csharp&quot;&gt;a1&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;data&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token expression language-csharp&quot;&gt;a2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;data&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 10, 0&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token return-type class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Swap&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;ref&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;A&lt;/span&gt; a1&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;ref&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;A&lt;/span&gt; a2&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token class-name&quot;&gt;A&lt;/span&gt; t &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; a1&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        a1 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; a2&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        a2 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; t&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;   
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;참고-문서&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%B0%B8%EA%B3%A0-%EB%AC%B8%EC%84%9C&quot; aria-label=&quot;참고 문서 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;참고 문서&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://learn.microsoft.com/ko-kr/dotnet/csharp/language-reference/keywords/ref&quot;&gt;ref 키워드 - C# 참조 | Microsoft Learn&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Csharp의 형식]]></title><description><![CDATA[CTS C#의 모든 형식은 기본 형식에서 파생된 또는 상속된 형식이다. 모든 형식은 로부터 파생된다. 이렇게 기본 형식에서 파생되는 구조를 공용 형식 시스템(Common Type System)이라고 한다. 형식 CTS의 모든 형식은 Value…]]></description><link>https://10cheon00.github.io/Csharp의-형식/</link><guid isPermaLink="false">https://10cheon00.github.io/Csharp의-형식/</guid><pubDate>Mon, 17 Jul 2023 05:03:15 GMT</pubDate><content:encoded>&lt;h1 id=&quot;cts&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#cts&quot; aria-label=&quot;cts permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;CTS&lt;/h1&gt;
+&lt;p&gt;C#의 모든 형식은 기본 형식에서 파생된 또는 상속된 형식이다. 모든 형식은 &lt;code class=&quot;language-text&quot;&gt;System.Object&lt;/code&gt;로부터 파생된다. 이렇게 기본 형식에서 파생되는 구조를 공용 형식 시스템(Common Type System)이라고 한다.&lt;/p&gt;
+&lt;h1 id=&quot;형식&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%98%95%EC%8B%9D&quot; aria-label=&quot;형식 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;형식&lt;/h1&gt;
+&lt;p&gt;CTS의 모든 형식은 Value와 Reference로 나뉜다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 507px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/c6ab01ca3b3f71f018f02ecc1b9ff427/3ebb1/image.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 79.11392405063292%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAIAAACZeshMAAAACXBIWXMAAAsTAAALEwEAmpwYAAACx0lEQVR42m2SXW/TSBSG/X8RgpVQVy1iu6iqVuIGccPFripAcLErLSstu4CoaEFJ86GkhCRu4jTxV8b2eOyZOJ6xx/bYTrxKy1YI+uq5ODePdI7eI3GeJEl6BedpkmRBEM6mU0PXdU21HRzxVRSvIr5mfE2jgrGYsTiKuJSmWZaJrxEij6IYoqXrhRCLQH2DT/et1i9Wcw+1d5ejA4QIxgEhgSREnufFFUKIJEkpZQTIZN4hYOANn4Hatt54qHaeW5+fu5PXGAeLRbiR87woivIKSmkc82UQoPZ99fCGU7+jfdie13as4av+yOn2lG5vLA9lAKyNXJbl6v+UZRlFUVVVmSig7cD2nln7yazvwuaOLf/dH067p/JgOO31z08/T3y8kVer1Xq9rrJMLJfU8/w4jhdBaOravHtgf3pifXoKe7+Z47pjKP74D3f0Eo1eYuVP4urSF7Wq0otwzjdzlmMPsdEj5eiufHjXbt9zRq/mk451cs842Tfre1ZzzweydGlWVSWEyLIsSZLLtX3k0vHj8fH93tuf3e4+OHsDzltBZwvUd2Bzx2ttYzD4cvM3shDC94gLPexh3/OR6wELmaoiN/9SB+/Ns2NDPvIgkCB0Lct2XcRYRCkLQ1qWqyzLKKVRxMIwZIzxTeKYp0vKeVokacnTMkmFtFgsL3tzHAShp6r64EwbKfPJzOnL+nRm53lRXZf1ei1hvMA+8ZBv6CYA9nSqKq3fx42ncu2JXPtV6f6bpPlFi99SFKXkk5AEMXSJqgFVA4Zhkd4j48OWVd916j+iwYuY52VZfv1Il+R5KREf+XBOkLXBd0wDOO0H+tEP2vHW7PAm6B5EfPPAQlyDxLR/vMbt8dtbs/e3cGd3psjzScM8e4e0E3f6EWp9FiUXRVyD5NszqLb0UcM6b0GtC23HcQOIQrJMcZBgwihlnKdxnHzPf+puWGguZ9rBAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/c6ab01ca3b3f71f018f02ecc1b9ff427/3ebb1/image.png&quot;
+        srcset=&quot;/static/c6ab01ca3b3f71f018f02ecc1b9ff427/c26ae/image.png 158w,
+/static/c6ab01ca3b3f71f018f02ecc1b9ff427/6bdcf/image.png 315w,
+/static/c6ab01ca3b3f71f018f02ecc1b9ff427/3ebb1/image.png 507w&quot;
+        sizes=&quot;(max-width: 507px) 100vw, 507px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;사진을 참고하면 &lt;code class=&quot;language-text&quot;&gt;Int32&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;Boolean&lt;/code&gt;과 같이 기본 자료형이라 생각되는 것들은 전부 값 형식이다. &lt;code class=&quot;language-text&quot;&gt;struct&lt;/code&gt; 키워드로 생성한 형식도 값 형식이다. 특이하게도 &lt;code class=&quot;language-text&quot;&gt;System.Enum&lt;/code&gt;은 값 형식이 아니지만 그것으로부터 파생된 Enum들은 전부 값 형식이다.&lt;/p&gt;
+&lt;p&gt;반면 &lt;code class=&quot;language-text&quot;&gt;String&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;Array&lt;/code&gt;는 참조 형식이다. 사용자 지정 클래스, 인터페이스 또한 참조 형식이다.&lt;/p&gt;
+&lt;h2 id=&quot;값-형식&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B0%92-%ED%98%95%EC%8B%9D&quot; aria-label=&quot;값 형식 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;값 형식&lt;/h2&gt;
+&lt;p&gt;값 형식은 변수에 값이 직접 담긴다. 스택에 할당되기 때문에 가비지 컬렉션이 돌아가지 않는다. 게다가, 값 형식은 &lt;code class=&quot;language-text&quot;&gt;sealed&lt;/code&gt;이기에 다른 형식을 만들 수 없다. 즉, 상속되지 않는다.&lt;/p&gt;
+&lt;p&gt;할당 시에, 파라미터로 전달할 때, 함수가 결과를 반환할 때 값이 복사되어 전달된다.&lt;/p&gt;
+&lt;h2 id=&quot;참조-형식&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%B0%B8%EC%A1%B0-%ED%98%95%EC%8B%9D&quot; aria-label=&quot;참조 형식 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;참조 형식&lt;/h2&gt;
+&lt;p&gt;참조 형식의 종류로는 &lt;code class=&quot;language-text&quot;&gt;class&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;record&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;interface&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;delegate&lt;/code&gt; 그리고 배열이 있다.&lt;/p&gt;
+&lt;p&gt;참조 형식에 인스턴스의 참조를 저장하기 전까지는 null이 담겨있다. 인스턴스가 생성되면 힙에 메모리가 할당되고, 변수에는 그 인스턴스의 참조가 저장된다. 아무도 참조하지 않는 인스턴스는 가비지 컬렉터가 자동으로 회수한다.&lt;/p&gt;
+&lt;p&gt;특이하게도, 배열은 값 형식이 저장되어 있더라도 참조 형식으로 생각한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;csharp&quot;&gt;&lt;pre class=&quot;language-csharp&quot;&gt;&lt;code class=&quot;language-csharp&quot;&gt;&lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/span&gt; arr &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// reference&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;sealed&lt;/code&gt; 키워드로 선언된 클래스가 아니라면 상속으로 다른 형식을 생성할 수 있다.&lt;/p&gt;
+&lt;h2 id=&quot;암시적-형식&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%95%94%EC%8B%9C%EC%A0%81-%ED%98%95%EC%8B%9D&quot; aria-label=&quot;암시적 형식 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;암시적 형식&lt;/h2&gt;
+&lt;p&gt;js나 파이썬처럼, 변수의 타입이 암시적인 언어들이 있다. C#에서 암시적인 형식을 만들려면 &lt;code class=&quot;language-text&quot;&gt;var&lt;/code&gt; 키워드를 사용하면 된다.&lt;/p&gt;
+&lt;h2 id=&quot;nullable&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#nullable&quot; aria-label=&quot;nullable permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Nullable&lt;/h2&gt;
+&lt;p&gt;값 형식은 null을 가질 수 없다. 하지만 형식 뒤에 &lt;code class=&quot;language-text&quot;&gt;?&lt;/code&gt;을 추가하면 null을 허용하는 형식이 된다.&lt;/p&gt;
+&lt;h1 id=&quot;참고-자료&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%B0%B8%EA%B3%A0-%EC%9E%90%EB%A3%8C&quot; aria-label=&quot;참고 자료 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;참고 자료&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://learn.microsoft.com/ko-kr/dotnet/csharp/fundamentals/types/&quot;&gt;C# 형식 시스템 | Microsoft Learn&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://slidetodoc.com/type-system-of-goc-seminar-ralf-vogler-tumnchen/&quot;&gt;Type system of GoC Seminar Ralf Vogler TUMnchen | Slidetodoc.com&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[추상 팩토리 패턴]]></title><description><![CDATA[…]]></description><link>https://10cheon00.github.io/추상-팩토리-패턴/</link><guid isPermaLink="false">https://10cheon00.github.io/추상-팩토리-패턴/</guid><pubDate>Sun, 16 Jul 2023 14:15:59 GMT</pubDate><content:encoded>&lt;h1 id=&quot;의도&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9D%98%EB%8F%84&quot; aria-label=&quot;의도 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;의도&lt;/h1&gt;
 &lt;p&gt;서로 관련성이 있거나 독립적인 여러 객체의 &lt;strong&gt;집합&lt;/strong&gt;을 생성하기 위한 인터페이스 제공한다.&lt;/p&gt;
 &lt;h1 id=&quot;사용-시기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%82%AC%EC%9A%A9-%EC%8B%9C%EA%B8%B0&quot; aria-label=&quot;사용 시기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;사용 시기&lt;/h1&gt;
 &lt;ul&gt;
