@@ -65,14 +65,14 @@ const BlogIndex = ({ data, location }) => {
                   </div>
                   <small className="post-date">{post.frontmatter.date}</small>
                 </header>
-                <section>
+                {/* <section>
                   <p
                     dangerouslySetInnerHTML={{
                       __html: post.frontmatter.description || post.excerpt,
                     }}
                     itemProp="description"
                   />
-                </section>
+                </section> */}
               </article>
             </li>
           )
