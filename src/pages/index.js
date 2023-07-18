@@ -43,6 +43,7 @@ const BlogIndex = ({ data, location }) => {
                   <h2>
                     <Link to={post.fields.slug} itemProp="url">
                       <span itemProp="headline">{title}</span>
+                      <small className="post-date">{post.frontmatter.date}</small>
                     </Link>
                   </h2>
                   <div className="tags">
@@ -63,7 +64,6 @@ const BlogIndex = ({ data, location }) => {
                         : null}
                     </ul>
                   </div>
-                  <small className="post-date">{post.frontmatter.date}</small>
                 </header>
                 {/* <section>
                   <p
