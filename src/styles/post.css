@@ -1,3 +1,7 @@
+body {
+  word-wrap: break-word;
+}
+
 header h1 {
   font-size: 3rem !important;
   font-weight: bold !important;
@@ -65,6 +69,7 @@ blockquote * {
 ul,
 ol {
   padding-left: var(--spacing-8);
+  list-style-position: outside;
 }
 
 ul li,
