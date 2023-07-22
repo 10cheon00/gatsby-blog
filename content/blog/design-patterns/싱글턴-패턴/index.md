@@ -76,7 +76,8 @@ Singleton* Singleton::Instance() {
 ```cpp
 Singleton* Singleton::Instance() {
     if(_instance == nullptr) {
-        const char* key = getEnv("SINGLETON"); //매
+        // 환경변수를 통해 다른 싱글턴을 반환하도록 설정
+        const char* key = getEnv("SINGLETON");
         _instance = findInstanceWithKey(key);
     }
     return _instance;
