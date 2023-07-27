@@ -9,6 +9,20 @@ tags: ["design-pattern"]
 
 객체에 **동적으로 새로운 책임**을 추가한다. 기능을 추가할 때 서브 클래스를 만드는 것보다 더 쉬운 방법을 제공한다.
 
+# UML
+
+![Alt text](image.png)
+
+컴포지트 패턴처럼 기초가 될 Component 추상 클래스를 정의한다. Component에는 데코레이터가 실행할 메서드인 `Operation()`를 정의한다.
+
+Decorator는 Component를 상속받되 하나의 Component를 자식으로 갖는다. Decorator의 `Operation()`이 호출될 때 자식으로 갖는 Component의 `Operation()`을 호출한다.
+
+Decorator의 서브 클래스는 조금 다르게 동작하는데, `Operation()`이 호출될 경우 먼저 자신의 부모 클래스인  **Decorator의 `Operation()`을 호출한다**. 그 다음 자신이 별도로 구현한 메서드를 실행한다.
+
+![Alt text](image-1.png)
+
+데코레이터에 데코레이터를 추가하는 과정이 연이어 일어나면 위 그림처럼 연쇄적으로 호출되는 상황이 벌어진다.
+
 # 사용 시기
 
 - 다른 객체에게 영향을 주지 않고 개개의 객체에게 새로운 책임을 줘야할 때
@@ -23,20 +37,6 @@ tags: ["design-pattern"]
 객체에 추가되는 책임이 정의된 작은 객체들이 많이 만들어지므로 각각의 객체에 대한 이해가 꼭 필요하다.
 
 추상 클래스에 정의된 내용을 모든 데코레이터의 서브 클래스가 구현해야하므로 추상 클래스가 거대해질수록 비용이 많이 든다.
-
-# UML
-
-![Alt text](image.png)
-
-컴포지트 패턴처럼 기초가 될 Component 추상 클래스를 정의한다. Component에는 데코레이터가 실행할 메서드인 `Operation()`를 정의한다.
-
-Decorator는 Component를 상속받되 하나의 Component를 자식으로 갖는다. Decorator의 `Operation()`이 호출될 때 자식으로 갖는 Component의 `Operation()`을 호출한다.
-
-Decorator의 서브 클래스는 조금 다르게 동작하는데, `Operation()`이 호출될 경우 먼저 자신의 부모 클래스인  **Decorator의 `Operation()`을 호출한다**. 그 다음 자신이 별도로 구현한 메서드를 실행한다.
-
-![Alt text](image-1.png)
-
-데코레이터에 데코레이터를 추가하는 과정이 연이어 일어나면 위 그림처럼 연쇄적으로 호출되는 상황이 벌어진다.
 
 # 구현
 
