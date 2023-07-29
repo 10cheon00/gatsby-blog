@@ -1,7 +1,7 @@
 ---
 title: 프록시 패턴
 description:
-date:
+date: '2023-07-29T11:26:11.002Z'
 tags: ["design-pattern"]
 ---
 
