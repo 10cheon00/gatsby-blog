@@ -44,15 +44,15 @@ Handler의 서브 클래스는 HandleRequest를 통해 자기 자신이 처리�
 ```cpp
 class OrderHandler {
 public:
-		OrderHandler(OrderHandler* handler) : _handler(handler) { }
+    OrderHandler(OrderHandler* handler) : _handler(handler) { }
 
-		void order(char* str) {
-			  if(_handler != nullptr){
-						_handler->order(str);
-				}
-		}
+    void order(char* str) {
+        if(_handler != nullptr){
+            _handler->order(str);
+        }
+    }
 private:
-		OrderHandler* _handler;
+    OrderHandler* _handler;
 }
 ```
 
@@ -61,36 +61,36 @@ OrderHandler 클래스에는 인스턴스의 참조자가 있다면 그 인스�
 ```cpp
 class Commander : public OrderHandler {
 public:
-		Commander(OrderHandler* handler) : OrderHandler(handler) { }
+    Commander(OrderHandler* handler) : OrderHandler(handler) { }
 
-		void order(char* str){
-				if(canResolveOrder(str)){
-						resolve();
-				}
-				else {
-						OrderHandler::order(str);
-				}
-		}
-		void canResolveOrder(char *str){
-				return false; //중대장은 무조건 처리할 수 없음
-		}
+    void order(char* str){
+        if(canResolveOrder(str)){
+            resolve();
+        }
+        else {
+            OrderHandler::order(str);
+        }
+    }
+    void canResolveOrder(char *str){
+        return false; //중대장은 무조건 처리할 수 없음
+    }
 }
 
 class StaffSergeant : public OrderHandler {
 public:
-		StaffSergeant(OrderHandler* handler) : OrderHandler(handler) { }
+    StaffSergeant(OrderHandler* handler) : OrderHandler(handler) { }
 
-		void order(char* str) {
-				if(canResolveOrder(str)){
-						resolve();
-				}
-				else {
-						OrderHandler::order(str);
-				}
-		}
-		void canResolveOrder(char *str){
-				return true; //하사는 무조건 처리할 수 있음
-		}
+    void order(char* str) {
+        if(canResolveOrder(str)){
+            resolve();
+        }
+        else {
+            OrderHandler::order(str);
+        }
+    }
+    void canResolveOrder(char *str){
+        return true; //하사는 무조건 처리할 수 있음
+    }
 }
 ```
 
