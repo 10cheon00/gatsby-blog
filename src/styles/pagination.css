@@ -1,0 +1,18 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination-link {
+  color: black;
+  vertical-align: middle;
+  padding: var(--spacing-2) var(--spacing-4);
+  text-decoration: none !important;
+}
+
+.pagination-link.pagination-current-link {  
+  background-color: var(--color-primary);
+  border-radius: 6px;
+  color: white;
+}

@@ -15,7 +15,7 @@ const blogPost = path.resolve(`./src/templates/blog-post.js`)
  * @type {import('gatsby').GatsbyNode['createPages']}
  */
 exports.createPages = async ({ graphql, actions, reporter }) => {
-  const { createPage } = actions
+  const { createPage, createRedirect } = actions
 
   // Get all markdown blog posts sorted by date
   const result = await graphql(`
@@ -48,7 +48,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
   // `context` is available in the template as a prop and as a variable in GraphQL
 
-  let tags = new Set();
+  let tags = new Set()
 
   if (posts.length > 0) {
     posts.forEach((post, index) => {
@@ -56,7 +56,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
 
       createPage({
-        path: post.fields.slug,
+        path: `${post.fields.slug}`,
         component: blogPost,
         context: {
           id: post.id,
@@ -64,10 +64,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           nextPostId,
         },
       })
-      
-      if(post.frontmatter.tags) {
-        post.frontmatter.tags.forEach((tag) => {
-          tags.add(tag);
+
+      if (post.frontmatter.tags) {
+        post.frontmatter.tags.forEach(tag => {
+          tags.add(tag)
         })
       }
     })
@@ -80,7 +80,37 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       component: tagTemplate,
       context: {
         tag,
-      }
+      },
+    })
+  })
+
+  // create redirect to set pagination page to root page.
+
+  createRedirect({
+    fromPath: `/`,
+    toPath: `/posts/`,
+    isPermanent: true,
+    redirectInBrowser: true,
+  })
+
+  // create pagination pages.
+
+  const postsPerPage = 10
+  const paginationPageCount = Math.ceil(posts.length / postsPerPage)
+  const numPagination = 5;
+
+  Array.from({ length: paginationPageCount }).forEach((_, i) => {
+    // create paginated page.
+    createPage({
+      path: i === 0 ? `/posts` : `/posts/${i + 1}`,
+      component: path.resolve("./src/templates/pagination.js"),
+      context: {
+        limit: postsPerPage,
+        skip: i * postsPerPage,
+        currentPage: i + 1,
+        numPagination,
+        paginationPageCount
+      },
     })
   })
 }
