@@ -9,7 +9,7 @@ const Pagination = ({ currentPage, numPagination, paginationPageCount }) => {
     previousPagination = (
       <a
         className="pagination-link pagination-previous"
-        href={`/posts/${previousPaginationLastPage}`}
+        href={`/${previousPaginationLastPage}`}
       >
         {"<<"}
       </a>
@@ -19,7 +19,7 @@ const Pagination = ({ currentPage, numPagination, paginationPageCount }) => {
     nextPagination = (
       <a
         className="pagination-link pagination-next"
-        href={`/posts/${nextPaginationFirstPage}`}
+        href={`/${nextPaginationFirstPage}`}
       >
         {">>"}
       </a>
@@ -40,7 +40,7 @@ const Pagination = ({ currentPage, numPagination, paginationPageCount }) => {
             className={`pagination-link${
               index === currentPage ? " pagination-current-link" : ""
             }`}
-            href={`/posts/${index !== 1 ? `${index}` : ``}`}
+            href={`/${index !== 1 ? `${index}` : ``}`}
           >
             {index}
           </a>

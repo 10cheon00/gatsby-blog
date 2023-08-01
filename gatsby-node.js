@@ -84,15 +84,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     })
   })
 
-  // create redirect to set pagination page to root page.
-
-  createRedirect({
-    fromPath: `/`,
-    toPath: `/posts/`,
-    isPermanent: true,
-    redirectInBrowser: true,
-  })
-
   // create pagination pages.
 
   const postsPerPage = 10
@@ -102,7 +93,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   Array.from({ length: paginationPageCount }).forEach((_, i) => {
     // create paginated page.
     createPage({
-      path: i === 0 ? `/posts` : `/posts/${i + 1}`,
+      path: i === 0 ? `/` : `/${i + 1}`,
       component: path.resolve("./src/templates/pagination.js"),
       context: {
         limit: postsPerPage,
