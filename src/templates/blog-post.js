@@ -5,6 +5,7 @@ import kebabCase from "lodash.kebabcase"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Utterances from "../components/utterances"
 
 import stringToRGB from "../helpers/string-to-rgb"
 
@@ -48,6 +49,7 @@ const BlogPostTemplate = ({
           <Bio />
         </footer>
       </article>
+      <Utterances />
       <nav className="blog-post-nav">
         <ul
           style={{

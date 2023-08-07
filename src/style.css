@@ -2,6 +2,7 @@
 
 /* CSS Custom Properties Definitions */
 @import url("styles/color.css");
+@import url("styles/bio.css");
 @import url("styles/font.css");
 @import url("styles/tags.css");
 @import url("styles/header.css");
