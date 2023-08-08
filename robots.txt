@@ -1,2 +1,4 @@
 User-agent: *
-Disallow:
+Allow: /
+Sitemap: https://10cheon00.github.io/sitemap-index.xml
+Host: https://10cheon00.github.io
