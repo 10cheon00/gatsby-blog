@@ -13,6 +13,6 @@
 
 .pagination-link.pagination-current-link {  
   background-color: var(--color-primary);
-  border-radius: 6px;
+  border-radius: 50%;
   color: white;
 }
