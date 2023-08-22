@@ -59,6 +59,7 @@ module.exports = {
             },
           },
           `gatsby-remark-prismjs`,
+          `gatsby-remark-emoji`,
           {
             resolve: `gatsby-remark-katex`,
             options: {
