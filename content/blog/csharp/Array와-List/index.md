@@ -1,7 +1,7 @@
 ---
 title: Array와 List
 description:
-date:
+date: '2023-08-21T14:01:03.000Z'
 tags: ["csharp"]
 ---
 
