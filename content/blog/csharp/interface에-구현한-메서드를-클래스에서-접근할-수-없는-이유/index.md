@@ -68,7 +68,7 @@ public static void Main(string[] args)
 >
 > **[:link: Explicit interface implementation | Microsoft Learn ](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/interfaces/explicit-interface-implementation)**
 
-공식 문서에 따르면 명시적 인터페이스 메서드는 **_접근 제한자를 가지지 않고 오직 인스턴스를 인터페이스로 접근했을 때에만 사용가능하다_**고 되어있다.
+공식 문서에 따르면 명시적 인터페이스 메서드는 ***접근 제한자를 가지지 않고 오직 인스턴스를 인터페이스로 접근했을 때에만 사용가능하다***고 되어있다.
 
 접근 제한자를 가지지 않고 인터페이스로만 접근해야하기 때문에 클래스로는 그 메서드를 호출할 수 없던 것이다.
 
@@ -108,4 +108,4 @@ public class Program
 }
 ```
 
-[:link: How to call explicit interface implementation methods internally without explicit casting?](https://stackoverflow.com/a/1869420)
+**[:link: How to call explicit interface implementation methods internally without explicit casting?](https://stackoverflow.com/a/1869420)**
