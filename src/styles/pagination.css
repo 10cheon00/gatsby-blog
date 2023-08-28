@@ -1,5 +1,6 @@
 .pagination {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
@@ -9,10 +10,18 @@
   vertical-align: middle;
   padding: var(--spacing-2) var(--spacing-4);
   text-decoration: none !important;
+  background-color: #f0f0f0;
+}
+
+.pagination-link:first-child {
+  border-radius: 50% 0 0 50% ;
+}
+
+.pagination-link:last-child {
+  border-radius: 0 50% 50% 0;
 }
 
 .pagination-link.pagination-current-link {  
   background-color: var(--color-primary);
-  border-radius: 50%;
   color: white;
 }
