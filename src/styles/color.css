@@ -1,5 +1,6 @@
 :root {
   --color-background: #ffffff;
+  --color-blockquote: #656d76;
   --color-blockquote-border: #d0d7de;
   --color-header-border-bottom: #d8dee4;
   --color-table-border: #d8dee4;
@@ -13,10 +14,11 @@
 
 body.dark {
   --color-background: #0d1117;
-  --color-blockquote-border: red;
+  --color-blockquote: #7d8590;
+  --color-blockquote-border: #30363d;
   --color-header-border-bottom: rgb(33, 38, 45);
-  --color-table-border: gray;
-  --color-table-evenRow-background: violet;
+  --color-table-border: #30363d;
+  --color-table-evenRow-background: #161b22;
   --color-text: #e6edf3;
   --color-text-heading: var(--color-text);
   --color-codeblock: var(--color-text);
