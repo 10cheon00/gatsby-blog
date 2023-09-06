@@ -145,6 +145,8 @@ code[class*="language-"] {
 
 :not(pre) > code[class*="language-"] {
   padding: 0.2em 0.4em;
+  background-color: var(--color-codeblock-background);
+  color: var(--color-codeblock);
 }
 
 .token.operator,

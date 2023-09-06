@@ -27,6 +27,7 @@
     "react-dom": "^18.1.0"
   },
   "devDependencies": {
+    "gatsby-plugin-dark-mode": "^1.1.2",
     "gatsby-plugin-robots-txt": "^1.8.0",
     "gatsby-remark-autolink-headers": "^6.11.0",
     "gatsby-remark-emoji": "^0.0.3",

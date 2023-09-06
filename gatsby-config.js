@@ -142,6 +142,7 @@ module.exports = {
         sitemap: `https://10cheon00.github.io/sitemap-index.xml`,
         policy: [{ userAgent: '*', allow: '/' }]
       }
-    }
+    },
+    `gatsby-plugin-dark-mode`
   ],
 }

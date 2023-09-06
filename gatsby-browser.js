@@ -11,3 +11,7 @@ import "katex/dist/katex.min.css";
 
 // custom CSS styles
 import "./src/style.css"
+
+if (document.body.classList.contains("dark")) {
+    // require("./src/styles/prism-ghdark.css");
+}

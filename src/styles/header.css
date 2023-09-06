@@ -1,6 +1,6 @@
 header.global-header h1 a {
   text-decoration: none;
-  color: var(--color-heading-black);
+  color: var(--color-text);
 }
 
 header.global-header h1 a:hover {
@@ -8,7 +8,7 @@ header.global-header h1 a:hover {
 }
 
 a.bio-icons {
-  color: var(--color-heading-black);
+  color: var(--color-text);
 }
 
 .bio {
