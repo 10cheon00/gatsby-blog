@@ -1,16 +1,9 @@
 :root {
-  /* no use */
-  /* --bgcolor-prismjs-code-selection: #9fc6e9;
-  --bgcolor-prismjs-pre: #f6f8fa;
-  --bgcolor-prismjs-not-pre: #eff1f3;
-  --bgcolor-prismjs-line: #fff8c5;
-  --boxshadowcolor-prismjs-line: #eed888; */
-  
   --color-prismjs-code: #24292f;
   --color-prismjs-codeblock: #b3d4fc;
   --bgcolor-prismjs-codeblock: #f6f8fa;
   --color-prismjs-inlinecode: #24292f;
-  --bgcolor-prismjs-inlinecode: rgba(175,184, 193, 0.2);
+  --bgcolor-prismjs-inlinecode: rgba(175, 184, 193, 0.2);
 
   --color-prismjs-token-comment: #6e7781;
   --color-prismjs-token-string: #0a3069;
@@ -27,7 +20,7 @@ body.dark {
   --color-prismjs-codeblock: #e6edf3;
   --bgcolor-prismjs-codeblock: #161b22;
   --color-prismjs-inlinecode: #e6edf3;
-  --bgcolor-prismjs-inlinecode:rgba(110, 118, 129, 0.4);
+  --bgcolor-prismjs-inlinecode: rgba(110, 118, 129, 0.4);
 
   --color-prismjs-token-comment: #8b949e;
   --color-prismjs-token-string: #a5d6ff;
