@@ -1,80 +1,124 @@
 /**
- * Github Light theme for Prism.js
- * Based on Github: https://github.com
- * @author Katorly
+ * GHColors theme by Avi Aryan (http://aviaryan.in)
+ * Inspired by Github syntax coloring
  */
-/* General */
 
-pre[class*="language-"],
-code[class*="language-"] {
-  font-size: 13px;
-  text-shadow: none;
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+code[class*="language-"],
+pre[class*="language-"] {
+  color: var(--color-prismjs-code);
+  font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
   direction: ltr;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
-  line-height: 1.5;
+  font-size: .9em;
+  line-height: 1.2em;
+
   -moz-tab-size: 4;
   -o-tab-size: 4;
   tab-size: 4;
+
   -webkit-hyphens: none;
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
 }
+
+pre>code[class*="language-"] {
+  font-size: 1em;
+}
+
+pre[class*="language-"]::-moz-selection,
+pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection,
+code[class*="language-"] ::-moz-selection {
+  background: var(--bgcolor-prismjs-code-selection);
+}
+
 pre[class*="language-"]::selection,
+pre[class*="language-"] ::selection,
 code[class*="language-"]::selection,
-pre[class*="language-"]::mozselection,
-code[class*="language-"]::mozselection {
-  text-shadow: none;
+code[class*="language-"] ::selection {
+  background: var(--bgcolor-prismjs-code-selection);
 }
-@media print {
-  pre[class*="language-"],
-  code[class*="language-"] {
-    text-shadow: none;
-  }
-}
+
+/* Code blocks */
 pre[class*="language-"] {
   padding: 1em;
   margin: .5em 0;
   overflow: auto;
+  background-color: var(--bgcolor-prismjs-codeblock);
+  border-radius: 6px;
 }
-:not(pre) > code[class*="language-"] {
-  padding: .1em .3em;
-  border-radius: .3em;
+
+/* Inline code */
+:not(pre)>code[class*="language-"] {
+  padding: .2em;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  background: var(--bgcolor-prismjs-inlinecode);
+  border-radius: 6px;
 }
-/* Line highlighting */
-pre[data-line] {
-  position: relative;
-}
-pre[class*="language-"] > code[class*="language-"] {
-  position: relative;
-  z-index: 1;
-}
-.line-highlight {
-  position: absolute;
-  left: 0;
-  right: 0;
-  padding: inherit 0;
-  margin-top: 1em;
-  z-index: 0;
-  pointer-events: none;
-  line-height: inherit;
-  white-space: pre;
-}
-/* Tokens */
-.namespace {
-  opacity: .7;
-}
-.token.important,
-.token.bold {
-  font-weight: bold;
-}
-.token.italic {
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: var(--color-prismjs-token-comment);
   font-style: italic;
 }
-.token.entity {
-  cursor: help;
+
+.token.namespace {
+  opacity: .7;
+}
+
+.token.string,
+.token.attr-value {
+  color: var(--color-prismjs-token-string);
+}
+
+.token.operator {
+  color: var(--color-prismjs-token-operator);
+  /* no highlight */
+}
+
+.token.entity,
+.token.url,
+.token.symbol,
+.token.number,
+.token.boolean,
+.token.variable,
+.token.constant,
+.token.property,
+.token.regex,
+.token.inserted {
+  color: var(--color-prismjs-token-symbol);
+}
+
+.token.atrule,
+.token.keyword,
+.token.attr-name,
+.language-autohotkey .token.selector {
+  color: var(--color-prismjs-token-keyword);
+}
+
+.token.function,
+.token.deleted,
+.language-autohotkey .token.tag {
+  color: var(--color-prismjs-token-function);
+}
+
+.token.tag,
+.token.selector,
+.language-autohotkey .token.keyword {
+  color: var(--color-prismjs-token-tag);
+}
+
+.token.class-name {
+  color: var(--color-prismjs-token-variable);
+}
+
+.token.italic {
+  font-style: italic;
 }
