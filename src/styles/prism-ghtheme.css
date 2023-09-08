@@ -61,6 +61,10 @@ pre[class*="language-"] {
   border-radius: 6px;
 }
 
+.token {
+  color: var(--color-prismjs-code);
+}
+
 .token.comment,
 .token.prolog,
 .token.doctype,
