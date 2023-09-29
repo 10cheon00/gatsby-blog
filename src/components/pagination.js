@@ -1,9 +1,11 @@
 import * as React from "react"
 
 const Pagination = ({ currentPage, numPagination, paginationPageCount }) => {
-  const previousPaginationLastPage = Math.floor((currentPage - 1) / numPagination) * numPagination
-  const nextPaginationFirstPage = Math.floor((currentPage - 1) / numPagination + 1) * numPagination + 1
-  
+  const previousPaginationLastPage =
+    Math.floor((currentPage - 1) / numPagination) * numPagination
+  const nextPaginationFirstPage =
+    Math.floor((currentPage - 1) / numPagination + 1) * numPagination + 1
+
   let previousPagination, nextPagination
   if (currentPage > numPagination) {
     previousPagination = (
@@ -41,6 +43,7 @@ const Pagination = ({ currentPage, numPagination, paginationPageCount }) => {
               index === currentPage ? " pagination-current-link" : ""
             }`}
             href={`/${index !== 1 ? `${index}` : ``}`}
+            key={index}
           >
             {index}
           </a>
