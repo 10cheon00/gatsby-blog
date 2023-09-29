@@ -16,7 +16,7 @@ class TableOfContents extends React.Component {
       .reverse()
       .find(e => {
         const pos = e.getBoundingClientRect()
-        return pos.y < 0
+        return pos.y < 100 
       })
 
     links.forEach(e => {
