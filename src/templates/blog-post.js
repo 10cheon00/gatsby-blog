@@ -6,6 +6,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Utterances from "../components/utterances"
+import TableOfContents from "../components/table-of-contents"
 
 import stringToRGB from "../helpers/string-to-rgb"
 
@@ -14,7 +15,8 @@ const BlogPostTemplate = ({
   location,
 }) => {
   const siteTitle = site.siteMetadata?.title || `Title`
-
+  const tableOfContentsHTML = post.tableOfContents
+  const documentRef = React.useRef()
   return (
     <Layout location={location} title={siteTitle}>
       <article
@@ -30,17 +32,24 @@ const BlogPostTemplate = ({
           <ul>
             {post.frontmatter.tags
               ? post.frontmatter.tags.map(tag => (
-                  <li key={kebabCase(tag)} 
+                  <li
+                    key={kebabCase(tag)}
                     style={{
-                      backgroundColor:`#${stringToRGB(tag)}`
-                    }}>
+                      backgroundColor: `#${stringToRGB(tag)}`,
+                    }}
+                  >
                     <Link to={`/tags/${kebabCase(tag)}`}>{kebabCase(tag)}</Link>
                   </li>
                 ))
               : null}
           </ul>
         </div>
+        <TableOfContents
+          html={tableOfContentsHTML}
+          documentRef={documentRef}
+        />
         <section
+          ref={documentRef}
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
@@ -112,6 +121,7 @@ export const pageQuery = graphql`
         description
         tags
       }
+      tableOfContents
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
       fields {

@@ -1,6 +1,11 @@
+header.global-header {
+  margin-top: var(--spacing-4);
+}
+
 header.global-header h1 a {
   text-decoration: none;
   color: var(--color-text);
+
 }
 
 header.global-header h1 a:hover {
