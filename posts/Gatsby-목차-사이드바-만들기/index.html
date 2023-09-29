@@ -94,7 +94,7 @@ void function() {
 <p>velog를 보면 게시글 오른쪽에 목차 사이드바가 떠있다. 간단한 기능이지만 긴 게시물의 경우 굳이 스크롤로 이동하지 않고 사이드바의 링크를 클릭해서 게시글을 이동할 수 있으니 꽤 좋은 기능이다.</p>
 <p>이런 플러그인을 찾기는 어려울 것 같아서 직접 만들어보기로 했다.</p>
 <h1 id="tableofcontents-쿼리" style="position:relative;"><a href="#tableofcontents-%EC%BF%BC%EB%A6%AC" aria-label="tableofcontents 쿼리 permalink" class="anchor before"><svg aria-hidden="true" width="16" height="16" version="1.1" viewBox="0 0 16 16"><path fill-rule="evenodd" d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a>tableOfContents 쿼리</h1>
-<p>게시물마다 목차만 추출해오기 위해서 [Gatsby Blog에 목차 추가하기 | Harry Park's Blog]를 참고했다.</p>
+<p>게시물마다 목차만 추출해오기 위해서 <a href="https://soopdop.github.io/2020/12/03/add-table-of-content-gatsby/">Gatsby Blog에 목차 추가하기 | Harry Park's Blog</a>를 참고했다.</p>
 <p>graphql을 이용해서 이미 만들어져 있는 목차 데이터를 갖고 올 수 있다.</p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">// gatsby-node.js</span>
 
@@ -283,8 +283,8 @@ exports<span class="token punctuation">.</span><span class="token function-varia
 <h1 id="현재-읽고-있는-내용-하이라이트-하기" style="position:relative;"><a href="#%ED%98%84%EC%9E%AC-%EC%9D%BD%EA%B3%A0-%EC%9E%88%EB%8A%94-%EB%82%B4%EC%9A%A9-%ED%95%98%EC%9D%B4%EB%9D%BC%EC%9D%B4%ED%8A%B8-%ED%95%98%EA%B8%B0" aria-label="현재 읽고 있는 내용 하이라이트 하기 permalink" class="anchor before"><svg aria-hidden="true" width="16" height="16" version="1.1" viewBox="0 0 16 16"><path fill-rule="evenodd" d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a>현재 읽고 있는 내용 하이라이트 하기</h1>
 <p>스크롤 될 때마다 현재 어느 목차를 읽고 있는지 확인해야 하므로 <code class="language-text">onScroll</code>이벤트리스너를 추가하여야 한다.</p>
 <p>컴포넌트가 마운트될 때 이벤트 리스너를 추가하고, 언마운트될 때 리스너를 삭제한다.</p>
-<p>그리고 DOM에 있는 목차요소들(<code class="language-text">h1</code>, <code class="language-text">h2</code>, <code class="language-text">h3</code>)의 y좌표가 0보다 작은지 검사하고 가장 작은 y좌표를 가진 요소를 하이라이트 하도록 했다.</p>
-<p>하이라이트는 단순하게 <code class="language-text">classList="active"</code>처럼 클래스 이름으로 css를 다르게 적용하는 방법을 사용했다.</p>
+<p>그리고 DOM에 있는 목차요소들(<code class="language-text">h1</code>, <code class="language-text">h2</code>, <code class="language-text">h3</code>)의 y좌표가 0보다 작은지 검사하고 가장 0과 가까운 y좌표를 가진 요소를 하이라이트 하도록 했다.</p>
+<p>하이라이트는 단순하게 <code class="language-text">className="active"</code>처럼 클래스 이름으로 css를 다르게 적용하는 방법을 사용했다.</p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">// src/components/table-of-contents.js</span>
 <span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> React <span class="token keyword">from</span> <span class="token string">"react"</span>
 
