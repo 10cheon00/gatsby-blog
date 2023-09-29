@@ -15,8 +15,7 @@ const BlogPostTemplate = ({
   location,
 }) => {
   const siteTitle = site.siteMetadata?.title || `Title`
-  const tableOfContentsHTML = post.tableOfContents
-  const documentRef = React.useRef()
+  const tableOfContents = post.tableOfContents
   return (
     <Layout location={location} title={siteTitle}>
       <article
@@ -45,11 +44,9 @@ const BlogPostTemplate = ({
           </ul>
         </div>
         <TableOfContents
-          html={tableOfContentsHTML}
-          documentRef={documentRef}
+          tableOfContents={tableOfContents}
         />
         <section
-          ref={documentRef}
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />

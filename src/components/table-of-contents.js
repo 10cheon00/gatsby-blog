@@ -1,50 +1,47 @@
 import * as React from "react"
-import * as ReactDOM from "react-dom"
 
-const TableOfContents = props => {
-  const elRef = React.useRef()
-  const [headerLinkPairs, setHeaderLinkPairs] = React.useState([])
+class TableOfContents extends React.Component {
+  componentDidMount() {
+    window.addEventListener("scroll", this.updateTableOfContents)
+  }
 
-  React.useEffect(() => {
-    const documentEl = ReactDOM.findDOMNode(props.documentRef.current)
-    const linkElements = ReactDOM.findDOMNode(elRef.current).querySelectorAll(
-      "a"
-    )
-    const headerElements = Array.from(documentEl.querySelectorAll("h1, h2, h3"))
-    setHeaderLinkPairs(headerElements.reduce((acc, cur) => {
-      acc.push({
-        headerEl: cur,
-        linkEl: Array.from(linkElements).find(
-          e => e.textContent === cur.textContent
-        ),
+  updateTableOfContents() {
+    const headers = document.querySelectorAll(`
+      section[itemProp="articleBody"] h1,
+      section[itemProp="articleBody"] h2,
+      section[itemProp="articleBody"] h3
+    `)
+    const links = document.querySelectorAll(`div.table-of-contents a`)
+    const currentHeader = Array.from(headers)
+      .reverse()
+      .find(e => {
+        const pos = e.getBoundingClientRect()
+        return pos.y < 0
       })
-      return acc
-    }, []))
 
-    window.addEventListener("scroll", () => {
-      headerLinkPairs.slice(0).reverse().reduce((acc, cur) => {
-        const yPos = cur.headerEl.getBoundingClientRect().y;
-        if (acc || yPos > 0) {
-          cur.linkEl.className = "";
-        }
-        else {
-          cur.linkEl.className = "active";
-          acc = true;
-        }
-        return acc;
-      }, false)
+    links.forEach(e => {
+      if (e.textContent === currentHeader?.textContent) {
+        e.className = "active"
+      } else {
+        e.className = ""
+      }
     })
-  }, [])
+  }
 
-  return (
-    <div className="table-of-contents-layout">
-      <div
-        ref={elRef}
-        className="table-of-contents"
-        dangerouslySetInnerHTML={{ __html: props.html }}
-      ></div>
-    </div>
-  )
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.updateTableOfContents)
+  }
+
+  render() {
+    return (
+      <div className="table-of-contents-layout">
+        <div
+          className="table-of-contents"
+          dangerouslySetInnerHTML={{ __html: this.props.tableOfContents }}
+        ></div>
+      </div>
+    )
+  }
 }
 
 export default TableOfContents
