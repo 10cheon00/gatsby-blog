@@ -12,11 +12,12 @@ class TableOfContents extends React.Component {
       section[itemProp="articleBody"] h3
     `)
     const links = document.querySelectorAll(`div.table-of-contents a`)
+    const halfOfWindowHeight = window.innerHeight / 2;
     const currentHeader = Array.from(headers)
       .reverse()
       .find(e => {
         const pos = e.getBoundingClientRect()
-        return pos.y < 100 
+        return pos.y < halfOfWindowHeight
       })
 
     links.forEach(e => {
