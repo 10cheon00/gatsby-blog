@@ -182,4 +182,87 @@ intra-AS에서는 정책으로 관리하지 않기에 중요하지 않지만, in
 
 # Software Define Networking
 
-별도의 특화된 메인 프레임에서 관리했었으나 발전이 느렸기 때문에 여러 OS와 CPU에 상관없이 개발할 수 있도록 변함
+각 라우터가 link-state 정보를 확인하고 경로를 업데이트 하는 방법은 실시간으로 적용하기 어렵다. 그래서 원격 컨트롤러에게 맡긴다.
+
+SDN은 3개의 계층로 분리된다.
+
+## Data-plane Switch
+
+단순하게 포워딩 테이블에 의한 패킷 스위칭을 담당한다. (generalized data-plane forwarding 사용)
+
+상위 계층인 컨트롤러에게 API를 제공하여 포워딩 테이블을 관리할 수 있다. 
+
+OpenFlow 프로토콜를 사용하여 컨트롤러와 통신한다.
+
+## SDN Controller(network OS)
+
+네트워크의 정보를 수집, 관리한다.
+
+상위 계층인 애플리케이션에게 API를 제공하여 알고리즘을 구현할 때 포워딩 테이블을 수정할 수 있도록 한다.
+
+스위치가 제공하는 API를 통해 상호작용한다.
+
+트래픽 관리 시스템을 구현한다.
+
+## Application
+
+컨트롤러가 제공하는 API를 통해 라우팅, 로드밸런싱 같은 알고리즘을 구현한다.
+
+컨트롤러와는 독립적으로, 서드파티에 의해 구현될 수도 있다.(?)
+
+# OpenFlow Protocol
+
+컨트롤러와 스위치 사이에서 메세지를 주고받는 규칙이다. TCP를 사용한다.
+
+## Controller to Switch
+
+- feature : 스위치의 정보를 쿼리로 긁어온다.
+- configure : 스위치의 파라미터를 수정한다.
+- modify-state : OpenFlow Table에 엔트리를 추가/삭제/수정한다.
+- packet-out : 컨트롤러가 직접 특정 스위치의 포트로 패킷을 내보낸다...(?)
+
+## Switch to Controller
+
+- packet-in : 패킷을 컨트롤러에게 보낸다.
+- flow-removed : OpenFlow Table에서 특정 엔트리가 지워졌음을 알린다.
+- port status : 포트의 상태를 알림. 포트가 변경되었을 때 알리는 것 같다.
+
+# 상호작용 흐름
+
+1. 어떤 오류가 발생하여 `port status`를 통해 컨트롤러에게 알린다.
+2. 컨트롤러는 메세지를 수신하여 DB에 저장된 link state의 정보를 수정하고, 애플리케이션에 알린다.
+3. 애플리케이션은 상태가 변경되었을 때 Dijkstra 알고리즘을 다시 수행하도록 설정하고 있다. 그러므로 다시 실행되어 경로를 업데이트한다.
+4. 애플리케이션이 알고리즘을 실행하면, 컨트롤러에 저장된 정보를 조회하기 위해 상호작용한다. 
+5. 업데이트된 경로를 전파하기 위해 애플리케이션이 컨트롤러를 통해 각 스위치의 FlowTable을 업데이트한다.
+
+> 여기까지 중간고사 범위
+
+# ICMP
+
+호스트와 라우터 사이에 데이터 전송과 관련된 문제를 알리기 위한 프로토콜. IP를 사용하지만 payload에 담겨서 전송된다.
+
+TTL이 0이면 전송된 패킷을 버리고 src로 ICMP 오류코드(type: 11, code: 0)가 담긴 메세지를 보낸다.
+
+# Network Management
+
+네트워크에 존재하는 관리시스템이 각 디바이스에 연결된 에이전트를 통해 관리한다.
+
+각 디바이스의 MIB정보를 조회, 수정하기 위해서 SNMP 프로토콜을 사용한다.
+
+## SNMP 프로토콜 메세지
+
+### 시스템
+
+- 정보 검색 : GetRequest, GetNextRequest, GetBulkRequest
+- 정보 업데이트 : SetRequest
+
+### 에이전트
+
+- 시스템의 요청에 대한 응답 : Response
+- 자발적으로 알림 : Trap (이슈가 생겼을 때 시스템에게 알림)
+
+Get~, Set~은 format이 동일하지만 Trap 메세지만 다른 format이다. 
+
+## MIB(Management Information Base) 
+
+망 관리를 위해 사용되는 관리 정보
