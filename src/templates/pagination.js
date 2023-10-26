@@ -8,6 +8,7 @@ import Pagination from "../components/pagination"
 
 import stringToRGB from "../helpers/string-to-rgb"
 import kebabCase from "lodash.kebabcase"
+import Tag from "../components/tag"
 
 export default class PaginationPage extends React.Component {
   render() {
@@ -39,22 +40,11 @@ export default class PaginationPage extends React.Component {
                       </Link>
                     </h2>
                     <div className="tags">
-                      <ul>
-                        {post.frontmatter.tags
-                          ? post.frontmatter.tags.map(tag => (
-                              <li
-                                key={kebabCase(tag)}
-                                style={{
-                                  backgroundColor: `#${stringToRGB(tag)}`,
-                                }}
-                              >
-                                <Link to={`/tags/${kebabCase(tag)}`}>
-                                  {kebabCase(tag)}
-                                </Link>
-                              </li>
-                            ))
-                          : null}
-                      </ul>
+                      {post.frontmatter.tags
+                        ? post.frontmatter.tags.map(tag => (
+                            <Tag tagName={tag}></Tag>
+                          ))
+                        : null}
                     </div>
                   </header>
                   {/* <section>
@@ -70,11 +60,11 @@ export default class PaginationPage extends React.Component {
             )
           })}
         </ol>
-        <Pagination 
+        <Pagination
           currentPage={this.props.pageContext.currentPage}
           numPagination={this.props.pageContext.numPagination}
           paginationPageCount={this.props.pageContext.paginationPageCount}
-          />
+        />
       </Layout>
     )
   }

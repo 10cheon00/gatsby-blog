@@ -1,24 +1,21 @@
-div.tags ul {
+.tags {
   padding-left: 0;
+  list-style: none;
 }
 
-div.tags ul li,
-div.tags ul li:first-child {
+.tag,
+.tag:first-child {
   display: inline-block;
-  padding: 0 0.5rem;
+  padding: 0 0.5rem 0.1em 0.5rem;
   margin: 0.125rem;
   transition: filter 0.25s linear;
 }
 
-div.tags li:hover {
+.tag:hover {
   filter: brightness(75%);
 }
 
-div.tags li a {
+.tag a {
   color: white;
   text-decoration: none;
-}
-
-ul.tags-list li.tags-list-item {
-  display: inline-block;
 }

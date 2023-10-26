@@ -3,9 +3,7 @@ import Layout from "../components/layout"
 import { Link, graphql } from "gatsby"
 import Seo from "../components/seo"
 
-import stringToRGB from "../helpers/string-to-rgb";
-
-var kebabCase = require("lodash.kebabcase")
+import Tag from "../components/tag"
 
 const TagsPage = ({
   data: {
@@ -21,22 +19,11 @@ const TagsPage = ({
       title="all tags"
       keywords={[`blog`, `gatsby`, `javascript`, `react`]}
     />
+    <h1>Tags</h1>
     <div className="tags">
-      <h1>Tags</h1>
-      <ul className="tags-list">
-        {group.map(tag => (
-          <li 
-            className="tags-list-item" 
-            key={tag.fieldValue} 
-            style={{
-              backgroundColor:`#${stringToRGB(tag.fieldValue)}`
-            }}>
-            <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-              {tag.fieldValue} ({tag.totalCount})
-            </Link>
-          </li>
-        ))}
-      </ul>
+      {group.map(tag => (
+        <Tag tagName={tag.fieldValue} relatedPostsNumber={tag.totalCount}></Tag>
+      ))}
     </div>
   </Layout>
 )
@@ -51,7 +38,7 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(limit: 2000) {
-      group(field: {frontmatter: {tags: SELECT}}) {
+      group(field: { frontmatter: { tags: SELECT } }) {
         fieldValue
         totalCount
       }

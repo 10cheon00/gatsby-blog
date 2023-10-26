@@ -9,6 +9,7 @@ import Utterances from "../components/utterances"
 import TableOfContents from "../components/table-of-contents"
 
 import stringToRGB from "../helpers/string-to-rgb"
+import Tag from "../components/tag"
 
 const BlogPostTemplate = ({
   data: { previous, next, site, markdownRemark: post },
@@ -28,24 +29,11 @@ const BlogPostTemplate = ({
           <p>{post.frontmatter.date}</p>
         </header>
         <div className="tags">
-          <ul>
-            {post.frontmatter.tags
-              ? post.frontmatter.tags.map(tag => (
-                  <li
-                    key={kebabCase(tag)}
-                    style={{
-                      backgroundColor: `#${stringToRGB(tag)}`,
-                    }}
-                  >
-                    <Link to={`/tags/${kebabCase(tag)}`}>{kebabCase(tag)}</Link>
-                  </li>
-                ))
-              : null}
-          </ul>
+          {post.frontmatter.tags
+            ? post.frontmatter.tags.map(tag => <Tag tagName={tag}></Tag>)
+            : null}
         </div>
-        <TableOfContents
-          tableOfContents={tableOfContents}
-        />
+        <TableOfContents tableOfContents={tableOfContents} />
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
