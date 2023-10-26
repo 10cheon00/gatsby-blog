@@ -21,10 +21,12 @@ const Tag = ({
       </Link>
     )
   }
+
+  const hoverable = enableLink?`hoverable`:``
   
   return (
     <span
-      class="tag"
+      class={`tag ${hoverable}`}
       style={{
         backgroundColor: `#${stringToRGB(tagName)}`,
       }}
