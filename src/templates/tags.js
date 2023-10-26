@@ -4,7 +4,6 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-import stringToRGB from "../helpers/string-to-rgb"
 import Tag from "../components/tag"
 
 const Tags = ({ pageContext, data, location }) => {

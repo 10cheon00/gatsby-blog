@@ -1,6 +1,5 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
-import kebabCase from "lodash.kebabcase"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -8,7 +7,6 @@ import Seo from "../components/seo"
 import Utterances from "../components/utterances"
 import TableOfContents from "../components/table-of-contents"
 
-import stringToRGB from "../helpers/string-to-rgb"
 import Tag from "../components/tag"
 
 const BlogPostTemplate = ({

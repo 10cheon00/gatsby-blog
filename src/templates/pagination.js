@@ -6,8 +6,6 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Pagination from "../components/pagination"
 
-import stringToRGB from "../helpers/string-to-rgb"
-import kebabCase from "lodash.kebabcase"
 import Tag from "../components/tag"
 
 export default class PaginationPage extends React.Component {
