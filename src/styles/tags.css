@@ -15,7 +15,7 @@
   filter: brightness(75%);
 }
 
-.tag {
+.tag, .tag a{
   color: white;
   text-decoration: none;
 }
