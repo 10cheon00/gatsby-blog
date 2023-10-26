@@ -10,7 +10,9 @@ tags: ["computer-network"]
 
 - 라우터 내부의 로직
 - 라우터로 들어온 패킷이 어느 포트로 나가야할 지 결정
-- input port - 스위칭 구조 - output port
+- input port - switch fabric - output port
+
+![Alt text](image.png)
 
 ## Input Port
 
@@ -37,12 +39,16 @@ datagram의 ip header를 검사하여 forwarding한다.
   ip destination의 패턴을 검사하여 가장 길게 매칭되는 prefix를 찾아 지정된 port로 나가도록 forwarding하는 것
   
   패턴을 검사하기만 하므로 (AND연산) 굉장히 빠르다
+ㅇ
+  ex) `11000000 10101000 00000000 ********` 이면 192.168.0.*인 주소들만 포워딩 된다.
 
 ## Switching Fabric
 
+![Alt text](image-1.png)
+
 input port로 들어온 packet을 output port로 내보낼 때 실제로 데이터를 스위칭하는 역할을 담당.
 
-N개의 패킷과 R개의 input port가 있다면 스위칭에 걸리는 이상적인 시간은 NR.
+N개의 패킷과 R개의 input port가 있다면 스위칭에 걸리는 이상적인 시간은 `NR`.
 
 - 메모리
 
@@ -60,7 +66,7 @@ N개의 패킷과 R개의 input port가 있다면 스위칭에 걸리는 이상�
 
   여러 패킷이 동시에 한 버스에 접근할 때 에러가 발생할 수 있음.
 
-- Interconnection
+- Interconnection (크로스바?)
 
   스위치를 사용하여 동시에 패킷을 스위칭함.
 
@@ -82,7 +88,7 @@ input port와 비슷하게 switching되는 속도가 output port에서 나가는
 
 queue가 꽉차면 오버플로우에 의해 데이터가 손실된다. 어쩔 수 없이 데이터가 손실된다면 데이터를 손실시키는 전략 필요.
 
-버퍼가 꽉찼을 때 전달되는 패킷을 drop하거나, 패킷에 중요도를 부여하여 중요도가 낮은 패킷을 drop
+버퍼가 꽉찼을 때 전달되는 패킷을 drop하거나(tail drop), 패킷에 중요도를 부여하여 중요도가 낮은 패킷을 drop(priority drop)
 
 ### Queue Management
 
@@ -102,7 +108,7 @@ queue가 꽉차면 오버플로우에 의해 데이터가 손실된다. 어쩔 �
 - WFQ
 
   Round Robin처럼 동작하되, 큐에 가중치를 부여하여 시퀀스를 결정한다.
-  가중치가 A=1, B=3, C=5인 시스템이라면 CCCCCBBBACCCCCBBBA... 형태로 바뀌어 동작한다.
+  가중치가 A=$1$, B=${1}\over{3}$, C=$1\over{5}$인 시스템이라면 CCCCCBBBACCCCCBBBA... 형태로 바뀌어 동작한다. 만약 패킷을 보낼 클래스의 큐에 패킷이 없으면 다음 클래스의 큐를 조사하게 된다.
 
 ## IP Datagram Format
 
@@ -168,6 +174,8 @@ a.b.c.d/n 으로 표현될 때 IP주소의 32비트에서 호스트 영역을 �
 
 서브넷 영역의 길이는 자유롭게 설정될 수 있음.
 
+ex) `192.168.12/23` 이면 `11000000 10101000 0000110* ********`을 의미하고 *부분은 서브넷의 호스트영역이 된다.
+
 ## DHCP
 
 새로운 네트워크에 접속했을 때 DHCP 서버로부터 서브넷 내에서 사용할 IP주소를 동적으로 할당해주는 것
@@ -207,11 +215,13 @@ ISP는 IP 주소를 영역 단위로 쪼개어 각 가입자에게 제공함.
 
 ### NAT Forwarding Table
 
+![Alt text](image-2.png)
+
 외부 주소를 나타내는 WAN과 로컬 호스트들의 주소를 나타내는 LAN으로 구성.
 
-내부에서 외부로 나가는 datagram의 경우 source addr을 라우터의 ip로 변환.
+라우터 내부에서 외부로 나가는 datagram의 경우 source addr을 라우터의 ip로 변환.
 
-외부에서 내부로 들어오는 datagram의 경우 dest addr을 호스트의 ip로 변환.
+라우터 외부에서 내부로 들어오는 datagram의 경우 dest addr을 호스트의 ip로 변환.
 
 단, 외부에서 내부로 들어올 때 호스트를 구분하기 위해 호스트별로 다른 포트를 사용한다.
 
@@ -251,7 +261,11 @@ IPv4와 다르게 헤더 체크섬, flag와 fragment offset, option 필드가 �
 
 기존에 있었던 방식으로는 destination based forwarding이 있다.
 
+Flow Table은 기존의 방식보다 더 다양한 레이어의 헤더를 검사하여 포워딩 시키고 여러가지 액션을 가능하게 한다.
+
 ## Open Flow Table
+
+![Alt text](image-3.png)
 
 Match에는 전달되는 포트, link layer의 헤더, network layer의 헤더 그리고 transport layer의 헤더가 사용됨.
 
