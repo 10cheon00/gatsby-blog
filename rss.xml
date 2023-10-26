@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[10cheon00의 Archive RSS Feed]]></title><description><![CDATA[A Blog archiving what I learned.]]></description><link>https://10cheon00.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 20 Oct 2023 10:36:12 GMT</lastBuildDate><item><title><![CDATA[네트워크 레이어 (2)]]></title><description><![CDATA[컴퓨터 네트워크 수업을 듣고 정리한 내용입니다. 컨트롤 영역 네트워크는 데이터 영역과 컨트롤 영역으로 나뉨. 컨트롤 영역의 구조는 두 가지가 있음 per-router control(traditional…]]></description><link>https://10cheon00.github.io/posts/네트워크-레이어-(2)/</link><guid isPermaLink="false">https://10cheon00.github.io/posts/네트워크-레이어-(2)/</guid><pubDate>Fri, 20 Oct 2023 03:04:58 GMT</pubDate><content:encoded>&lt;p&gt;컴퓨터 네트워크 수업을 듣고 정리한 내용입니다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[10cheon00의 Archive RSS Feed]]></title><description><![CDATA[A Blog archiving what I learned.]]></description><link>https://10cheon00.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 26 Oct 2023 06:11:03 GMT</lastBuildDate><item><title><![CDATA[네트워크 레이어 (2)]]></title><description><![CDATA[컴퓨터 네트워크 수업을 듣고 정리한 내용입니다. 컨트롤 영역 네트워크는 데이터 영역과 컨트롤 영역으로 나뉨. 컨트롤 영역의 구조는 두 가지가 있음 per-router control(traditional…]]></description><link>https://10cheon00.github.io/posts/네트워크-레이어-(2)/</link><guid isPermaLink="false">https://10cheon00.github.io/posts/네트워크-레이어-(2)/</guid><pubDate>Fri, 20 Oct 2023 03:04:58 GMT</pubDate><content:encoded>&lt;p&gt;컴퓨터 네트워크 수업을 듣고 정리한 내용입니다.&lt;/p&gt;
 &lt;h1 id=&quot;컨트롤-영역&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%BB%A8%ED%8A%B8%EB%A1%A4-%EC%98%81%EC%97%AD&quot; aria-label=&quot;컨트롤 영역 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;컨트롤 영역&lt;/h1&gt;
 &lt;p&gt;네트워크는 데이터 영역과 컨트롤 영역으로 나뉨.&lt;/p&gt;
 &lt;p&gt;컨트롤 영역의 구조는 두 가지가 있음&lt;/p&gt;
@@ -19,7 +19,7 @@
 &lt;li&gt;모든 노드(라우터)가 같은 정보를 공유한다.&lt;/li&gt;
 &lt;li&gt;Link state의 브로드캐스트를 통해 전달된다.&lt;/li&gt;
 &lt;li&gt;각 노드마다 모든 노드로 향하는 최소 비용의 경로를 계산한다.&lt;/li&gt;
-&lt;li&gt;최소 비용을 계산하는 데에 $$ O(n^2) %% 의 시간복잡도를 갖는다.&lt;/li&gt;
+&lt;li&gt;최소 비용을 계산하는 데에 &lt;span class=&quot;math math-inline&quot;&gt;&lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;O&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;msup&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msup&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&quot;application/x-tex&quot;&gt;O(n^2)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&quot;katex-html&quot; aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;base&quot;&gt;&lt;span class=&quot;strut&quot; style=&quot;height:1.064108em;vertical-align:-0.25em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord mathnormal&quot; style=&quot;margin-right:0.02778em;&quot;&gt;O&lt;/span&gt;&lt;span class=&quot;mopen&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;&lt;span class=&quot;mord mathnormal&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;msupsub&quot;&gt;&lt;span class=&quot;vlist-t&quot;&gt;&lt;span class=&quot;vlist-r&quot;&gt;&lt;span class=&quot;vlist&quot; style=&quot;height:0.8141079999999999em;&quot;&gt;&lt;span style=&quot;top:-3.063em;margin-right:0.05em;&quot;&gt;&lt;span class=&quot;pstrut&quot; style=&quot;height:2.7em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;sizing reset-size6 size3 mtight&quot;&gt;&lt;span class=&quot;mord mtight&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mclose&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 의 시간복잡도를 갖는다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;oscillation-possible&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#oscillation-possible&quot; aria-label=&quot;oscillation possible permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Oscillation possible&lt;/h2&gt;
 &lt;p&gt;노드(라우터)간 비용이 달라졌을 때 경로가 계속 변경되어 진동하는 것처럼 보이는 것.&lt;/p&gt;
@@ -36,7 +36,7 @@
 &lt;p&gt;한 지역에 있는 라우터들의 집합을 말한다.&lt;/p&gt;
 &lt;h2 id=&quot;intra-as&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#intra-as&quot; aria-label=&quot;intra as permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Intra-AS&lt;/h2&gt;
 &lt;p&gt;내부 도메인 라우팅을 말한다.&lt;/p&gt;
-&lt;p&gt;같은 AS에 있는 라우터들은 동일한 intra domain protocol을 사용한다.&lt;/p&gt;
+&lt;p&gt;같은 AS에 있는 라우터들은 동일한 프로토콜을 사용하여 포워딩 테이블을 구성한다.&lt;/p&gt;
 &lt;p&gt;다른 AS에 있는 라우터와 연결된 라우터들을 gateway router라고 명칭한다.&lt;/p&gt;
 &lt;h2 id=&quot;inter-as&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#inter-as&quot; aria-label=&quot;inter as permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Inter-AS&lt;/h2&gt;
 &lt;p&gt;AS간 또는 도메인간 라우팅을 말한다.&lt;/p&gt;
@@ -94,7 +94,38 @@
 &lt;p&gt;자신의 서브넷에 대한 정보를 모든 내부 도메인 즉, Intra AS내의 라우터에 뿌리는 것.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;두 BGP 라우터가 세션을 구성하여 반영구적으로 계속 BGP 메세지를 주고 받는다. 새로운 라우터가 서브넷에 가입되면 eBGP를 통해 다른 AS에 전파되고, 그 AS에서는 iBGP를 통해 AS 내부의 라우터에 전파된다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/88237c015c5ed34bdd7681a28cbf1fdc/c67d4/image-1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 31.645569620253163%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABR0lEQVR42m2R3UsCURDF9/+PsJcw6eOhpyB6CCMI+qAoUFt1szSt1cpd3dav3PW2at57f+Eq0kMHBg4zZw7DGUMDaI0E1JIrFTP0vK80SseqFaYTSRBKss6A05JDsFhEKY0xFj/0vxXpcpt07hUx0xBFTD1vZaCV5FsIwpFgNp3w9tnjIGOTKPqsFzrsmU3e+yLWGvVBxM71M6mLCtsn9+xelTEfKviPJXyvR772wXmhSm8YEokRTcehVHvl1vbZyrdI5FzWTI8jy8XvBRjDyYys80Wq0GLzzOLaqlPP5HBdl7uqT8rqsJF1OG6EvDg+3ecKKgzja5oDgdnwsUaay/chtveFwTKft25IrT1AT8YgRnT6AYemTfKpT7IxJXHzQt5ug5TIaIySkv9gzO3+hq4Xf4kfMkexFbB/W8WJ1Gq+0mq9qD/8F2kSvzQanHGkAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/88237c015c5ed34bdd7681a28cbf1fdc/f058b/image-1.png&quot;
+        srcset=&quot;/static/88237c015c5ed34bdd7681a28cbf1fdc/c26ae/image-1.png 158w,
+/static/88237c015c5ed34bdd7681a28cbf1fdc/6bdcf/image-1.png 315w,
+/static/88237c015c5ed34bdd7681a28cbf1fdc/f058b/image-1.png 630w,
+/static/88237c015c5ed34bdd7681a28cbf1fdc/c67d4/image-1.png 723w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;두 BGP 라우터가 세션을 구성하여 반영구적으로 계속 BGP 메세지를 주고 받는다. 새로운 라우터(위 사진의 라우터 X)가 서브넷에 가입되면 eBGP를 통해 다른 AS에 전파되고, 그 AS에서는 iBGP를 통해 AS 내부의 라우터에 전파된다.&lt;/p&gt;
 &lt;p&gt;BGP는 prefix와 attributes를 전파한다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -207,13 +238,43 @@
 &lt;/ul&gt;
 &lt;p&gt;Get~, Set~은 format이 동일하지만 Trap 메세지만 다른 format이다.&lt;/p&gt;
 &lt;h2 id=&quot;mibmanagement-information-base&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#mibmanagement-information-base&quot; aria-label=&quot;mibmanagement information base permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;MIB(Management Information Base)&lt;/h2&gt;
-&lt;p&gt;망 관리를 위해 사용되는 관리 정보&lt;/p&gt;</content:encoded></item><item><title><![CDATA[네트워크 레이어 (1)]]></title><description><![CDATA[컴퓨터 네트워크 수업을 듣고 정리한 내용입니다. 데이터 영역 라우터 내부의 로직 라우터로 들어온 패킷이 어느 포트로 나가야할 지 결정 input port - 스위칭 구조 - output port Input Port link layer…]]></description><link>https://10cheon00.github.io/posts/네트워크-레이어-(1)/</link><guid isPermaLink="false">https://10cheon00.github.io/posts/네트워크-레이어-(1)/</guid><pubDate>Fri, 06 Oct 2023 06:38:42 GMT</pubDate><content:encoded>&lt;p&gt;컴퓨터 네트워크 수업을 듣고 정리한 내용입니다.&lt;/p&gt;
+&lt;p&gt;망 관리를 위해 사용되는 관리 정보&lt;/p&gt;</content:encoded></item><item><title><![CDATA[네트워크 레이어 (1)]]></title><description><![CDATA[컴퓨터 네트워크 수업을 듣고 정리한 내용입니다. 데이터 영역 라우터 내부의 로직 라우터로 들어온 패킷이 어느 포트로 나가야할 지 결정 input port - switch fabric - output port  Input Port link layer…]]></description><link>https://10cheon00.github.io/posts/네트워크-레이어-(1)/</link><guid isPermaLink="false">https://10cheon00.github.io/posts/네트워크-레이어-(1)/</guid><pubDate>Fri, 06 Oct 2023 06:38:42 GMT</pubDate><content:encoded>&lt;p&gt;컴퓨터 네트워크 수업을 듣고 정리한 내용입니다.&lt;/p&gt;
 &lt;h1 id=&quot;데이터-영역&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%98%81%EC%97%AD&quot; aria-label=&quot;데이터 영역 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;데이터 영역&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;라우터 내부의 로직&lt;/li&gt;
 &lt;li&gt;라우터로 들어온 패킷이 어느 포트로 나가야할 지 결정&lt;/li&gt;
-&lt;li&gt;input port - 스위칭 구조 - output port&lt;/li&gt;
+&lt;li&gt;input port - switch fabric - output port&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 567px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/64bf2f89a88be66e34b8b76b060e94c5/8710b/image.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 51.26582278481012%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABzElEQVR42nWSW3OiQBCF+f8/KK95zEZdIwKKiBhFERjBRXS4Dt8WVG5byXbVVE3N6Tnd53Rr/BRVRSclFAVISVfX31J6vHIc6s2G3HFILYsqTdH+SVIK2ZNFEaf1GtswyH2fRoi3hI6u64br7XxmN5sRr1YsdJ3xeEwUhmhKKZqmoW0apLyTS0kRBPiPj2wfHoh0nVIIaqWo64q2aen/3KUkSxLuWcZxu8U1TbK+Q9UqnJ3NZG3jzlxen0cUvg99V2FIm6Qktk2imyycgJH9m5M4geqI7CV+36VtExgGNyHQmrrB22+YWBbmxGL19IQ8HkGpQVorJdFywWE642Xu8rLUOYXBgBVVRRTH6IbBcy85jtHePUnTC0VRUDUNSggcy8JaLDhuNrRpOuRcLheKsnyzs/vw/pbnnM9nyrL8HMr1mg8PfVWyjMD3mVsWuRA0SfL28UbV418H+YW4j0Hy68HD8Dxc02M/nSIPhw/Jqii4uC6hbrBa7ph7Nn6w/0b6TqxVZYW1NvllzDHHJt5oxNV1acNwWJfqcCBdO+wmLxjzNeOFznbv8b/Qet9ELEiShCiO+JNlQ7V+ld5PvyZCiAEPw5AgCLherz8S/gXwUPW5A07wtwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/64bf2f89a88be66e34b8b76b060e94c5/8710b/image.png&quot;
+        srcset=&quot;/static/64bf2f89a88be66e34b8b76b060e94c5/c26ae/image.png 158w,
+/static/64bf2f89a88be66e34b8b76b060e94c5/6bdcf/image.png 315w,
+/static/64bf2f89a88be66e34b8b76b060e94c5/8710b/image.png 567w&quot;
+        sizes=&quot;(max-width: 567px) 100vw, 567px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;h2 id=&quot;input-port&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#input-port&quot; aria-label=&quot;input port permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Input Port&lt;/h2&gt;
 &lt;p&gt;link layer에서 전달된 datagram을 수신함.&lt;/p&gt;
 &lt;p&gt;이 때 들어오는 속도가 라우터를 빠져나가는 속도보다 더 빠르면 데이터의 손실이 발생할 수 있음.&lt;/p&gt;
@@ -233,9 +294,42 @@
 &lt;p&gt;패턴을 검사하기만 하므로 (AND연산) 굉장히 빠르다&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;ㅇ
+ex) &lt;code class=&quot;language-text&quot;&gt;11000000 10101000 00000000 ********&lt;/code&gt; 이면 192.168.0.*인 주소들만 포워딩 된다.&lt;/p&gt;
 &lt;h2 id=&quot;switching-fabric&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#switching-fabric&quot; aria-label=&quot;switching fabric permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Switching Fabric&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/0569ef849237726da821b753704b1de5/68de2/image-1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 27.848101265822784%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABUElEQVR42nWRW2/aUBCE/f9/SiMlD6hSiCJoK0oNIaG2GzABYmzsFAwH37g5Pj5fhUmjvGRedrWzs7ua1SbTKWN7ROZ5SCGIVoL98cAJCsV87jMe2ISeS7reEKcpKFXx4WrFaGDjOw5hEKDyHO3O+E3/Wwtb1+nd3FC/rNHt31NKSSELfuldhp0ew4sv1C6uuG00yY/HauCz59JqtliYJpNajazbRftjjxi271BizfrxEb3xgydnWgle5SsPholjDth2dKzOA/eGgZRFxfuLF4yewdZ5xms22Fom2koIlvOAeDYjcV2WL39JsrQSlKpEbCK2ccIhSUhFVHGyKDjs9yyWCybjCeHTmP51nVm7g3YSyrIkPPmXZXyGKI4pivNlu90Oy7LwXI8sy5j7AV+v63z/2UZTSqHeTOZjzv+Sen/Cufcc8zx/X3CyIAh8NpHgH2vtvl4GsBuqAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/0569ef849237726da821b753704b1de5/f058b/image-1.png&quot;
+        srcset=&quot;/static/0569ef849237726da821b753704b1de5/c26ae/image-1.png 158w,
+/static/0569ef849237726da821b753704b1de5/6bdcf/image-1.png 315w,
+/static/0569ef849237726da821b753704b1de5/f058b/image-1.png 630w,
+/static/0569ef849237726da821b753704b1de5/68de2/image-1.png 677w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;input port로 들어온 packet을 output port로 내보낼 때 실제로 데이터를 스위칭하는 역할을 담당.&lt;/p&gt;
-&lt;p&gt;N개의 패킷과 R개의 input port가 있다면 스위칭에 걸리는 이상적인 시간은 NR.&lt;/p&gt;
+&lt;p&gt;N개의 패킷과 R개의 input port가 있다면 스위칭에 걸리는 이상적인 시간은 &lt;code class=&quot;language-text&quot;&gt;NR&lt;/code&gt;.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;메모리&lt;/p&gt;
@@ -250,7 +344,7 @@
 &lt;p&gt;여러 패킷이 동시에 한 버스에 접근할 때 에러가 발생할 수 있음.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Interconnection&lt;/p&gt;
+&lt;p&gt;Interconnection (크로스바?)&lt;/p&gt;
 &lt;p&gt;스위치를 사용하여 동시에 패킷을 스위칭함.&lt;/p&gt;
 &lt;p&gt;datagram의 크기를 고정하여 속도를 향상할 수 있음. 이 때 길이가 긴 datagram은 쪼개어 스위칭해야함.&lt;/p&gt;
 &lt;/li&gt;
@@ -263,7 +357,7 @@
 &lt;h2 id=&quot;output-port-queuing&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#output-port-queuing&quot; aria-label=&quot;output port queuing permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Output Port Queuing&lt;/h2&gt;
 &lt;p&gt;input port와 비슷하게 switching되는 속도가 output port에서 나가는 속도보다 빠를 경우 output port에 datagram이 쌓인다.&lt;/p&gt;
 &lt;p&gt;queue가 꽉차면 오버플로우에 의해 데이터가 손실된다. 어쩔 수 없이 데이터가 손실된다면 데이터를 손실시키는 전략 필요.&lt;/p&gt;
-&lt;p&gt;버퍼가 꽉찼을 때 전달되는 패킷을 drop하거나, 패킷에 중요도를 부여하여 중요도가 낮은 패킷을 drop&lt;/p&gt;
+&lt;p&gt;버퍼가 꽉찼을 때 전달되는 패킷을 drop하거나(tail drop), 패킷에 중요도를 부여하여 중요도가 낮은 패킷을 drop(priority drop)&lt;/p&gt;
 &lt;h3 id=&quot;queue-management&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#queue-management&quot; aria-label=&quot;queue management permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Queue Management&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -282,7 +376,7 @@
 &lt;li&gt;
 &lt;p&gt;WFQ&lt;/p&gt;
 &lt;p&gt;Round Robin처럼 동작하되, 큐에 가중치를 부여하여 시퀀스를 결정한다.
-가중치가 A=1, B=3, C=5인 시스템이라면 CCCCCBBBACCCCCBBBA... 형태로 바뀌어 동작한다.&lt;/p&gt;
+가중치가 A=&lt;span class=&quot;math math-inline&quot;&gt;&lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;annotation encoding=&quot;application/x-tex&quot;&gt;1&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&quot;katex-html&quot; aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;base&quot;&gt;&lt;span class=&quot;strut&quot; style=&quot;height:0.64444em;vertical-align:0em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;, B=&lt;span class=&quot;math math-inline&quot;&gt;&lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mfrac&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;/mfrac&gt;&lt;/mrow&gt;&lt;annotation encoding=&quot;application/x-tex&quot;&gt;{1}\over{3}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&quot;katex-html&quot; aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;base&quot;&gt;&lt;span class=&quot;strut&quot; style=&quot;height:1.190108em;vertical-align:-0.345em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;&lt;span class=&quot;mopen nulldelimiter&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mfrac&quot;&gt;&lt;span class=&quot;vlist-t vlist-t2&quot;&gt;&lt;span class=&quot;vlist-r&quot;&gt;&lt;span class=&quot;vlist&quot; style=&quot;height:0.845108em;&quot;&gt;&lt;span style=&quot;top:-2.6550000000000002em;&quot;&gt;&lt;span class=&quot;pstrut&quot; style=&quot;height:3em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;sizing reset-size6 size3 mtight&quot;&gt;&lt;span class=&quot;mord mtight&quot;&gt;&lt;span class=&quot;mord mtight&quot;&gt;3&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;top:-3.23em;&quot;&gt;&lt;span class=&quot;pstrut&quot; style=&quot;height:3em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;frac-line&quot; style=&quot;border-bottom-width:0.04em;&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;top:-3.394em;&quot;&gt;&lt;span class=&quot;pstrut&quot; style=&quot;height:3em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;sizing reset-size6 size3 mtight&quot;&gt;&lt;span class=&quot;mord mtight&quot;&gt;&lt;span class=&quot;mord mtight&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;vlist-s&quot;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;vlist-r&quot;&gt;&lt;span class=&quot;vlist&quot; style=&quot;height:0.345em;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mclose nulldelimiter&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;, C=&lt;span class=&quot;math math-inline&quot;&gt;&lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mfrac&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mn&gt;5&lt;/mn&gt;&lt;/mfrac&gt;&lt;/mrow&gt;&lt;annotation encoding=&quot;application/x-tex&quot;&gt;1\over{5}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&quot;katex-html&quot; aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;base&quot;&gt;&lt;span class=&quot;strut&quot; style=&quot;height:1.190108em;vertical-align:-0.345em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;&lt;span class=&quot;mopen nulldelimiter&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mfrac&quot;&gt;&lt;span class=&quot;vlist-t vlist-t2&quot;&gt;&lt;span class=&quot;vlist-r&quot;&gt;&lt;span class=&quot;vlist&quot; style=&quot;height:0.845108em;&quot;&gt;&lt;span style=&quot;top:-2.6550000000000002em;&quot;&gt;&lt;span class=&quot;pstrut&quot; style=&quot;height:3em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;sizing reset-size6 size3 mtight&quot;&gt;&lt;span class=&quot;mord mtight&quot;&gt;&lt;span class=&quot;mord mtight&quot;&gt;5&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;top:-3.23em;&quot;&gt;&lt;span class=&quot;pstrut&quot; style=&quot;height:3em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;frac-line&quot; style=&quot;border-bottom-width:0.04em;&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;top:-3.394em;&quot;&gt;&lt;span class=&quot;pstrut&quot; style=&quot;height:3em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;sizing reset-size6 size3 mtight&quot;&gt;&lt;span class=&quot;mord mtight&quot;&gt;&lt;span class=&quot;mord mtight&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;vlist-s&quot;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;vlist-r&quot;&gt;&lt;span class=&quot;vlist&quot; style=&quot;height:0.345em;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mclose nulldelimiter&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;인 시스템이라면 CCCCCBBBACCCCCBBBA... 형태로 바뀌어 동작한다. 만약 패킷을 보낼 클래스의 큐에 패킷이 없으면 다음 클래스의 큐를 조사하게 된다.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;ip-datagram-format&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#ip-datagram-format&quot; aria-label=&quot;ip datagram format permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;IP Datagram Format&lt;/h2&gt;
@@ -343,6 +437,7 @@
 &lt;p&gt;라우터간을 거치지 않고 접근할 수 있는 인터페이스들의 집합&lt;/p&gt;
 &lt;p&gt;a.b.c.d/n 으로 표현될 때 IP주소의 32비트에서 호스트 영역을 나타내는 하위 n비트를 제외한 나머지 영역을 서브넷 영역이라고 함.&lt;/p&gt;
 &lt;p&gt;서브넷 영역의 길이는 자유롭게 설정될 수 있음.&lt;/p&gt;
+&lt;p&gt;ex) &lt;code class=&quot;language-text&quot;&gt;192.168.12/23&lt;/code&gt; 이면 &lt;code class=&quot;language-text&quot;&gt;11000000 10101000 0000110* ********&lt;/code&gt;을 의미하고 *부분은 서브넷의 호스트영역이 된다.&lt;/p&gt;
 &lt;h2 id=&quot;dhcp&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#dhcp&quot; aria-label=&quot;dhcp permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;DHCP&lt;/h2&gt;
 &lt;p&gt;새로운 네트워크에 접속했을 때 DHCP 서버로부터 서브넷 내에서 사용할 IP주소를 동적으로 할당해주는 것&lt;/p&gt;
 &lt;h3 id=&quot;dhcp-sequence&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#dhcp-sequence&quot; aria-label=&quot;dhcp sequence permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;DHCP Sequence&lt;/h3&gt;
@@ -376,9 +471,38 @@
 &lt;li&gt;호스트의 주소를 바꿀 때 외부에 알리지 않아도 됨&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;nat-forwarding-table&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#nat-forwarding-table&quot; aria-label=&quot;nat forwarding table permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;NAT Forwarding Table&lt;/h3&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 306px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/f882e42f92e9b8e3822f03b259795349/98b92/image-2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 40.50632911392405%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABc0lEQVR42l1RbXOyMBDs//9XffwgoEwbXkRq69BHQYUGAwkGC7idu5naaTOzk83eZXN3eQAAYwyklKjrGufzmc+Etm2htWbedd1dI05QSnE+3SMMw4AHMiSzcRyJ8h4EAZIkwX6/x3a7ZR6GIdI0RVEUiKKIz2T6vb4fYsPT6YQsy/gymQgh2JQ013WRrFbYbDZsFMcx/OUSy8UC/9/fcSgKzsvznDtgw6qqOOlxNsNTGOJJCPjPzwjjGP9mM5RSwl6vWCUJ6yKKsPB9BFEE1/cxd102v1dIhtfPT1xeX2GSBObtDfrlBSbL0B+PUJ6Har3GIU1hKbZe45LnjFYIXIsCtVI/FdJgp2nCra4xSolb0zC/aY3JGNyqCr2UUIcDJWOimFKYlML48QFYe/+o+wybpoHuOm6vNQaWKu57XKyFHQY0WuNYluiHgXWKS6UYtu9RluVPhUR2ux0P3fM8/oi/cBwH8/n8l+bR7jgIhOCiqMsvY85QFx72Jh0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/f882e42f92e9b8e3822f03b259795349/98b92/image-2.png&quot;
+        srcset=&quot;/static/f882e42f92e9b8e3822f03b259795349/c26ae/image-2.png 158w,
+/static/f882e42f92e9b8e3822f03b259795349/98b92/image-2.png 306w&quot;
+        sizes=&quot;(max-width: 306px) 100vw, 306px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;외부 주소를 나타내는 WAN과 로컬 호스트들의 주소를 나타내는 LAN으로 구성.&lt;/p&gt;
-&lt;p&gt;내부에서 외부로 나가는 datagram의 경우 source addr을 라우터의 ip로 변환.&lt;/p&gt;
-&lt;p&gt;외부에서 내부로 들어오는 datagram의 경우 dest addr을 호스트의 ip로 변환.&lt;/p&gt;
+&lt;p&gt;라우터 내부에서 외부로 나가는 datagram의 경우 source addr을 라우터의 ip로 변환.&lt;/p&gt;
+&lt;p&gt;라우터 외부에서 내부로 들어오는 datagram의 경우 dest addr을 호스트의 ip로 변환.&lt;/p&gt;
 &lt;p&gt;단, 외부에서 내부로 들어올 때 호스트를 구분하기 위해 호스트별로 다른 포트를 사용한다.&lt;/p&gt;
 &lt;h2 id=&quot;ipv6-datagram-format&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#ipv6-datagram-format&quot; aria-label=&quot;ipv6 datagram format permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;IPv6 Datagram format&lt;/h2&gt;
 &lt;ul&gt;
@@ -417,7 +541,38 @@
 &lt;p&gt;각 패킷은 flow를 갖는데, flow는 여러 헤더들에 의해 규정된다.&lt;/p&gt;
 &lt;p&gt;특정 패턴에 부합하는 패킷이라면 지정된 action을 수행한다.&lt;/p&gt;
 &lt;p&gt;기존에 있었던 방식으로는 destination based forwarding이 있다.&lt;/p&gt;
+&lt;p&gt;Flow Table은 기존의 방식보다 더 다양한 레이어의 헤더를 검사하여 포워딩 시키고 여러가지 액션을 가능하게 한다.&lt;/p&gt;
 &lt;h2 id=&quot;open-flow-table&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#open-flow-table&quot; aria-label=&quot;open flow table permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Open Flow Table&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 624px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/dd0bc77d6f0e2b55e8d22e348809ec97/39c09/image-3.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 60.12658227848101%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAA7DAAAOwwHHb6hkAAACbUlEQVR42nWTS2sTYRSG85tEFJfuFEQQhCr6C9z6B0T3QrtxodQq1lZxo1hUtG3SNE3TyyQ27UwuNpfJXJKZJnNNL0nneyRJpV7qgYcXzoGXl++cL1ZqWqzsVlhXdeSmSsMuY7g1Wk4dx7LYa7Xw2m0Ou10GJaIIIQQMOKNimZrK280cH5UfLNcUtippSq0tVFvBtpoYpoHveRydGJ6WOOEvw47jcNTr0ev3CcOQg4OD4eC4d4S+W6VZV7EbGi1NxzZMLN0gaHeIer2zEwZBMDKI+tiOiWlrdHybPcdEliUkKc329saQQiGLIks0GiXcwKJ75P9r6Pujphc6ZJQ4qa154hufWf7+lR11A0WTyNfWqLZljPAHelBG9YpUHRndrfw/YdB1WZUX+bb6kfnMHAnpC/n6GuvFJBulFMXmd+pugWpHpu4UqLkKhlc9I+Evw32XbDnN2s4Sq/k4me0EmXyCldzCkGxxhVwpTSYfp2xsobklmm5ttO3fiIWBjxDHw1OIjk/ht8sYaDR457+IzlqK2nSQyia7moxu76DZMma7wKGwOIxaHAiLXs+EUEV01ZGGDdhvIPZ0hGESmQZC1xDtNrEnnypcfZRifO4+06kbvFq6w4vkGJOJm7xcGuPpyi3mP1xn//E53PHzeBMX8SYuET65QOneZbK377J67QrZmzdQHj4gtq4YTM3l+JZ5T1KaZmlzhmRuluXcGxLSNAnpNZupFxhfn2EuPseMT2EuTtFcmKT4bhJl9g3yzGuU6VdUFxeI/XH4J+p0fJx2MPpiJ6NjIdjz9zE7PpYT0I/EsGd5Hi3HxfZ8+lHET/SVaXkH6WtvAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/dd0bc77d6f0e2b55e8d22e348809ec97/39c09/image-3.png&quot;
+        srcset=&quot;/static/dd0bc77d6f0e2b55e8d22e348809ec97/c26ae/image-3.png 158w,
+/static/dd0bc77d6f0e2b55e8d22e348809ec97/6bdcf/image-3.png 315w,
+/static/dd0bc77d6f0e2b55e8d22e348809ec97/39c09/image-3.png 624w&quot;
+        sizes=&quot;(max-width: 624px) 100vw, 624px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Match에는 전달되는 포트, link layer의 헤더, network layer의 헤더 그리고 transport layer의 헤더가 사용됨.&lt;/p&gt;
 &lt;p&gt;Action에는 Forward, drop, modify, encapsulate?가 있음.&lt;/p&gt;
 &lt;p&gt;Match+action 구조는 라우터 뿐만 아니라 스위치, 방화벽, NAT 등의 여러 인터페이스에서 사용가능.&lt;/p&gt;
