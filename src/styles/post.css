@@ -3,7 +3,7 @@ body {
 }
 
 .blog-post-header {
-  padding-top: var(--spacing-24); 
+  padding-top: var(--spacing-24);
   border-bottom: 1px dashed var(--color-text-light);
 }
 
@@ -99,7 +99,7 @@ ol li:first-child {
   margin-top: 0;
 }
 
-li > ul {
+li>ul {
   margin-left: 0;
   margin-top: 0;
 }
@@ -151,14 +151,14 @@ dl dd {
   margin-inline-start: 0;
 }
 
-:not(pre) > pre[class*="language-"],
+:not(pre)>pre[class*="language-"],
 code[class*="language-"] {
-  font-size: 14px ;
+  font-size: 14px;
   line-height: 1.45;
-  font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
 }
 
-:not(pre) > code[class*="language-"] {
+:not(pre)>code[class*="language-"] {
   padding: 0.2em 0.4em;
   background-color: var(--color-codeblock-background);
   color: var(--color-codeblock);
