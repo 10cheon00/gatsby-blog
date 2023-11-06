@@ -2,10 +2,25 @@ body {
   word-wrap: break-word;
 }
 
-header h1 {
+.blog-post-header {
+  padding-top: var(--spacing-24); 
+  border-bottom: 1px dashed var(--color-text-light);
+}
+
+.blog-post-header .title {
   font-size: 3rem !important;
   font-weight: bold !important;
   border-bottom: none;
+  margin-bottom: 0;
+}
+
+.blog-post-header .date {
+  margin: 0;
+  color: var(--color-text-light);
+}
+
+.blog-post-header .tags {
+  padding: var(--spacing-2);
 }
 
 h1,

@@ -22,15 +22,17 @@ const BlogPostTemplate = ({
         itemScope
         itemType="http://schema.org/Article"
       >
-        <header>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
+        <header className="blog-post-header">
+          <h1 className="title" itemProp="headline">
+            {post.frontmatter.title}
+          </h1>
+          <p className="date">{post.frontmatter.date}</p>
+          <div className="tags">
+            {post.frontmatter.tags
+              ? post.frontmatter.tags.map(tag => <Tag tagName={tag}></Tag>)
+              : null}
+          </div>
         </header>
-        <div className="tags">
-          {post.frontmatter.tags
-            ? post.frontmatter.tags.map(tag => <Tag tagName={tag}></Tag>)
-            : null}
-        </div>
         <TableOfContents tableOfContents={tableOfContents} />
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
