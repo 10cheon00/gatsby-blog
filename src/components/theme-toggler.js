@@ -1,5 +1,7 @@
 import * as React from "react"
 import { ThemeToggler as DarkModeThemeToggler } from "gatsby-plugin-dark-mode"
+import { FaMoon, FaSun } from "react-icons/fa6"
+
 
 class ThemeToggler extends React.Component {
   render() {
@@ -20,6 +22,7 @@ class ThemeToggler extends React.Component {
       <DarkModeThemeToggler>
         {({ theme, toggleTheme }) => (
           <label className="theme-toggler">
+            <FaSun></FaSun>
             <input
               type="checkbox"
               onChange={e => {
@@ -28,7 +31,7 @@ class ThemeToggler extends React.Component {
               }}
               checked={theme === "dark"}
             />{" "}
-            <span>Dark mode</span>
+            <FaMoon></FaMoon>
           </label>
         )}
       </DarkModeThemeToggler>
