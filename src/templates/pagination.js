@@ -1,7 +1,6 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Pagination from "../components/pagination"
@@ -16,7 +15,6 @@ export default class PaginationPage extends React.Component {
 
     return (
       <Layout location={location} title={siteTitle}>
-        <Bio />
         <ol style={{ listStyle: `none` }}>
           {posts.map(post => {
             const title = post.frontmatter.title || post.fields.slug
