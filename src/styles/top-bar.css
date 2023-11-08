@@ -1,0 +1,35 @@
+.nav-bar {
+  width: 100%;
+  position: fixed;
+  /* height: var(--top-bar-size); */
+  height: auto;
+  background-color: var(--color-top-bar);
+}
+
+.nav-bar .nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: var(--spacing-5);
+}
+
+.nav-bar .nav h1 {
+  font-size: var(--fontSize-2);
+  border-bottom: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-bar .nav h1 a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.nav-bar .bio {  
+  align-items: center;
+}
+
+.nav-bar .bio a {
+  color: var(--color-text);
+}

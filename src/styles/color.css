@@ -10,6 +10,8 @@
   --color-text-bio: var(--color-text);
   --color-text-light: #656d76;
   --color-codeblock-background: #eff1f3;
+
+  --color-top-bar: red;
 }
 
 body.dark {

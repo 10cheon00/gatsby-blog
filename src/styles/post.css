@@ -2,11 +2,6 @@ body {
   word-wrap: break-word;
 }
 
-.blog-post-header {
-  padding-top: var(--spacing-24);
-  border-bottom: 1px dashed var(--color-text-light);
-}
-
 .blog-post-header .title {
   font-size: 3rem !important;
   font-weight: bold !important;
@@ -20,7 +15,7 @@ body {
 }
 
 .blog-post-header .tags {
-  padding: var(--spacing-2);
+  padding: var(--spacing-2) 0;
 }
 
 h1,
