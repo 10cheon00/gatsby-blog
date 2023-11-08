@@ -41,8 +41,8 @@ const TopBar = ({ title }) => {
           layout="fixed"
           formats={["auto", "webp", "avif"]}
           src="../images/profile-icon.png"
-          width={50}
-          height={50}
+          width={35}
+          height={35}
           quality={95}
           alt="Profile picture"
         />
@@ -61,7 +61,7 @@ const TopBar = ({ title }) => {
         <a className="bio-icons" href={`${social?.github || ``}`}>
           <FaGithub size="1.5rem"></FaGithub>
         </a>
-        <ThemeToggler/>
+        <ThemeToggler class="theme-toggler"/>
       </div>
     </div>
   )
