@@ -6,12 +6,11 @@ label.theme-toggler {
 label.theme-toggler input {
   appearance: none;
   position: relative;
-  border: max(2px, 0.1em) solid black;
+  border: max(2px, 0.1em) solid var(--color-text);
   border-radius: 1.25em;
   width: 2.25em;
   height: 1.25em;
   margin: 0px 0.25em;
-  background-color: white;
 }
 
 label.theme-toggler input::before {
@@ -22,16 +21,10 @@ label.theme-toggler input::before {
   height: 1em;
   border-radius: 50%;
   transform: scale(0.8);
-  background-color: black;
+  background-color: var(--color-text);
   transition: left 250ms linear;
 }
 
 label.theme-toggler input:checked::before {
-  background-color: white;
   left: 1em;
-}
-
-label.theme-toggler input:checked {
-  background-color: green;
-  border-color: green;
 }
