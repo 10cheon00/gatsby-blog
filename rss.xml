@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[10cheon00의 Archive RSS Feed]]></title><description><![CDATA[A Blog archiving what I learned.]]></description><link>https://10cheon00.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 06 Nov 2023 12:18:48 GMT</lastBuildDate><item><title><![CDATA[Annotation]]></title><description><![CDATA[Annotation은 영어로 번역했을 때 주석이라는 뜻을 갖는다. 주석은 코드의 흐름에 영향을 주지 않는다. 하지만 코드를 보는 사람으로 하여금 어떤 코드인지 이해하게 만들고 함수 또는 라이브러리를 어떤 상황에 써야하는지 설명한다. Java…]]></description><link>https://10cheon00.github.io/java/annotation/</link><guid isPermaLink="false">https://10cheon00.github.io/java/annotation/</guid><pubDate>Mon, 06 Nov 2023 12:01:06 GMT</pubDate><content:encoded>&lt;p&gt;Annotation은 영어로 번역했을 때 주석이라는 뜻을 갖는다. 주석은 코드의 흐름에 영향을 주지 않는다. 하지만 코드를 보는 사람으로 하여금 어떤 코드인지 이해하게 만들고 함수 또는 라이브러리를 어떤 상황에 써야하는지 설명한다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[10cheon00의 Archive RSS Feed]]></title><description><![CDATA[A Blog archiving what I learned.]]></description><link>https://10cheon00.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 08 Nov 2023 05:41:42 GMT</lastBuildDate><item><title><![CDATA[Annotation]]></title><description><![CDATA[Annotation은 영어로 번역했을 때 주석이라는 뜻을 갖는다. 주석은 코드의 흐름에 영향을 주지 않는다. 하지만 코드를 보는 사람으로 하여금 어떤 코드인지 이해하게 만들고 함수 또는 라이브러리를 어떤 상황에 써야하는지 설명한다. Java…]]></description><link>https://10cheon00.github.io/java/annotation/</link><guid isPermaLink="false">https://10cheon00.github.io/java/annotation/</guid><pubDate>Mon, 06 Nov 2023 12:01:06 GMT</pubDate><content:encoded>&lt;p&gt;Annotation은 영어로 번역했을 때 주석이라는 뜻을 갖는다. 주석은 코드의 흐름에 영향을 주지 않는다. 하지만 코드를 보는 사람으로 하여금 어떤 코드인지 이해하게 만들고 함수 또는 라이브러리를 어떤 상황에 써야하는지 설명한다.&lt;/p&gt;
 &lt;p&gt;Java의 어노테이션도 이와 비슷하다. 프로그램에 직접적으로 영향을 주지 않지만 다른 라이브러리나 툴이 그 프로그램을 어떻게 쓸 수 있는지 제시한다. 어노테이션은 런타임에 영향을 준다고 한다.&lt;/p&gt;
 &lt;h1 id=&quot;선언-및-사용-방법&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%A0%EC%96%B8-%EB%B0%8F-%EC%82%AC%EC%9A%A9-%EB%B0%A9%EB%B2%95&quot; aria-label=&quot;선언 및 사용 방법 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;선언 및 사용 방법&lt;/h1&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token annotation punctuation&quot;&gt;@interface&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;NewAnnotation&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
@@ -54,7 +54,81 @@
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;hr&gt;
 &lt;h1 id=&quot;참고-문헌&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%B0%B8%EA%B3%A0-%EB%AC%B8%ED%97%8C&quot; aria-label=&quot;참고 문헌 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;참고 문헌&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&quot;https://docs.oracle.com/javase/8/docs/technotes/guides/language/annotations.html&quot;&gt;Annotations | Oracle Help Center&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[컴퓨터 구조론 (2) - 명령어 구조]]></title><description><![CDATA[컴퓨터는 명령어에 의해 동작한다. CPU는 메모리에 저장된 명령어를 불러와 해석하고 연산한다. 명령어 설계 원칙? 간단하게 하기 위해서는 규칙적인 것으로 정한다 명령어에 들어가는 파라미터는 3개로 제한한다. ex. 은 x6과 x…]]></description><link>https://10cheon00.github.io/computer-organization/컴퓨터-구조론-(2)-명령어-구조/</link><guid isPermaLink="false">https://10cheon00.github.io/computer-organization/컴퓨터-구조론-(2)-명령어-구조/</guid><pubDate>Thu, 26 Oct 2023 07:48:34 GMT</pubDate><content:encoded>&lt;p&gt;컴퓨터는 명령어에 의해 동작한다. CPU는 메모리에 저장된 명령어를 불러와 해석하고 연산한다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://docs.oracle.com/javase/8/docs/technotes/guides/language/annotations.html&quot;&gt;Annotations | Oracle Help Center&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[WSL에서 Intellij 인덱싱이 끝나지 않을 때]]></title><description><![CDATA[Spring Initializr를 이용해 간단한 설정파일들을 받은 후 WSL에 설치되어있는 JDK를 이용해 프로젝트를 불러오려고 했다.  Gradle 설정은 이렇게 해두었다. 사진에는 짤렸는데 Add SDK 항목에서 WSL에 JDK…]]></description><link>https://10cheon00.github.io/posts/WSL에서-IntelliJ-인덱싱이-끝나지-않을-때/</link><guid isPermaLink="false">https://10cheon00.github.io/posts/WSL에서-IntelliJ-인덱싱이-끝나지-않을-때/</guid><pubDate>Mon, 06 Nov 2023 12:01:06 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Windows 10 Pro 22h2 19045.3570
+IntelliJ Idea 2023.2.4&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://start.spring.io&quot;&gt;Spring Initializr&lt;/a&gt;를 이용해 간단한 설정파일들을 받은 후 WSL에 설치되어있는 JDK를 이용해 프로젝트를 불러오려고 했다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/3865161e089b98b99ca02b871a858f5a/0b6f4/image.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 74.0506329113924%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAACl0lEQVR42k1Uy07cQBD0L0Ri188Zvz1+YxsvZlnzWNgQhBAKSSSknHKIiJJT/v9SUbdtyKE0a+9Md1V1jTUZxAjDEIZhwDRNhuM4EEIwpJQQjoCQgt8Tln0LLFvAsizYtg3N8zwEQYAojuFKyRuiKEKW5VAqRUzv5z2+7zOo+Tt02DLkoqZpQCurCnVd8wEpqKCFOE5Q5AWSJIEQEnEUcxNiS0yYsXhn7Dg2hJh+a1VZI1UKR0dH0HVjKuy6ENKFIyTSLEOe50jTiW0YhHBdl8F2EITgZ5sKZirGduhR5gpJ5MN3HXiuRKYiqDiEUopBbJM4YRvo8OSz5KJklWNbbIGWt3vsbp5RdDdQx9fI2ktU7TnG+x+oz5/geT6zIuY0PFrJErKAhrCArCD/tXL7jLPDd+SnT0g3T2jHL/BDBUsEEG6ELM2gEjVNfJa5gIoQK13X31KiOdYKbZWBVmP1Aba5hnAcrNcrniBJLIqCPSTpMUlnTFYQY/Zdykmy7wfo+w0SpeB5FI2A2SxdaRDL4cVLkktxm4Yh3wbEDF3p4qQ7mcOts9n0JxU0DYPl5nnB+ev7HsMwoCxLlr80pVWnTFIOXddDc9zAo6jM418YUiaJ0TJJydmzYZkmDCq2wJih69DkzLDIc5bxf0HqnpF3aYbubEQ37NBstsjqDmFWIS5qRHmNIC34ma6xRsFsmpYlr1YrlrxMj7BMd9jtcfj0gP3hDlc3Hxnb8QrD+YhuM2Cz3SEtKmhUoKoqBL7PhYgZ5YrYktT1es1SttsRd4db3O6vcH0xYjjtcdp36E9aNHWJrqmgkhhaGEZ8hzn99sSOvxyODUcQ6EZYGO9e8PDyF/ff/uD+628cPr/O+IXLx5+4eHxF04/4Bw/Yqv19c8BKAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/3865161e089b98b99ca02b871a858f5a/f058b/image.png&quot;
+        srcset=&quot;/static/3865161e089b98b99ca02b871a858f5a/c26ae/image.png 158w,
+/static/3865161e089b98b99ca02b871a858f5a/6bdcf/image.png 315w,
+/static/3865161e089b98b99ca02b871a858f5a/f058b/image.png 630w,
+/static/3865161e089b98b99ca02b871a858f5a/40601/image.png 945w,
+/static/3865161e089b98b99ca02b871a858f5a/0b6f4/image.png 984w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Gradle 설정은 이렇게 해두었다. 사진에는 짤렸는데 Add SDK 항목에서 WSL에 JDK를 설치할 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/c9f34b366a72ba390c46bf5293dcc446/eb3fa/image-1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 83.54430379746836%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAAAsTAAALEwEAmpwYAAABVUlEQVR42u2US07DMBCGcwUk2jhx4mceTUOcVlUrAWLBuituwI77n+BHnsRR2lAJCSQ2LD7NyI9/xuOxo0xIWKOgpECSJGCMkQ3+ROLHBxvGwrpAmqaItv0J2/4Jud6gqmtYa5FlOUQuIIWEEBJSeitGRt8nkF4FZQzR4fmM1/M7zPYR1mharJSGMQacc2RZRnB+aT2LU3jBsjDo2g3u7++gtcZ6vYa1BVy/Q9u2E03ToKoq7Pd7CnSrNNFD1+F4PFFWZVmi2TQoigLO9dj1PZxzRO8Gv+s6KkvA7/ElieN4EJRCoK5qiuRFvZjWio7sN3h7iaaT+DmlFGUbMibBedo+ymq1mm7s+hbntxlY1DAIUU1mEzGLF7CJYU88+gvB3+Rf8M8Fk5Ev2ia0zo8FfXNed/t3SaaenX8OZUk/TJ7ni1dwmwQp5zAvHyhPbzgedtDGksYnucTAOGtZGhgAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/c9f34b366a72ba390c46bf5293dcc446/f058b/image-1.png&quot;
+        srcset=&quot;/static/c9f34b366a72ba390c46bf5293dcc446/c26ae/image-1.png 158w,
+/static/c9f34b366a72ba390c46bf5293dcc446/6bdcf/image-1.png 315w,
+/static/c9f34b366a72ba390c46bf5293dcc446/f058b/image-1.png 630w,
+/static/c9f34b366a72ba390c46bf5293dcc446/40601/image-1.png 945w,
+/static/c9f34b366a72ba390c46bf5293dcc446/eb3fa/image-1.png 1026w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;프로젝트 설정은 이렇게 WSL에 설치한 JDK를 선택하고, Java 17을 사용할 것이어서 버전도 맞춰주었다.&lt;/p&gt;
+&lt;p&gt;그런데 프로젝트를 열어보니, Update Indexing...에서 한 시간이 넘도록 가만히 있는 것 같았다. 이 문제를 해결하려고 여기저기 검색했었는데, 아래 Github Issue에서 해답을 찾을 수 있었다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/microsoft/WSL/issues/8995#issuecomment-1356454733&quot;&gt;Windows Defender is fcking the performance of Windows 11 WSL2 · Issue #8995 · microsoft/WSL&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;윈도우 방화벽에서 &lt;em&gt;특정 프로세스&lt;/em&gt;를 제외시키면 된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;fsnotifier-wsl
+idea64.exe&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;파일이나 폴더를 제외시키는건 딱히 효과가 없었고 프로세스를 제외시키는 것이 효과가 있었다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[컴퓨터 구조론 (2) - 명령어 구조]]></title><description><![CDATA[컴퓨터는 명령어에 의해 동작한다. CPU는 메모리에 저장된 명령어를 불러와 해석하고 연산한다. 명령어 설계 원칙? 간단하게 하기 위해서는 규칙적인 것으로 정한다 명령어에 들어가는 파라미터는 3개로 제한한다. ex. 은 x6과 x…]]></description><link>https://10cheon00.github.io/computer-organization/컴퓨터-구조론-(2)-명령어-구조/</link><guid isPermaLink="false">https://10cheon00.github.io/computer-organization/컴퓨터-구조론-(2)-명령어-구조/</guid><pubDate>Thu, 26 Oct 2023 07:48:34 GMT</pubDate><content:encoded>&lt;p&gt;컴퓨터는 명령어에 의해 동작한다. CPU는 메모리에 저장된 명령어를 불러와 해석하고 연산한다.&lt;/p&gt;
 &lt;h1 id=&quot;명령어-설계-원칙&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%AA%85%EB%A0%B9%EC%96%B4-%EC%84%A4%EA%B3%84-%EC%9B%90%EC%B9%99&quot; aria-label=&quot;명령어 설계 원칙 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;명령어 설계 원칙?&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
