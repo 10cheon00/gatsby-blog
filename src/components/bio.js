@@ -9,7 +9,7 @@ import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
-import { FaGithub } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa6"
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -39,19 +39,15 @@ const Bio = () => {
         layout="fixed"
         formats={["auto", "webp", "avif"]}
         src="../images/profile-icon.png"
-        width={50}
-        height={50}
+        width={25}
+        height={25}
         quality={95}
         alt="Profile picture"
       />
       {author?.name && (
-        <p>
-          Written by <strong>{author.name}</strong> {author?.summary || null}<br/>
-          
-          <a className="bio-icons" href={`${social?.github || ``}`}>
-            <FaGithub size="1.5rem"></FaGithub>
-          </a>
-        </p>
+        <span className="bio-author">
+          <strong>{author.name}</strong>,&nbsp;
+        </span>
       )}
     </div>
   )

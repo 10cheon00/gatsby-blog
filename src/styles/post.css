@@ -9,6 +9,10 @@ body {
   margin-bottom: 0;
 }
 
+.blog-post-header .info {
+  display: flex;
+}
+
 .blog-post-header .date {
   margin: 0;
   color: var(--color-text-light);

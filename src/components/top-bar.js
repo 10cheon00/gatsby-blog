@@ -36,16 +36,6 @@ const TopBar = ({ title }) => {
   return (
     <div className="top-bar">
       <Link className="home-link" to="/">
-        <StaticImage
-          className="bio-avatar"
-          layout="fixed"
-          formats={["auto", "webp", "avif"]}
-          src="../images/profile-icon.png"
-          width={35}
-          height={35}
-          quality={95}
-          alt="Profile picture"
-        />
         <h1 className="main-heading">{title}</h1>
         <FaHouse size="30" className="main-heading-icon" />
       </Link>

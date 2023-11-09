@@ -1,12 +1,12 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Utterances from "../components/utterances"
 import TableOfContents from "../components/table-of-contents"
-
 import Tag from "../components/tag"
 
 const BlogPostTemplate = ({
@@ -26,7 +26,10 @@ const BlogPostTemplate = ({
           <h1 className="title" itemProp="headline">
             {post.frontmatter.title}
           </h1>
-          <p className="date">{post.frontmatter.date}</p>
+          <div className="info">
+            <Bio />
+            <span className="date">{post.frontmatter.date}</span>
+          </div>
           <div className="tags">
             {post.frontmatter.tags
               ? post.frontmatter.tags.map(tag => <Tag tagName={tag}></Tag>)
