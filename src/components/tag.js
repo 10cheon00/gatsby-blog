@@ -26,7 +26,7 @@ const Tag = ({
   
   return (
     <span
-      class={`tag ${hoverable}`}
+      className={`tag ${hoverable}`}
       style={{
         backgroundColor: `#${stringToRGB(tagName)}`,
       }}

@@ -6,11 +6,10 @@
  */
 
 import * as React from "react"
+import { FaGithub, FaHouse } from "react-icons/fa6"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 
 import { ThemeToggler } from "./theme-toggler"
-import { FaGithub, FaHouse } from "react-icons/fa6"
 
 const TopBar = ({ title }) => {
   const data = useStaticQuery(graphql`
@@ -50,7 +49,7 @@ const TopBar = ({ title }) => {
         <a className="bio-icons" href={`${social?.github || ``}`}>
           <FaGithub size="1.5rem"></FaGithub>
         </a>
-        <ThemeToggler class="theme-toggler" />
+        <ThemeToggler className="theme-toggler" />
       </div>
     </div>
   )

@@ -1,6 +1,5 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -32,7 +31,7 @@ const BlogPostTemplate = ({
           </div>
           <div className="tags">
             {post.frontmatter.tags
-              ? post.frontmatter.tags.map(tag => <Tag tagName={tag}></Tag>)
+              ? post.frontmatter.tags.map(tag => <Tag key={tag} tagName={tag}></Tag>)
               : null}
           </div>
         </header>

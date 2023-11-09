@@ -38,7 +38,7 @@ export default class PaginationPage extends React.Component {
                     <div className="tags">
                       {post.frontmatter.tags
                         ? post.frontmatter.tags.map(tag => (
-                            <Tag tagName={tag}></Tag>
+                            <Tag key={tag} tagName={tag}></Tag>
                           ))
                         : null}
                     </div>
