@@ -246,10 +246,14 @@ a:focus {
 .global-wrapper {
   margin: var(--spacing-0) auto;
   max-width: var(--maxWidth-wrapper);
-  padding: var(--spacing-10) var(--spacing-5);
+}
+
+.global-wrapper main {
+  padding-top: calc(var(--top-bar-size) + var(--spacing-10));
+  background-color: var(--color-background);
 
   /* Padding for top bar */
-  padding-top: calc(var(--top-bar-size) + var(--spacing-10));
+  padding: var(--spacing-24) var(--spacing-5);
 }
 
 /* .global-wrapper[data-is-root-path="true"] .bio {

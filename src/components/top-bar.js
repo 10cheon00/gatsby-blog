@@ -10,7 +10,7 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import { ThemeToggler } from "./theme-toggler"
-import { FaGithub } from "react-icons/fa6"
+import { FaGithub, FaHouse } from "react-icons/fa6"
 
 const TopBar = ({ title }) => {
   const data = useStaticQuery(graphql`
@@ -27,8 +27,8 @@ const TopBar = ({ title }) => {
         }
       }
     }
-    `)
-    
+  `)
+
   // Set these values by editing "siteMetadata" in gatsby-config.js
   // const author = data.site.siteMetadata?.author
   const social = data.site.siteMetadata?.social
@@ -47,11 +47,10 @@ const TopBar = ({ title }) => {
           alt="Profile picture"
         />
         <h1 className="main-heading">{title}</h1>
+        <FaHouse size="30" className="main-heading-icon" />
       </Link>
+        <div className="divider"></div>
       <div className="top-bar-links">
-        <Link to="/tags">
-          <h1>Tags</h1>
-        </Link>
         <Link to="/tags">
           <h1>Tags</h1>
         </Link>
@@ -61,7 +60,7 @@ const TopBar = ({ title }) => {
         <a className="bio-icons" href={`${social?.github || ``}`}>
           <FaGithub size="1.5rem"></FaGithub>
         </a>
-        <ThemeToggler class="theme-toggler"/>
+        <ThemeToggler class="theme-toggler" />
       </div>
     </div>
   )

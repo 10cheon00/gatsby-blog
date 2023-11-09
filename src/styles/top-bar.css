@@ -5,7 +5,7 @@
   padding: var(--spacing-5);
 
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   background-color: var(--color-top-bar);
 
@@ -16,7 +16,28 @@
 .top-bar .home-link {
   display: flex;
   align-items: center;
+}
+
+.top-bar .divider {
   flex-grow: 1;
+}
+
+.top-bar .home-link .main-heading {
+  display: inline-block;
+}
+
+.top-bar .home-link .main-heading-icon {
+  display: none;
+}
+
+@media screen and (max-width: 42rem) {
+  .top-bar .home-link .main-heading {
+    display: none;
+  }
+  
+  .top-bar .home-link .main-heading-icon {
+    display: inline-block;
+  }
 }
 
 .top-bar h1 {
