@@ -31,7 +31,9 @@ const BlogPostTemplate = ({
           </div>
           <div className="tags">
             {post.frontmatter.tags
-              ? post.frontmatter.tags.map(tag => <Tag key={tag} tagName={tag}></Tag>)
+              ? post.frontmatter.tags.map(tag => (
+                  <Tag key={tag} tagName={tag}></Tag>
+                ))
               : null}
           </div>
         </header>
