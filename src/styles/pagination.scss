@@ -10,10 +10,10 @@
   vertical-align: middle;
   padding: var(--spacing-1) var(--spacing-3);
   text-decoration: none !important;
-}
 
-.pagination-link.pagination-current-link {  
-  background-color: var(--color-primary);
-  color: white;
-  border-radius: 25%;
+  &.pagination-current-link {  
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 25%;
+  }
 }

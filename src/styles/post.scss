@@ -2,24 +2,26 @@ body {
   word-wrap: break-word;
 }
 
-.blog-post-header .title {
-  font-size: 3rem !important;
-  font-weight: bold !important;
-  border-bottom: none;
-  margin-bottom: 0;
-}
+.blog-post-header {
+  .title {
+    font-size: 3rem !important;
+    font-weight: bold !important;
+    border-bottom: none;
+    margin-bottom: 0;
+  }
 
-.blog-post-header .info {
-  display: flex;
-}
+  .info {
+    display: flex;
+  }
 
-.blog-post-header .date {
-  margin: 0;
-  color: var(--color-text-light);
-}
+  .date {
+    margin: 0;
+    color: var(--color-text-light);
+  }
 
-.blog-post-header .tags {
-  padding: var(--spacing-2) 0;
+  .tags {
+    padding: var(--spacing-2) 0;
+  }
 }
 
 h1,
@@ -67,17 +69,15 @@ blockquote {
   margin-inline-start: 0;
   margin-inline-end: 0;
   padding-left: var(--spacing-4);
-}
 
-blockquote {
   border-left: var(--spacing-1) solid var(--color-blockquote-border);
   font-style: normal;
   font-size: var(--fontSize-1);
-}
 
-blockquote,
-blockquote * {
-  color: var(--color-text-light);
+  &,
+  & * {
+    color: var(--color-text-light);
+  }
 }
 
 ul,

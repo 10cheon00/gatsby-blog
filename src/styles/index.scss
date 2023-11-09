@@ -2,8 +2,8 @@ small.post-date {
   color: var(--color-text-light);
   margin-left: var(--spacing-1);
   font-size: calc(1rem * 0.95);
-}
 
-small.post-date:before {
-  content: " - ";
+  &:before {
+    content: " - ";
+  }
 }
