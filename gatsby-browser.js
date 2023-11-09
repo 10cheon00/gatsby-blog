@@ -11,5 +11,4 @@ import "./src/styles/prism-ghcolor.css"
 import "katex/dist/katex.min.css";
 
 // custom CSS styles
-import "./src/style.css"
 import "./src/style.scss"
