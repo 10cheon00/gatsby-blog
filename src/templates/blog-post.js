@@ -43,9 +43,6 @@ const BlogPostTemplate = ({
           itemProp="articleBody"
         />
         <hr />
-        <footer>
-          <Bio />
-        </footer>
       </article>
       <Utterances />
       <nav className="blog-post-nav">
