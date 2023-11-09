@@ -143,6 +143,7 @@ module.exports = {
         policy: [{ userAgent: '*', allow: '/' }]
       }
     },
-    `gatsby-plugin-dark-mode`
+    `gatsby-plugin-dark-mode`,
+    `gatsby-plugin-sass`
   ],
 }

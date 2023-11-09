@@ -14,6 +14,7 @@
     "gatsby-plugin-feed": "^5.11.0",
     "gatsby-plugin-image": "^3.11.0",
     "gatsby-plugin-manifest": "^5.11.0",
+    "gatsby-plugin-sass": "^6.12.3",
     "gatsby-plugin-sharp": "^5.11.0",
     "gatsby-plugin-sitemap": "^6.11.0",
     "gatsby-remark-images": "^7.11.0",
@@ -28,6 +29,7 @@
   "devDependencies": {
     "gatsby-plugin-dark-mode": "^1.1.2",
     "gatsby-plugin-robots-txt": "^1.8.0",
+    "gatsby-plugin-sass": "^6.12.3",
     "gatsby-remark-autolink-headers": "^6.11.0",
     "gatsby-remark-emoji": "^0.0.3",
     "gatsby-remark-katex": "^7.11.0",
@@ -36,7 +38,8 @@
     "katex": "^0.13.11",
     "lodash.kebabcase": "^4.1.1",
     "prettier": "^2.8.8",
-    "react-icons": "^4.10.1"
+    "react-icons": "^4.10.1",
+    "sass": "^1.69.5"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
