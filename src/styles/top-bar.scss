@@ -1,7 +1,7 @@
 .top-bar {
   position: fixed;
   width: 100%;
-  height: auto;
+  height: var(--top-bar-size);
   padding: var(--spacing-5);
 
   display: flex;
@@ -9,6 +9,24 @@
   background-color: var(--color-top-bar);
 
   z-index: 999;
+  overflow: hidden;
+
+  /* background image */
+
+  .top-bar-icon {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: var(--top-bar-size);
+    top: -1.5rem;
+    left: 0.5rem;
+    z-index: -10;
+    filter: grayscale(1);
+    filter: blur(1px);
+    opacity: 0.5;
+  }
+
+  /* home icon and blog title */
 
   .home-link {
     display: flex;
@@ -35,9 +53,13 @@
     }
   }
 
+  /* empty space */
+
   .divider {
     flex-grow: 1;
   }
+
+  /* text decoration */
 
   & h1 {
     font-size: var(--fontSize-2);
@@ -54,6 +76,8 @@
       text-decoration: none;
     }
   }
+
+  /* links and theme toggler */
 
   .top-bar-right {
     display: flex;
