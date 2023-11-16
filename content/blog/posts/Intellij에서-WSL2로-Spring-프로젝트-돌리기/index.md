@@ -48,10 +48,6 @@ jbrsdk-17 (WSL) java version "17.0.9" (JetBrain Runtime JDK 17.0.9)
 
 고르고 싶은 IDE를 고른 다음 하단에 Project directory에 불러올 스프링 프로젝트의 경로를 지정해주면 된다.
 
-![Alt text](image-4.png)
-
-열심히 다운로드하는 모습이다.
-
 다운로드가 다 끝나면 IntelliJ 창이 아닌 JetBrain Client라는 새로운 창이 열린다.
 
 gradle import도 잘 되는 모습이다.
