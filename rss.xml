@@ -1,4 +1,251 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[10cheon00의 Archive RSS Feed]]></title><description><![CDATA[A Blog archiving what I learned.]]></description><link>https://10cheon00.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 11 Nov 2023 13:42:13 GMT</lastBuildDate><item><title><![CDATA[vscode에서 scss의 주석 단축키가 이상한 이유]]></title><description><![CDATA[문제 vscode에서 scss…]]></description><link>https://10cheon00.github.io/posts/vscode에서-scss의-주석-단축키가-이상한-이유/</link><guid isPermaLink="false">https://10cheon00.github.io/posts/vscode에서-scss의-주석-단축키가-이상한-이유/</guid><pubDate>Thu, 09 Nov 2023 15:01:51 GMT</pubDate><content:encoded>&lt;h1 id=&quot;문제&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%AC%B8%EC%A0%9C&quot; aria-label=&quot;문제 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;문제&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[10cheon00의 Archive RSS Feed]]></title><description><![CDATA[A Blog archiving what I learned.]]></description><link>https://10cheon00.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 16 Nov 2023 09:05:33 GMT</lastBuildDate><item><title><![CDATA[링크 레이어]]></title><link>https://10cheon00.github.io/computer-network/링크-레이어/</link><guid isPermaLink="false">https://10cheon00.github.io/computer-network/링크-레이어/</guid><content:encoded></content:encoded></item><item><title><![CDATA[Intellij에서 WSL2로 Spring 프로젝트 돌리기]]></title><description><![CDATA[서론 C에 설치한 인텔리제이로 WSL에 있는 프로젝트를 돌리려고 하니,  이런 에러가 뜨지 않나, 어찌어찌 Gradle import…]]></description><link>https://10cheon00.github.io/posts/Intellij에서-WSL2로-Spring-프로젝트-돌리기/</link><guid isPermaLink="false">https://10cheon00.github.io/posts/Intellij에서-WSL2로-Spring-프로젝트-돌리기/</guid><pubDate>Thu, 16 Nov 2023 09:02:11 GMT</pubDate><content:encoded>&lt;h1 id=&quot;서론&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%9C%EB%A1%A0&quot; aria-label=&quot;서론 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;서론&lt;/h1&gt;
+&lt;p&gt;C에 설치한 인텔리제이로 WSL에 있는 프로젝트를 돌리려고 하니, &lt;code class=&quot;language-text&quot;&gt;UNC Path is missing hostname: //&lt;/code&gt; 이런 에러가 뜨지 않나, 어찌어찌 Gradle import를 성공하고 실행시키니 &lt;code class=&quot;language-text&quot;&gt;Could not find or load main class com.example.demo.demoapplication&lt;/code&gt; 이런 에러가 뜨지 않나... 정말 화가 나서 싹 설치 제거하고 다시 설치했는데도 이렇게 오류가 떴는데, 정말 간단하게 해결할 수 있었다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# 환경
+
+WSL 버전: 2.0.9.0
+커널 버전: 5.15.133.1-1
+WSLg 버전: 1.0.59
+MSRDC 버전: 1.2.4677
+Direct3D 버전: 1.611.1-81528511
+DXCore 버전: 10.0.25131.1002-220531-1700.rs-onecore-base2-hyp
+Windows 버전: 10.0.19045.3570
+Ubuntu 20.04.6 LTS
+IntelliJ IDEA Ultimate 2023.2.5
+jbrsdk-17 (WSL) java version &quot;17.0.9&quot; (JetBrain Runtime JDK 17.0.9)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;intellij-설치&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#intellij-%EC%84%A4%EC%B9%98&quot; aria-label=&quot;intellij 설치 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;a href=&quot;https://www.jetbrains.com/ko-kr/idea/download/?section=windows&quot;&gt;IntelliJ 설치&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;다운로드 받은 파일을 실행해서 설치한다.&lt;/p&gt;
+&lt;h1 id=&quot;wsl2-설치&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#wsl2-%EC%84%A4%EC%B9%98&quot; aria-label=&quot;wsl2 설치 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;a href=&quot;https://learn.microsoft.com/ko-kr/windows/wsl/install-manual&quot;&gt;WSL2 설치&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;아직 윈도우 11을 사용하지 않아서 다른 링크를 갖고 왔다.&lt;/p&gt;
+&lt;h1 id=&quot;intellij에서-jetbrain-client로-wsl-사용하기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#intellij%EC%97%90%EC%84%9C-jetbrain-client%EB%A1%9C-wsl-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0&quot; aria-label=&quot;intellij에서 jetbrain client로 wsl 사용하기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;IntelliJ에서 JetBrain Client로 WSL 사용하기&lt;/h1&gt;
+&lt;p&gt;설치를 다 끝내고 인텔리제이를 키게 되면 이렇게 Remote Development에 WSL이 있다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/e11c74a7d43b3151c4d486c1e94bcc04/321ea/image.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 81.64556962025317%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB0ElEQVR42s2U227UMBRF8w2IiZ34bmcymUkmmWmlClQVxEXlCYnX0o8BCfHdCznD9P6AoA88bB3Zspb3Od5JURlP8B7vPTFGQghUVYUQEiHErUqBlPKRyrK8qU3TUEzrgWF3yjSOhBix1mKMoes6pmliGAa224H1ek1d1/ektebs7Izz83P2+z1931Osmo52vWXZNBhjUVphrJnh2a1Sar4kKzu/qwzNrpbL5Xy2bVsKHwK7aZw3U4qs2g0hNMQY5sPeO5SqEaKkqiSVFPeg4nfLeSwpJYoYE9O0YxxHum7FyfSaZdrMt/XbHf12IqYllTLU2lEbj5TV7RxVjbMGozWpSRSqErSbln6zIjqNrhfUVUmMK1ToUWlENxNudYJr95i4QVa3czTREr1Flr8d7t5e8+H6G5+uv/Px6w/eXf2k27+nlgJlAsoGlPHUJhzcicNrG6PRRmNUrmZ+5Rm42b3h4vKK04svdKeXbF99pun2lOVLpBRIUR4gcy1vWr0bqbxeLBYHoHeaaeiwWlKJFwRXk1KgFE/n7inlx7kB5njkzFnrsM7hnJsj8qewR8BjkI9ZO67/Gnh09GzAh7D/D/hcLecc5r9Vkb/Xh9B/Af4Ch1uwHgC9BQIAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/e11c74a7d43b3151c4d486c1e94bcc04/f058b/image.png&quot;
+        srcset=&quot;/static/e11c74a7d43b3151c4d486c1e94bcc04/c26ae/image.png 158w,
+/static/e11c74a7d43b3151c4d486c1e94bcc04/6bdcf/image.png 315w,
+/static/e11c74a7d43b3151c4d486c1e94bcc04/f058b/image.png 630w,
+/static/e11c74a7d43b3151c4d486c1e94bcc04/321ea/image.png 786w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;우측 상단에 New Project를 누르면 이렇게 설치된 배포판을 고를 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4277a82babebad2cc692a9e93330c7d0/321ea/image-1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 81.64556962025317%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsTAAALEwEAmpwYAAABG0lEQVR42u2U0U6EMBBF+xErtEBLW0oKKzEGVoz+gfF/fPbPr7kFNhvjg7vy6MPNdJr0zJ0yRSjtYC1l4RhrC6kklFK/VlmWqKoKWmsIZy26LqLve0TG4xFaV8iyDHmeQ0q5xvycb3spX4tzrygKCO0DxumE0zRhHE+Yn2Z472GMQV3XP0atlzW7ort8LUKwkEqllglxziVZZ1PeNE3KvV/ilhMUQkhiq1s3CciKPExo13UYhgExRji/FFl0uV7l/LkIwW3bJveClo022MBhdcGWrhVZ4vKCaX2zf4tSy9sX2kP/wL8rvZQ9gGRwOjh2+wClxN3hkIZc0OY1f5bv4vmC71mVCG28HUhn2hi8vjzj/nFG+/aJh/cPfAGK6KVhEQUWOgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/4277a82babebad2cc692a9e93330c7d0/f058b/image-1.png&quot;
+        srcset=&quot;/static/4277a82babebad2cc692a9e93330c7d0/c26ae/image-1.png 158w,
+/static/4277a82babebad2cc692a9e93330c7d0/6bdcf/image-1.png 315w,
+/static/4277a82babebad2cc692a9e93330c7d0/f058b/image-1.png 630w,
+/static/4277a82babebad2cc692a9e93330c7d0/321ea/image-1.png 786w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;설치된 배포판을 선택하고 나면 IDE Version을 갖고 온다는 로딩이 뜬 후에 IDE를 고를 수 있는 드롭다운이 보인다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/990744fcf22335fc24321aa5a63b8f65/321ea/image-3.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 81.64556962025317%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsTAAALEwEAmpwYAAACD0lEQVR42pWU2W7aQBSG/QpVg5exDV7iFQheANtATcGUIGhaaJRWUR8gSlGlhqp9geamT/1XMyEIi1aFi09nRprz66zDEVWHpmmo1Wo7KwoCJEk6GlmWoSgKs5yu6fA8H57rwvc91H0ftmVDEHiIoni0KH1LCAGnVlVYtg3Pc+E4DsOyLGjaU8SSJEIQhKOgbzlJJqhWq9BoyroBw7Sg6SZMy4JuWlDUGohS3SGr1dK9hKyAozVzbAcyITCcOgbFDHkxQdzro9VNEKUZorSHcM8243aZKEar04Xh1sE953/28gUa0RBvb39gcbvBm+uvGC/XKFZfGOMVPa8xen+PweKuRH9xh/zqHm493EbouLBMA0F2idnnn5h93GC65XLL9GaD2afvmN48YLj8dsDowwPcRgSOdoa2m0gSTMdCbzxA1g4Qhw10oiajveMCQdNDq+kcEFy4rLEsZdqhSuUM546P0WSOPB8iSVOkacZItjbNeujSusZxibjdRhCEbEJ2NeT5Chzbx6SYIx/mzDFJDul0Ooii6IAwDNlS7AQrfAWu5WM+uUIxKZCyCPdJkGUZsjRDTCP7n6AgClBkBYZuQNOfVvBf0Ln9G4Su3rMgExUE8Dx/9GbsQ/0kunr7gqchHEC12Nic8rNQqA8hMoisllHU0wRpaqZ5jlf9BE5UoPHuEdHqEa3lLwTXv2G/XuMPSLjWEdA2qfcAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/990744fcf22335fc24321aa5a63b8f65/f058b/image-3.png&quot;
+        srcset=&quot;/static/990744fcf22335fc24321aa5a63b8f65/c26ae/image-3.png 158w,
+/static/990744fcf22335fc24321aa5a63b8f65/6bdcf/image-3.png 315w,
+/static/990744fcf22335fc24321aa5a63b8f65/f058b/image-3.png 630w,
+/static/990744fcf22335fc24321aa5a63b8f65/321ea/image-3.png 786w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;고르고 싶은 IDE를 고른 다음 하단에 Project directory에 불러올 스프링 프로젝트의 경로를 지정해주면 된다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/990744fcf22335fc24321aa5a63b8f65/321ea/image-4.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 81.64556962025317%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsTAAALEwEAmpwYAAACD0lEQVR42pWU2W7aQBSG/QpVg5exDV7iFQheANtATcGUIGhaaJRWUR8gSlGlhqp9geamT/1XMyEIi1aFi09nRprz66zDEVWHpmmo1Wo7KwoCJEk6GlmWoSgKs5yu6fA8H57rwvc91H0ftmVDEHiIoni0KH1LCAGnVlVYtg3Pc+E4DsOyLGjaU8SSJEIQhKOgbzlJJqhWq9BoyroBw7Sg6SZMy4JuWlDUGohS3SGr1dK9hKyAozVzbAcyITCcOgbFDHkxQdzro9VNEKUZorSHcM8243aZKEar04Xh1sE953/28gUa0RBvb39gcbvBm+uvGC/XKFZfGOMVPa8xen+PweKuRH9xh/zqHm493EbouLBMA0F2idnnn5h93GC65XLL9GaD2afvmN48YLj8dsDowwPcRgSOdoa2m0gSTMdCbzxA1g4Qhw10oiajveMCQdNDq+kcEFy4rLEsZdqhSuUM546P0WSOPB8iSVOkacZItjbNeujSusZxibjdRhCEbEJ2NeT5Chzbx6SYIx/mzDFJDul0Ooii6IAwDNlS7AQrfAWu5WM+uUIxKZCyCPdJkGUZsjRDTCP7n6AgClBkBYZuQNOfVvBf0Ln9G4Su3rMgExUE8Dx/9GbsQ/0kunr7gqchHEC12Nic8rNQqA8hMoisllHU0wRpaqZ5jlf9BE5UoPHuEdHqEa3lLwTXv2G/XuMPSLjWEdA2qfcAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/990744fcf22335fc24321aa5a63b8f65/f058b/image-4.png&quot;
+        srcset=&quot;/static/990744fcf22335fc24321aa5a63b8f65/c26ae/image-4.png 158w,
+/static/990744fcf22335fc24321aa5a63b8f65/6bdcf/image-4.png 315w,
+/static/990744fcf22335fc24321aa5a63b8f65/f058b/image-4.png 630w,
+/static/990744fcf22335fc24321aa5a63b8f65/321ea/image-4.png 786w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;열심히 다운로드하는 모습이다.&lt;/p&gt;
+&lt;p&gt;다운로드가 다 끝나면 IntelliJ 창이 아닌 JetBrain Client라는 새로운 창이 열린다.&lt;/p&gt;
+&lt;p&gt;gradle import도 잘 되는 모습이다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/bcf33a1a583599cdf5b6177e406a7f34/218a4/image-6.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 63.291139240506325%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAACXElEQVR42oWT2YrbShRF9Qk33RpL1lClsTTY8ijL3bbTEBIIhDyFfkj+IP//vILKTpPLJdyHBVVFsTln73Os6+YjXw4TPz9feT2/59pPHPXAcbWl1w1VVaGkwnVdojiiLEp0rVFKEQQCIUJ8PyAMF4SLCKvcfmKzHqh1gxCCMBRkStEMO/rNyHK5RGtNURSGPC/QdY2uCzKZUGTqjqQqCyyVLpjGA+O4J78/KiWJswqZV8RxTBTHpGlqUDKlW08cP3zn8PLKcHll8/KD1ekr3fQNa/50PV+YjhNd29H3S5SUVLqhWw2mwr7vUFl2E00SlMrpVgf24zOJLBALSRilLGSD5fu+EZmOJ+IoNn7ESYwqKtJqiao66ran73q0rqmqEpkmJKlit92TqZTHh394tB9w7HdYs9lV3fA0ncjyzJidZZmpsq4bduMT28PE4XjiMJ04PV+Yns4cny5Mzxc2+/GN7X7EEmFI2684jiNN0xAIQTK3JiVlVXG+vHC+XNns9gzrLevtzpw32x3LYU2/HOhXN9p+iTXHXeQldVlR5gWhCFiIgDSJTWtd2xrapjUed11nxma+z2lLmZIkCUkc4zgOVpREFF1OUkvqlSavW3K9ou42xDLH9zxmn/9O8EYQBFixlAjlI5RAqBAvSnBDafDC9H/E/oslh0+4D+/wbA/PdvBcG9+5Efj36oLgxr+q+otgGIY8PsyR2ziOjWM7d2w81zMr5zr2jfnsusYr13HwPPcm5Hl4d6y27dBvOyuRfzCPkFIZedlQ1D1ZXpiRMsE02qxhFEUmlN+b9Av3yHFB98AD3gAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/bcf33a1a583599cdf5b6177e406a7f34/f058b/image-6.png&quot;
+        srcset=&quot;/static/bcf33a1a583599cdf5b6177e406a7f34/c26ae/image-6.png 158w,
+/static/bcf33a1a583599cdf5b6177e406a7f34/6bdcf/image-6.png 315w,
+/static/bcf33a1a583599cdf5b6177e406a7f34/f058b/image-6.png 630w,
+/static/bcf33a1a583599cdf5b6177e406a7f34/40601/image-6.png 945w,
+/static/bcf33a1a583599cdf5b6177e406a7f34/218a4/image-6.png 1052w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;좌측 상단의 Ubuntu 20.04를 클릭하면 신기하게도 성능 프로파일을 잘 보여준다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 548px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/8bef0a1f8dc017e444a7e1135d1e04f8/a58fe/image-9.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 77.84810126582278%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAChElEQVR42nWTXW/TMBSG8x8ozZedxF+JHadNk7TruqZDsE0bEuMChLhEQvz/v/AiO2vXjXHxyD62dY593tfB14tb/Lx+xJ+7H/j96Tt+3XzDY/cB96sRX/d3eNh9xLZeYbfaoLMr9G2PUinEcYw4ipGQBJXRGLoOzWKLwOoanHEoISG58AjOsbu8wmE/4jAe/DiOB2wuLpDnOVhRoDjCChhjwBhDSggCVWlEUYTIVUyecQc45ycY5ygKhjRN/yHLMhBCQEiKoKw0lCqxXm8wDBt0fYd1P/ibzGYzhOEc8/lEGIZT8Vf458exTxxklIBmOcqygqkNpJQoyxJSiheJzudv4RL7hIwVqGuDoe+x7jssFw1MXUPrCpRSj3uOO3ycHzl/tj9DKYLLyytc337Gzf0X3D48Yr3dox8GLNsWw3qD/Tiitha7/R7jOEJrjeoJbYwvfoQphYBmDIW0kHoJUS3BZO2b79RL0nQSRQg/ppRASOnVdTHNMi9mkiT+LFsYBFEYQgoOXZYopYTR2vdRCuGfYoz2t7LWIiUurqGEQFWVXjjX1/ezGeI4ArcWgVOnYMwncVY5b3wUR5MgT7jGh/OXYhBCvYiUEOTGIEhcwqaC3C5R2xosL8AL5mFuZM9M8Zk3GYNSCm27nARMCQJXRekKi65FmlPM0xghSd7E7VFewDYNpFSTKMagsQ0oJb5IwLlAogqENcesyvGuzP6L249qAa4klJT+dh6pvG3cLQOhtLdFXWnfhyLLT+RZdsJ5zP3hhW3QWIumadC2LRaLxs+dQD6hEyVK4smsdDLrZINkiknqcfPj/lucvp53+dOCwzXaqSYE96oef4Urcv5vX+P2Xa6/VDa/xYNUocsAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/8bef0a1f8dc017e444a7e1135d1e04f8/a58fe/image-9.png&quot;
+        srcset=&quot;/static/8bef0a1f8dc017e444a7e1135d1e04f8/c26ae/image-9.png 158w,
+/static/8bef0a1f8dc017e444a7e1135d1e04f8/6bdcf/image-9.png 315w,
+/static/8bef0a1f8dc017e444a7e1135d1e04f8/a58fe/image-9.png 548w&quot;
+        sizes=&quot;(max-width: 548px) 100vw, 548px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;아무것도 건드리지 않고 프로젝트를 실행하면 역시 잘 된다.&lt;/p&gt;
+&lt;p&gt;앞으로 WSL을 사용해 개발하려면 이렇게 해야겠다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/e481a49211a14a1a574eba09497612c0/218a4/image-2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 63.291139240506325%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAACfElEQVR42kWTWZLbRhBEcQeNSA623rD0go3rgCaHY8kafTgcvv9tnqObIesjo6sAFCorKzv7OHzy83Dnn8Of/L1/8Ahn3vcr52Fh8gEpBEX+SmMMfW9pTENd10gt0VJS1TVCSF5fXxFSkbWHnxz3e7z35HlOWRbozmPHE/54wx0vmGmhqKtUFCGVQgrJdrtNeayLsVaSTImC69uF9e2MMQrvevq+p5YG3Q9obaiFRMWfSInSit5aluXIOM50ncW6gdYY/PovmRCCj8cH1/VKCAPzvOC8w7iedllo5wkzD6i+QzUGYwxGa8IwczqdqRPznCLPseOZbLfbMY4T63qlqiqKoqRpG6TRiH5AuhkZJvplxEyBzge00Zim53JZ6bo2jRvHNlqSbTcbnA/cbzfapkkMtDEoKVOstEHUMi0nTiOVpqxKTNMRwpiY/dIyypLVtaDtHNO04MOANi1FWVLVVdIs4sm8oCzKdEbEutgwbvy5zDLFmRQVp/WGDyNhnDBthzI6iZ+2qVTqrHV89htSK0RsqFXK4/uYZ5W9okRF07Qo+SyM4+WlJK8UeVmz223TWFGe3S9st7+x27HZbBLzTA3vhGFhHgaO+wP7ZWFZZpSvcblF1DVfX17o2452mqjGETEvVNH0xyP1NFNJyel0wlpLZuzM2/0Hf1wufLw/eNzv3O83mr3iUO6TRV6+fOGwLIR1RbyttH/9wDweNN++ox8PlHV8fn4yLwtZFLNrG5y1eOdwvU1x1RSYnaYsisQwGlc7R+kcVQhPjCPVMFAIwTxHk3dkznms8/TWpbvqfUin8xPjPDFNE+M4YqKltE53egzhf9iufRJxLn37H2NfddiXRXtuAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/e481a49211a14a1a574eba09497612c0/f058b/image-2.png&quot;
+        srcset=&quot;/static/e481a49211a14a1a574eba09497612c0/c26ae/image-2.png 158w,
+/static/e481a49211a14a1a574eba09497612c0/6bdcf/image-2.png 315w,
+/static/e481a49211a14a1a574eba09497612c0/f058b/image-2.png 630w,
+/static/e481a49211a14a1a574eba09497612c0/40601/image-2.png 945w,
+/static/e481a49211a14a1a574eba09497612c0/218a4/image-2.png 1052w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[vscode에서 scss의 주석 단축키가 이상한 이유]]></title><description><![CDATA[문제 vscode에서 scss…]]></description><link>https://10cheon00.github.io/posts/vscode에서-scss의-주석-단축키가-이상한-이유/</link><guid isPermaLink="false">https://10cheon00.github.io/posts/vscode에서-scss의-주석-단축키가-이상한-이유/</guid><pubDate>Thu, 09 Nov 2023 15:01:51 GMT</pubDate><content:encoded>&lt;h1 id=&quot;문제&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%AC%B8%EC%A0%9C&quot; aria-label=&quot;문제 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;문제&lt;/h1&gt;
 &lt;p&gt;vscode에서 scss파일을 작업하다가 &lt;code class=&quot;language-text&quot;&gt;Ctrl+/&lt;/code&gt; 단축키로 주석처리를 했더니, 이렇게 되었다.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
