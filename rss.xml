@@ -1,4 +1,532 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[10cheon00의 Archive RSS Feed]]></title><description><![CDATA[A Blog archiving what I learned.]]></description><link>https://10cheon00.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 17 Nov 2023 10:53:16 GMT</lastBuildDate><item><title><![CDATA[링크 레이어]]></title><description><![CDATA[링크 레이어의 역할 물리적으로 연결된 두 노드 사이에서 frame을 전달한다. 이 때 물리적으로 연결되었다는 것은 유선 또는 무선으로 연결된 것을 의미한다. frame frame…]]></description><link>https://10cheon00.github.io/computer-network/링크-레이어/</link><guid isPermaLink="false">https://10cheon00.github.io/computer-network/링크-레이어/</guid><pubDate>Thu, 16 Nov 2023 09:09:09 GMT</pubDate><content:encoded>&lt;h1 id=&quot;링크-레이어의-역할&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%A7%81%ED%81%AC-%EB%A0%88%EC%9D%B4%EC%96%B4%EC%9D%98-%EC%97%AD%ED%95%A0&quot; aria-label=&quot;링크 레이어의 역할 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;링크 레이어의 역할&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[10cheon00의 Archive RSS Feed]]></title><description><![CDATA[A Blog archiving what I learned.]]></description><link>https://10cheon00.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 02 Dec 2023 09:17:45 GMT</lastBuildDate><item><title><![CDATA[무선, 모바일 네트워크]]></title><description><![CDATA[무선 네트워크의 구성 요소  Wireless host : 무선 기기(노드) Base Station : 유선으로 연결된 네트워크를 다른 노드들에게 제공 Link…]]></description><link>https://10cheon00.github.io/computer-network/무선-모바일-네트워크/</link><guid isPermaLink="false">https://10cheon00.github.io/computer-network/무선-모바일-네트워크/</guid><pubDate>Sat, 25 Nov 2023 05:38:13 GMT</pubDate><content:encoded>&lt;h1 id=&quot;무선-네트워크의-구성-요소&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%AC%B4%EC%84%A0-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%EC%9D%98-%EA%B5%AC%EC%84%B1-%EC%9A%94%EC%86%8C&quot; aria-label=&quot;무선 네트워크의 구성 요소 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;무선 네트워크의 구성 요소&lt;/h1&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/e2f8f0b7efd18d027c588f084e07cbd8/ee3fb/image.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 67.72151898734178%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAAA7DAAAOwwHHb6hkAAACl0lEQVR42oWT308bRxDH/U/mNSIvVaT0FSV5oqraVGraREoxxofvgJZCiJKHVlVRIBiaFKVNI4vWNeDY+HxnFwKJsS/+we3t7X6qW4eWRIiMNLpZzeizM/O9TQFohiY1NPuKYifir67GP1YINcxqnbh+x0/sdJw6Cao9xWJTkq0JJspdsk89rJ0283ua7a4yNUIIBoMBSiniODagJJZSmnMSG+Af7Zh0TZCtR+Tqgo9vTfPFZ1/z7WYDq9wj/XebZ68ElRdllpaWWF9fZ2VlhXw+T6lUYmNjw5wPDw9JJZ1N1BJQhF0XOA3F2E+/cf3BGrYvsWuh8fRuyJ9HIfJ4QLfbo9vt0ul0CMOQfr9PEASm09S9ZkSmJrCT7rwIqypwfMXsviKzHWJ7kcll3Yj5RkQYK7PQk729v8/UVF1i+zFOXQ6BuzGf/uxybbHAeFGS85OLpJnA8mMaIf+JdJalxst9JrfbpKt9plzB7D5cXVzn0k0Hx5XkKn3jM3XBjaceq1t1gtZrjo7aHBwcsLe3Z77JCgww7Qpyz/7hfn6TqRcBtq8YXVhm5EsLayfAqfSxdwJm3ZBPVktYPyzzS36VYrFoxEmEWVtbo1KpDIE3f/e5cPEyX93OMO0Nx5ssv2FiJ8CqDshUekwmgnmSrCepD/T5I8/VelyxHjD2sIDT1GbsRF3Hi7E9QeZJjYUnJbK7A+Yakp78XxT9njgGuNXTzLTg+0NNzh3+Pgl0uqm58bjMR1dG+W7xRya8mOftmNMv68wOk2T+peCb6rGBOcl4rmCmobjzvMHI5+NcWyrwqAWxOg91ChhrKHRiZv2ISfet1yKshuJuCwo9jTx50x8Cni4KIk3pTcyvr4de7EhaAwlamZoP9wf/AgQT+CrMLT8sAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/e2f8f0b7efd18d027c588f084e07cbd8/f058b/image.png&quot;
+        srcset=&quot;/static/e2f8f0b7efd18d027c588f084e07cbd8/c26ae/image.png 158w,
+/static/e2f8f0b7efd18d027c588f084e07cbd8/6bdcf/image.png 315w,
+/static/e2f8f0b7efd18d027c588f084e07cbd8/f058b/image.png 630w,
+/static/e2f8f0b7efd18d027c588f084e07cbd8/40601/image.png 945w,
+/static/e2f8f0b7efd18d027c588f084e07cbd8/ee3fb/image.png 1144w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Wireless host : 무선 기기(노드)&lt;/li&gt;
+&lt;li&gt;Base Station : 유선으로 연결된 네트워크를 다른 노드들에게 제공&lt;/li&gt;
+&lt;li&gt;Link : 두 노드간 무선으로 연결된 네트워크&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;무선 네트워크는 두 가지 종류가 있다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Infrastructre mode : Base station이 다른 노드들에게 네트워크를 제공하는 것&lt;/li&gt;
+&lt;li&gt;Ad-Hoc mode : Base station이 없고, 노드간 무선 네트워크를 구성하는 것&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;hidden-terminal-problem&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#hidden-terminal-problem&quot; aria-label=&quot;hidden terminal problem permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Hidden Terminal Problem&lt;/h1&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/80be233fbb34bb5276e08a9554184dd1/7de01/image-2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 65.82278481012659%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAA7DAAAOwwHHb6hkAAACIklEQVR42l1TWW/TQBDOz+axAsRTBSriBZCQEEiAkKJGaZsilYDSgyR23KRFiLREJQ3N5SuOnTj1Hh+a9ZFjpc8765n5dnaOHDbWnEuMFhJ3ocB4IRFymelIHic6spmt6NKVS4VIAJ1AQHc46g5HLdkNl+NmJhRIXtXpLsefQOBebBAS2U8vNmy4MYwEdMH+IMLeIILmLP+nduRz6fGMVBFSZLXEmG5tOEyBzt9MhuIwUiiP2RpZakO+FKkipDzoiYHuMGjWAg2Pw5hwaC5H4XaB/E0MkrUV24Yn0JgkZ5djxoEcJbmePJVITnoejowO9PEMZw5HoSewXWhh5/AKu7ccpzZFxfCj7+P7r3+oj+cwJgJ1h6lC5fqhQM2OQyfF1s5rPHzyFIYV4tjiODCBBy8/4NHHEkoWUDEZdPseW89e4fmLN9DNhNBmuJvL9QjPPYmC0cbueRstHzi1GPaGHI8/lbBdrKA4iHBiMTQ9ibdHZ/hcvUDTh8olcagIgySHlJPmFDjuuSh3RoqwakX4YgHvml28v+jh0JKo2hGaU4lKz0bdmsOgPCY5DFhS5etAZD0XV5CpdqFz2eTI//WR7wb4ai6rrDsRNDvKqnydVpk+CyFxOeHJ09laH2oOw8GIYX/I1vowJSaf1oQj5BuTEgqJ9lQop9oK6Cltn+PKF1kjpyDb3/6SbI2QFk2mF8Wz2p0JtftMZjqS+ys6j0nIjXH+DwquxuQCb0CuAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/80be233fbb34bb5276e08a9554184dd1/f058b/image-2.png&quot;
+        srcset=&quot;/static/80be233fbb34bb5276e08a9554184dd1/c26ae/image-2.png 158w,
+/static/80be233fbb34bb5276e08a9554184dd1/6bdcf/image-2.png 315w,
+/static/80be233fbb34bb5276e08a9554184dd1/f058b/image-2.png 630w,
+/static/80be233fbb34bb5276e08a9554184dd1/7de01/image-2.png 794w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;B는 A와 C 모두 범위 내에 있기 때문에 통신이 가능하지만 A는 C와 직접적인 통신이 되지 않는다. 게다가 B에게는 A의 신호가 C의 신호와 같이 들리기 때문에 충돌이 일어날 수 있다. 이 상황에서 A는 C의 신호가 들리지 않고 C 또한 마찬가지이므로 충돌이 없다고 생각하여 계속 신호를 보내게 된다.&lt;/p&gt;
+&lt;h1 id=&quot;cdma-code-division-multiple-access&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#cdma-code-division-multiple-access&quot; aria-label=&quot;cdma code division multiple access permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;CDMA (Code Division Multiple Access)&lt;/h1&gt;
+&lt;p&gt;각 링크에 연결된 두 노드간에 미리 정해진 코드를 통해 신호를 인코딩 디코딩 하는 것이다.&lt;/p&gt;
+&lt;p&gt;같은 주파수 대역을 사용하면서 모든 유저가 동시에 채널을 사용할 수 있는 장점이 있다.&lt;/p&gt;
+&lt;h2 id=&quot;encoding&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#encoding&quot; aria-label=&quot;encoding permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Encoding&lt;/h2&gt;
+&lt;p&gt;각 타임 슬롯마다 보낼 신호에 미리 정해진 코드값을 각각 내적하여 인코딩한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;             t1           t0
+data :       -1     |      1
+       -------------+------------ 
+code :  -1  1  1 -1 |  1  1 -1 -1
+
+-&gt; inner product -&gt;
+
+             t1           t0
+data :   1 -1 -1  1 |  1  1 -1 -1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;decoding&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#decoding&quot; aria-label=&quot;decoding permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Decoding&lt;/h2&gt;
+&lt;p&gt;인코딩된 신호에 미리 정해진 코드값을 곱한 후 각 타임 슬롯마다 더하여 원래의 신호로 디코딩한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;             t1           t0
+data :   1 -1 -1  1 |  1  1 -1 -1
+       -------------+------------ 
+code :  -1  1  1 -1 |  1  1 -1 -1
+
+-&gt; inner product -&gt;
+
+             t1           t0
+data :  -1 -1 -1 -1 |  1  1  1  1
+
+-&gt; sum and divide by code length -&gt;
+
+             t1           t0
+sum  :      -4      |      4
+       -------------+------------ 
+data :  -4 / 4 = -1 |   4 / 4 = 1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이 방법은 두 개 이상의 신호가 곱해져도 (잡음이 더해져도) 원래의 신호를 디코딩할 수 있다.&lt;/p&gt;
+&lt;h1 id=&quot;80211&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#80211&quot; aria-label=&quot;80211 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;802.11&lt;/h1&gt;
+&lt;p&gt;802.11은 무선 통신을 위해 사용하는 표준 규격이다.&lt;/p&gt;
+&lt;h2 id=&quot;구성-요소&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B5%AC%EC%84%B1-%EC%9A%94%EC%86%8C&quot; aria-label=&quot;구성 요소 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;구성 요소&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/6e5e5267a92f42fc0427d1343bda944c/3d4b6/image-1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 60.12658227848101%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAA7DAAAOwwHHb6hkAAACMUlEQVR42pWS32/ScBTF+2f6N/hmYvRhme5hz/5IXNiATrbEGI2Zi2ZZIk9CohOY0E1go1AoQhmjLRtQSn9+TCEat2mMNznfk9zc7825OUcAaDab5AuHNBp1TqsVGqcn1E9PaCgKpaMjTNOMxgiCgDAMr+B6CdFzORpxpnVp9XVy7XOybYNSR0c3hxi6jjW158M3v98s4eeQNA550YNn1QviaYmtqslbzcNwwZqM0bQehmHMMR6P56oj/qPCrO7zVLZ53oXVtMSd1SdslnViNYuUYlP+3uebVEI6OiKXy6GqKpIkoSjKQvlvpwudacBG0yHZdBBbLsmWS0yZkVR9NtsesabH+zPv37dGS8MQIaN7rDUcxLZPUvVYL+sk5REbJ0PiygxR9UmoHj3LxRicczkaM55MGA6HGKbJ1Lavnrx/5rFenyKWjfnCld0MD159YL1ygShPEOsWCdlCNm2kL5/J5/PUZJlisUghm6XX6SwEWhbMZgjpQcD91B7J7R1SWsjSmwy3ltZ4fNAl2XJINKbE61M6Ew/qNcLjYygUQJJAluHwEKpVODiAWg2hYsHt+A7Lr9OkeiCqLqLqkVBsNj81ECsG252AWRDJCAgch9C2CSP2fULXBc9bwPcRnAB2TYh3w4UpyowtDVb28ty995BYUePraJHCGzm+3ohMifh86vJStVlTIocdNloej6QBy+ljMgN3Hujwmpu/8Ldg2z6ULgL2+x7vNI+PZkg/4L/rB7okdSr51l2eAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/6e5e5267a92f42fc0427d1343bda944c/f058b/image-1.png&quot;
+        srcset=&quot;/static/6e5e5267a92f42fc0427d1343bda944c/c26ae/image-1.png 158w,
+/static/6e5e5267a92f42fc0427d1343bda944c/6bdcf/image-1.png 315w,
+/static/6e5e5267a92f42fc0427d1343bda944c/f058b/image-1.png 630w,
+/static/6e5e5267a92f42fc0427d1343bda944c/3d4b6/image-1.png 712w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Access Point : Base Station을 AP라고 명명한다.&lt;/li&gt;
+&lt;li&gt;Base Station Set : Infrastructure로 구성되어 무선 네트워크를 제공하는 영역이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;AP관리자는 각 AP가 사용할 주파수를 설정할 수 있는데, 다른 AP와 동일한 주파수를 사용하면 충돌이 일어날 수 있다.&lt;/p&gt;
+&lt;h2 id=&quot;새로운-노드가-bss에-접속할-때&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%83%88%EB%A1%9C%EC%9A%B4-%EB%85%B8%EB%93%9C%EA%B0%80-bss%EC%97%90-%EC%A0%91%EC%86%8D%ED%95%A0-%EB%95%8C&quot; aria-label=&quot;새로운 노드가 bss에 접속할 때 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;새로운 노드가 BSS에 접속할 때&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;AP가 브로드캐스트하는 Beacon Frame을 수신한다.&lt;/li&gt;
+&lt;li&gt;AP의 이름인 SSID와 AP의 MAC 주소를 획득한다.&lt;/li&gt;
+&lt;li&gt;AP가 인증을 요구할 경우 인증을 진행한다.&lt;/li&gt;
+&lt;li&gt;DHCP로 IP 주소를 할당받아 네트워크에 참여한다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;passive-scanning&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#passive-scanning&quot; aria-label=&quot;passive scanning permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Passive Scanning&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 540px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/28f504dbb4e8cdbb20dafce042213582/07484/image-4.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 55.69620253164557%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAACP0lEQVR42k2S228SURCH+Ut980/wxQfjk28mRu2LJiYaG5PWGjVUY2za2gvXXW6tWrDQAqUUhN2z7LLAsmc+swutnWTOJTP5zvnNTIKliYAVQNWeUO65VJ2A7kSYaW5MAHcO3Ymm42sGATdxWeYkoiUQqLoacwTJny1W9wts1fvklFBSGme+ANfGkBnMefH1gA3zD+lBSMGB7vT/o4mIXPM0OVtTVJrySCiNhILSFB3BVBpDaUwFecViH84xLE1BSXzPWnAxWQKtQDBiWBgDUpcj0h1F5tKJzyVHs9UP+daLchbAw0uPzJVHqjMi059iOmAo8EJInPtC3tYU7JAjH5KlGo9XP/Cp3KTsgeloNrtzNvtRnlCZwNphiWfrX9hpKoojYtk5Gy58SNS9hSRjGMSvJst17j5c4cnaNvnfdXZaFp/PXD5Whxz2phjNPq+Tu9y5/5Q3eyccdFyyf4O4HA0PEm1fMJRgDGZsVhrsty2Ofag4Ibn2kA3zhHuPnrPy4i3v02VSpWPW94y4aamuS/LonPSVj+FA0xcSXiiYkeSoIS4UHY1pzTHtkKIrHHnw4OU7Xu2afP/VZH1rnx9mhb1Gn6ILJVcoLiXbwXJsOhMha+sYUlBhDI88ukf1LboBBU/YbTlsn1uYwwBTRZMApi1kLDj1bo1NZL2pxB2NOp5fegRtjIVWu01roDgegzGSuF6RZ+3FzyJYKLcG+xoaaLBmwtVU6M+EcShx7Do+DYWOL5x6Qs2Ds/FC5nVO5P8ABj0sVDAELn4AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/28f504dbb4e8cdbb20dafce042213582/07484/image-4.png&quot;
+        srcset=&quot;/static/28f504dbb4e8cdbb20dafce042213582/c26ae/image-4.png 158w,
+/static/28f504dbb4e8cdbb20dafce042213582/6bdcf/image-4.png 315w,
+/static/28f504dbb4e8cdbb20dafce042213582/07484/image-4.png 540w&quot;
+        sizes=&quot;(max-width: 540px) 100vw, 540px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;AP가 지속적으로 BSS내에 Beacon Frame을 송신한다. BSS에 접속한 노드는 수신한 frame을 전송한 AP에게 Request Frame을 보내어 핸드쉐이크를 한다.&lt;/p&gt;
+&lt;h2 id=&quot;active-scanning&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#active-scanning&quot; aria-label=&quot;active scanning permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Active Scanning&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 543px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/bf2980fed4cb05657d6fb7b0b3e03c96/29579/image-5.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.32911392405063%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAACM0lEQVR42lWTS2/TQBSF829BYseWDStWgNggsaoKUqXSShUVtFFoSp84D8d59UFUmiYladI8x07sxInt+dDYIS1XOpbtufp8fc5MDEAqSTA9uDLnlHsOFcvjzoVZAMsewPahM5O0XclgJpk/WlcVUxdPwm9bYoxgt9Ji7aTIXrWPbkLBhOE8Al9PINOd8nE/TfxXk0xvRnkkuXf/4RbAqg2ZIeQVwALDlEvpIlJe+OSEjzH00FpjUm0bveeSG3joIqA1jaAxcw45EcEME45uBan2mPS9jSF8yjbsDyDelZTHhM9q/eCqSbptkmqNyJsBBTNg4ktifyaQFWAISdGG1cQJb9e/sVvpcNQYcdAYs3sjSNYF+/UBWmfCVuacZy/f8CGe48xRw/jLKWM15YtQU0rKDqwmdZ6+WuH9V43twxQb6QvWTkt8yV6yVaqx81PnU+KY15s/WDkosZW9CCfOmZK6ExBruZAeSkpj2Dm/JVFpUBx5FFVI9Q7bRoV363usxjU2M2ek8iU2jrOk2oKLqURTsGHkY2MSEJv6D/7pQ59sf06m74X3BRtO2zZPnr9g49hgr9LgczzJd01Hq3XDqQqWDD3UzQDLk1HKHXfx2wtwfiFlQ1ZIktddUr0pJ02Lw4ZJru+GvimQUmYYcOPIh22jqj+DMytKXIWkL5KvOnB336E5sLhUAVgSw5LkRLBUzZH4kv+BqtRLaw69WfQBZcfjmgfRJq46MjwItxMZ9stHPX8BBVsptuW5TpgAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/bf2980fed4cb05657d6fb7b0b3e03c96/29579/image-5.png&quot;
+        srcset=&quot;/static/bf2980fed4cb05657d6fb7b0b3e03c96/c26ae/image-5.png 158w,
+/static/bf2980fed4cb05657d6fb7b0b3e03c96/6bdcf/image-5.png 315w,
+/static/bf2980fed4cb05657d6fb7b0b3e03c96/29579/image-5.png 543w&quot;
+        sizes=&quot;(max-width: 543px) 100vw, 543px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;BSS에 접속한 노드가 Request Frame을 브로드캐스트한다. AP가 Request Frame을 수신하면 Response Frame을 송신한다.&lt;/p&gt;
+&lt;p&gt;여러 AP에게서 Response Frame이 전달되어도 노드 스스로 선택한 AP와 핸드쉐이크를 한다.&lt;/p&gt;
+&lt;h2 id=&quot;csmaca-collsion-sense-multiple-access--collision-avoid&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#csmaca-collsion-sense-multiple-access--collision-avoid&quot; aria-label=&quot;csmaca collsion sense multiple access  collision avoid permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;CSMA/CA (Collsion Sense Multiple Access / Collision Avoid)&lt;/h2&gt;
+&lt;p&gt;Hidden Terminal Problem과 같이 무선 연결의 경우 충돌을 감지하기 어렵다. 따라서 데이터 전송 전에 가능한 충돌을 회피하기 위해 기다리는 방법으로 발전하게 되었다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 395px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/a5702799c7fba9f8cb42ec464a2aa56a/2cb6c/image-6.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 120.25316455696202%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAYCAYAAAD6S912AAAACXBIWXMAAAsTAAALEwEAmpwYAAADSUlEQVR42pWVTWsbVxSGJ7Zo030gdFlw6daL7Lov2A3FEAiBQFaB/gEvgiHkBzg04Nip7TRk4VCnBBvShZ0sTBKok4w0MqlGkmVLGdXIUixpKnkkWY3m6yn3WuPYiqSmBy535s49z3nPuR+j+L6PsEKhQDabZWtri0wmg23b9LJWq0U+n5c+uVyOnZ0d6vW6/KYEQMMwSKVSJJNJEokEjuP0BDabTTlX13U2NzfRNI39/f0PQM/z5IvoDw4O+D/WaDSO/CXw+EeRZrUdKVDey4LvlmXhuu4HoGmaUrqog3gWLXCwfY9/fJeW7+H4Hh4+nWFE7U4oLBaLxONxdnd3qVYqvNgzSLUsmm73Ggqo0w7g4mPVa91T9tqxx7ZXUcIzfBN/yGh6hfHcKxbMbaIHZYpOE6+dqt9LYbAowcSxzFOU11MMRu7IXlGnUMLTnIrM8uWfC3ybeszVv14wU4zzvF4gVzVFfXor/CHzBEWdJqTdZTA6zyltFiXyM4oIIJo6jaLeJiT6V7e4lY1IP6cNPQIG5f4+vSqdBExpqxrSF/kq9iuh6GEQ0X+xcU+CJw21P/B8+glK+A6fb/yCos0xnFjifHqVkfQKp+XYrBwPiYDqFDeNcH/gd1u/o7z8icHwjExxIDLLgDbHoGjReQa0+RPAngqDpVspZbiWVxndXuFr/SGno3flqov0ZP1EHbU5PpPjt7nZDyhWOzjkcku4NolmhaWqwUQ+LFMX9QwJhQK8Pslk5mUb6HUH7tdqcsMGEzrNclokGhUeld/y49s/+C2ry3G3FzBQKBIQe9N2Pd47h008Bzv6+C2lqirRaJRyufwx0LLEUQLH8fC6iHQ9n1KlxUbM4t5CgbVnBqZZwDT/ljdP3xoKEaWSTSxWZ3m5zI0bWS5eTHDunMbQ0GvOnFnnwYPsYSC32yrj8eaNyeJiievXDcbGdEZGYly5ssnly0kuXIjL9/HxDPfvFwiHa7x7V8X3vaPTpxxXI+zSpSRnz64zPBxhdDTGxITB0lIJXW9QrTrYtn9i/keXQ+elubxcYG2tyt5eC8fpfsmK9EQTnFqt1hvYrYYCKlQdAnw6L/K+CoNVFk7/8Qf4NKBI+fj/4VPM69hb/wL/1sCvilUntQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/a5702799c7fba9f8cb42ec464a2aa56a/2cb6c/image-6.png&quot;
+        srcset=&quot;/static/a5702799c7fba9f8cb42ec464a2aa56a/c26ae/image-6.png 158w,
+/static/a5702799c7fba9f8cb42ec464a2aa56a/6bdcf/image-6.png 315w,
+/static/a5702799c7fba9f8cb42ec464a2aa56a/2cb6c/image-6.png 395w&quot;
+        sizes=&quot;(max-width: 395px) 100vw, 395px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&quot;송신측&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%86%A1%EC%8B%A0%EC%B8%A1&quot; aria-label=&quot;송신측 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;송신측&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;채널을 사용한 후 기다려야할 최소 시간(DIFS)이 지난 후에 채널이 유휴상태라고 판단되면 frame을 전송한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;채널을 누가 사용하고 있는것 같다면,&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;임의의 시간만큼 기다린다.&lt;/li&gt;
+&lt;li&gt;전송한다.&lt;/li&gt;
+&lt;li&gt;ACK이 없으면 1번으로 돌아가서 더 긴 시간을 기다린다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;수신측&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%88%98%EC%8B%A0%EC%B8%A1&quot; aria-label=&quot;수신측 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;수신측&lt;/h3&gt;
+&lt;p&gt;수신이 완료되었다면 ACK 신호를 보낸다.&lt;/p&gt;
+&lt;h3 id=&quot;rts-cts-frame&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#rts-cts-frame&quot; aria-label=&quot;rts cts frame permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;RTS, CTS frame&lt;/h3&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/fe16773869dbc0e5b872785b76755c66/00172/image-7.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 63.92405063291139%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC6ElEQVR42lWTSY8bVRSF/YPY8BtYwIIl4g/AEkVILLIjKzYgITohLTJIKJFYIKVJkJIQkJJgdei23abV7paHeEzZNdg1uqpcw6vhfcjVjoArnadzpaujO5xXAyjLkmbrDNO0tylSygrbWPs+imqQFzn/DVnVXXLLdjg/H1Q6te0TRTEHB7+gq4tdtaQsi4rqus6TF2fYdgKyRJY57CB3NRcXXR4cPKp4Lcsy8kzgRCVdI+HvoU5nrKG5MXaY4W0EUXREkjzEcG0WbsHUThiZCacTk+etPi/P56zCywlqIsvIRIoVZnQWG06nDu2BxtAImbspiiUwVndRlCscnrU56q+od97QHpkMlxumywDNjUiy8l/BbYfaWtCchhz1VBpdhZEZsfBSzChjFUpmRoblBayDANfziOKoEigliFySF3InKARpmlaJKErcIGYyX/JG95npEb2xz3nfpTteM1A2TIyEiRGysGJ0L2WTFv87VrXDVKSU2507EC5CtJ7KRovIHUnuFOReQepkRFZGYKbMXmsMujMcM8a1EwIvw/c35HlOzVuvkYngqT3i88FTrmsNfrIv+M0fcxwu6KYmi9zHKiN8mRKTUSCRb+2z847neiRJQs1ybIgEt40275zc4L3GbT44vMVHrXt80n/IZ8PHfDF6xpfTF3yjvOKm2uRH/ZSfVxf8avV55gypBwp9S6UQGbVEpJBL7uht3j3Z5/3mXT58dYePm/f5tP+IK6MnXJ38wbXpc76a/cnXyiHfzv/iu/kx36sN9tUmN40WL+c9lnOVWioEeSpQs4Df3SGP10Me+APu2x1+0FvcUBvsKUfszY/ZUy9x3WiyvzxhX29xS29VvK4NkCKntl3k9tJsbSQgdmL0sYGnhURmgT2PUUY+45HLaObwem5z3BtR7/Zo6xrN1YK6pdDRZlVjtbfnTtOCMMhwnABdNwmCGCFK8ry4/LglyBykgGgd4Zlrsk1BHpaUEXj2unLLP4HQuceqxE6zAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/fe16773869dbc0e5b872785b76755c66/f058b/image-7.png&quot;
+        srcset=&quot;/static/fe16773869dbc0e5b872785b76755c66/c26ae/image-7.png 158w,
+/static/fe16773869dbc0e5b872785b76755c66/6bdcf/image-7.png 315w,
+/static/fe16773869dbc0e5b872785b76755c66/f058b/image-7.png 630w,
+/static/fe16773869dbc0e5b872785b76755c66/40601/image-7.png 945w,
+/static/fe16773869dbc0e5b872785b76755c66/00172/image-7.png 1044w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;송신측 노드는 먼저 작은 RTS(Request To Send) 신호를 AP에게 전송한다. 이 때 충돌이 발생할 수 있지만 frame의 크기가 작아서 충돌이 거의 없다.&lt;/li&gt;
+&lt;li&gt;RTS 신호를 받은 AP는 CTS(Clear To Send) 신호를 브로드캐스트하여 모든 노드에게 전송하지 말라는 신호를 보낸다.&lt;/li&gt;
+&lt;li&gt;다른 노드는 모두 전송을 중단하게 되고 송신측 노드만 전송을 하게 된다.&lt;/li&gt;
+&lt;li&gt;전송이 완료되면 AP는 ACK신호를 브로드캐스트하여 다른 노드들에게 전송이 끝났음을 알린다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;80211-frame-format&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#80211-frame-format&quot; aria-label=&quot;80211 frame format permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;802.11 Frame Format&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/6411991d89d7b28b4625e4470130855d/32b38/image-3.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 7.59493670886076%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAmklEQVR42h3MTQqCQABA4c7Sohbtol8rW0QUJBbRHYKgTZlOBkUp4p0ydDQbPdULXL7F92oD6dCMDqyUxygTaNJhXQRMMpdxKjCLgHF2pROfWf6edKVFOz6xUC9GqWDz85jld+rvfdU1LRW0PkeMwq+GuhTsyhA9c5kkNtsyZPq9ocUXDOXRlza9xMJQPsPUxlQ+8/xBIzpU5g8t4mMii+tjygAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/6411991d89d7b28b4625e4470130855d/f058b/image-3.png&quot;
+        srcset=&quot;/static/6411991d89d7b28b4625e4470130855d/c26ae/image-3.png 158w,
+/static/6411991d89d7b28b4625e4470130855d/6bdcf/image-3.png 315w,
+/static/6411991d89d7b28b4625e4470130855d/f058b/image-3.png 630w,
+/static/6411991d89d7b28b4625e4470130855d/40601/image-3.png 945w,
+/static/6411991d89d7b28b4625e4470130855d/78612/image-3.png 1260w,
+/static/6411991d89d7b28b4625e4470130855d/32b38/image-3.png 1471w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Receiver MAC Address : frame을 수신하는 노드의 MAC 주소&lt;/li&gt;
+&lt;li&gt;Transmitter MAC Address : frame을 송신하는 노드의 MAC 주소&lt;/li&gt;
+&lt;li&gt;Router MAC Address : AP와 유선으로 연결된 라우터의 MAC 주소&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;BSS 내의 무선 네트워크에서는 802.11 WiFi frame으로 통신하지만, BSS바깥의 라우터로 전송될 때는 Ethernet frame으로 바뀌어 전송된다.&lt;/p&gt;
+&lt;h2 id=&quot;mobility-in-same-subnet&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#mobility-in-same-subnet&quot; aria-label=&quot;mobility in same subnet permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Mobility in same subnet&lt;/h2&gt;
+&lt;p&gt;같은 서브넷에서 한 AP에 연결된 노드가 다른 AP로 이동하게 되면 스위치의 포워딩 테이블 또한 변경되어야 한다. 노드의 MAC 주소를 보고 노드와 연결된 스위치 테이블의 포트를 업데이트하여 노드의 위치를 업데이트하게 된다.&lt;/p&gt;
+&lt;h2 id=&quot;power-management&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#power-management&quot; aria-label=&quot;power management permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Power Management&lt;/h2&gt;
+&lt;p&gt;노드가 배터리를 절약하기 위해 절전 모드(Sleep)로 들어가되 AP와 연결은 유지하고 싶은 경우다.&lt;/p&gt;
+&lt;p&gt;노드가 AP에게 다음 Beacon Frame까지 sleep하겠다고 신호를 보내면, AP는 다음 Beacon Frame까지 그 노드에게 신호를 전송하지 않는다. 대신 노드는 다음 Beacon Frame에 절전 모드에서 깨어난다.&lt;/p&gt;
+&lt;h1 id=&quot;cellular-networks&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#cellular-networks&quot; aria-label=&quot;cellular networks permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Cellular Networks&lt;/h1&gt;
+&lt;p&gt;노드가 이동하여도 수많은 기지국(Base Station = Cell)들 중 하나와 연결되어 네트워크에 참여할 수 있는 것을 Cellular Network라고 한다.&lt;/p&gt;
+&lt;h2 id=&quot;구성-요소-1&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B5%AC%EC%84%B1-%EC%9A%94%EC%86%8C-1&quot; aria-label=&quot;구성 요소 1 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;구성 요소&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;모바일 디바이스&lt;/p&gt;
+&lt;p&gt;스마트폰이나 노트북과 같은 기기를 말하는데, SIM 카드에 담긴 고유 식별자인 ISMI로 노드를 구분한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Base Station (eNode-B)&lt;/p&gt;
+&lt;p&gt;AP와 비슷하게 범위 내의 노드들의 무선 네트워크를 관리한다. 또한 무선 스펙트럼을 스스로 관리하고 노드가 다른 Base Station으로 이동했을 때 상호작용한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;HSS (Home Subscriber Service)&lt;/p&gt;
+&lt;p&gt;홈 네트워크에 가입한 노드들의 정보를 저장하고 있다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;S-GW (Serving Gateway), P-GW (PDN Gateway)&lt;/p&gt;
+&lt;p&gt;S-GW는 Base Station과 P-GW사이에서 라우팅하여 사용자 정보를 전달한다(?).&lt;/p&gt;
+&lt;p&gt;P-GW는 LTE 네트워크와 더 큰 네트워크 사이에서 NAT기능을 제공한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;MME (Mobility Manager Entity)&lt;/p&gt;
+&lt;p&gt;가입자와 네트워크간 인증을 담당한다. 이 때 가입자의 인증정보를 얻기 위해 HSS에 접근하게 된다.&lt;/p&gt;
+&lt;p&gt;또한 노드의 이동성을 관리하여 다른 Base Station으로 이동했는지 추적, 관리한다.&lt;/p&gt;
+&lt;p&gt;노드와 P-GW간 터널링의 경로를 설정하는 역할도 담당한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;control-plane&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#control-plane&quot; aria-label=&quot;control plane permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Control Plane&lt;/h2&gt;
+&lt;p&gt;모바일 디바이스가 연결 유지 및 관리를 위해 MME, eNode-B 또는 다른 구성 요소에게 데이터를 전달한다.&lt;/p&gt;
+&lt;h2 id=&quot;data-plane&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#data-plane&quot; aria-label=&quot;data plane permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Data Plane&lt;/h2&gt;
+&lt;p&gt;새로운 프로토콜를 담은 패킷을 Base Station으로부터 P-GW까지 터널링으로 전달한다.&lt;/p&gt;
+&lt;p&gt;모바일 디바이스는 링크 레이어에 Packet Data Convergence, Radio Link Control Protocol, Medium Access에 관한 정보를 담아 eNode-B에 전송한다.&lt;/p&gt;
+&lt;p&gt;eNode-B는 이 정보를 UDP로 캡슐화하여 S-GW에 전송하고, S-GW는 P-GW에 전송한다.&lt;/p&gt;
+&lt;h3 id=&quot;흐름&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%9D%90%EB%A6%84&quot; aria-label=&quot;흐름 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;흐름&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Base Station은 동기화 신호를 모든 주파수에 5ms마다 송신한다.&lt;/li&gt;
+&lt;li&gt;모바일 디바이스는 동기화 신호를 감지하고 여러 정보를 담은 두 번째 동기화 신호를 수신하여 정보를 획득한다.&lt;/li&gt;
+&lt;li&gt;이 때 여러 Base Station에게서 동기화 신호를 수신했을 경우 한 개의 Base Station만 선택하여 네트워크에 참여한다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&quot;mobility&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#mobility&quot; aria-label=&quot;mobility permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Mobility&lt;/h1&gt;
+&lt;p&gt;앞서 &lt;a href=&quot;#mobility-in-same-subnet&quot;&gt;Mobility in same subnet&lt;/a&gt;에서, 한 서브넷안에서 모바일 디바이스가 이동하면서 AP를 바꿀 수 있다고 했었는데, 이건 작은 의미의 Mobility다. 좀 더 큰 의미의 Mobility는 한 ISP안에서, 또는 다른 ISP사이에서도 모바일 디바이스가 이동할 수 있다.&lt;/p&gt;
+&lt;p&gt;이 기능을 라우터가 혼자 제공하려면 매우 많은 수의 모바일 디바이스에 대한 테이블을 관리해야하므로 이 방법 대신에 먼저 Home Network에 접속해서 모바일 디바이스가 어디에 있는지에 대한 정보를 획득한 후 포워딩 되는 방법을 선택한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Home Network : 사용자가 가입되어있는 네트워크. HSS에 가입자에 대한 정보가 저장되어 있다.&lt;/li&gt;
+&lt;li&gt;Visited Network : Home Network가 아닌 다른 네트워크.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;indirect-routing&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#indirect-routing&quot; aria-label=&quot;indirect routing permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Indirect Routing&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;모바일 디바이스가 Home Network에서 Visited Network로 이동한다.&lt;/li&gt;
+&lt;li&gt;모바일 디바이스는 Visited Network의 MME에 연결된다.&lt;/li&gt;
+&lt;li&gt;MME는 모바일 디바이스의 HSS와 연동하여 현재 모바일 디바이스의 위치를 업데이트한다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;위치가 업데이트 된 후 라우팅은 아래의 절차대로 진행된다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/b09f32ff7295930fed332e9710079747/7e509/image-8.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 73.41772151898735%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC/UlEQVR42n2UaU8bVxSG/Yf7pV8aqVHVooYGSDGF2IBLUdUsSqNCE6UhFIRiAS7YYGyDDWY84wWvM2awwR7PeLanGmOstEl7pLtJ5zw69+p9rw/AdV0UzeTsxiXRBqHjotsMwuXjuO5oCC2DaAv2VMh2wB4m+rwp1uwTSsoERItAAfwFWG96MHcEvQP3HHj0epexsMh8BeYkhx8kOG4PgU0TFnIGwcMK8+c9Fovw8lRhKa3ye82mbzuDRGdI3LuCz39eZ3I1Qkg0WSw5hAoOv1RAs8Hnte3PGjwIC4zv5JmMN1lJ1wm+3Obe2ySx8yK2oQ9g3is8KfS5v5Zg5rDBTlTg160Uj8MiM6JFTLXw/anAY8liKlplOtHEn1KZL1tMvy8xEVfIqPro7boO/JTv83C/zKPjK169T/J0M83YaoIv3h7xLKPg21UsZrYElosmoQv4UTSYXjllbjXBcuaailTFadRxLAujZ7BStQmeGcweXRM8qBHM24SK7qCpddnFJ3Ucxp4fML6VZSpWZTGn8+z1LgvPt3iXruGcpNDTabRUEqQsC2GRe0sRQi8izMQumIhWCOUtAkXIa+AzXdioGoPrThwpzOYMvtyWCLyLc9loktJgXYU1sU1K7RNOlZnfr/OiavEgWuHb8DlzOYNI+wPZdDUbsWUTVRz2yz020w0uqjLHyRxfbYmMx+o8jCvc3y7xl9QcFAqqRVI2Obs0Ob20aHdMT9C3wLrcpSA1KYgyQrY62HsyuRCK7OweM3EoM7lfIXhQ51XJQDddyqUrpJyCmGsgCjKl8g22MwQ6jkOvp6EbOj1dQ9d7t0K2DMbfZHiTUSi1uqjnOTTz1kJevjc63Q7dbmfgttGV3X/56+4s6fB1QuO3gwobmxJ/nDTZVCFz435kS/dD6/0DNlwNT3NFl6UaLO8JfO9/yuxpl6k8rDXcoXvcUWd34fuE90fQxDX4cw7fbJzwWeAJ38VqLJdANv774/gk8C48Fxc7Nodqn8ilSVzWaPXd/yvhbwofQmVhqdxbAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/b09f32ff7295930fed332e9710079747/f058b/image-8.png&quot;
+        srcset=&quot;/static/b09f32ff7295930fed332e9710079747/c26ae/image-8.png 158w,
+/static/b09f32ff7295930fed332e9710079747/6bdcf/image-8.png 315w,
+/static/b09f32ff7295930fed332e9710079747/f058b/image-8.png 630w,
+/static/b09f32ff7295930fed332e9710079747/7e509/image-8.png 745w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;다른 송신자는 현재 모바일 디바이스의 위치를 모르므로, 모바일 디바이스가 가입되어 있는 Home Network로 패킷을 전송한다.&lt;/li&gt;
+&lt;li&gt;Home Network Gateway는 HSS에 저장된 디바이스의 위치에 따라 Visited Network Gateway로 포워딩한다.&lt;/li&gt;
+&lt;li&gt;Visited Network Gateway는 전달받은 패킷을 모바일 디바이스에게 전달한다.&lt;/li&gt;
+&lt;li&gt;모바일 디바이스의 응답을 다시 전송할 때, Home Network를 경유하여 전송하거나 직접 전송한다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;이렇게 송신자가 모바일 디바이스에게 패킷을 전송할 때 Home Network를 경유하여 전송하는 것을 Triangle Routing이라고 한다.&lt;/p&gt;
+&lt;h2 id=&quot;direct-routing&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#direct-routing&quot; aria-label=&quot;direct routing permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Direct Routing&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/510e81fa4b3ca18ff9ece23112238937/13e20/image-9.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 74.0506329113924%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC9klEQVR42n2T6U8bRxiH/R+336JWiRQpNKEpDiYmNTahVdqEREKNINBGIQ0YFCCJD3wUu/jYtfGxttf4Zr273p0nYo0JVWl/0oxmNPM+8857uAAs26bU1Yl3IdSGVE8wtHAk+KLJutHpkWwZ7J7CThPSfbAvzlzn027NwB+rMS/ZzMvgluFtC4Q4H8IBTWDtEdxe3uS7vQK+CnglwZw0hjrA0hAeZXR8kQoLOQO/LHh5VCWQVFlTbCx7jBIXxHcqfB1YxbMRwp81CMgWfsliuQK6Da7gKbhTGne2/mYqmOV+VGU1WcbzdJsbfySIZYsIa+TANBuWcjrfbkTwxJqEPhzx6+so8+9lPFmDeNvC9XsdHmYM3GGFB4dNZhNtfEWD2a0i0xEVqTW4jOGpCf6cwQ/hKg+SbV5tx1jaTDO1nuSbN3+xmm3hClZ1PJtpHhctFkvwOK/jfnqI93WKJw3oml/ScmbBSg0eJgZ4PzZ4FFL4sSBYLAi8eYvdpsCV6RjcfhbmztYxM6EqgZzOL79t41vZJXgy9s4W4jKW9w5q3Fra5+e1MN/vyUzvF1mQbAJFqBvgOnfgbW3EXFzFHW8xn9W5Gczw059xerE4n5QBayqs1QWHPdjJdXj+ocALecD9sIL7YxG/PCIxuFI2/cGIYtci0rCJVjT2ck0a9SbRgwRTr6Lc/aQwfVDm5vsyoXIbPZUiU9c5apgcqybZpkmvbzo/cYBKrY8sNchnqxynypzIqlOopXyJreAh7v0TZkMKvrzJerrJWbVBodimIKmkU2XyuTpKXXPC4gBt20LXhxiGjm4MMU1j7P/IYHolyrtQnpJu0TVG9Ku1cQlpZ46NNhww1LXLxLn+1V+TrRDE+nA32uXlnsz6G5n1SJmNE41Uf3zrIk8XHXUVeE2/9kawIAkWFQhsx5iZe4Y32WFGgh1V/AN4VS6u0eRepAOzxya3NsJ8FVjhXkRluSScx6752H8DJzpPTOXMJtWziPcF2baBZon/M+EzQrFEbY847FgAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/510e81fa4b3ca18ff9ece23112238937/f058b/image-9.png&quot;
+        srcset=&quot;/static/510e81fa4b3ca18ff9ece23112238937/c26ae/image-9.png 158w,
+/static/510e81fa4b3ca18ff9ece23112238937/6bdcf/image-9.png 315w,
+/static/510e81fa4b3ca18ff9ece23112238937/f058b/image-9.png 630w,
+/static/510e81fa4b3ca18ff9ece23112238937/13e20/image-9.png 741w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;모바일 디바이스가 가입되어있는 Home Network에게 현재 모바일 디바이스가 어디에 있는지 조회하는 패킷을 전송한다.&lt;/li&gt;
+&lt;li&gt;이에 대한 응답으로 송신자는 모바일 디바이스의 위치를 알게 되었으므로 송신자가 직접 패킷을 전송한다.&lt;/li&gt;
+&lt;li&gt;Visited Network Gateway는 수신된 패킷을 모바일 디바이스에게 전달한다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;configuring-lte-elements&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#configuring-lte-elements&quot; aria-label=&quot;configuring lte elements permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Configuring LTE Elements&lt;/h2&gt;
+&lt;h3 id=&quot;control-plane-1&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#control-plane-1&quot; aria-label=&quot;control plane 1 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Control Plane&lt;/h3&gt;
+&lt;p&gt;모바일 디바이스가 이동할 때 Visited Network의 MME와 상호작용하여 자신의 IMSI를 통해 네트워크의 인증, 보안 등의 서비스 정보를 얻는다. MME는 모바일 디바이스가 가입된 네트워크의 HSS에 위치를 업데이트한다.&lt;/p&gt;
+&lt;h3 id=&quot;data-plane-1&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#data-plane-1&quot; aria-label=&quot;data plane 1 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Data Plane&lt;/h3&gt;
+&lt;p&gt;모바일 디바이스가 이동했다면 &lt;code class=&quot;language-text&quot;&gt;S-GW &amp;lt;-&gt; Base Station&lt;/code&gt;간 터널에서 모바일 디바이스가 연결된 Base Station으로 패킷이 이동하도록 EndPoint를 변경한다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;S-GW &amp;lt;-&gt; Home Network P-GW&lt;/code&gt;간 터널에서는 indirect routing을 유지한다.&lt;/p&gt;
+&lt;h2 id=&quot;handover-in-same-cellular-network&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#handover-in-same-cellular-network&quot; aria-label=&quot;handover in same cellular network permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Handover in same cellular network&lt;/h2&gt;
+&lt;p&gt;같은 네트워크 내에서 모바일 기기가 Base Station을 변경할 때 아래의 순서대로 진행된다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/43de9ddcb83427a36bb09de7598e4635/d4c13/image-10.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 47.46835443037975%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAACJElEQVR42mWSy09acRCF7z/ZbfcuXLTdNGli0oWNKJUWQakIWkt5ROuTthoDeqFqfQEiVR7yksvlYaUQRQTh9zVIkzbpJLOYxZx8c+ZIAJ0//X8J7jpwXIXPBcFiARZK4EpUWVKa+CuQuIGbewFCIABJiN7QXe4IQeNeUG8Jbttw0YA5BcYzYMqBNvyLwe0so9tJTOEK42mBIS2wKBC57mlIXY6KgO91WLkCe5fgEmYumuiitz2xeAv9fh7tRpjRlW1mvRFGZ/aY3skg+094f6BiTbWotUFKFxtoVlIM2E4ZllX0OyW0/jJD7iga5yGWkMLbzRC6rSi64yqL4TLeJZllpw/3RgDbaY3ZYJkRX5LA5S2SP15nYD7BoCPI8EYeo1xEs5bHIOdxeiP0TZzwdKGIOSewVWHyvMnapy2sJg9+t4xJ7TCRa/Pcvsl6vIyUbMJ49h5Tso61CFMqWEq9k33fjtFH7uhzqDwaOaPfpWKMtTB9jfDCuIs1oLC6l8b48YhXW1kOKm2kSlNgyXTNhXcpgTktmEwLzKk29t0U09FrbEqbqWCFJ9MxHg+FePYhRr/Wh8YWxOmJM5uoM5YDpUHvKaU7cBcEUxkwpMCQ7FLD6+UQui8/GNsr4PEGcJ4UMR7+5OV6Ft2cH72c4E0ezBeC/SvxEDRJ/JO6qyaEa7B5CaslcByoTB4VmDmvsViCpaJ4SMJ89gZXRMWTr3N2DdXWX5Xf14hu3WDqIC4AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/43de9ddcb83427a36bb09de7598e4635/f058b/image-10.png&quot;
+        srcset=&quot;/static/43de9ddcb83427a36bb09de7598e4635/c26ae/image-10.png 158w,
+/static/43de9ddcb83427a36bb09de7598e4635/6bdcf/image-10.png 315w,
+/static/43de9ddcb83427a36bb09de7598e4635/f058b/image-10.png 630w,
+/static/43de9ddcb83427a36bb09de7598e4635/d4c13/image-10.png 825w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;기존에 모바일 디바이스와 연결된 Source Base Station은 새로 연결될 Target Base Station에게 &lt;em&gt;Handover Request Message&lt;/em&gt;를 전송한다.&lt;/li&gt;
+&lt;li&gt;Target Base Station은 메세지를 수신한 후 Source Base Station에게 응답 메세지를 전송한 후 모바일 디바이스와 연결될 준비를 한다.&lt;/li&gt;
+&lt;li&gt;Source Base Station은 모바일 디바이스에게 Target Base Station의 정보를 전송하여 모바일 디바이스가 Target Base Station와 연결될 수 있도록 한다.&lt;/li&gt;
+&lt;li&gt;Source Base Station은 모바일 디바이스에게 전송하는 것을 멈추고 Target Base Station으로 라우팅한다.&lt;/li&gt;
+&lt;li&gt;Target Base Station은 MME에게 모바일 디바이스가 연결된 Base Station이 달라졌음을 전달하여 S-GW가 EndPoint를 자신으로 설정하도록 업데이트한다.&lt;/li&gt;
+&lt;li&gt;Target Base Station이 Source Base Station에게 handover가 완료되었다는 메세지를 전송하여 Source Base Station이 포워딩을 그만두도록 한다.&lt;/li&gt;
+&lt;li&gt;모바일 디바이스는 새로운 Base Station으로 데이터를 전송할 수 있게 되어 네트워크를 유지하게 된다.&lt;/li&gt;
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[링크 레이어]]></title><description><![CDATA[링크 레이어의 역할 물리적으로 연결된 두 노드 사이에서 frame을 전달한다. 이 때 물리적으로 연결되었다는 것은 유선 또는 무선으로 연결된 것을 의미한다. frame frame…]]></description><link>https://10cheon00.github.io/computer-network/링크-레이어/</link><guid isPermaLink="false">https://10cheon00.github.io/computer-network/링크-레이어/</guid><pubDate>Thu, 16 Nov 2023 09:09:09 GMT</pubDate><content:encoded>&lt;h1 id=&quot;링크-레이어의-역할&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%A7%81%ED%81%AC-%EB%A0%88%EC%9D%B4%EC%96%B4%EC%9D%98-%EC%97%AD%ED%95%A0&quot; aria-label=&quot;링크 레이어의 역할 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;링크 레이어의 역할&lt;/h1&gt;
 &lt;p&gt;물리적으로 연결된 두 노드 사이에서 frame을 전달한다. 이 때 물리적으로 연결되었다는 것은 유선 또는 무선으로 연결된 것을 의미한다.&lt;/p&gt;
 &lt;h1 id=&quot;frame&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#frame&quot; aria-label=&quot;frame permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;frame&lt;/h1&gt;
 &lt;p&gt;frame에는 상위 레이어인 네트워크 레이어가 전달하고자 하는 데이터인 datagram 또는 packet이 포함된다. 포함된 정보는 한 노드에서 다른 노드로 전달되는데, 이를 위해서 시작 주소와 도착 주소가 담긴다. 이 주소는 MAC 주소로, 모든 네트워크에서 유일한 주소다.&lt;/p&gt;
@@ -689,7 +1217,63 @@ CssSyntaxError
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;한 줄밖에 없는 파일이 열리는데 바로 보이는 &lt;code class=&quot;language-text&quot;&gt;lineComment&lt;/code&gt;의 값을 &lt;code class=&quot;language-text&quot;&gt;&quot;&quot;&lt;/code&gt;로 바꾸면 해결된다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[WSL에서 Intellij 인덱싱이 끝나지 않을 때]]></title><description><![CDATA[Spring Initializr를 이용해 간단한 설정파일들을 받은 후 WSL에 설치되어있는 JDK를 이용해 프로젝트를 불러오려고 했다.  Gradle 설정은 이렇게 해두었다. 사진에는 짤렸는데 Add SDK 항목에서 WSL에 JDK…]]></description><link>https://10cheon00.github.io/posts/WSL에서-IntelliJ-인덱싱이-끝나지-않을-때/</link><guid isPermaLink="false">https://10cheon00.github.io/posts/WSL에서-IntelliJ-인덱싱이-끝나지-않을-때/</guid><pubDate>Mon, 06 Nov 2023 12:01:06 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Windows 10 Pro 22h2 19045.3570
+&lt;p&gt;한 줄밖에 없는 파일이 열리는데 바로 보이는 &lt;code class=&quot;language-text&quot;&gt;lineComment&lt;/code&gt;의 값을 &lt;code class=&quot;language-text&quot;&gt;&quot;&quot;&lt;/code&gt;로 바꾸면 해결된다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Annotation]]></title><description><![CDATA[Annotation은 영어로 번역했을 때 주석이라는 뜻을 갖는다. 주석은 코드의 흐름에 영향을 주지 않는다. 하지만 코드를 보는 사람으로 하여금 어떤 코드인지 이해하게 만들고 함수 또는 라이브러리를 어떤 상황에 써야하는지 설명한다. Java…]]></description><link>https://10cheon00.github.io/java/annotation/</link><guid isPermaLink="false">https://10cheon00.github.io/java/annotation/</guid><pubDate>Mon, 06 Nov 2023 12:01:06 GMT</pubDate><content:encoded>&lt;p&gt;Annotation은 영어로 번역했을 때 주석이라는 뜻을 갖는다. 주석은 코드의 흐름에 영향을 주지 않는다. 하지만 코드를 보는 사람으로 하여금 어떤 코드인지 이해하게 만들고 함수 또는 라이브러리를 어떤 상황에 써야하는지 설명한다.&lt;/p&gt;
+&lt;p&gt;Java의 어노테이션도 이와 비슷하다. 프로그램에 직접적으로 영향을 주지 않지만 다른 라이브러리나 툴이 그 프로그램을 어떻게 쓸 수 있는지 제시한다. 어노테이션은 런타임에 영향을 준다고 한다.&lt;/p&gt;
+&lt;h1 id=&quot;선언-및-사용-방법&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%A0%EC%96%B8-%EB%B0%8F-%EC%82%AC%EC%9A%A9-%EB%B0%A9%EB%B2%95&quot; aria-label=&quot;선언 및 사용 방법 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;선언 및 사용 방법&lt;/h1&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token annotation punctuation&quot;&gt;@interface&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;NewAnnotation&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;설명을 넣어주세요&quot;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token annotation punctuation&quot;&gt;@NewAnnotation&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+    id &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    name &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;새로운 Annotation&quot;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Foo&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// ...&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;선언할 때에는 &lt;code class=&quot;language-text&quot;&gt;@interface&lt;/code&gt; 타입으로 선언하고, 사용할 때에는 어노테이션을 선언할 때 정의한 속성에 맞게 파라미터를 괄호 안에 넣어준다. &lt;code class=&quot;language-text&quot;&gt;default&lt;/code&gt;로 기본값 선언을 해두었다면 별도로 인자를 넣지 않아도 된다.&lt;/p&gt;
+&lt;p&gt;속성을 정의하지 않은 어노테이션도 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token annotation punctuation&quot;&gt;@interface&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;NoArgumentAnnotation&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token annotation punctuation&quot;&gt;@NoArgumentAnnotation&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Foo&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// ...&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;괄호 없이 어노테이션 이름만 붙여준다.&lt;/p&gt;
+&lt;p&gt;속성이 한 개인 어노테이션이라면 속성명을 넣지 않고 그냥 파라미터를 넣는다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token annotation punctuation&quot;&gt;@interface&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;OneArgumentAnnotation&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token annotation punctuation&quot;&gt;@OneArgumentAnnotation&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Person&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// ...&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이렇게 어노테이션 선언을 했는데, 클래스나 객체가 어노테이션을 갖는지 확인하려면 &lt;code class=&quot;language-text&quot;&gt;java.lang.reflect&lt;/code&gt; 패키지를 이용해야 한다. 공식 문서를 참조하면 아래의 코드는 &lt;code class=&quot;language-text&quot;&gt;args[0]&lt;/code&gt;가 가리키는 클래스로부터 &lt;code class=&quot;language-text&quot;&gt;@Test&lt;/code&gt;를 갖는 모든 함수를 실행한 다음, 에러를 검출하여 전체 테스트 케이스를 돌려보고 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token import&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;java&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;lang&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;reflect&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;RunTests&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+   &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; args&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; passed &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; failed &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Method&lt;/span&gt; m &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Class&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;forName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;args&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getMethods&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+         &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;m&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;isAnnotationPresent&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Test&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;token keyword&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+               m&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;invoke&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+               passed&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Throwable&lt;/span&gt; ex&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+               &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Test %s failed: %s %n&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; m&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; ex&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getCause&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+               failed&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+         &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Passed: %d, Failed %d%n&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; passed&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; failed&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+   &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;참고-문헌&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%B0%B8%EA%B3%A0-%EB%AC%B8%ED%97%8C&quot; aria-label=&quot;참고 문헌 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;참고 문헌&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://docs.oracle.com/javase/8/docs/technotes/guides/language/annotations.html&quot;&gt;Annotations | Oracle Help Center&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[WSL에서 Intellij 인덱싱이 끝나지 않을 때]]></title><description><![CDATA[Spring Initializr를 이용해 간단한 설정파일들을 받은 후 WSL에 설치되어있는 JDK를 이용해 프로젝트를 불러오려고 했다.  Gradle 설정은 이렇게 해두었다. 사진에는 짤렸는데 Add SDK 항목에서 WSL에 JDK…]]></description><link>https://10cheon00.github.io/posts/WSL에서-IntelliJ-인덱싱이-끝나지-않을-때/</link><guid isPermaLink="false">https://10cheon00.github.io/posts/WSL에서-IntelliJ-인덱싱이-끝나지-않을-때/</guid><pubDate>Mon, 06 Nov 2023 12:01:06 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Windows 10 Pro 22h2 19045.3570
 IntelliJ Idea 2023.2.4&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;a href=&quot;https://start.spring.io&quot;&gt;Spring Initializr&lt;/a&gt;를 이용해 간단한 설정파일들을 받은 후 WSL에 설치되어있는 JDK를 이용해 프로젝트를 불러오려고 했다.&lt;/p&gt;
 &lt;p&gt;&lt;span
@@ -763,63 +1347,7 @@ IntelliJ Idea 2023.2.4&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;윈도우 방화벽에서 &lt;em&gt;특정 프로세스&lt;/em&gt;를 제외시키면 된다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;fsnotifier-wsl
 idea64.exe&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;파일이나 폴더를 제외시키는건 딱히 효과가 없었고 프로세스를 제외시키는 것이 효과가 있었다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Annotation]]></title><description><![CDATA[Annotation은 영어로 번역했을 때 주석이라는 뜻을 갖는다. 주석은 코드의 흐름에 영향을 주지 않는다. 하지만 코드를 보는 사람으로 하여금 어떤 코드인지 이해하게 만들고 함수 또는 라이브러리를 어떤 상황에 써야하는지 설명한다. Java…]]></description><link>https://10cheon00.github.io/java/annotation/</link><guid isPermaLink="false">https://10cheon00.github.io/java/annotation/</guid><pubDate>Mon, 06 Nov 2023 12:01:06 GMT</pubDate><content:encoded>&lt;p&gt;Annotation은 영어로 번역했을 때 주석이라는 뜻을 갖는다. 주석은 코드의 흐름에 영향을 주지 않는다. 하지만 코드를 보는 사람으로 하여금 어떤 코드인지 이해하게 만들고 함수 또는 라이브러리를 어떤 상황에 써야하는지 설명한다.&lt;/p&gt;
-&lt;p&gt;Java의 어노테이션도 이와 비슷하다. 프로그램에 직접적으로 영향을 주지 않지만 다른 라이브러리나 툴이 그 프로그램을 어떻게 쓸 수 있는지 제시한다. 어노테이션은 런타임에 영향을 준다고 한다.&lt;/p&gt;
-&lt;h1 id=&quot;선언-및-사용-방법&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%A0%EC%96%B8-%EB%B0%8F-%EC%82%AC%EC%9A%A9-%EB%B0%A9%EB%B2%95&quot; aria-label=&quot;선언 및 사용 방법 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;선언 및 사용 방법&lt;/h1&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token annotation punctuation&quot;&gt;@interface&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;NewAnnotation&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;설명을 넣어주세요&quot;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;token annotation punctuation&quot;&gt;@NewAnnotation&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
-    id &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-    name &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;새로운 Annotation&quot;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Foo&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token comment&quot;&gt;// ...&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;선언할 때에는 &lt;code class=&quot;language-text&quot;&gt;@interface&lt;/code&gt; 타입으로 선언하고, 사용할 때에는 어노테이션을 선언할 때 정의한 속성에 맞게 파라미터를 괄호 안에 넣어준다. &lt;code class=&quot;language-text&quot;&gt;default&lt;/code&gt;로 기본값 선언을 해두었다면 별도로 인자를 넣지 않아도 된다.&lt;/p&gt;
-&lt;p&gt;속성을 정의하지 않은 어노테이션도 있다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token annotation punctuation&quot;&gt;@interface&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;NoArgumentAnnotation&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;token annotation punctuation&quot;&gt;@NoArgumentAnnotation&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Foo&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token comment&quot;&gt;// ...&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;괄호 없이 어노테이션 이름만 붙여준다.&lt;/p&gt;
-&lt;p&gt;속성이 한 개인 어노테이션이라면 속성명을 넣지 않고 그냥 파라미터를 넣는다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token annotation punctuation&quot;&gt;@interface&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;OneArgumentAnnotation&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;token annotation punctuation&quot;&gt;@OneArgumentAnnotation&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Person&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token comment&quot;&gt;// ...&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;이렇게 어노테이션 선언을 했는데, 클래스나 객체가 어노테이션을 갖는지 확인하려면 &lt;code class=&quot;language-text&quot;&gt;java.lang.reflect&lt;/code&gt; 패키지를 이용해야 한다. 공식 문서를 참조하면 아래의 코드는 &lt;code class=&quot;language-text&quot;&gt;args[0]&lt;/code&gt;가 가리키는 클래스로부터 &lt;code class=&quot;language-text&quot;&gt;@Test&lt;/code&gt;를 갖는 모든 함수를 실행한 다음, 에러를 검출하여 전체 테스트 케이스를 돌려보고 있다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token import&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;java&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;lang&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;reflect&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;RunTests&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-   &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; args&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; passed &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; failed &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-      &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Method&lt;/span&gt; m &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Class&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;forName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;args&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getMethods&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-         &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;m&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;isAnnotationPresent&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Test&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;token keyword&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-               m&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;invoke&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-               passed&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Throwable&lt;/span&gt; ex&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-               &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Test %s failed: %s %n&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; m&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; ex&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getCause&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-               failed&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-         &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-      &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Passed: %d, Failed %d%n&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; passed&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; failed&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-   &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;hr&gt;
-&lt;h1 id=&quot;참고-문헌&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%B0%B8%EA%B3%A0-%EB%AC%B8%ED%97%8C&quot; aria-label=&quot;참고 문헌 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;참고 문헌&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&quot;https://docs.oracle.com/javase/8/docs/technotes/guides/language/annotations.html&quot;&gt;Annotations | Oracle Help Center&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[컴퓨터 구조론 (2) - 명령어 구조]]></title><description><![CDATA[컴퓨터는 명령어에 의해 동작한다. CPU는 메모리에 저장된 명령어를 불러와 해석하고 연산한다. 명령어 설계 원칙? 간단하게 하기 위해서는 규칙적인 것으로 정한다 명령어에 들어가는 파라미터는 3개로 제한한다. ex. 은 x6과 x…]]></description><link>https://10cheon00.github.io/computer-organization/컴퓨터-구조론-(2)-명령어-구조/</link><guid isPermaLink="false">https://10cheon00.github.io/computer-organization/컴퓨터-구조론-(2)-명령어-구조/</guid><pubDate>Thu, 26 Oct 2023 07:48:34 GMT</pubDate><content:encoded>&lt;p&gt;컴퓨터는 명령어에 의해 동작한다. CPU는 메모리에 저장된 명령어를 불러와 해석하고 연산한다.&lt;/p&gt;
+&lt;p&gt;파일이나 폴더를 제외시키는건 딱히 효과가 없었고 프로세스를 제외시키는 것이 효과가 있었다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[컴퓨터 구조론 (2) - 명령어 구조]]></title><description><![CDATA[컴퓨터는 명령어에 의해 동작한다. CPU는 메모리에 저장된 명령어를 불러와 해석하고 연산한다. 명령어 설계 원칙? 간단하게 하기 위해서는 규칙적인 것으로 정한다 명령어에 들어가는 파라미터는 3개로 제한한다. ex. 은 x6과 x…]]></description><link>https://10cheon00.github.io/computer-organization/컴퓨터-구조론-(2)-명령어-구조/</link><guid isPermaLink="false">https://10cheon00.github.io/computer-organization/컴퓨터-구조론-(2)-명령어-구조/</guid><pubDate>Thu, 26 Oct 2023 07:48:34 GMT</pubDate><content:encoded>&lt;p&gt;컴퓨터는 명령어에 의해 동작한다. CPU는 메모리에 저장된 명령어를 불러와 해석하고 연산한다.&lt;/p&gt;
 &lt;h1 id=&quot;명령어-설계-원칙&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%AA%85%EB%A0%B9%EC%96%B4-%EC%84%A4%EA%B3%84-%EC%9B%90%EC%B9%99&quot; aria-label=&quot;명령어 설계 원칙 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;명령어 설계 원칙?&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
