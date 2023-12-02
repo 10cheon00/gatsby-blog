@@ -92,9 +92,13 @@ AP관리자는 각 AP가 사용할 주파수를 설정할 수 있는데, 다른 
 
 ## Passive Scanning
 
+![Alt text](image-4.png)
+
 AP가 지속적으로 BSS내에 Beacon Frame을 송신한다. BSS에 접속한 노드는 수신한 frame을 전송한 AP에게 Request Frame을 보내어 핸드쉐이크를 한다.
 
 ## Active Scanning
+
+![Alt text](image-5.png)
 
 BSS에 접속한 노드가 Request Frame을 브로드캐스트한다. AP가 Request Frame을 수신하면 Response Frame을 송신한다.
 
@@ -103,6 +107,8 @@ BSS에 접속한 노드가 Request Frame을 브로드캐스트한다. AP가 Requ
 ## CSMA/CA (Collsion Sense Multiple Access / Collision Avoid)
 
 Hidden Terminal Problem과 같이 무선 연결의 경우 충돌을 감지하기 어렵다. 따라서 데이터 전송 전에 가능한 충돌을 회피하기 위해 기다리는 방법으로 발전하게 되었다. 
+
+![Alt text](image-6.png)
 
 ### 송신측
 
@@ -118,6 +124,8 @@ Hidden Terminal Problem과 같이 무선 연결의 경우 충돌을 감지하기
 수신이 완료되었다면 ACK 신호를 보낸다.
 
 ### RTS, CTS frame
+
+![Alt text](image-7.png)
 
 1. 송신측 노드는 먼저 작은 RTS(Request To Send) 신호를 AP에게 전송한다. 이 때 충돌이 발생할 수 있지만 frame의 크기가 작아서 충돌이 거의 없다.
 2. RTS 신호를 받은 AP는 CTS(Clear To Send) 신호를 브로드캐스트하여 모든 노드에게 전송하지 말라는 신호를 보낸다.
@@ -154,7 +162,7 @@ BSS 내의 무선 네트워크에서는 802.11 WiFi frame으로 통신하지만,
 
   스마트폰이나 노트북과 같은 기기를 말하는데, SIM 카드에 담긴 고유 식별자인 ISMI로 노드를 구분한다.
 
-- Base Station
+- Base Station (eNode-B)
 
   AP와 비슷하게 범위 내의 노드들의 무선 네트워크를 관리한다. 또한 무선 스펙트럼을 스스로 관리하고 노드가 다른 Base Station으로 이동했을 때 상호작용한다.
 
@@ -176,10 +184,80 @@ BSS 내의 무선 네트워크에서는 802.11 WiFi frame으로 통신하지만,
 
   노드와 P-GW간 터널링의 경로를 설정하는 역할도 담당한다.
 
+## Control Plane
+
+모바일 디바이스가 연결 유지 및 관리를 위해 MME, eNode-B 또는 다른 구성 요소에게 데이터를 전달한다. 
+
 ## Data Plane 
 
-LTE에서 
+새로운 프로토콜를 담은 패킷을 Base Station으로부터 P-GW까지 터널링으로 전달한다.
 
-- Packet Data Convergence : IP 헤더 압축, 암호화 및 복호화
-- Radio Link Control : 패킷의 fragmentation 및 assemble, 
-- Medium Access
+모바일 디바이스는 링크 레이어에 Packet Data Convergence, Radio Link Control Protocol, Medium Access에 관한 정보를 담아 eNode-B에 전송한다.
+
+eNode-B는 이 정보를 UDP로 캡슐화하여 S-GW에 전송하고, S-GW는 P-GW에 전송한다.
+
+### 흐름
+
+1. Base Station은 동기화 신호를 모든 주파수에 5ms마다 송신한다.
+2. 모바일 디바이스는 동기화 신호를 감지하고 여러 정보를 담은 두 번째 동기화 신호를 수신하여 정보를 획득한다.
+3. 이 때 여러 Base Station에게서 동기화 신호를 수신했을 경우 한 개의 Base Station만 선택하여 네트워크에 참여한다.
+
+# Mobility
+
+앞서 [Mobility in same subnet](#mobility-in-same-subnet)에서, 한 서브넷안에서 모바일 디바이스가 이동하면서 AP를 바꿀 수 있다고 했었는데, 이건 작은 의미의 Mobility다. 좀 더 큰 의미의 Mobility는 한 ISP안에서, 또는 다른 ISP사이에서도 모바일 디바이스가 이동할 수 있다.
+
+이 기능을 라우터가 혼자 제공하려면 매우 많은 수의 모바일 디바이스에 대한 테이블을 관리해야하므로 이 방법 대신에 먼저 Home Network에 접속해서 모바일 디바이스가 어디에 있는지에 대한 정보를 획득한 후 포워딩 되는 방법을 선택한다.
+
+- Home Network : 사용자가 가입되어있는 네트워크. HSS에 가입자에 대한 정보가 저장되어 있다.
+- Visited Network : Home Network가 아닌 다른 네트워크.
+
+## Indirect Routing
+
+1. 모바일 디바이스가 Home Network에서 Visited Network로 이동한다.
+2. 모바일 디바이스는 Visited Network의 MME에 연결된다. 
+3. MME는 모바일 디바이스의 HSS와 연동하여 현재 모바일 디바이스의 위치를 업데이트한다.
+
+위치가 업데이트 된 후 라우팅은 아래의 절차대로 진행된다.
+
+![Alt text](image-8.png)
+
+1. 다른 송신자는 현재 모바일 디바이스의 위치를 모르므로, 모바일 디바이스가 가입되어 있는 Home Network로 패킷을 전송한다.
+2. Home Network Gateway는 HSS에 저장된 디바이스의 위치에 따라 Visited Network Gateway로 포워딩한다.
+3. Visited Network Gateway는 전달받은 패킷을 모바일 디바이스에게 전달한다.
+4. 모바일 디바이스의 응답을 다시 전송할 때, Home Network를 경유하여 전송하거나 직접 전송한다.
+
+이렇게 송신자가 모바일 디바이스에게 패킷을 전송할 때 Home Network를 경유하여 전송하는 것을 Triangle Routing이라고 한다. 
+
+## Direct Routing
+
+![Alt text](image-9.png)
+
+1. 모바일 디바이스가 가입되어있는 Home Network에게 현재 모바일 디바이스가 어디에 있는지 조회하는 패킷을 전송한다.
+2. 이에 대한 응답으로 송신자는 모바일 디바이스의 위치를 알게 되었으므로 송신자가 직접 패킷을 전송한다.
+3. Visited Network Gateway는 수신된 패킷을 모바일 디바이스에게 전달한다.
+
+## Configuring LTE Elements
+
+### Control Plane
+
+모바일 디바이스가 이동할 때 Visited Network의 MME와 상호작용하여 자신의 IMSI를 통해 네트워크의 인증, 보안 등의 서비스 정보를 얻는다. MME는 모바일 디바이스가 가입된 네트워크의 HSS에 위치를 업데이트한다. 
+
+### Data Plane
+
+모바일 디바이스가 이동했다면 `S-GW <-> Base Station`간 터널에서 모바일 디바이스가 연결된 Base Station으로 패킷이 이동하도록 EndPoint를 변경한다.
+
+`S-GW <-> Home Network P-GW`간 터널에서는 indirect routing을 유지한다.
+
+## Handover in same cellular network
+
+같은 네트워크 내에서 모바일 기기가 Base Station을 변경할 때 아래의 순서대로 진행된다.
+
+![Alt text](image-10.png)
+
+1. 기존에 모바일 디바이스와 연결된 Source Base Station은 새로 연결될 Target Base Station에게 *Handover Request Message*를 전송한다.
+2. Target Base Station은 메세지를 수신한 후 Source Base Station에게 응답 메세지를 전송한 후 모바일 디바이스와 연결될 준비를 한다.
+3. Source Base Station은 모바일 디바이스에게 Target Base Station의 정보를 전송하여 모바일 디바이스가 Target Base Station와 연결될 수 있도록 한다.
+4. Source Base Station은 모바일 디바이스에게 전송하는 것을 멈추고 Target Base Station으로 라우팅한다.
+5. Target Base Station은 MME에게 모바일 디바이스가 연결된 Base Station이 달라졌음을 전달하여 S-GW가 EndPoint를 자신으로 설정하도록 업데이트한다.
+6. Target Base Station이 Source Base Station에게 handover가 완료되었다는 메세지를 전송하여 Source Base Station이 포워딩을 그만두도록 한다.
+7. 모바일 디바이스는 새로운 Base Station으로 데이터를 전송할 수 있게 되어 네트워크를 유지하게 된다.
