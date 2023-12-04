@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[10cheon00의 Archive RSS Feed]]></title><description><![CDATA[A Blog archiving what I learned.]]></description><link>https://10cheon00.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 02 Dec 2023 09:17:45 GMT</lastBuildDate><item><title><![CDATA[무선, 모바일 네트워크]]></title><description><![CDATA[무선 네트워크의 구성 요소  Wireless host : 무선 기기(노드) Base Station : 유선으로 연결된 네트워크를 다른 노드들에게 제공 Link…]]></description><link>https://10cheon00.github.io/computer-network/무선-모바일-네트워크/</link><guid isPermaLink="false">https://10cheon00.github.io/computer-network/무선-모바일-네트워크/</guid><pubDate>Sat, 25 Nov 2023 05:38:13 GMT</pubDate><content:encoded>&lt;h1 id=&quot;무선-네트워크의-구성-요소&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%AC%B4%EC%84%A0-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%EC%9D%98-%EA%B5%AC%EC%84%B1-%EC%9A%94%EC%86%8C&quot; aria-label=&quot;무선 네트워크의 구성 요소 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;무선 네트워크의 구성 요소&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[10cheon00의 Archive RSS Feed]]></title><description><![CDATA[A Blog archiving what I learned.]]></description><link>https://10cheon00.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 04 Dec 2023 04:11:27 GMT</lastBuildDate><item><title><![CDATA[무선, 모바일 네트워크]]></title><description><![CDATA[무선 네트워크의 구성 요소  Wireless host : 무선 기기(노드) Base Station : 유선으로 연결된 네트워크를 다른 노드들에게 제공 Link…]]></description><link>https://10cheon00.github.io/computer-network/무선-모바일-네트워크/</link><guid isPermaLink="false">https://10cheon00.github.io/computer-network/무선-모바일-네트워크/</guid><pubDate>Sat, 25 Nov 2023 05:38:13 GMT</pubDate><content:encoded>&lt;h1 id=&quot;무선-네트워크의-구성-요소&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%AC%B4%EC%84%A0-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%EC%9D%98-%EA%B5%AC%EC%84%B1-%EC%9A%94%EC%86%8C&quot; aria-label=&quot;무선 네트워크의 구성 요소 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;무선 네트워크의 구성 요소&lt;/h1&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
@@ -533,8 +533,147 @@ data :  -4 / 4 = -1 |   4 / 4 = 1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&quot;error-detection&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#error-detection&quot; aria-label=&quot;error detection permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Error Detection&lt;/h1&gt;
 &lt;p&gt;frame에 datagram을 캡슐화하는 과정(여러 데이터로 datagram을 감싸는 것)에서 전송 중에 발생할 수 있는 에러를 위해 정정 비트들을 같이 포함시켜서 보낸다.&lt;/p&gt;
 &lt;h2 id=&quot;패리티-체크&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%8C%A8%EB%A6%AC%ED%8B%B0-%EC%B2%B4%ED%81%AC&quot; aria-label=&quot;패리티 체크 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;패리티 체크&lt;/h2&gt;
+&lt;h3 id=&quot;single-parity-check&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#single-parity-check&quot; aria-label=&quot;single parity check permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Single parity check&lt;/h3&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 353px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/5367f26c18c8f52400123346b11c1be9/6c115/image-3.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 55.69620253164557%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABU0lEQVR42qVS/YuCQBD1//+TMtIgi8gwiDL6wDSz/CglEiuqd7yRPa7j7ofrFh4zO7vzZubtavf7HWEYYrvdiiWiKBKo2E++7/tYr9cIgkDiamllWWI2m8F1XSyXS8F4PBZMJhOsVivxeWc+n4tPq3ySD4dD3G63mrCqKnieh263C8dxYNs2ms0mWq0WTNOUWKPRgGVZcqbrOgaDgRRgd8R0OsXlcqkJr9cr9vs9iqIQu9vtcDgckOc5jsejxGgZS9MUSZKI5egcOY5jaej5fNaEbJVt89LpdJJk7nmJICGTF4uFFHs8HlKcPi2hyITwfD7LCNSO1Zg4Go1kXI5OKbg3DAP9fl+SSUbdNpuN5DDGQrQa/rGoG7v/uoSQzAq/re/n/G6cip3yUfgjOO2fO1Sk/B2dTge9Xk++FqXhQ75NyHHb7fanrgpva8hk6pdl2YscH2KcPTCglCMUAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/5367f26c18c8f52400123346b11c1be9/6c115/image-3.png&quot;
+        srcset=&quot;/static/5367f26c18c8f52400123346b11c1be9/c26ae/image-3.png 158w,
+/static/5367f26c18c8f52400123346b11c1be9/6bdcf/image-3.png 315w,
+/static/5367f26c18c8f52400123346b11c1be9/6c115/image-3.png 353w&quot;
+        sizes=&quot;(max-width: 353px) 100vw, 353px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;보낼 데이터에서 1의 개수가 홀수라면 0, 짝수라면 1인 비트를 맨 뒤에 붙여 보낸다. 즉 데이터에 등장하는 1을 무조건 홀수 개가 되도록 만들어서 오류를 검사하는 것이다. 그런데 전송 중에 짝수 개의 에러가 발생하면 1의 개수가 여전히 홀수 개이므로, 에러를 발견할 수 없다는 단점이 있다.&lt;/p&gt;
-&lt;p&gt;그래서&lt;/p&gt;
+&lt;h3 id=&quot;two-dimensional-parity-check&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#two-dimensional-parity-check&quot; aria-label=&quot;two dimensional parity check permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Two dimensional parity check&lt;/h3&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 444px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/6d0c9248393dee9f70a3ea1f53a90b15/9b7bd/image-4.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 57.59493670886076%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAA7DAAAOwwHHb6hkAAABnUlEQVR42o1Ta4+qQAzl//8sNruBD14TDSoCwzDqHeQhEq+Igp6b1gxZdXezTRpm+jg9bQcLT3K73fCTpKlGksRI07+QUkCIAH3fDX4LvxRTx/c13t99fHz4cJwlbHuOprkMMS+AUkpUVfXAuOs69H3Pd6U0lMrQtjfkeY0o0ui6/nuGSimEYcggnwHNPcu2ECLE4XBAGAaYzz0olaAoimfAe0+LxQJa6weGl8tlAFyv14iiCG3b8ncymaAsSxyPx68Z7nY7JEnywtC0TIkESnFxHGO1WnH8wJASjG63J048n8+4Xq8DIN0NINmpANmEEHwmtl/OUIh/ECLm+Tw/JfOcUq1ZSYIgGOZt/NZ0OmUH0Q+CAzxvBs/zeNMEXNc18jxHWRTcrgwC/Hl7Q55loNzxeMyghoQ1Go1g2zZc18FyWfOWCXyz2fBsSMlGSmdJNimhkgSO43Drn38Gi6pnWcbq+0euSMnEzMyNtkyJJAQ6m83Y3zQNXNe9d1CWOJ1OjzOsqvvzoGBqgRZA1c3XnMlHBCh2v98zYJqmXPQ/XbCV+bJmTL4AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/6d0c9248393dee9f70a3ea1f53a90b15/9b7bd/image-4.png&quot;
+        srcset=&quot;/static/6d0c9248393dee9f70a3ea1f53a90b15/c26ae/image-4.png 158w,
+/static/6d0c9248393dee9f70a3ea1f53a90b15/6bdcf/image-4.png 315w,
+/static/6d0c9248393dee9f70a3ea1f53a90b15/9b7bd/image-4.png 444w&quot;
+        sizes=&quot;(max-width: 444px) 100vw, 444px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;발견뿐만 아니라 에러를 고치기 위해 데이터를 2차원 평면으로 구성하여 각 행과 열에 패리티 비트를 부여한다.&lt;/p&gt;
+&lt;p&gt;만약 어느 행에서 에러를 발견했다면, 각 열의 패리티 비트를 확인하여 에러를 정정할 수 있다. 하지만 두 개 이상의 에러가 발생할 경우 정정을 할 수 없다는 단점이 존재한다.&lt;/p&gt;
+&lt;h2 id=&quot;checksum&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#checksum&quot; aria-label=&quot;checksum permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Checksum&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;모든 segment를 16비트로 구분한다.&lt;/li&gt;
+&lt;li&gt;구분한 데이터를 1의 보수로 바꾼 후 전체 합의 결과를 전송한다.&lt;/li&gt;
+&lt;li&gt;수신자 또한 전달받은 데이터를 모두 더한 후 1의 보수를 취한다.&lt;/li&gt;
+&lt;li&gt;그 값이 0이라면 오류가 없는 것이고 0이 아니라면 오류가 있는 것이다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// sender
+Data : A1E3 067B
+
+1010000111100011 0000011001111011 (Binary)
+0101111000011100 1111100110000100 (1&apos;s Complement)
+
+     0101111000011100 
++    1111100110000100
+---------------------
+0001 0001000010100000
++  `--------------&gt; 1 (end-round carry)
+---------------------
+     0001000010100001 (Checksum)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// receiver
+1010000111100011 0000011001111011 0001000010100001 (Received)
+                                  (↑ Checksum)
+0101111000011100 1111100110000100 1110111101011110 (1&apos;s Complement)
+
+     0101111000011100 
++    1111100110000100
+---------------------
+0001 0001000010100000
++  `--------------&gt; 1 (end-round carry)
+---------------------
+     0001000010100001
++    1110111101011110 
+---------------------
+     1111111111111111 == -0 (No error)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;cyclic-redundancy-check&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#cyclic-redundancy-check&quot; aria-label=&quot;cyclic redundancy check permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Cyclic Redundancy Check&lt;/h2&gt;
+&lt;p&gt;좀 더 강력한 에러 검출을 위해 2진수의 모듈러 연산을 사용하여 보낼 데이터를 나눈 나머지를 데이터 뒤에 붙여 전송한다. 수신자는 이 데이터를 다시 모듈러 연산을 취해 나머지가 0인지 확인하여 오류 유무를 판단한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Data : 1001001110
+Pattern : 110
+
+          110001
+    +-----------
+110 | 1001001110
+       110
+      ----------
+        11001110
+        110
+        --------
+            1110
+            110
+            ----
+              10
+
+sent data : 1001001110 + 010&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;보낼 데이터의 길이를 &lt;span class=&quot;math math-inline&quot;&gt;&lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;K&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&quot;application/x-tex&quot;&gt;K&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&quot;katex-html&quot; aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;base&quot;&gt;&lt;span class=&quot;strut&quot; style=&quot;height:0.68333em;vertical-align:0em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord mathnormal&quot; style=&quot;margin-right:0.07153em;&quot;&gt;K&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;, 패턴의 길이를 &lt;span class=&quot;math math-inline&quot;&gt;&lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;R&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&quot;application/x-tex&quot;&gt;R&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&quot;katex-html&quot; aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;base&quot;&gt;&lt;span class=&quot;strut&quot; style=&quot;height:0.68333em;vertical-align:0em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord mathnormal&quot; style=&quot;margin-right:0.00773em;&quot;&gt;R&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;이라고 하고 최종적으로 전송할 데이터의 길이를 &lt;span class=&quot;math math-inline&quot;&gt;&lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;N&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&quot;application/x-tex&quot;&gt;N&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&quot;katex-html&quot; aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;base&quot;&gt;&lt;span class=&quot;strut&quot; style=&quot;height:0.68333em;vertical-align:0em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord mathnormal&quot; style=&quot;margin-right:0.10903em;&quot;&gt;N&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;이라고 하면 &lt;span class=&quot;math math-inline&quot;&gt;&lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;N&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;K&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mi&gt;R&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&quot;application/x-tex&quot;&gt;N=K+R&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&quot;katex-html&quot; aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;base&quot;&gt;&lt;span class=&quot;strut&quot; style=&quot;height:0.68333em;vertical-align:0em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord mathnormal&quot; style=&quot;margin-right:0.10903em;&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.2777777777777778em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mrel&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.2777777777777778em;&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;base&quot;&gt;&lt;span class=&quot;strut&quot; style=&quot;height:0.76666em;vertical-align:-0.08333em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord mathnormal&quot; style=&quot;margin-right:0.07153em;&quot;&gt;K&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.2222222222222222em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mbin&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.2222222222222222em;&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;base&quot;&gt;&lt;span class=&quot;strut&quot; style=&quot;height:0.68333em;vertical-align:0em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord mathnormal&quot; style=&quot;margin-right:0.00773em;&quot;&gt;R&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;이 되어야 한다.&lt;/p&gt;
+&lt;p&gt;즉 위에서 나머지가 &lt;code class=&quot;language-text&quot;&gt;10&lt;/code&gt;으로 나왔지만 실제로 데이터를 전송할 때에는 패턴의 길이 R에 맞춰 &lt;code class=&quot;language-text&quot;&gt;010&lt;/code&gt;을 붙이게 된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Received data : 1001001110010
+
+          110001001
+    +--------------
+110 | 1001001110010
+       110
+      -------------
+        11001110010
+        110
+       ------------
+            1110010
+            110
+           --------
+              10010
+               110
+              -----
+                110
+                110
+
+== No error&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&quot;multiple-access-protocols&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#multiple-access-protocols&quot; aria-label=&quot;multiple access protocols permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Multiple Access Protocols&lt;/h1&gt;
 &lt;p&gt;여러 호스트들이 한 회선을 공유하고 있을 때, 두 호스트가 동시에 회선을 사용하려고 한다면 충돌(Collision)이 일어난다.&lt;/p&gt;
 &lt;p&gt;Multiple Access Protocol은 호스트들(노드들)이 어떻게 한 회선(채널)을 공유하고, 충돌을 회피하거나 감지하는 방법이다.&lt;/p&gt;
@@ -544,6 +683,37 @@ data :  -4 / 4 = -1 |   4 / 4 = 1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id=&quot;random-access-protocols&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#random-access-protocols&quot; aria-label=&quot;random access protocols permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Random Access Protocols&lt;/h2&gt;
 &lt;p&gt;채널을 분할하지않고 각 노드들에게 자율적으로 사용하도록 열어준다. 이렇게 되면 충돌(Collision)이 무조건 발생하기 때문에 각 노드들은 충돌을 감지하고, 다시 전송하는 알고리즘을 갖고 있어야 한다.&lt;/p&gt;
 &lt;h3 id=&quot;slotted-aloha&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#slotted-aloha&quot; aria-label=&quot;slotted aloha permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Slotted ALOHA&lt;/h3&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/1b8068b14264a51d85edf916ecbfac84/f1901/image-5.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 26.58227848101266%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABGUlEQVR42k2Qv0vDQBTH8y87ugu6CYKgmw66ODs4iHRQ20VwKKGNrbWkrfHH9S7JXZJL7j6SlBa/8B7vDd8f7wVCCJTKMPIAZ/vY6o0y38e5hhbGPCJ+97pZyiNSdc0Gruveg3OuK+89gZQSnWsuVxcMiyGf+ZLT0THn4RmTfLqh+i3ZAjX/IWXFYrFkNBoRxzFBmqZoo7m7uuH9NURT8Jz0GSQD1l5i5znft1Hn3kKPfxAPs52gECXT6YwwDEmShEAphZBrlicvrHsfWBzONjS2ocbxNZgRHfYoTIGlYXU/ZnLyROUsrnFdwvk8JorGaG0INqd4TFVjjEUITa5L0qwgywqkKihtQ5qW3a6ykqo1rOtd6q1G+8M/9OV40HAWmZsAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/1b8068b14264a51d85edf916ecbfac84/f058b/image-5.png&quot;
+        srcset=&quot;/static/1b8068b14264a51d85edf916ecbfac84/c26ae/image-5.png 158w,
+/static/1b8068b14264a51d85edf916ecbfac84/6bdcf/image-5.png 315w,
+/static/1b8068b14264a51d85edf916ecbfac84/f058b/image-5.png 630w,
+/static/1b8068b14264a51d85edf916ecbfac84/f1901/image-5.png 942w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;TDMA처럼 채널을 똑같은 타임 슬롯으로 분할한다. 각 노드들 또한 정해진 타임 슬롯에 맞는 크기로 frame을 전송해야한다.&lt;/p&gt;
 &lt;p&gt;노드들이 frame을 전송하기 위해서는 정확한 타임슬롯의 시작 지점에서 전송해야하므로 모든 노드들은 동기화되어야 한다.&lt;/p&gt;
 &lt;p&gt;노드가 frame을 전송해야할 때 충돌한다면, 일단 전송을 멈추고, 알고리즘에 의해 정해진 시간만큼 기다렸다가 다시 frame을 전송한다.&lt;/p&gt;
@@ -552,6 +722,37 @@ data :  -4 / 4 = -1 |   4 / 4 = 1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;그렇지만 구조가 단순해서 많이 사용한다.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&quot;pure-aloha&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#pure-aloha&quot; aria-label=&quot;pure aloha permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Pure ALOHA&lt;/h3&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/df515499816e92a9333068e729dc048f/612f7/image-6.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 26.58227848101266%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABC0lEQVR42n2PTUvDUBBF+5vF/6ErK4ILsaBLBevHQlwoKqVaoVi1jTYlsW2SJk3eaxqSl7wjCVUQxAsDl2HumZkaK+V5ThTMsQ0TyzARQVj1Pc+h1+vS778gZUhRFPynmta6MiKM6E9NGp1z9h/POB7ccPh8R2c8wTJ9LDvE91OkTKr5kruK/gZ+myJVvC+m1EcX7JRlXrFprHEbrAMHaPbI812UGq8S+u8LlVLVu3EcU/qfBTmo7AOtW2TpNXBPq9ngaOOS0+0nmvU2J1tt/KlAU5BlWcWpJUmC67rYto3jOkRSEArBLJhhWg5CghSaOAbj1aP7MGD4ZjMZ+XwOPcJ5xGIhEUKwXC75AsdWduRZrrAUAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/df515499816e92a9333068e729dc048f/f058b/image-6.png&quot;
+        srcset=&quot;/static/df515499816e92a9333068e729dc048f/c26ae/image-6.png 158w,
+/static/df515499816e92a9333068e729dc048f/6bdcf/image-6.png 315w,
+/static/df515499816e92a9333068e729dc048f/f058b/image-6.png 630w,
+/static/df515499816e92a9333068e729dc048f/612f7/image-6.png 773w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Slotted ALOHA와 같지만, frame의 크기가 제한되지 않는다. 따라서 충돌이 더 많이 발생한다.&lt;/p&gt;
 &lt;h3 id=&quot;csmacd-carrier-sense-multiple-access--collision-detection&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#csmacd-carrier-sense-multiple-access--collision-detection&quot; aria-label=&quot;csmacd carrier sense multiple access  collision detection permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;CSMA/CD (Carrier Sense Multiple Access / Collision Detection)&lt;/h3&gt;
 &lt;p&gt;frame을 전송하려는 노드가 채널이 사용중인지 감지하는 알고리즘이다.&lt;/p&gt;
