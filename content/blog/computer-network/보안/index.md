@@ -1,6 +1,6 @@
 ---
 title: 보안
-date: 
+date: '2023-12-15T13:40:32.000Z'
 tags: ["computer-network"]
 ---
 
