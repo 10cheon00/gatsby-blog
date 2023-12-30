@@ -3,6 +3,20 @@ import * as React from "react"
 class TableOfContents extends React.Component {
   componentDidMount() {
     window.addEventListener("scroll", this.updateTableOfContents)
+
+    const links = document.querySelectorAll(`div.table-of-contents a`)
+    for(let link of links){
+      link.addEventListener(`click`, event => {
+        event.preventDefault()
+        const id = new URL(link.href).hash
+        const decodedId = decodeURI(id);
+        const target = document.querySelector(decodedId)
+        window.scrollTo({
+          top: target.offsetTop - window.innerHeight / 2 + 1,
+          behavior: 'instant'
+        })
+      })
+    }
   }
 
   updateTableOfContents() {
