@@ -1,6 +1,6 @@
 ---
 title: 컴퓨터 구조론 (3) - 데이터 패스 (1)
-date:
+date: '2024-01-02T05:46:54.502Z'
 tags: ["computer-organization"]
 ---
 
