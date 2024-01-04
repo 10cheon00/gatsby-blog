@@ -4,6 +4,8 @@ date: "2024-01-04T13:04:51.014Z"
 tags: ["computer-organization"]
 ---
 
+> 2023년 2학기 컴퓨터 구조론 수업을 듣고 정리한 내용입니다. 수업 교재는 [컴퓨터 구조 및 설계 RISC-V 2판](https://product.kyobobook.co.kr/detail/S000060622658)입니다.
+
 # 분기 하자드
 
 데이터 하자드와 유사하게, 분기 명령어를 실행할 때 발생한다.
