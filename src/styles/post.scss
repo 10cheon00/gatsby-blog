@@ -162,6 +162,7 @@ code[class*="language-"] {
   padding: 0.2em 0.4em;
   background-color: var(--color-codeblock-background);
   color: var(--color-codeblock);
+  white-space: break-spaces;
 }
 
 .token.operator,
