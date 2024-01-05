@@ -47,11 +47,15 @@ class TableOfContents extends React.Component {
         return pos.y < halfOfWindowHeight
       })
 
-    links.forEach(e => {
-      if (e.textContent === currentHeader?.textContent) {
-        e.className = `active`
+    links.forEach(link => {
+      const decodedId = decodeURI(new URL(link.href).hash).slice(1)
+      if (
+        link.textContent === currentHeader?.textContent &&
+        decodedId === currentHeader.id
+      ) {
+        link.className = `active`
       } else {
-        e.className = ``
+        link.className = ``
       }
     })
   }
