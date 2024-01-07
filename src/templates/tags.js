@@ -3,12 +3,12 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-
+import PostList from "../components/post-list"
 import Tag from "../components/tag"
 
 const Tags = ({ pageContext, data, location }) => {
   const { tag } = pageContext
-  const { edges, totalCount } = data.allMarkdownRemark
+  const { nodes, totalCount } = data.allMarkdownRemark
   const siteTitle = data.site.siteMetadata.title
   const tagHeader = `${totalCount} post${
     totalCount === 1 ? "" : "s"
@@ -21,19 +21,7 @@ const Tags = ({ pageContext, data, location }) => {
         {tagHeader}
         <Tag tagName={tag} enableLink={false}></Tag>
       </h1>
-      <ul>
-        {edges.map(({ node }) => {
-          const { slug } = node.fields
-          const { title, date } = node.frontmatter
-          return (
-            <li key={slug}>
-              <Link to={slug}>
-                {title} | {date}
-              </Link>
-            </li>
-          )
-        })}
-      </ul>
+      <PostList posts={nodes} />
       <Link to="/tags">All tags</Link>
     </Layout>
   )
@@ -54,15 +42,14 @@ export const pageQuery = graphql`
       filter: { frontmatter: { tags: { in: [$tag] } } }
     ) {
       totalCount
-      edges {
-        node {
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            date(formatString: "MMMM DD, YYYY")
-          }
+      nodes {
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+          date(formatString: "MMMM DD, YYYY")
+          tags
         }
       }
     }
