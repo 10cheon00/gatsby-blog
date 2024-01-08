@@ -56,20 +56,34 @@ const BlogPostTemplate = ({
             padding: 0,
           }}
         >
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                <FaArrowLeftLong /> {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
+          {next && (
+            <li>
               <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} <FaArrowRightLong />
+                <p>
+                  <FaArrowLeftLong />
+                  다음 글
+                </p>
+                <div>
+                  <p className="date">{next.frontmatter.date}</p>
+                  <p className="title">{next.frontmatter.title}</p>
+                </div>
               </Link>
-            )}
-          </li>
+            </li>
+          )}
+          {previous && (
+            <li>
+              <Link to={previous.fields.slug} rel="prev">
+                <p>
+                  <FaArrowRightLong />
+                  이전 글
+                </p>
+                <div>
+                  <p className="date">{previous.frontmatter.date}</p>
+                  <p className="title">{previous.frontmatter.title}</p>
+                </div>
+              </Link>
+            </li>
+          )}
         </ul>
       </nav>
     </Layout>
@@ -115,7 +129,8 @@ export const pageQuery = graphql`
         slug
       }
       frontmatter {
-        title
+        title,
+        date(formatString: "MMMM DD, YYYY")
       }
     }
     next: markdownRemark(id: { eq: $nextPostId }) {
@@ -123,7 +138,8 @@ export const pageQuery = graphql`
         slug
       }
       frontmatter {
-        title
+        title,
+        date(formatString: "MMMM DD, YYYY")
       }
     }
   }
