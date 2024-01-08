@@ -1,6 +1,7 @@
 import React from "react"
-
 import { Link, graphql } from "gatsby"
+import { FaTags } from "react-icons/fa6"
+
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import PostList from "../components/post-list"
@@ -22,7 +23,7 @@ const Tags = ({ pageContext, data, location }) => {
         <Tag tagName={tag} enableLink={false}></Tag>
       </h1>
       <PostList posts={nodes} />
-      <Link to="/tags">All tags</Link>
+      <Link to="/tags"><FaTags />All tags</Link>
     </Layout>
   )
 }
