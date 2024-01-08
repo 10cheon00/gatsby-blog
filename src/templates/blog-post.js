@@ -7,6 +7,7 @@ import Seo from "../components/seo"
 import Utterances from "../components/utterances"
 import TableOfContents from "../components/table-of-contents"
 import Tag from "../components/tag"
+import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6"
 
 const BlogPostTemplate = ({
   data: { previous, next, site, markdownRemark: post },
@@ -58,14 +59,14 @@ const BlogPostTemplate = ({
           <li>
             {previous && (
               <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
+                <FaArrowLeftLong /> {previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
             {next && (
               <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
+                {next.frontmatter.title} <FaArrowRightLong />
               </Link>
             )}
           </li>
