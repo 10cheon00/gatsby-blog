@@ -1,4 +1,5 @@
 import * as React from "react"
+import { FaCircleChevronLeft, FaCircleChevronRight } from "react-icons/fa6"
 
 const Pagination = ({ currentPage, numPagination, paginationPageCount }) => {
   const previousPaginationLastPage =
@@ -13,7 +14,7 @@ const Pagination = ({ currentPage, numPagination, paginationPageCount }) => {
         className="pagination-link pagination-previous"
         href={`/${previousPaginationLastPage}`}
       >
-        {"<<"}
+        <FaCircleChevronLeft />
       </a>
     )
   }
@@ -23,7 +24,7 @@ const Pagination = ({ currentPage, numPagination, paginationPageCount }) => {
         className="pagination-link pagination-next"
         href={`/${nextPaginationFirstPage}`}
       >
-        {">>"}
+        <FaCircleChevronRight />
       </a>
     )
   }

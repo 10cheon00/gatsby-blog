@@ -10,10 +10,15 @@
   vertical-align: middle;
   padding: var(--spacing-1) var(--spacing-3);
   text-decoration: none !important;
-
+  
   &.pagination-current-link {  
     background-color: var(--color-primary);
     color: white;
     border-radius: 25%;
+  }
+
+  svg {
+    display: block;
+    fill: var(--color-primary);
   }
 }
