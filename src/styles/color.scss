@@ -13,6 +13,7 @@
 
   --color-top-bar: var(--color-primary);
   --color-blog-post-nav-btn: var(--color-codeblock-background);
+  --color-pagination: var(--color-codeblock-background);
 }
 
 body.dark {
@@ -27,4 +28,5 @@ body.dark {
   --color-codeblock: var(--color-text);
   --color-codeblock-background: rgba(110, 118, 129, 0.4);
   --color-blog-post-nav-btn: var(--color-codeblock-background);
+  --color-pagination: var(--color-codeblock-background);
 }

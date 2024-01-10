@@ -37,19 +37,21 @@ const Pagination = ({ currentPage, numPagination, paginationPageCount }) => {
   return (
     <div className="pagination">
       {previousPagination}
-      {paginationList.map(index => {
-        return (
-          <a
-            className={`pagination-link${
-              index === currentPage ? " pagination-current-link" : ""
-            }`}
-            href={`/${index !== 1 ? `${index}` : ``}`}
-            key={index}
-          >
-            {index}
-          </a>
-        )
-      })}
+      <div className="pagination-links">
+        {paginationList.map(index => {
+          return (
+            <a
+              className={`pagination-link${
+                index === currentPage ? " pagination-current-link" : ""
+              }`}
+              href={`/${index !== 1 ? `${index}` : ``}`}
+              key={index}
+            >
+              {index}
+            </a>
+          )
+        })}
+      </div>
       {nextPagination}
     </div>
   )
