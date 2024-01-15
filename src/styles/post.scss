@@ -34,6 +34,7 @@ h6 {
   margin-top: var(--spacing-6);
   margin-bottom: var(--spacing-4);
   font-weight: var(--fontWeight-semiBold);
+  scroll-margin-top: calc(var(--top-bar-size) + 1rem);
 }
 
 h1,
