@@ -16,10 +16,11 @@ class TableOfContents extends React.Component {
       getComputedStyle(document.querySelector(`.top-bar`)).height
     )
 
-    const currentHeader = Array.from(headers).find(e => {
+    const currentHeader = Array.from(headers).filter(e => {
       const pos = e.getBoundingClientRect()
-      return pos.y > topBarHeight
-    })
+      const offset = parseInt(getComputedStyle(e).scrollMarginTop)
+        return pos.y - offset <= topBarHeight
+      }).pop();
 
     links.forEach(link => {
       const decodedId = decodeURI(new URL(link.href).hash).slice(1)
