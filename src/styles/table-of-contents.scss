@@ -7,6 +7,11 @@
   position: absolute;
   left: 100%;
 
+  & * {
+    transition: color 0.1s linear;
+    transition: font-weight 0.1s linear;
+  }
+
   @media screen and (max-width: 70rem) {
     & {
       display: none;
@@ -34,6 +39,13 @@
   & a.active {
     color: var(--color-text) !important;
     font-weight: var(--fontWeight-bold);
+
+    &:after {
+      content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='100' cy='50' r='40' stroke='black' stroke-width='2' fill='red'/%3E%3Cpolyline points='20,20 40,25 60,40 80,120 120,140 200,180' style='fill:none;stroke:black;stroke-width:3'/%3E%3C/svg%3E ");
+      float:right;
+      width: 20px;
+      height: 20px;
+    }
   }
   
   & p {
