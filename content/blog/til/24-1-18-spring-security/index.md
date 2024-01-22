@@ -1,6 +1,6 @@
 ---
 title: 24-1-18 Spring Security 비밀번호 로그인
-date:
+date: '2024-01-18T23:12:48.217Z'
 tags: ["TIL", "spring"]
 ---
 
