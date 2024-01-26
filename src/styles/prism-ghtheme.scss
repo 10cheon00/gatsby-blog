@@ -126,3 +126,21 @@ pre[class*="language-"] {
 .token.italic {
   font-style: italic;
 }
+
+.gatsby-remark-prismjs-copy-button-container {
+  top: calc(1.5em + 13px);
+  left: 0;
+  padding-right: 6px;
+}
+
+.gatsby-remark-prismjs-copy-button {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary) !important;
+  opacity: 0.25;
+  transition: opacity .2s ease-in-out;
+}
+
+.gatsby-remark-prismjs-copy-button:hover {
+  background-color: var(--color-primary) !important;
+  opacity: 1;
+}
