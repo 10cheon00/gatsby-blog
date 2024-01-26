@@ -125,7 +125,7 @@ pre[class*="language-"] {
 
 .gatsby-remark-prismjs-copy-button-container {
   top: calc(1.5em + 13px);
-  left: 0;
+  left: 0 !important;
   padding-right: 6px;
 }
 
