@@ -3,6 +3,10 @@ title: 2D 웹 게임 프레임워크 제작기
 description: 대학교 웹프로그래밍 수업 팀프로젝트로 바운스볼을 만들기 위해 게임 프레임워크를 제작했었던 경험입니다.
 date: '2023-07-08T05:33:17.576Z'
 tags: ["js", "university"]
+category: 
+  name: "Post"
+  category:
+    name: "Review"
 ---
 
 # 수강신청

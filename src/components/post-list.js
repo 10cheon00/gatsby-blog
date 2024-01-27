@@ -6,7 +6,6 @@ import Tag from "./tag"
 export default class PostList extends React.Component {
   constructor(props) {
     super(props)
-    console.dir(props);
     this.posts = props.posts
   }
 

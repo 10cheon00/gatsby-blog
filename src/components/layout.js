@@ -1,6 +1,7 @@
 import * as React from "react"
 
 import TopBar from "./top-bar"
+import SideBar from "./side-bar"
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -8,7 +9,8 @@ const Layout = ({ location, title, children }) => {
 
   return (
     <div>
-      <TopBar title={title}/>
+      <TopBar title={title} />
+      <SideBar />
       <div className="global-wrapper" data-is-root-path={isRootPath}>
         {/* <Bio /> */}
         <main>{children}</main>

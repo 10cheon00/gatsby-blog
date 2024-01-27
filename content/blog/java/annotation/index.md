@@ -2,6 +2,10 @@
 title: Annotation
 date: '2023-11-06T12:01:06.489Z'
 tags: ["java"]
+category: 
+  name: "Post"
+  category:
+    name: "Java"
 ---
 
 Annotation은 영어로 번역했을 때 주석이라는 뜻을 갖는다. 주석은 코드의 흐름에 영향을 주지 않는다. 하지만 코드를 보는 사람으로 하여금 어떤 코드인지 이해하게 만들고 함수 또는 라이브러리를 어떤 상황에 써야하는지 설명한다. 

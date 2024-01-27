@@ -3,6 +3,10 @@ title: Gatsby Starter Blog테마에 Pagination 추가하기
 description:
 date: '2023-08-02T15:38:11.196Z'
 tags: ["gatsby", "blog", "react"]
+category:
+  name: Post
+  category:
+    name: Review
 ---
 
 # 동기
