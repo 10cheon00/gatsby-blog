@@ -13,14 +13,13 @@ const Tags = ({ pageContext, data, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const tagHeader = `${totalCount} post${
     totalCount === 1 ? "" : "s"
-  } tagged with `
+  } tagged with ${tag}`
 
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title={tagHeader} />
       <h1>
         {tagHeader}
-        <Tag tagName={tag} enableLink={false}></Tag>
       </h1>
       <PostList posts={nodes} />
       <Link to="/tags"><FaTags />All tags</Link>

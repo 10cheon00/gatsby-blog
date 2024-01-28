@@ -26,13 +26,12 @@ const Tag = ({
   const hoverable = enableLink ? `hoverable` : ``
 
   const hexCode = convertStringToRgb(tagName)
-  const scaledHexCode = scaleRGB(hexCode, 0.5)
+  const backgroundColor = hexCode;//scaleRGB(, 0.75)
   return (
     <span
       className={`tag ${hoverable}`}
       style={{
-        backgroundColor: `${scaledHexCode}`,
-        border: `1px solid ${hexCode}`,
+        backgroundColor: `${backgroundColor}`,
       }}
     >
       {element}
