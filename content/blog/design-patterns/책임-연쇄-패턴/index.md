@@ -3,6 +3,10 @@ title: 책임 연쇄 패턴
 description:
 date: '2023-07-30T13:30:12.406Z'
 tags: ["design-pattern"]
+category:
+  name: "Study"
+  category:
+    name: "디자인 패턴"
 ---
 
 # 의도

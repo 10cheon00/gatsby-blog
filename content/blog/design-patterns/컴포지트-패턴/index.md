@@ -3,6 +3,10 @@ title: 컴포지트 패턴
 description:
 date: '2023-07-25T14:26:50.685Z'
 tags: ["design-pattern"]
+category:
+  name: "Study"
+  category:
+    name: "디자인 패턴"
 ---
 
 # 의도

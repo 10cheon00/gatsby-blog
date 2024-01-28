@@ -3,6 +3,10 @@ title: Array와 List
 description:
 date: '2023-08-21T14:01:03.000Z'
 tags: ["csharp"]
+category:
+  name: "Study"
+  category:
+    name: "C#"
 ---
 
 # Array

@@ -3,6 +3,10 @@ title: Boxing과 Unboxing
 description:
 date: '2023-08-10T06:40:12.917Z'
 tags: ["csharp"]
+category:
+  name: "Study"
+  category:
+    name: "C#"
 ---
 
 # Boxing

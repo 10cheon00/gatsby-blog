@@ -2,6 +2,8 @@
 title: Intellij에서 WSL2로 Spring 프로젝트 돌리기
 date: '2023-11-16T09:02:11.647Z'
 tags: ["intellij", "wsl", "spring"]
+category:
+  name: "Intellij"
 ---
 
 # 서론

@@ -3,6 +3,10 @@ title: 추상 팩토리 패턴
 description: GoF의 디자인 패턴이라는 책에 소개된 추상 팩토리 패턴에 대해 정리한 글입니다.
 date: '2023-07-16T14:15:59.563Z'
 tags: ["design-pattern"]
+category:
+  name: "Study"
+  category:
+    name: "디자인 패턴"
 ---
 
 # 의도

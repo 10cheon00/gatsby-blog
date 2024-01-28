@@ -3,6 +3,10 @@ title: 플라이웨이트 패턴
 description:
 date: '2023-07-28T07:20:34.286Z'
 tags: ["design-pattern"]
+category:
+  name: "Study"
+  category:
+    name: "디자인 패턴"
 ---
 
 # 의도

@@ -2,6 +2,10 @@
 title: 24-1-12 docker build
 date: '2024-01-12T13:28:05.407Z'
 tags: ["TIL", "docker"]
+category:
+  name: "Study"
+  category:
+    name: "Docker"
 ---
 
 # docker build

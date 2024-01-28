@@ -2,6 +2,10 @@
 title: 컴퓨터 구조론 (7) - 메모리 계층 및 캐시
 date: '2024-01-04T19:58:12.958Z'
 tags: ["computer-organization"]
+category:
+  name: "Study"
+  category:
+    name: "컴퓨터 구조론"
 ---
 
 > 2023년 2학기 컴퓨터 구조론 수업을 듣고 정리한 내용입니다. 수업 교재는 [컴퓨터 구조 및 설계 RISC-V 2판](https://product.kyobobook.co.kr/detail/S000060622658)입니다.

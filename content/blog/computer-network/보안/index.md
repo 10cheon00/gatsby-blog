@@ -2,6 +2,10 @@
 title: 보안
 date: '2023-12-15T13:40:32.000Z'
 tags: ["computer-network"]
+category:
+  name: "Study"
+  category:
+    name: "컴퓨터 네트워크"
 ---
 
 > 2023년 2학기 컴퓨터 네트워크 수업을 듣고 정리한 내용입니다. 수업 교재는 [컴퓨터 네트워킹 하향식 접근 8판](https://product.kyobobook.co.kr/detail/S000061694627)입니다.

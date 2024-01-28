@@ -3,6 +3,10 @@ title: 팩토리 메서드 패턴
 description:
 date: '2023-07-19T07:43:14.997Z'
 tags: ["design-pattern"]
+category:
+  name: "Study"
+  category:
+    name: "디자인 패턴"
 ---
 
 # 의도

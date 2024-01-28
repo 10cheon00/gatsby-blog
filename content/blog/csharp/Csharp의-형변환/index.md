@@ -3,6 +3,10 @@ title: Csharp의 형변환
 description:
 date: '2023-08-10T09:19:41.466Z'
 tags: ["csharp"]
+category:
+  name: "Study"
+  category:
+    name: "C#"
 ---
 
 # 암시적 형변환

@@ -3,6 +3,10 @@ title: Csharp의 형식
 description: 값 형식과 참조 형식의 차이점을 알기 위해 공부한 글입니다.
 date: '2023-07-17T05:03:15.765Z'
 tags: ['csharp']
+category:
+  name: "Study"
+  category:
+    name: "C#"
 ---
 
 # CTS

@@ -2,6 +2,10 @@
 title: 24-1-11 docker 이해하기
 date: "2024-01-11T08:26:12.959Z"
 tags: ["TIL", "docker"]
+category:
+  name: "Study"
+  category:
+    name: "Docker"
 ---
 
 # docker란

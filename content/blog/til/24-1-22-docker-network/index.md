@@ -2,6 +2,10 @@
 title: 24-1-22 docker network
 date: "2024-01-22T07:24:57.154Z"
 tags: ["TIL", "docker"]
+category:
+  name: "Study"
+  category:
+    name: "Docker"
 ---
 
 # docker network

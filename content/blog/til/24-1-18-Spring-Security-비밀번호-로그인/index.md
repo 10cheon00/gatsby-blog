@@ -2,6 +2,10 @@
 title: 24-1-18 Spring Security 비밀번호 로그인
 date: '2024-01-18T23:12:48.217Z'
 tags: ["TIL", "spring"]
+category:
+  name: "Study"
+  category:
+    name: "Spring"
 ---
 
 docker-compose로 mysql과 spring boot 앱을 같이 올려보려고 했는데, mysql은 정상적으로 초기화 되었지만 spring boot 앱이 자꾸 mysql과 연결되지 못해 에러를 내었다. 이 부분은 조금 더 공부해야겠다.

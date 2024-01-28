@@ -3,6 +3,10 @@ title: 프록시 패턴
 description:
 date: '2023-07-29T11:26:11.002Z'
 tags: ["design-pattern"]
+category:
+  name: "Study"
+  category:
+    name: "디자인 패턴"
 ---
 
 # 의도

@@ -3,6 +3,10 @@ title: 싱글턴 패턴
 description:
 date: '2023-07-22T11:49:46.575Z'
 tags: ["design-pattern"]
+category:
+  name: "Study"
+  category:
+    name: "디자인 패턴"
 ---
 
 # 의도

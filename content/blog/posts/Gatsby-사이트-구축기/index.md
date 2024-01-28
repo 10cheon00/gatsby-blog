@@ -3,6 +3,8 @@ title: Gatsby 사이트 구축기
 date: '2023-07-07T07:45:44.249Z'
 description: Gatsby를 이용해 사이트를 구축할 때 겪었던 내용입니다.
 tags: ["gatsby", "blog"]
+category: 
+  name: "Gatsby"
 ---
 
 # Gatsby를 선택한 이유

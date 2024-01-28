@@ -2,6 +2,8 @@
 title: WSL에서 Intellij 인덱싱이 끝나지 않을 때
 date: '2023-11-06T12:01:06.489Z'
 tags: ["intellij"]
+category:
+  name: "Intellij"
 ---
 
 ```

@@ -3,7 +3,12 @@ title: 어댑터 패턴
 description: 
 date: '2023-07-23T11:45:10.758Z'
 tags: ["design-pattern"]
+category:
+  name: "Study"
+  category:
+    name: "디자인 패턴"
 ---
+
 # 의도
 
 클래스의 인터페이스를 사용자가 기대하는 인터페이스로 적응(Adapt)시킨다.

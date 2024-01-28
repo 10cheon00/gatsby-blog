@@ -3,6 +3,10 @@ title: 전략 패턴
 description:
 date: "2023-08-14T12:17:50.165Z"
 tags: ["design-pattern"]
+category:
+  name: "Study"
+  category:
+    name: "디자인 패턴"
 ---
 
 # 의도

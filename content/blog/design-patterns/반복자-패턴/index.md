@@ -3,6 +3,10 @@ title: 반복자 패턴
 description:
 date: '2023-08-02T13:28:51.816Z'
 tags: ["design-pattern"]
+category:
+  name: "Study"
+  category:
+    name: "디자인 패턴"
 ---
 
 # 의도

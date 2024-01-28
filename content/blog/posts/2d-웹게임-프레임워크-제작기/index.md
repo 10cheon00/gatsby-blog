@@ -4,9 +4,7 @@ description: 대학교 웹프로그래밍 수업 팀프로젝트로 바운스볼
 date: '2023-07-08T05:33:17.576Z'
 tags: ["js", "university"]
 category: 
-  name: "Post"
-  category:
-    name: "Review"
+  name: "Review"
 ---
 
 # 수강신청

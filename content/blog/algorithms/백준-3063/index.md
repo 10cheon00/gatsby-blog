@@ -3,6 +3,8 @@ title: 백준 3063
 description: 백준 3063번 문제풀이입니다.
 date: '2023-07-11T04:04:52.148Z'
 tags: ["algorithm"]
+category:
+  name: "Algorithm"
 ---
 
 # [3063 게시판](https://www.acmicpc.net/problem/3063)

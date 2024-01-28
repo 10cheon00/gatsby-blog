@@ -3,6 +3,8 @@ title: 백준 24723
 description: 백준 24723번 문제풀이입니다.
 date: '2023-07-10T07:11:03.422Z'
 tags: ["algorithm"]
+category:
+  name: "Algorithm"
 ---
 
 # [24723 녹색거탑](https://www.acmicpc.net/problem/24723)

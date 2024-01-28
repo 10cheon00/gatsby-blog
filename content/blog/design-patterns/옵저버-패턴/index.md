@@ -3,6 +3,10 @@ title: 옵저버 패턴
 description:
 date: '2023-08-08T15:05:07.908Z'
 tags: ["design-pattern"]
+category:
+  name: "Study"
+  category:
+    name: "디자인 패턴"
 ---
 
 # 의도

@@ -3,6 +3,10 @@ title: interface에 구현한 메서드를 클래스에서 접근할 수 없는 
 description:
 date: "2023-08-22T12:47:15.703Z"
 tags: ["csharp"]
+category:
+  name: "Study"
+  category:
+    name: "C#"
 ---
 
 # 동기

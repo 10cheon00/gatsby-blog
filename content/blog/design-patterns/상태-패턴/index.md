@@ -3,6 +3,10 @@ title: 상태 패턴
 description:
 date: '2023-08-09T15:01:03.825Z'
 tags: ["design-pattern"]
+category:
+  name: "Study"
+  category:
+    name: "디자인 패턴"
 ---
 
 # 의도

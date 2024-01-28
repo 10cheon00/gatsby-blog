@@ -3,6 +3,10 @@ title: record
 description:
 date: '2023-08-23T15:18:04.704Z'
 tags: ["csharp"]
+category:
+  name: "Study"
+  category:
+    name: "C#"
 ---
 
 # record

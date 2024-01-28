@@ -2,6 +2,8 @@
 title: Gatsby 목차 사이드바 만들기
 date: '2023-09-29T10:06:53.302Z'
 tags: ["gatsby", "blog", "react"]
+category: 
+  name: "Gatsby"
 ---
 
 # 동기

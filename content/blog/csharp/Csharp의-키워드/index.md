@@ -3,6 +3,10 @@ title: Csharp의 키워드
 description:
 date: '2023-08-25T14:32:32.484Z'
 tags: ["csharp"]
+category:
+  name: "Study"
+  category:
+    name: "C#"
 ---
 
 몇 가지 처음 보는 키워드들을 정리해보았다.

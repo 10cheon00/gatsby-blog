@@ -3,6 +3,10 @@ title: Csharp에서 데이터 swap하기
 description: ref키워드를 이용해 값을 교환하는 방법에 대해 공부한 글입니다.
 date: '2023-07-17T07:15:37.651Z'
 tags: ['csharp']
+category:
+  name: "Study"
+  category:
+    name: "C#"
 ---
 
 # 문제

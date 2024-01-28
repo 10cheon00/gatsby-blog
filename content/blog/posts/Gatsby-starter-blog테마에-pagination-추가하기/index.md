@@ -4,9 +4,7 @@ description:
 date: '2023-08-02T15:38:11.196Z'
 tags: ["gatsby", "blog", "react"]
 category:
-  name: Post
-  category:
-    name: Review
+  name: Gatsby
 ---
 
 # 동기

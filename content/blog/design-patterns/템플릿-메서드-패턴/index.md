@@ -3,6 +3,10 @@ title: 템플릿 메서드 패턴
 description:
 date: '2023-08-15T10:12:59.193Z'
 tags: ["design-pattern"]
+category:
+  name: "Study"
+  category:
+    name: "디자인 패턴"
 ---
 
 # 의도

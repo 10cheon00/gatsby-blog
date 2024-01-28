@@ -3,6 +3,8 @@ title: Haleygg 사이트 제작기
 description: 스타크래프트 전적 검색기 사이트를 제작한 경험입니다.
 date: '2023-07-08T08:52:35.768Z'
 tags: ['python', 'django', 'js', 'vue']
+category: 
+  name: "Review"
 ---
 
 # 동기

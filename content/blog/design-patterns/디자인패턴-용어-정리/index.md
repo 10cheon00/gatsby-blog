@@ -3,6 +3,10 @@ title: 디자인 패턴 용어 정리
 description: GoF의 디자인 패턴이라는 책을 공부한 후 관련된 용어를 정리한 글입니다.
 date: '2023-07-13T05:27:20.856Z'
 tags: ["design-pattern"]
+category:
+  name: "Study"
+  category:
+    name: "디자인 패턴"
 ---
 
 # 객체

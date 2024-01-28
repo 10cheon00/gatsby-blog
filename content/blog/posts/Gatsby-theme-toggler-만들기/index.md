@@ -3,6 +3,8 @@ title: Gatsby Theme Toggler 만들기
 description:
 date: '2023-09-08T04:38:18.894Z'
 tags: ["gatsby", "blog", "react"]
+category:
+  name: "Gatsby"
 ---
 
 [이전 게시글](/posts/Gatsby-사이트-구축기)에서 다크모드를 적용하기로 마음만 먹고 계속 미뤘는데, 이번에 구현해보기로 마음먹었다.

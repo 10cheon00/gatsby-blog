@@ -2,6 +2,10 @@
 title: 24-1-26 Spring Security Authorization
 date: '2024-01-26T06:04:29.901Z'
 tags: ["TIL", "spring"]
+category:
+  name: "Study"
+  category:
+    name: "Spring"
 ---
 
 > Spring Security 6.2.1을 사용했습니다.

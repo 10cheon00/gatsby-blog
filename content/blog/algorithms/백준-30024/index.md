@@ -3,6 +3,8 @@ title: 백준 30024
 description:
 date: '2023-09-21T13:19:09.960Z'
 tags: ["algorithm"]
+category:
+  name: "Algorithm"
 ---
 
 # [옥수수밭](https://www.acmicpc.net/problem/30024)

@@ -3,6 +3,10 @@ title: 프로토타입 패턴
 description:
 date: '2023-07-21T14:02:05.301Z'
 tags: ["design-pattern"]
+category:
+  name: "Study"
+  category:
+    name: "디자인 패턴"
 ---
 
 # 의도

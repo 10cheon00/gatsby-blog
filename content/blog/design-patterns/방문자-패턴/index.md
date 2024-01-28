@@ -3,6 +3,10 @@ title: 방문자 패턴
 description:
 date: '2023-08-17T09:12:21.124Z'
 tags: ["design-pattern"]
+category:
+  name: "Study"
+  category:
+    name: "디자인 패턴"
 ---
 
 # 의도

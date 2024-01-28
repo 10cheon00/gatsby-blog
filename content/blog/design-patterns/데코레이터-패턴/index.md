@@ -3,6 +3,10 @@ title: 데코레이터 패턴
 description:
 date: '2023-07-26T06:38:49.847Z'
 tags: ["design-pattern"]
+category:
+  name: "Study"
+  category:
+    name: "디자인 패턴"
 ---
 
 # 의도

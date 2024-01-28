@@ -2,6 +2,8 @@
 title: vscode에서 scss의 주석 단축키가 이상한 이유
 date: '2023-11-09T15:01:51.688Z'
 tags: ["vscode", "scss"]
+category:
+  name: "Vscode"
 ---
 
 # 문제

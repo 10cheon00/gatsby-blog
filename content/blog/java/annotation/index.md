@@ -3,7 +3,7 @@ title: Annotation
 date: '2023-11-06T12:01:06.489Z'
 tags: ["java"]
 category: 
-  name: "Post"
+  name: "Study"
   category:
     name: "Java"
 ---
