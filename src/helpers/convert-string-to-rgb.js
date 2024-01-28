@@ -12,8 +12,8 @@ const intToRGB = i => {
   return "00000".substring(0, 6 - c.length) + c
 }
 
-const stringToRGB = str => {
-  return intToRGB(hashCode(str))
+const convertStringToRgb = str => {
+  return `#${intToRGB(hashCode(str))}`
 }
 
-export default stringToRGB;
+export default convertStringToRgb;
