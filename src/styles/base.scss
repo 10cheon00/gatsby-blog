@@ -247,13 +247,20 @@ a:focus {
   margin: var(--spacing-0) auto;
   max-width: var(--maxWidth-wrapper);
   background-color: var(--color-background);
-}
-
-.global-wrapper main {
   padding-top: calc(var(--top-bar-size) + var(--spacing-10));
 
-  /* Padding for top bar */
-  padding: var(--spacing-24) var(--spacing-5);
+  section {
+    /* Padding for top bar */
+    padding: 0 var(--spacing-5);
+  }
+
+  main {
+    display: flex;
+
+    section {
+      overflow: auto;
+    }
+  }
 }
 
 /* .global-wrapper[data-is-root-path="true"] .bio {

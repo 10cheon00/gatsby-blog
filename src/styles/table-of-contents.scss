@@ -1,11 +1,6 @@
-.table-of-contents-layout {
+.table-of-contents {
   position: sticky;
   top: 150px;
-}
-
-.table-of-contents {
-  position: absolute;
-  left: 100%;
 
   & * {
     transition: color 0.1s linear;

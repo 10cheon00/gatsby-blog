@@ -1,11 +1,9 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Utterances from "../components/utterances"
-import TableOfContents from "../components/table-of-contents"
 import Tag from "../components/tag"
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6"
 
@@ -14,9 +12,12 @@ const BlogPostTemplate = ({
   location,
 }) => {
   const siteTitle = site.siteMetadata?.title || `Title`
-  const tableOfContents = post.tableOfContents
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout
+      location={location}
+      title={siteTitle}
+      tableOfContents={post.tableOfContents}
+    >
       <article
         className="blog-post"
         itemScope
@@ -27,7 +28,6 @@ const BlogPostTemplate = ({
             {post.frontmatter.title}
           </h1>
           <div className="info">
-            <Bio />
             <span className="date">{post.frontmatter.date}</span>
           </div>
           <div className="tags">
@@ -38,7 +38,6 @@ const BlogPostTemplate = ({
               : null}
           </div>
         </header>
-        <TableOfContents tableOfContents={tableOfContents} />
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
@@ -129,7 +128,7 @@ export const pageQuery = graphql`
         slug
       }
       frontmatter {
-        title,
+        title
         date(formatString: "MMMM DD, YYYY")
       }
     }
@@ -138,7 +137,7 @@ export const pageQuery = graphql`
         slug
       }
       frontmatter {
-        title,
+        title
         date(formatString: "MMMM DD, YYYY")
       }
     }

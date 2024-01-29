@@ -41,12 +41,10 @@ class TableOfContents extends React.Component {
 
   render() {
     return (
-      <div className="table-of-contents-layout">
-        <div
-          className="table-of-contents"
-          dangerouslySetInnerHTML={{ __html: this.props.tableOfContents }}
-        ></div>
-      </div>
+      <div
+        className="table-of-contents"
+        dangerouslySetInnerHTML={{ __html: this.props.tableOfContents }}
+      ></div>
     )
   }
 }

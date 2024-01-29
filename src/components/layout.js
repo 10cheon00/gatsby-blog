@@ -1,19 +1,25 @@
 import * as React from "react"
 
+import TableOfContents from "../components/table-of-contents"
 import TopBar from "./top-bar"
 import SideBar from "./side-bar"
 
-const Layout = ({ location, title, children }) => {
+const Layout = ({ location, title, tableOfContents, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
 
   return (
     <div>
       <TopBar title={title} />
-      <SideBar />
       <div className="global-wrapper" data-is-root-path={isRootPath}>
-        {/* <Bio /> */}
-        <main>{children}</main>
+        <main>
+          <SideBar tableOfContents={tableOfContents}>
+            <TableOfContents tableOfContents={tableOfContents} />
+          </SideBar>
+          <section>
+            {children}
+          </section>
+        </main>
         <footer>
           © {new Date().getFullYear()}, Built with
           {` `}

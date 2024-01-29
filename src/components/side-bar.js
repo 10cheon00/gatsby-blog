@@ -2,8 +2,9 @@ import * as React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
 import Category from "./category"
+import Bio from "./bio"
 
-const SideBar = () => {
+const SideBar = ({children}) => {
   const data = useStaticQuery(graphql`
     query SideBarQuery {
       allMarkdownRemark(limit: 2000) {
@@ -23,10 +24,14 @@ const SideBar = () => {
 
   const group = data.allMarkdownRemark.group
   return (
-    <div className="side-bar">
-      Categories
-      <Category data={group}/>
-    </div>
+    <aside className="side-bar">
+      <Bio />
+      <div className="categories">
+        <p className="categories-header">All Categories</p>
+        <Category data={group}/>
+      </div>
+      {children}
+    </aside>
   )
 }
 

@@ -37,15 +37,15 @@ const Bio = () => {
         layout="fixed"
         formats={["auto", "webp", "avif"]}
         src="../images/profile-icon.png"
-        width={25}
-        height={25}
+        width={150}
+        height={150}
         quality={95}
         alt="Profile picture"
       />
       {author?.name && (
-        <span className="bio-author">
+        <p className="bio-author">
           <strong>{author.name}</strong>,&nbsp;
-        </span>
+        </p>
       )}
     </div>
   )
