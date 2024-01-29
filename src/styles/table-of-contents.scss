@@ -1,42 +1,43 @@
 .table-of-contents {
   position: sticky;
-  top: 150px;
+  top: calc(var(--top-bar-size) + 1rem);
 
   & * {
     transition: color 0.1s linear;
     transition: font-weight 0.1s linear;
   }
 
-  @media screen and (max-width: 70rem) {
+  @media screen and (max-width: 56rem) {
     & {
       display: none;
     }
   }
   
   & > ul {
-    margin: 0 0 0 var(--spacing-6);
-    max-width: var(--maxWidth-xs);
-    width: var(--maxWidth-xs);
-    border-left: 2px solid var(--color-blockquote);
+    margin: 0;
+    padding: 0;
+
+    li {
+      width: auto;
+    }
   }
   
-  & ul {
-    padding-left: var(--spacing-4);
+  ul {
     list-style-type: none;
   }
   
-  & a {
+  a {
     text-decoration: none;
     color: var(--color-blockquote);
     font-size: var(--fontSize-0);
   }
   
-  & a.active {
+  a.active {
     color: var(--color-text) !important;
     font-weight: var(--fontWeight-bold);
   }
   
-  & p {
+  p {
     margin: 0;
   }
 

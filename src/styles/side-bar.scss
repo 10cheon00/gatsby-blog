@@ -1,11 +1,42 @@
 .side-bar {
-  width: 250px;
-  padding: 0 var(--spacing-5);
-  padding-top: calc(var(--top-bar-size) + var(--spacing-10));
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+    
+  & > * {
+    margin: var(--spacing-3);
+    padding: var(--spacing-3);
+  }
 
-  @media screen and (max-width: 70rem) {
+  @media screen and (max-width: 56rem) {
     & {
       display: none;
     }
+  }
+
+  .categories {
+    padding: var(--spacing-3);
+    font-family: consolas;
+    font-size: var(--fontSize-0);
+
+    .categories-header {
+      margin: 0;
+      font-weight: bold;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+
+      li {
+        list-style: none;
+        margin-top: var(--spacing-1);
+
+        ul {
+          padding: 0;
+        }
+      }
+    }
+
   }
 }
