@@ -14,11 +14,11 @@ const Layout = ({ location, title, tableOfContents, children }) => {
       <div className="global-wrapper" data-is-root-path={isRootPath}>
         <main>
           <SideBar tableOfContents={tableOfContents}>
-            <TableOfContents tableOfContents={tableOfContents} />
+            {tableOfContents ? (
+              <TableOfContents tableOfContents={tableOfContents} />
+            ) : null}
           </SideBar>
-          <section>
-            {children}
-          </section>
+          <section>{children}</section>
         </main>
         <footer>
           © {new Date().getFullYear()}, Built with
