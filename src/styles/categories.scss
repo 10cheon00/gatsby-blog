@@ -1,0 +1,33 @@
+.categories {
+  padding: var(--spacing-3);
+  font-family: consolas;
+  font-size: var(--fontSize-0);
+
+  .categories-header {
+    margin: 0;
+    font-weight: bold;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+      margin-top: var(--spacing-1);
+
+      ul {
+        padding: 0;
+      }
+    }
+
+    a {
+      /* text-decoration: none; */
+      color: var(--color-text);
+    }
+
+    a:hover{
+      color: darkgreen;
+    }
+  }
+}

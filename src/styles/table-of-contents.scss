@@ -1,6 +1,6 @@
 .table-of-contents {
   position: sticky;
-  top: calc(var(--top-bar-size) + 1rem);
+  top: calc(var(--top-bar-size) + var(--spacing-3));
 
   & * {
     transition: color 0.1s linear;

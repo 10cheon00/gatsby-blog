@@ -246,11 +246,10 @@ a:focus {
 .global-wrapper {
   margin: var(--spacing-3) auto;
   background-color: var(--color-background);
-  padding-top: calc(var(--top-bar-size) + var(--spacing-10));
 
   section {
     /* Padding for top bar */
-    padding: 0 var(--spacing-5);
+    padding: var(--spacing-5);
   }
 
   main {
