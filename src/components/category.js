@@ -1,3 +1,4 @@
+import { Link } from "gatsby"
 import * as React from "react"
 
 const Category = ({ data, subTreeCount = 0 }) => {
@@ -19,8 +20,10 @@ const Category = ({ data, subTreeCount = 0 }) => {
       {data.map(({ group, fieldValue, totalCount }, index) => {
         return (
           <li key={fieldValue} className="category-link">
-            <span>{`${generateTreePrefix(index)}${fieldValue}`}</span>
-            &nbsp;<span>({totalCount})</span>
+            <Link to={`/categories/${fieldValue}`}>
+              <span>{`${generateTreePrefix(index)}${fieldValue}`}</span>
+              &nbsp;<span>({totalCount})</span>
+            </Link>
             {generateSubCategory(group)}
           </li>
         )
