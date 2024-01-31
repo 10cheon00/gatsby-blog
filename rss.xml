@@ -1,4 +1,206 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[10cheon00의 Archive RSS Feed]]></title><description><![CDATA[A Blog archiving what I learned.]]></description><link>https://10cheon00.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 26 Jan 2024 13:50:53 GMT</lastBuildDate><item><title><![CDATA[24-1-26 Spring Security Authorization]]></title><description><![CDATA[Spring Security 6.2.1을 사용했습니다. Authorization 직역하면 허가, 인증 그런 뜻이다. 자원에 대한 접근 권한을 Authority라고 하고, 사용자가 그 권한을 갖고 있는지 검사하는걸 Authorization…]]></description><link>https://10cheon00.github.io/til/24-1-26-Spring-Security-Authorization/</link><guid isPermaLink="false">https://10cheon00.github.io/til/24-1-26-Spring-Security-Authorization/</guid><pubDate>Fri, 26 Jan 2024 06:04:29 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[10cheon00의 Archive RSS Feed]]></title><description><![CDATA[A Blog archiving what I learned.]]></description><link>https://10cheon00.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 31 Jan 2024 08:42:53 GMT</lastBuildDate><item><title><![CDATA[24-1-31 Spring Security Method Authorization]]></title><description><![CDATA[Method Security 이전에 Authorization에 대해 공부했을 땐 로 명시된 클래스에서 직접 모든 경로에 대해 authorization을 지정했다. 그러나 세세한 엔드포인트에 대해 authorization…]]></description><link>https://10cheon00.github.io/til/24-1-31-Spring-Security-Method-Authorization/</link><guid isPermaLink="false">https://10cheon00.github.io/til/24-1-31-Spring-Security-Method-Authorization/</guid><content:encoded>&lt;h1 id=&quot;method-security&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#method-security&quot; aria-label=&quot;method security permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Method Security&lt;/h1&gt;
+&lt;p&gt;이전에 Authorization에 대해 공부했을 땐 &lt;code class=&quot;language-text&quot;&gt;@Configuration&lt;/code&gt;로 명시된 클래스에서 직접 모든 경로에 대해 authorization을 지정했다. 그러나 세세한 엔드포인트에 대해 authorization을 지정하려면 코드가 매우 길어지고 유지보수하기 까다로우므로, Spring Security에서는 메서드별로 authorization을 거는 방법을 제공하고 있다.&lt;/p&gt;
+&lt;h1 id=&quot;flow&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#flow&quot; aria-label=&quot;flow permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Flow&lt;/h1&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/28ba13c0da2a3862b31e603dd30630ea/d4b10/image.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 64.55696202531645%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAADmElEQVR42mMItbDgDLWQ4WRgYGCuDw1lY2BgYDB06tLTs23uMHPvr7T0nJVt5tJXYuE2NdfUbWquvv30HB2TWHsrt7pUc/eZeRYek3NN3SbnWnlNzTV0nJjLwMAgydXrZqiyPc4izNjYmBVkoFPgTCN7vwWFNl69dTaerd0OfpOrHYJmFTkFzS629J5dbOyUY+YeOqHfJXTOarfgWctdQ2et8IiYs8IhYMYihselTo4vcgyqnuSa9L3MM8raHq2rDjLUXl9fQE9PnBvMtmdgYUAC////ZwqMndvgFT5rgXPApNlugZPn+ITPmOsUMH0iw/HaiJozBW4HThW67Thf7L51XZKdJdjbhlZSMjIyQoKCDPxaWsZyILH6+nqm+vr9YMOnz1zR2zth8Yma+sn7auqn7OvsXnB0ypSlCyA2VuqIf6nVcwexZWQsOBkY7MGaHPynVFl7Ttro6Ddlhb3v1I0Gtt3xMFdGZy86mN579n/mhNN/0vtO/M2cdPF/aOGWqwxLcpf4TwubuLbLv2X5rIipi0pcSwxAGuLt7TmSsvstIzNmuSdkzHOKyZrhERA3URlmYGr+7EMLVu34P3vJ6j8zF638u2z99v8lDcuvMqxqWmW8OGdh1sKseUkg3B1YL8bAEM+hqJOpJ6MaJ80gmMbPwxMqKqo1hUdSrUdEybhDjoEhjTW7ZE5uVc2sGXUN0/tr62dMaGiaNTUjf1YNAwqor2cCUVYeU93M3WestvGducTWZ8ZKG+9pa0G0rc+MZcbOU9aqmjXp+8fPL7Dzn73EynvaHFvfGXMdA+fMsQ+YOQcc0KtCVzHX29ezzEw7w1pf/59p1apVzCCsoaEhrKioKG5vb88BiV0GRmgsM9r5TW+y85uz2NZnxlxb/1nzHALmzTN2mTKVAQ0wqqgwsKuoqLBD+RxCQkJ8enqWYugKO3uX1jU3z16dn9+xpDC/a0l97bQVza0L+uEKjH3qufStah3NHcuCrDzqvczdZhur6ntLKysry+roGGsYGxvza2lpsTEw/Ae7Mq9y8Y7s5h3/M5q2fktv3PQ9s3nH/7TK1RfAXgYpSC+dp+oaPH2LW8jsDR5hszc7Bk7boGVWrCUpySEnL6+qqaCgoG9mZsYHc0BExryD7YtO/m9ffOhP64J9f3tWnv6fULrxGgM+AEnI9UyhoaHMUIsZoZghv3TmgulTZt+bNXXqpelTpl6aN2vW7aq6WesBLWhYhguSI9oAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/28ba13c0da2a3862b31e603dd30630ea/f058b/image.png&quot;
+        srcset=&quot;/static/28ba13c0da2a3862b31e603dd30630ea/c26ae/image.png 158w,
+/static/28ba13c0da2a3862b31e603dd30630ea/6bdcf/image.png 315w,
+/static/28ba13c0da2a3862b31e603dd30630ea/f058b/image.png 630w,
+/static/28ba13c0da2a3862b31e603dd30630ea/40601/image.png 945w,
+/static/28ba13c0da2a3862b31e603dd30630ea/78612/image.png 1260w,
+/static/28ba13c0da2a3862b31e603dd30630ea/d4b10/image.png 1394w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;그림에서는 &lt;code class=&quot;language-text&quot;&gt;readCustomer&lt;/code&gt;라는 자원에 접근하는 요청을 예시로 들고 있다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;자원에 접근하기 전에 Spring AOP가 해당 자원의 프록시 메서드를 호출한다. 다시 말해 &lt;code class=&quot;language-text&quot;&gt;@PreAuthorize&lt;/code&gt;가 명시되어 있다면 &lt;code class=&quot;language-text&quot;&gt;AuthorizationManagerBeforeMethodInterceptor&lt;/code&gt;를 통해 프록시 메서드를 호출한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;AuthorizationManagerBeforeMethodInterceptor&lt;/code&gt;는 &lt;code class=&quot;language-text&quot;&gt;@PreAuthorize&lt;/code&gt;내에 명시된 메서드를 호출하기 위해 &lt;code class=&quot;language-text&quot;&gt;PreAuthorizeAuthorizationManager&lt;/code&gt;클래스를 생성자의 인자로 요구하는데, 그 클래스의 &lt;code class=&quot;language-text&quot;&gt;check&lt;/code&gt; 메서드를 호출한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;check&lt;/code&gt; 메서드는 &lt;code class=&quot;language-text&quot;&gt;@PreAuthorize&lt;/code&gt;내에 명시된 메서드를 실행하기 위해 어떻게 명시되어있는지 해석해야 한다. 사용자는 &lt;strong&gt;SeEL expression&lt;/strong&gt;으로 메서드를 표현했으므로 그 표현식을 해석하기 위해 &lt;code class=&quot;language-text&quot;&gt;MethodSecurityExpressionHandler&lt;/code&gt;를 필요로 요구한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;이 객체는 적절한 Context객체를 생성하여 반환한다. Context 객체에는 &lt;code class=&quot;language-text&quot;&gt;Supplier&amp;lt;Authentication&gt;&lt;/code&gt;과 &lt;code class=&quot;language-text&quot;&gt;MethodInvocation&lt;/code&gt;이 담겨 있어 상위 객체에서 직접 Authorization을 할 수 있다.&lt;/p&gt;
+&lt;ol start=&quot;4&quot;&gt;
+&lt;li&gt;
+&lt;p&gt;3번을 통해 얻은 Context를 이용하여 interceptor가 해당 사용자를 평가(인가)한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;인가되었다면 자원에 접근을 허용하고, 그렇지 않으면 AccessDeniedException을 던진다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;6~10번 또한 같은 과정이지만 자원에 접근하고 난 후에 평가하는 과정이다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&quot;multiple-annotations&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#multiple-annotations&quot; aria-label=&quot;multiple annotations permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Multiple Annotations&lt;/h1&gt;
+&lt;p&gt;자원에 접근하기 전, 접근한 후, 두 번에 걸쳐서 필터링을 걸 수 있기 때문에 서비스의 특정 메서드에 여러번 Annotation을 달 수 있다.&lt;/p&gt;
+
+          &lt;div class=&quot;gatsby-remark-prismjs-copy-button-container&quot;&gt;
+            &lt;div class=&quot;gatsby-remark-prismjs-copy-button&quot; tabindex=&quot;0&quot; role=&quot;button&quot; aria-pressed=&quot;false&quot; onclick=&quot;gatsbyRemarkCopyToClipboard(this, this.parentNode.nextElementSibling)&quot;&gt;
+              Copy
+            &lt;/div&gt;
+          &lt;/div&gt;
+          
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token annotation punctuation&quot;&gt;@Service&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;CustomService&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token annotation punctuation&quot;&gt;@PreAuthorize&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;hasRole(&apos;ADMIN&apos;)&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token annotation punctuation&quot;&gt;@PostAuthorize&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;returnObject.name == &apos;user&apos;&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Collection&lt;/span&gt;&lt;span class=&quot;token generics&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Account&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getAll&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token comment&quot;&gt;// ...&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;대신 같은 Annotation을 여러 번 달 수는 없다.&lt;/p&gt;
+&lt;h1 id=&quot;spel-표현식&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#spel-%ED%91%9C%ED%98%84%EC%8B%9D&quot; aria-label=&quot;spel 표현식 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;SpEL 표현식&lt;/h1&gt;
+&lt;p&gt;Annotation을 쓸 때 여러 조건을 같이 걸 수 있다.&lt;/p&gt;
+
+          &lt;div class=&quot;gatsby-remark-prismjs-copy-button-container&quot;&gt;
+            &lt;div class=&quot;gatsby-remark-prismjs-copy-button&quot; tabindex=&quot;0&quot; role=&quot;button&quot; aria-pressed=&quot;false&quot; onclick=&quot;gatsbyRemarkCopyToClipboard(this, this.parentNode.nextElementSibling)&quot;&gt;
+              Copy
+            &lt;/div&gt;
+          &lt;/div&gt;
+          
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;@PreAuthorize(&quot;hasRole(&apos;USER&apos;) || hasAuthority(&apos;permission:db&apos;))&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;위의 예시처럼 &lt;code class=&quot;language-text&quot;&gt;USER&lt;/code&gt;역할을 가진 사용자중 &lt;code class=&quot;language-text&quot;&gt;permission:db&lt;/code&gt;라는 권한을 가진 사람만 인가되도록 설정할 수 있다.&lt;/p&gt;
+&lt;h1 id=&quot;postauthorize&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#postauthorize&quot; aria-label=&quot;postauthorize permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;@PostAuthorize&lt;/h1&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;@PostAuthorize&lt;/code&gt;를 사용하면 메서드가 반환하는 데이터에 대해 인가를 결정할 수 있다.&lt;/p&gt;
+
+          &lt;div class=&quot;gatsby-remark-prismjs-copy-button-container&quot;&gt;
+            &lt;div class=&quot;gatsby-remark-prismjs-copy-button&quot; tabindex=&quot;0&quot; role=&quot;button&quot; aria-pressed=&quot;false&quot; onclick=&quot;gatsbyRemarkCopyToClipboard(this, this.parentNode.nextElementSibling)&quot;&gt;
+              Copy
+            &lt;/div&gt;
+          &lt;/div&gt;
+          
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token annotation punctuation&quot;&gt;@Service&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;CustomService&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token annotation punctuation&quot;&gt;@PostAuthorize&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;returnObject.createdDate &amp;lt; 946684800000&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Collection&lt;/span&gt;&lt;span class=&quot;token generics&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Account&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getAll&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token comment&quot;&gt;// ...&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;946684800000은 2000년 1월 1일을 나타내는 값으로, 위와 같이 설정하면 생년월일이 2000년 1월 1일 이후인 사용자가 반환되려고 할 때 403에러가 던져지게 된다.&lt;/p&gt;
+&lt;h1 id=&quot;prefilter&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#prefilter&quot; aria-label=&quot;prefilter permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;@PreFilter&lt;/h1&gt;
+&lt;p&gt;인가뿐만 아니라 메서드 파라미터에 대해서도 필터링이 가능하다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;@PreFilter&lt;/code&gt;를 통해 파라미터에 대해 조건을 걸 수 있다.&lt;/p&gt;
+
+          &lt;div class=&quot;gatsby-remark-prismjs-copy-button-container&quot;&gt;
+            &lt;div class=&quot;gatsby-remark-prismjs-copy-button&quot; tabindex=&quot;0&quot; role=&quot;button&quot; aria-pressed=&quot;false&quot; onclick=&quot;gatsbyRemarkCopyToClipboard(this, this.parentNode.nextElementSibling)&quot;&gt;
+              Copy
+            &lt;/div&gt;
+          &lt;/div&gt;
+          
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token annotation punctuation&quot;&gt;@Service&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;CustomService&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token annotation punctuation&quot;&gt;@PreFilter&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;filterObject.birth_date &gt; 946684800000&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Collection&lt;/span&gt;&lt;span class=&quot;token generics&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Account&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;newAccounts&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;token generics&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Accounts&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt; accounts&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token comment&quot;&gt;// ...&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;946684800000은 2000년 1월 1일을 나타내는 값으로, 위와 같이 설정하면 생년월일이 2000년 1월 1일 이후인 사용자만 생성되도록 설정할 수 있다.&lt;/p&gt;
+&lt;h1 id=&quot;postfilter&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#postfilter&quot; aria-label=&quot;postfilter permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;@PostFilter&lt;/h1&gt;
+
+          &lt;div class=&quot;gatsby-remark-prismjs-copy-button-container&quot;&gt;
+            &lt;div class=&quot;gatsby-remark-prismjs-copy-button&quot; tabindex=&quot;0&quot; role=&quot;button&quot; aria-pressed=&quot;false&quot; onclick=&quot;gatsbyRemarkCopyToClipboard(this, this.parentNode.nextElementSibling)&quot;&gt;
+              Copy
+            &lt;/div&gt;
+          &lt;/div&gt;
+          
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token annotation punctuation&quot;&gt;@Service&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;CustomService&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token annotation punctuation&quot;&gt;@PostAuthorize&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;returnObject.createdDate &amp;lt; 1704067200000&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Collection&lt;/span&gt;&lt;span class=&quot;token generics&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Account&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getAll&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token comment&quot;&gt;// ...&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;1704067200000은 2024년 1월 1일을 나타내는 값으로, 위와 같이 설정하면 결과값으로 반환되는 사용자들은 모두 2024년 1월 1일 이전에 생성된 사용자들이다.&lt;/p&gt;
+&lt;h1 id=&quot;class--interface-level-annotation&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#class--interface-level-annotation&quot; aria-label=&quot;class  interface level annotation permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Class / Interface level Annotation&lt;/h1&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;@PreAuthorize&lt;/code&gt;를 살펴보면 이렇다.&lt;/p&gt;
+
+          &lt;div class=&quot;gatsby-remark-prismjs-copy-button-container&quot;&gt;
+            &lt;div class=&quot;gatsby-remark-prismjs-copy-button&quot; tabindex=&quot;0&quot; role=&quot;button&quot; aria-pressed=&quot;false&quot; onclick=&quot;gatsbyRemarkCopyToClipboard(this, this.parentNode.nextElementSibling)&quot;&gt;
+              Copy
+            &lt;/div&gt;
+          &lt;/div&gt;
+          
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token annotation punctuation&quot;&gt;@Target&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;ElementType&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;METHOD&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;ElementType&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;TYPE&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token annotation punctuation&quot;&gt;@Retention&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;RetentionPolicy&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;RUNTIME&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token annotation punctuation&quot;&gt;@Inherited&lt;/span&gt;
+&lt;span class=&quot;token annotation punctuation&quot;&gt;@Documented&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token annotation punctuation&quot;&gt;@interface&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;PreAuthorize&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+
+	&lt;span class=&quot;token comment&quot;&gt;/**
+	 * @return the Spring-EL expression to be evaluated before invoking the protected
+	 * method
+	 */&lt;/span&gt;
+	&lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;METHOD&lt;/code&gt;와 &lt;code class=&quot;language-text&quot;&gt;TYPE&lt;/code&gt;이 명시되어 있다. 그러므로 클래스 또는 인터페이스 단위에서도 사용할 수 있다는 것이다.&lt;/p&gt;
+
+          &lt;div class=&quot;gatsby-remark-prismjs-copy-button-container&quot;&gt;
+            &lt;div class=&quot;gatsby-remark-prismjs-copy-button&quot; tabindex=&quot;0&quot; role=&quot;button&quot; aria-pressed=&quot;false&quot; onclick=&quot;gatsbyRemarkCopyToClipboard(this, this.parentNode.nextElementSibling)&quot;&gt;
+              Copy
+            &lt;/div&gt;
+          &lt;/div&gt;
+          
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token annotation punctuation&quot;&gt;@RestController&lt;/span&gt;
+&lt;span class=&quot;token annotation punctuation&quot;&gt;@RequestMapping&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;/users&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token annotation punctuation&quot;&gt;@PreAuthorize&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;hasAuthority(&apos;permission:read&apos;)&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;UserController&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;UserService&lt;/span&gt; userDetailsService&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token annotation punctuation&quot;&gt;@Autowired&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;UserController&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;UserService&lt;/span&gt; userDetailsService&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;userDetailsService &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; userDetailsService&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token annotation punctuation&quot;&gt;@GetMapping&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token annotation punctuation&quot;&gt;@ResponseBody&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;token generics&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Users&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getUsers&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; userDetailsService&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;findAll&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    
+    &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;위의 코드처럼 &lt;code class=&quot;language-text&quot;&gt;/users&lt;/code&gt;로 접근하면 UserController에게 dispatch되는데 이때 &lt;code class=&quot;language-text&quot;&gt;@PreAuthorize(&quot;hasAuthority(&apos;permission:read&apos;)&quot;)&lt;/code&gt;가 붙어있으므로 &lt;code class=&quot;language-text&quot;&gt;permission:read&lt;/code&gt; 권한을 가진 사용자만 UserController를 사용할 수(?) 있게 된다.&lt;/p&gt;
+&lt;p&gt;또한 인터페이스에도 사용가능하다.&lt;/p&gt;
+
+          &lt;div class=&quot;gatsby-remark-prismjs-copy-button-container&quot;&gt;
+            &lt;div class=&quot;gatsby-remark-prismjs-copy-button&quot; tabindex=&quot;0&quot; role=&quot;button&quot; aria-pressed=&quot;false&quot; onclick=&quot;gatsbyRemarkCopyToClipboard(this, this.parentNode.nextElementSibling)&quot;&gt;
+              Copy
+            &lt;/div&gt;
+          &lt;/div&gt;
+          
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token annotation punctuation&quot;&gt;@Target&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;ElementType&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;METHOD&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;ElementType&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;TYPE&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token annotation punctuation&quot;&gt;@Retention&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;RetentionPolicy&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;RUNTIME&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token annotation punctuation&quot;&gt;@PreAuthorize&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;hasRole(&apos;ADMIN&apos;)&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token annotation punctuation&quot;&gt;@interface&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;IsAdmin&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이렇게 인터페이스를 정의하여 재사용가능하다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[24-1-26 Spring Security Authorization]]></title><description><![CDATA[Spring Security 6.2.1을 사용했습니다. Authorization 직역하면 허가, 인증 그런 뜻이다. 자원에 대한 접근 권한을 Authority라고 하고, 사용자가 그 권한을 갖고 있는지 검사하는걸 Authorization…]]></description><link>https://10cheon00.github.io/til/24-1-26-Spring-Security-Authorization/</link><guid isPermaLink="false">https://10cheon00.github.io/til/24-1-26-Spring-Security-Authorization/</guid><pubDate>Fri, 26 Jan 2024 06:04:29 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;Spring Security 6.2.1을 사용했습니다.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h1 id=&quot;authorization&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#authorization&quot; aria-label=&quot;authorization permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Authorization&lt;/h1&gt;
