@@ -9,7 +9,7 @@
   align-items: center;
   background-color: var(--color-top-bar);
 
-  z-index: 999;
+  z-index: 700;
   overflow: hidden;
 
   /* background image */
@@ -37,9 +37,10 @@
       display: inline-block;
     }
 
-    .main-heading-icon {
-      display: none;
-    }
+  }
+
+  .side-bar-icon {
+    display: none;
   }
 
   @media screen and (max-width: 56rem) {
@@ -47,10 +48,10 @@
       .main-heading {
         display: none;
       }
+    }
 
-      .main-heading-icon {
-        display: inline-block;
-      }
+    .side-bar-icon {
+      display: inline-block;
     }
   }
 

@@ -15,10 +15,4 @@
     vertical-align: top;
     color: var(--color-text-light);
   }
-
-  @media screen and (max-width: 28rem) {
-    .bio-author {
-      display: none;
-    }
-  }
 }

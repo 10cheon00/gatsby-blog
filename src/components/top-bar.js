@@ -6,13 +6,13 @@
  */
 
 import * as React from "react"
-import { FaGithub, FaHouse } from "react-icons/fa6"
+import { FaGithub, FaBars } from "react-icons/fa6"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import { ThemeToggler } from "./theme-toggler"
 
-const TopBar = ({ title }) => {
+const TopBar = ({ title, openSideBar }) => {
   const data = useStaticQuery(graphql`
     query BioQuery {
       site {
@@ -47,8 +47,8 @@ const TopBar = ({ title }) => {
       />
       <Link className="home-link" to="/">
         <h1 className="main-heading">{title}</h1>
-        <FaHouse size="30" className="main-heading-icon" />
       </Link>
+      <FaBars size="30" className="side-bar-icon" onClick={openSideBar}/>
       <div className="divider"></div>
       <div className="top-bar-links">
         <Link to="/tags">
