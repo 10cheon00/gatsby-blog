@@ -14,7 +14,11 @@
 
     li {
       list-style: none;
-      margin-top: var(--spacing-1);
+      margin-top: var(--spacing-1) !important;
+
+      &::before{
+        content: attr(data-content);
+      }
 
       ul {
         padding: 0;
@@ -24,10 +28,6 @@
     a {
       /* text-decoration: none; */
       color: var(--color-text);
-    }
-
-    a:hover{
-      color: darkgreen;
     }
   }
 }

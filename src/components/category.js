@@ -19,9 +19,13 @@ const Category = ({ data, subTreeCount = 0 }) => {
     <ul>
       {data.map(({ group, fieldValue, totalCount }, index) => {
         return (
-          <li key={fieldValue} className="category-link">
+          <li
+            key={fieldValue}
+            className="category-link"
+            data-content={generateTreePrefix(index)}
+          >
             <Link to={`/categories/${fieldValue}`}>
-              <span>{`${generateTreePrefix(index)}${fieldValue}`}</span>
+              <span>{fieldValue}</span>
               &nbsp;<span>({totalCount})</span>
             </Link>
             {generateSubCategory(group)}
