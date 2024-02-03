@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import Pagination from "../components/pagination"
 import PostList from "../components/post-list"
 
-export default class PaginationPage extends React.Component {
+export default class CategoryPage extends React.Component {
   render() {
     const location = { pathname: "/" }
     const siteTitle = this.props.data.site.siteMetadata?.title || `Title`
@@ -14,11 +14,11 @@ export default class PaginationPage extends React.Component {
     return (
       <Layout location={location} title={siteTitle}>
         <PostList posts={posts} />
-        <Pagination
+        {/* <Pagination
           currentPage={this.props.pageContext.currentPage}
           numPagination={this.props.pageContext.numPagination}
           paginationPageCount={this.props.pageContext.paginationPageCount}
-        />
+        /> */}
       </Layout>
     )
   }
@@ -32,7 +32,7 @@ export default class PaginationPage extends React.Component {
 export const Head = () => <Seo title="All posts" />
 
 export const blogListQuery = graphql`
-  query blogListQuery($skip: Int!, $limit: Int!) {
+  query blogListQuery {
     site {
       siteMetadata {
         title
@@ -40,8 +40,11 @@ export const blogListQuery = graphql`
     }
     allMarkdownRemark(
       sort: { frontmatter: { date: DESC } }
-      limit: $limit
-      skip: $skip
+      filter: {
+        frontmatter: {
+          category: [String]
+        }
+      }
     ) {
       nodes {
         excerpt
@@ -51,7 +54,6 @@ export const blogListQuery = graphql`
         frontmatter {
           date(formatString: "MMMM DD, YYYY")
           title
-          description
           tags
         }
       }
