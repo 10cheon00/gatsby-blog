@@ -1,8 +1,8 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 
+import Seo from "../components/seo"
 import Layout from "../components/layout"
-import Pagination from "../components/pagination"
 import PostList from "../components/post-list"
 
 export default class CategoryPage extends React.Component {
@@ -13,12 +13,10 @@ export default class CategoryPage extends React.Component {
 
     return (
       <Layout location={location} title={siteTitle}>
+        <h1>
+          Posts
+        </h1>
         <PostList posts={posts} />
-        {/* <Pagination
-          currentPage={this.props.pageContext.currentPage}
-          numPagination={this.props.pageContext.numPagination}
-          paginationPageCount={this.props.pageContext.paginationPageCount}
-        /> */}
       </Layout>
     )
   }
@@ -31,18 +29,24 @@ export default class CategoryPage extends React.Component {
  */
 export const Head = () => <Seo title="All posts" />
 
-export const blogListQuery = graphql`
-  query blogListQuery {
+export const categoryPageQuery = graphql`
+  query categoryPageQuery($category: String!, $subCategory: String) {
     site {
       siteMetadata {
         title
       }
     }
     allMarkdownRemark(
+      limit: 2000
       sort: { frontmatter: { date: DESC } }
       filter: {
         frontmatter: {
-          category: [String]
+          category: {
+            name: { 
+              eq: $category 
+            }
+            category: { name: { eq: $subCategory } }
+          }
         }
       }
     ) {

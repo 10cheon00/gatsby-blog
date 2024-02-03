@@ -95,7 +95,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   const postsPerPage = 10
   const paginationPageCount = Math.ceil(posts.length / postsPerPage)
-  const numPagination = 5;
+  const numPagination = 5
 
   Array.from({ length: paginationPageCount }).forEach((_, i) => {
     // create paginated page.
@@ -107,74 +107,53 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         skip: i * postsPerPage,
         currentPage: i + 1,
         numPagination,
-        paginationPageCount
+        paginationPageCount,
       },
     })
   })
 
   // create category pages.
 
-  const Category = categoryName => new Object({
-    _name: categoryName,
-    _count: 0, 
-    _posts: [],
-    isExistSubCategory: categoryName => {
-      return Object.keys(this).find(key => key === categoryName)
-    },
-    addPost: post => {
-      _posts.add(post)
-      _count++
-    },
-    createSubCategory: subCateroyName => {
-      this[subCateroyName] = new Category(subCateroyName)
-      return this[subCateroyName]
-    },
-    hasSubCategory: categoryName => Object.keys(this).some(key => key === categoryName)
-  })
-
-  const totalCategory = new Category("Total")
-  posts.forEach(post => {
-    totalCategory.addPost(categoryName)
-    
-    // check subcategory
-    const categoryName = post.frontmatter.category?.name
-    if (totalCategory.hasSubCategory(categoryName)) {
-      // if exist subcategory,
-      // append post to subcategory
-      totalCategory.addPost(post)
-    }
-    else {
-      if (categoryName == null) {
-        return
-      }
-      // if not exist subcategory,
-      // create new category into it
-      const category = totalCategory.createSubCategory(categoryName)
-      const subCategoryName = post.frontmatter.category?.category?.name
-      if (category.hasSubCategory(subCategoryName)) {
-        category.addPost(post)
-      }
-      else {
-        const subCategory = category.createSubCategory(subCategoryName)
-        subCategory.addPost(post)
-      }
-    }
-  })
   const categoryPostsPerPage = 10
   const categoryPaginationPageCount = Math.ceil(posts.length / postsPerPage)
 
-  Array.from({ length: totalCategory._posts.length }).forEach((_, i) => {
-    // create category page.
+  const categoryData = await graphql(`
+    query CategoryQuery {
+      allMarkdownRemark(limit: 2000) {
+        group(field: { frontmatter: { category: { name: SELECT } } }) {
+          group(
+            field: { frontmatter: { category: { category: { name: SELECT } } } }
+          ) {
+            fieldValue
+            totalCount
+          }
+          fieldValue
+          totalCount
+        }
+      }
+    }
+  `)
+  const allCategory = categoryData.data.allMarkdownRemark.group
+
+  allCategory.forEach(category => {
     createPage({
-      path: i === 0 ? `/` : `/${i + 1}`,
+      path: `/categories/${category.fieldValue}`,
       component: path.resolve("./src/templates/category.js"),
       context: {
-        limit: postsPerPage,
-        skip: i * postsPerPage,
-        currentPage: i + 1,
-        numPagination,
-        paginationPageCount
+        category: category.fieldValue,
       },
+    })
+
+    const allSubCategory = category.group
+    allSubCategory.forEach(subCategory => {
+      createPage({
+        path: `/categories/${category.fieldValue}/${subCategory.fieldValue}`,
+        component: path.resolve("./src/templates/category.js"),
+        context: {
+          category: category.fieldValue,
+          subCategory: subCategory.fieldValue
+        },
+      })
     })
   })
 }
@@ -238,6 +217,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 
     type Category {
       name: String
+      category: Category
     }
 
     type Fields {
