@@ -1,3 +1,5 @@
+const { slugify } = require("./src/helpers/slugify.js")
+
 // Define All url in blog
 const urlPatterns = {
   category: "/categories",
@@ -7,7 +9,9 @@ const urlPatterns = {
 const resolveUrl = (urlKey, ...parameters) => {
   const isExistKey = Object.keys(urlPatterns).some(key => key === urlKey)
   if (isExistKey) {
-    return parameters.reduce((res, parameter) => {
+    const slugifiedParameters = parameters.map(param => slugify(param))
+
+    return slugifiedParameters.reduce((res, parameter) => {
       return `${res}/${parameter}`
     }, urlPatterns[urlKey])
   }

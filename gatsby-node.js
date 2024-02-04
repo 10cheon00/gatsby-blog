@@ -150,7 +150,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     allSubCategory.forEach(subCategory => {
       createPage({
         path: resolveUrl("category", category.fieldValue, subCategory.fieldValue),
-        path: `/categories/${category.fieldValue}/${subCategory.fieldValue}`,
         component: path.resolve("./src/templates/category.js"),
         context: {
           category: category.fieldValue,

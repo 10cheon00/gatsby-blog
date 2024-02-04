@@ -6,7 +6,7 @@ tags: ["csharp"]
 category:
   name: "Study"
   category:
-    name: "C#"
+    name: "CSharp"
 ---
 
 몇 가지 처음 보는 키워드들을 정리해보았다.

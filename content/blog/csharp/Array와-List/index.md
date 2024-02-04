@@ -6,7 +6,7 @@ tags: ["csharp"]
 category:
   name: "Study"
   category:
-    name: "C#"
+    name: "CSharp"
 ---
 
 # Array
