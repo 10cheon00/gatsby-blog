@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 import convertStringToRgb from "../helpers/convert-string-to-rgb"
-import { getUrl } from "../../gatsby-urls"
+import { resolveUrl } from "../../gatsby-urls"
 
 const kebabCase = require("lodash.kebabcase")
 
@@ -17,7 +17,7 @@ const Tag = ({
   let element = `${tagName} ${relatedPostsNumberString}`
   if (enableLink) {
     element = (
-      <Link to={getUrl("tags", kebabCase(tagName))}>
+      <Link to={resolveUrl("tags", kebabCase(tagName))}>
         {tagName} {relatedPostsNumberString}
       </Link>
     )
@@ -26,7 +26,7 @@ const Tag = ({
   const hoverable = enableLink ? `hoverable` : ``
 
   const hexCode = convertStringToRgb(tagName)
-  const backgroundColor = hexCode;//scaleRGB(, 0.75)
+  const backgroundColor = hexCode //scaleRGB(, 0.75)
   return (
     <span
       className={`tag ${hoverable}`}

@@ -5,7 +5,7 @@ import { FaHouse, FaXmark } from "react-icons/fa6"
 import Category from "./category"
 import Bio from "./bio"
 
-import { getUrl } from "../../gatsby-urls"
+import { resolveUrl } from "../../gatsby-urls"
 
 const SideBar = ({ closeSideBar, children }) => {
   const data = useStaticQuery(graphql`
@@ -30,9 +30,7 @@ const SideBar = ({ closeSideBar, children }) => {
   const getPrefix = (categoryIndex, subCategoryIndex) => {
     if (subCategoryIndex == null) {
       return `${
-        categoryIndex < categories.length - 1
-          ? "+--\u00a0"
-          : "`--\u00a0"
+        categoryIndex < categories.length - 1 ? "+--\u00a0" : "`--\u00a0"
       }`
     }
     return `${
@@ -60,14 +58,14 @@ const SideBar = ({ closeSideBar, children }) => {
         <ul>
           {categories.map((category, categoryIndex) => {
             const subCategories = category.group
-            
+
             return (
               <Category
                 key={category.fieldValue}
                 name={category.fieldValue}
                 count={category.totalCount}
                 prefix={getPrefix(categoryIndex)}
-                path={getUrl("category", category.fieldValue)}
+                path={resolveUrl("category", category.fieldValue)}
               >
                 {subCategories == null
                   ? null
@@ -78,7 +76,11 @@ const SideBar = ({ closeSideBar, children }) => {
                           name={subCategory.fieldValue}
                           count={subCategory.totalCount}
                           prefix={getPrefix(categoryIndex, subCategoryIndex)}
-                          path={getUrl("category", category.fieldValue, subCategory.fieldValue)}
+                          path={resolveUrl(
+                            "category",
+                            category.fieldValue,
+                            subCategory.fieldValue
+                          )}
                         />
                       )
                     })}

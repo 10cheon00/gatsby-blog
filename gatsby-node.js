@@ -11,7 +11,7 @@ const kebabCase = require(`lodash.kebabcase`)
 // Define the template for blog post
 const blogPost = path.resolve(`./src/templates/blog-post.js`)
 
-const { getUrl } = require("./gatsby-urls.js")
+const { resolveUrl } = require("./gatsby-urls.js")
 
 /**
  * @type {import('gatsby').GatsbyNode['createPages']}
@@ -85,7 +85,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const tagTemplate = path.resolve("src/templates/tags.js")
   tags.forEach(tag => {
     createPage({
-      path: getUrl("tags", kebabCase(tag)),
+      path: resolveUrl("tags", kebabCase(tag)),
       component: tagTemplate,
       context: {
         tag,
@@ -139,7 +139,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   allCategory.forEach(category => {
     createPage({
-      path: getUrl("category", category.fieldValue),
+      path: resolveUrl("category", category.fieldValue),
       component: path.resolve("./src/templates/category.js"),
       context: {
         category: category.fieldValue,
@@ -149,7 +149,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     const allSubCategory = category.group
     allSubCategory.forEach(subCategory => {
       createPage({
-        path: getUrl("category", category.fieldValue, subCategory.fieldValue),
+        path: resolveUrl("category", category.fieldValue, subCategory.fieldValue),
         path: `/categories/${category.fieldValue}/${subCategory.fieldValue}`,
         component: path.resolve("./src/templates/category.js"),
         context: {

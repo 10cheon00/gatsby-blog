@@ -1,11 +1,10 @@
-
 // Define All url in blog
 const urlPatterns = {
   category: "/categories",
-  tags: "/tags"
+  tags: "/tags",
 }
 
-const getUrl = (urlKey, ...parameters) => {
+const resolveUrl = (urlKey, ...parameters) => {
   const isExistKey = Object.keys(urlPatterns).some(key => key === urlKey)
   if (isExistKey) {
     return parameters.reduce((res, parameter) => {
@@ -15,4 +14,4 @@ const getUrl = (urlKey, ...parameters) => {
   return `/`
 }
 
-module.exports.getUrl = getUrl
+module.exports.resolveUrl = resolveUrl
