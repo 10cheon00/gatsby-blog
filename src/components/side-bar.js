@@ -5,7 +5,7 @@ import { FaHouse, FaXmark } from "react-icons/fa6"
 import Category from "./category"
 import Bio from "./bio"
 
-const SideBar = ({closeSideBar ,children}) => {
+const SideBar = ({ closeSideBar, children }) => {
   const data = useStaticQuery(graphql`
     query SideBarQuery {
       allMarkdownRemark(limit: 2000) {
@@ -23,20 +23,67 @@ const SideBar = ({closeSideBar ,children}) => {
     }
   `)
 
-  const group = data.allMarkdownRemark.group
+  const categories = data.allMarkdownRemark.group
+
+  const getPrefix = (categoryIndex, subCategoryIndex) => {
+    if (subCategoryIndex == null) {
+      return `${
+        categoryIndex < categories.length - 1
+          ? "+--\u00a0"
+          : "`--\u00a0"
+      }`
+    }
+    return `${
+      categoryIndex < categories.length - 1
+        ? "|\u00a0\u00a0\u00a0"
+        : "\u00a0\u00a0\u00a0\u00a0"
+    }${
+      subCategoryIndex < categories[categoryIndex].group.length - 1
+        ? "+--\u00a0"
+        : "`--\u00a0"
+    }`
+  }
 
   return (
     <aside className="side-bar">
       <div className="side-bar-icons">
         <Link to="/" className="side-bar-home" onClick={closeSideBar}>
-          <FaHouse size="30"/>
+          <FaHouse size="30" />
         </Link>
-        <FaXmark size="30" className="side-bar-xmark" onClick={closeSideBar}/>
+        <FaXmark size="30" className="side-bar-xmark" onClick={closeSideBar} />
       </div>
       <Bio />
       <div className="categories">
         <p className="categories-header">All Categories</p>
-        <Category data={group}/>
+        <ul>
+          {categories.map((category, categoryIndex) => {
+            const subCategories = category.group
+            
+            return (
+              <Category
+                key={category.fieldValue}
+                name={category.fieldValue}
+                count={category.totalCount}
+                prefix={getPrefix(categoryIndex)}
+                path={""}
+              >
+                {subCategories == null
+                  ? null
+                  : subCategories.map((subCategory, subCategoryIndex) => {
+                      return (
+                        <Category
+                          key={subCategory.fieldValue}
+                          name={subCategory.fieldValue}
+                          count={subCategory.totalCount}
+                          prefix={getPrefix(categoryIndex, subCategoryIndex)}
+                          path={""}
+                        />
+                      )
+                    })}
+              </Category>
+            )
+          })}
+        </ul>
       </div>
       {children}
     </aside>
