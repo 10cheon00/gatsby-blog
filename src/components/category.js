@@ -8,23 +8,6 @@ const Category = ({
   path,
   children,
 }) => {
-  /*
-  \u00a0
-  *
-  +-- *
-  |   +--
-  |   `--
-  +-- *
-  |   `-- *
-  |       +--
-  |       `--
-  `-- *
-      +-- *
-      |   `--
-      `-- *
-  
-  */
-
   return (
     <li key={name} className="category-link" data-content={prefix}>
       <Link to={path}>

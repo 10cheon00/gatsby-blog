@@ -2,6 +2,7 @@
 // Define All url in blog
 const urlPatterns = {
   category: "/categories",
+  tags: "/tags"
 }
 
 const getUrl = (urlKey, ...parameters) => {

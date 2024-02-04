@@ -2,9 +2,9 @@ import React from "react"
 import { Link } from "gatsby"
 
 import convertStringToRgb from "../helpers/convert-string-to-rgb"
-import scaleRGB from "../helpers/scale-rgb"
+import { getUrl } from "../../gatsby-urls"
 
-var kebabCase = require("lodash.kebabcase")
+const kebabCase = require("lodash.kebabcase")
 
 const Tag = ({
   tagName,
@@ -17,7 +17,7 @@ const Tag = ({
   let element = `${tagName} ${relatedPostsNumberString}`
   if (enableLink) {
     element = (
-      <Link to={`/tags/${kebabCase(tagName)}/`}>
+      <Link to={getUrl("tags", kebabCase(tagName))}>
         {tagName} {relatedPostsNumberString}
       </Link>
     )

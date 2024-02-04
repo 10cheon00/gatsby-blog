@@ -85,7 +85,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const tagTemplate = path.resolve("src/templates/tags.js")
   tags.forEach(tag => {
     createPage({
-      path: `/tags/${kebabCase(tag)}/`,
+      path: getUrl("tags", kebabCase(tag)),
       component: tagTemplate,
       context: {
         tag,
@@ -138,7 +138,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const allCategory = categoryData.data.allMarkdownRemark.group
 
   allCategory.forEach(category => {
-    console.log(getUrl("category", category.fieldValue))
     createPage({
       path: getUrl("category", category.fieldValue),
       component: path.resolve("./src/templates/category.js"),
