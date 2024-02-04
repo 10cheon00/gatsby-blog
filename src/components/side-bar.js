@@ -5,6 +5,8 @@ import { FaHouse, FaXmark } from "react-icons/fa6"
 import Category from "./category"
 import Bio from "./bio"
 
+import { getUrl } from "../../gatsby-urls"
+
 const SideBar = ({ closeSideBar, children }) => {
   const data = useStaticQuery(graphql`
     query SideBarQuery {
@@ -65,7 +67,7 @@ const SideBar = ({ closeSideBar, children }) => {
                 name={category.fieldValue}
                 count={category.totalCount}
                 prefix={getPrefix(categoryIndex)}
-                path={""}
+                path={getUrl("category", category.fieldValue)}
               >
                 {subCategories == null
                   ? null
@@ -76,7 +78,7 @@ const SideBar = ({ closeSideBar, children }) => {
                           name={subCategory.fieldValue}
                           count={subCategory.totalCount}
                           prefix={getPrefix(categoryIndex, subCategoryIndex)}
-                          path={""}
+                          path={getUrl("category", category.fieldValue, subCategory.fieldValue)}
                         />
                       )
                     })}

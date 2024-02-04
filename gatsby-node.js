@@ -11,6 +11,8 @@ const kebabCase = require(`lodash.kebabcase`)
 // Define the template for blog post
 const blogPost = path.resolve(`./src/templates/blog-post.js`)
 
+const { getUrl } = require("./gatsby-urls.js")
+
 /**
  * @type {import('gatsby').GatsbyNode['createPages']}
  */
@@ -136,8 +138,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const allCategory = categoryData.data.allMarkdownRemark.group
 
   allCategory.forEach(category => {
+    console.log(getUrl("category", category.fieldValue))
     createPage({
-      path: `/categories/${category.fieldValue}`,
+      path: getUrl("category", category.fieldValue),
       component: path.resolve("./src/templates/category.js"),
       context: {
         category: category.fieldValue,
@@ -147,6 +150,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     const allSubCategory = category.group
     allSubCategory.forEach(subCategory => {
       createPage({
+        path: getUrl("category", category.fieldValue, subCategory.fieldValue),
         path: `/categories/${category.fieldValue}/${subCategory.fieldValue}`,
         component: path.resolve("./src/templates/category.js"),
         context: {
