@@ -16,19 +16,18 @@ const Layout = ({ location, title, tableOfContents, children }) => {
     document.body.classList.remove("side-bar-toggled")
   }
 
+  React.useEffect(closeSideBar)
+
   return (
     <div>
       <TopBar openSideBar={openSideBar} title={title} />
       <div className="global-wrapper" data-is-root-path={isRootPath}>
         <div className="side-bar-background" onClick={closeSideBar}></div>
         <main>
-          <SideBar
-            closeSideBar={closeSideBar}
-            tableOfContents={tableOfContents}
-          >
+          <SideBar tableOfContents={tableOfContents}>
             {tableOfContents ? (
               <TableOfContents tableOfContents={tableOfContents} />
-              ) : null}
+            ) : null}
           </SideBar>
           <section>{children}</section>
         </main>

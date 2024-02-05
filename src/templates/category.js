@@ -13,12 +13,13 @@ export default class CategoryPage extends React.Component {
     const posts = this.props.data.allMarkdownRemark.nodes
     const category = this.props.pageContext.category
     const subCategory = this.props.pageContext.subCategory
-    console.log(this.props)
     return (
       <Layout location={location} title={siteTitle}>
         <h1>
           <span className="category-page-title">{category}</span>
-          {subCategory ? <span className="category-page-subtitle">{`\u00a0/\u00a0${subCategory}`}</span> : null}
+          {subCategory ? (
+            <span className="category-page-subtitle">{`\u00a0/\u00a0${subCategory}`}</span>
+          ) : null}
         </h1>
         <PostList posts={posts} />
       </Layout>

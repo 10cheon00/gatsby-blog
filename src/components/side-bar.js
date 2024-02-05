@@ -7,7 +7,7 @@ import Bio from "./bio"
 
 import { resolveUrl } from "../../gatsby-urls"
 
-const SideBar = ({ closeSideBar, children }) => {
+const SideBar = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SideBarQuery {
       allMarkdownRemark(limit: 2000) {
@@ -47,10 +47,10 @@ const SideBar = ({ closeSideBar, children }) => {
   return (
     <aside className="side-bar">
       <div className="side-bar-icons">
-        <Link to="/" className="side-bar-home" onClick={closeSideBar}>
+        <Link to="/" className="side-bar-home">
           <FaHouse size="30" />
         </Link>
-        <FaXmark size="30" className="side-bar-xmark" onClick={closeSideBar} />
+        <FaXmark size="30" className="side-bar-xmark" />
       </div>
       <Bio />
       <div className="categories">
