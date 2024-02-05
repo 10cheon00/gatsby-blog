@@ -4,17 +4,21 @@ import { graphql } from "gatsby"
 import Seo from "../components/seo"
 import Layout from "../components/layout"
 import PostList from "../components/post-list"
+import { FaChevronRight, FaSlash } from "react-icons/fa6"
 
 export default class CategoryPage extends React.Component {
   render() {
     const location = { pathname: "/" }
     const siteTitle = this.props.data.site.siteMetadata?.title || `Title`
     const posts = this.props.data.allMarkdownRemark.nodes
-
+    const category = this.props.pageContext.category
+    const subCategory = this.props.pageContext.subCategory
+    console.log(this.props)
     return (
       <Layout location={location} title={siteTitle}>
         <h1>
-          Posts
+          <span className="category-page-title">{category}</span>
+          {subCategory ? <span className="category-page-subtitle">{`\u00a0/\u00a0${subCategory}`}</span> : null}
         </h1>
         <PostList posts={posts} />
       </Layout>
@@ -42,9 +46,7 @@ export const categoryPageQuery = graphql`
       filter: {
         frontmatter: {
           category: {
-            name: { 
-              eq: $category 
-            }
+            name: { eq: $category }
             category: { name: { eq: $subCategory } }
           }
         }
