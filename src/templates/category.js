@@ -4,7 +4,6 @@ import { graphql } from "gatsby"
 import Seo from "../components/seo"
 import Layout from "../components/layout"
 import PostList from "../components/post-list"
-import { FaChevronRight, FaSlash } from "react-icons/fa6"
 
 export default class CategoryPage extends React.Component {
   render() {

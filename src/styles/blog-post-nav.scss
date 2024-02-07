@@ -8,7 +8,11 @@
     padding: var(--spacing-2);
     margin: 0;
     background-color: var(--color-blog-post-nav-btn);
+    transition: background-color 0.2s ease-in-out;
 
+    &:hover {
+      background-color: var(--color-blog-post-nav-btn-hover);
+    }
     a {
       color: var(--color-text);
       text-decoration: none;

@@ -5,7 +5,6 @@ import { FaTags } from "react-icons/fa6"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import PostList from "../components/post-list"
-import Tag from "../components/tag"
 
 const Tags = ({ pageContext, data, location }) => {
   const { tag } = pageContext
