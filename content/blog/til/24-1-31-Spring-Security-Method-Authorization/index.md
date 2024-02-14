@@ -1,6 +1,6 @@
 ---
 title: 24-1-31 Spring Security Method Authorization
-date: 
+date: '2024-01-31T16:21:42.535Z'
 category:
   name: Study
   category:
