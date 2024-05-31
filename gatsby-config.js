@@ -19,6 +19,7 @@ module.exports = {
     social: {
       github: `https://github.com/10cheon00`
     },
+    pathPrefix: `10cheon00`
   },
   plugins: [
     `gatsby-plugin-image`,
