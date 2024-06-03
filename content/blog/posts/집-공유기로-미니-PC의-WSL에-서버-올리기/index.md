@@ -1,6 +1,6 @@
 ---
 title: 집 공유기로 미니 PC의 WSL에 서버 올리기
-date: 
+date: "2024-06-03T09:15:09.394Z"
 tags: ["wsl"]
 category:
   name: "wsl"
