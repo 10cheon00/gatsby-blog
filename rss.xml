@@ -1,4 +1,405 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[10cheon00의 Archive RSS Feed]]></title><description><![CDATA[A Blog archiving what I learned.]]></description><link>https://10cheon00.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 21 Feb 2024 08:33:52 GMT</lastBuildDate><item><title><![CDATA[24-2-21 Spring Dependency Injection]]></title><description><![CDATA[DIP Dependency Inversion Principle, 의존성 주입 원칙은 SOLID…]]></description><link>https://10cheon00.github.io/til/24-2-21-Spring-Dependency-Injection/</link><guid isPermaLink="false">https://10cheon00.github.io/til/24-2-21-Spring-Dependency-Injection/</guid><pubDate>Wed, 21 Feb 2024 06:49:05 GMT</pubDate><content:encoded>&lt;h1 id=&quot;dip&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#dip&quot; aria-label=&quot;dip permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;DIP&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[10cheon00의 Archive RSS Feed]]></title><description><![CDATA[A Blog archiving what I learned.]]></description><link>https://10cheon00.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 03 Jun 2024 09:17:36 GMT</lastBuildDate><item><title><![CDATA[집 공유기로 미니 PC의 WSL에 서버 올리기]]></title><description><![CDATA[동기 어쩌다 해커톤에 나가서 스프링 애플리케이션을 배포해야했는데, AWS…]]></description><link>https://10cheon00.github.io/posts/집-공유기로-미니-PC의-WSL에-서버-올리기/</link><guid isPermaLink="false">https://10cheon00.github.io/posts/집-공유기로-미니-PC의-WSL에-서버-올리기/</guid><pubDate>Mon, 03 Jun 2024 09:15:09 GMT</pubDate><content:encoded>&lt;h1 id=&quot;동기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%8F%99%EA%B8%B0&quot; aria-label=&quot;동기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;동기&lt;/h1&gt;
+&lt;p&gt;어쩌다 해커톤에 나가서 스프링 애플리케이션을 배포해야했는데, AWS, 네이버 클라우드, 구글 클라우드 모두 사용할 수 없었던 상황에 빠져 난감했었다.&lt;/p&gt;
+&lt;p&gt;다행히 예전에 가입해놓고 까먹었던 오라클 클라우드를 찾아 인스턴스를 생성한 다음 부랴부랴 올려서 개발을 진행했었다. 하지만 실력 부족으로 서비스를 개발하진 못했다. 다시 생각해보면 웹 서버를 배포하는 것에 시간을 매우 많이 쏟았기 때문이었던것 같다.&lt;/p&gt;
+&lt;p&gt;오라클 클라우드의 프리티어 인스턴스는 메모리가 1Gb, CPU 코어 1개만 주기 때문에 가볍게 쓰기는 좋지만 약간 무거운 작업을 하기만 해도 뻗어버린다. 이 프리티어 인스턴스에서 pip install pandas만 해도 설치파일을 메모리에 올리려 하는 와중에 메모리 부족 에러가 일어날 정도다.&lt;/p&gt;
+&lt;p&gt;그래서 예전에 사두었던 N100 미니 PC에 서버를 배포하면 어떨까 생각했다. 대충 우리집 공유기에 포트포워딩 해두고 적절히 서버 포트를 바꾸면 될 것 같다고 생각했다.&lt;/p&gt;
+&lt;h1 id=&quot;ssh-설정을-위한-집-공유기라우터-포트포워딩&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#ssh-%EC%84%A4%EC%A0%95%EC%9D%84-%EC%9C%84%ED%95%9C-%EC%A7%91-%EA%B3%B5%EC%9C%A0%EA%B8%B0%EB%9D%BC%EC%9A%B0%ED%84%B0-%ED%8F%AC%ED%8A%B8%ED%8F%AC%EC%9B%8C%EB%94%A9&quot; aria-label=&quot;ssh 설정을 위한 집 공유기라우터 포트포워딩 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;SSH 설정을 위한 집 공유기(라우터) 포트포워딩&lt;/h1&gt;
+&lt;p&gt;서버 설정을 만지기 전에, 외부에서 미니 PC에 올라간 WSL에 접근할 수 있도록 SSH 접속 환경을 제공해야했다.&lt;/p&gt;
+&lt;h2 id=&quot;ssh-설치&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#ssh-%EC%84%A4%EC%B9%98&quot; aria-label=&quot;ssh 설치 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;SSH 설치&lt;/h2&gt;
+
+          &lt;div class=&quot;gatsby-remark-prismjs-copy-button-container&quot;&gt;
+            &lt;div class=&quot;gatsby-remark-prismjs-copy-button&quot; tabindex=&quot;0&quot; role=&quot;button&quot; aria-pressed=&quot;false&quot; onclick=&quot;gatsbyRemarkCopyToClipboard(this, this.parentNode.nextElementSibling)&quot;&gt;
+              Copy
+            &lt;/div&gt;
+          &lt;/div&gt;
+          
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;apt&lt;/span&gt; update
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;apt&lt;/span&gt; upgrade
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;apt&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; openssh-server&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;미니 PC의 WSL에서 위 명령어를 실행해 SSH를 설치한다.&lt;/p&gt;
+&lt;p&gt;설치가 완료되면 &lt;code class=&quot;language-text&quot;&gt;sudo vi /etc/ssh/sshd_config&lt;/code&gt;을 실행하여 아래와 같이 설정을 맞췄다.&lt;/p&gt;
+
+          &lt;div class=&quot;gatsby-remark-prismjs-copy-button-container&quot;&gt;
+            &lt;div class=&quot;gatsby-remark-prismjs-copy-button&quot; tabindex=&quot;0&quot; role=&quot;button&quot; aria-pressed=&quot;false&quot; onclick=&quot;gatsbyRemarkCopyToClipboard(this, this.parentNode.nextElementSibling)&quot;&gt;
+              Copy
+            &lt;/div&gt;
+          &lt;/div&gt;
+          
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Port 1234567890
+Protocol 2
+PermitRootLogin no
+AuthorizedKeysFile  .ssh/authorized_keys
+PasswordAuthentication yes
+PubkeyAuthentication yes
+ChallengeResponseAuthentication no
+X11Forwarding yes
+UseDNS no&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;포트 번호만 마음대로 설정하면 된다. 나중에 포트포워딩할 때 내부 포트 부분에 적어주면 된다.&lt;/p&gt;
+&lt;p&gt;우리집은 kt 공유기를 사용하고 있기 때문에 공유기의 homehub 사이트에 접속해서 포트포워딩을 했다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/892c962c4b74def54f5f32f94f943f71/01267/image.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 29.11392405063291%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAAsTAAALEwEAmpwYAAABhUlEQVR42lXLz2/SYADG8f6jhp3MZjJP7mBJOBoP0Cwo8epBRVQorFQzYKNMyjTGGBdvzOg2sUBb+ovC+y7C1wxPHr75PJdHufh5wXA4ZDqdIoRALpdIIZFSIsQSsUg3SilYrVawXm9a38j/3vwVTdMoFPLkcjnK5eesAPHnmsUiIYomJDImjl2icMxJr0XTqG16a9ZpNmuYpo6uVzDNGu7kEkVVVe7u7pLZ2uKRVkDaNmI0IhUp3tWQ2O4ThT5BMGHQb9M6rNNpHXDUNja7Z71jYHf49NHCm/xAua+q7O3d4/b2Nk/2NaLiY2ava7iej/P9G063zXT6izBwOOoY1Kov0KvljS/LTzn7egqkpMmEwL9CyWaz3NnZ4VYmw/7DB8SWxXw2I1mmeOdnzD6c4PsOM2+E1TWpvnmG0ahgHLz6Z6NC+7DO2Dkn8C9RSqUSxWKRfD6P3qjjCsnYjwijhGTuk1xHRKFDHI758vkUy2oxGFjY/WP674/p9doM7C6B/5t57PIXmhqVc8XCxH8AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/892c962c4b74def54f5f32f94f943f71/f058b/image.png&quot;
+        srcset=&quot;/static/892c962c4b74def54f5f32f94f943f71/c26ae/image.png 158w,
+/static/892c962c4b74def54f5f32f94f943f71/6bdcf/image.png 315w,
+/static/892c962c4b74def54f5f32f94f943f71/f058b/image.png 630w,
+/static/892c962c4b74def54f5f32f94f943f71/01267/image.png 713w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/bade5ca586145bfcca9ff53e292c32c7/bbb77/image-1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 7.59493670886076%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAjUlEQVR42h3HTQqCQACAUY8nbiNnnL8gyFt4lyBaCAleoE3LVkFBjVA2o9gxvtDV4yXGKKSUOGfRWiFWa7bOYazBqAIlBVprnCrYGIMQAmsNZbkjz3PSNF20TpNlGUkMniF4xtnpQ2gbQn1k/PXEpuZbVcTLmdCeCIc9w/Sme90Yh47QP3ncr/j50S//AzFGbaxj2LyzAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/bade5ca586145bfcca9ff53e292c32c7/f058b/image-1.png&quot;
+        srcset=&quot;/static/bade5ca586145bfcca9ff53e292c32c7/c26ae/image-1.png 158w,
+/static/bade5ca586145bfcca9ff53e292c32c7/6bdcf/image-1.png 315w,
+/static/bade5ca586145bfcca9ff53e292c32c7/f058b/image-1.png 630w,
+/static/bade5ca586145bfcca9ff53e292c32c7/bbb77/image-1.png 765w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;이렇게 설정해두면 공유기 ip와 포트 번호를 파라미터로 사용하여 외부에서 접근할 수 있다. 미니 PC의 WSL로 접근하여 로그인을 하게 된다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 403px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/e0c6dffc4cd59d998f6743b405027f07/045fd/image-3.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 12.658227848101264%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA4ElEQVR42gXBTS/DYADA8bppNhX29EXbPel7dW1NVuNCHDaz0y6iaQiiiSyIZDcniZuLm3D0QXy5v99PUXVBVxfYtqRSt3jo9Fh1dZ5VQRJIjIsB1iLBuswwbwrMuwLrfg9Rp+hXAzZ9HWNbIP0z0vwRpXX6NF5EOjvgfJ7xOSn4mA95m5UcLk/wvqb4PxO892NkM8SpS6LbMV5bES6PkPsRsR8SpguS/Anlz3T5tQLSZoT4PkV7HaOtKjovI0RbYNYZxnXOzjTG3jCQwqH0M2I7oPB2ifwQt+8iehrq+hr/srletQzcCwkAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/e0c6dffc4cd59d998f6743b405027f07/045fd/image-3.png&quot;
+        srcset=&quot;/static/e0c6dffc4cd59d998f6743b405027f07/c26ae/image-3.png 158w,
+/static/e0c6dffc4cd59d998f6743b405027f07/6bdcf/image-3.png 315w,
+/static/e0c6dffc4cd59d998f6743b405027f07/045fd/image-3.png 403w&quot;
+        sizes=&quot;(max-width: 403px) 100vw, 403px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;로그인 말고 공개키를 사용한 방법은 아직 몰라서 하지 않았다... 나중에 꼭 해두어야 github action으로 배포가 가능하겠다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;이렇게 했는데 외부에서 접근이 안된다. 포트포워딩을 적절하게 했는데도 ssh 명령어를 실행하였을 때 아무 응답이 없었다. 잘못된 포트나 IP를 사용했을 땐 바로 connection refused 에러가 뜬다.&lt;/p&gt;
+&lt;p&gt;네트워크 환경을 생각하면 다음과 같다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/2efe0336960cc9528c7a77abaad3d50f/2e195/image-4.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.9620253164557%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABfUlEQVR42nWTO0/DQBCE87v5AbQ09BQIUVAgJChoQoGgQigilAiwAwqOHeLXvXdv0J3zwoSVVpbPns97M+cBtoo9Q9oWhjQsm3g1rGHJbO53tCYFxxaV/sZgGxgWtZNruPc+NhPDGIdi/g0iQr/CO6HmMvsLlFZEQBCGZg4wg2xe4eVtAmvNLxix3wLOfgPJE7RVEdIv5g4etCvA3wl7wEaI9VR9gXWE8fgZWqv1emsYZ6MStXYbYABY1y1c3dzh4OgUX/kc5CySNEVZVhBtg/PhGHv7h/icJMhmOVTbYPRe4PD4BKPXLOpzkWGwMj7UW5ri5v4eZd1AKYkkSVAURQzo4fEJ5xeXEKLtBvCMSV7h+naIyWwR9YXobdk6g6pZxG0H86WUEG0HsEZDBku27FBSQAoJJeVuD1cpk9skHKYLKZe1QvoxhbN24+2y+b9QAlAtz2EXZ6fw7FHVEtNpDlr6vSvlon8O45/iWrCnXodJHYjdjmcE8t1Har3AD/kMVupQH6bQAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/2efe0336960cc9528c7a77abaad3d50f/f058b/image-4.png&quot;
+        srcset=&quot;/static/2efe0336960cc9528c7a77abaad3d50f/c26ae/image-4.png 158w,
+/static/2efe0336960cc9528c7a77abaad3d50f/6bdcf/image-4.png 315w,
+/static/2efe0336960cc9528c7a77abaad3d50f/f058b/image-4.png 630w,
+/static/2efe0336960cc9528c7a77abaad3d50f/2e195/image-4.png 782w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;공유기가 제공하는 포트포워딩을 통해 SSH 접속을 미니 PC로 전달했지만, 미니 PC 속에 존재하는 WSL에는 도달하지 못한다. 그렇다면 미니 PC에서 직접 포트포워딩같은 방법을 사용해서 전달해야한다.&lt;/p&gt;
+&lt;h2 id=&quot;portproxy&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#portproxy&quot; aria-label=&quot;portproxy permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Portproxy&lt;/h2&gt;
+&lt;p&gt;미니 PC에서 Powershell을 관리자 권한으로 연 뒤 다음 명령어를 입력한다.&lt;/p&gt;
+
+          &lt;div class=&quot;gatsby-remark-prismjs-copy-button-container&quot;&gt;
+            &lt;div class=&quot;gatsby-remark-prismjs-copy-button&quot; tabindex=&quot;0&quot; role=&quot;button&quot; aria-pressed=&quot;false&quot; onclick=&quot;gatsbyRemarkCopyToClipboard(this, this.parentNode.nextElementSibling)&quot;&gt;
+              Copy
+            &lt;/div&gt;
+          &lt;/div&gt;
+          
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;netsh interface portproxy &lt;span class=&quot;token function&quot;&gt;add&lt;/span&gt; v4tov4 &lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;
+&lt;span class=&quot;token assign-left variable&quot;&gt;listenport&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;포트포워딩에서 열어둔 포트&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token assign-left variable&quot;&gt;listenaddress&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0.0&lt;/span&gt;.0.0 &lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;
+&lt;span class=&quot;token assign-left variable&quot;&gt;connectport&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;ssh 설정에서 열어둔 포트&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token assign-left variable&quot;&gt;connectaddress&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;WSL IP&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;WSL의 IP를 알기 위해서는 ifconfig에서 eth0의 ip를 확인하면 된다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/04a91cda600a1cf1ee5a51707c921bda/68de2/image-5.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 37.34177215189873%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsTAAALEwEAmpwYAAABJ0lEQVR42l2RSXKDUAxE2YIZXC6wKTNPfwDMkI1XuUA2yf0v06lWChZZqND0n1rC0cairmtorbGPI2xVY+46fGiNuihhjJEae5qmQVmWeDweqKoKeZ7D931EUSR2vV7hRGGIMAhQtQ0+lcb3a8HXNONnXrBrjfn1wjiO6LpO4NM0CZw5a63klVIy9Pl8wuEE2jAMUFRjLZQ1aIcB2hhRtW2bgPhoWRYBtm0rsCRJEMexWBAEf0A6nLbvO0ZrxV/XVUCc/n6/JabPXJZl8DwPl8sFruuePlnO4RRFIROpiPfhegRQDX1+eT+qvN/vSNNUwOxlfGzqUDKL3J8NBB/HJ5CHZw9r7KOi4zE3O+wEHn9HbqiUqKSKvu/PlRlTJYdQze12OwH/7RcNWLvshwXVLAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/04a91cda600a1cf1ee5a51707c921bda/f058b/image-5.png&quot;
+        srcset=&quot;/static/04a91cda600a1cf1ee5a51707c921bda/c26ae/image-5.png 158w,
+/static/04a91cda600a1cf1ee5a51707c921bda/6bdcf/image-5.png 315w,
+/static/04a91cda600a1cf1ee5a51707c921bda/f058b/image-5.png 630w,
+/static/04a91cda600a1cf1ee5a51707c921bda/68de2/image-5.png 677w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;listenport는 공유기의 포트포워딩에서 사용한 포트로, connectport는 ssh 설정에서 열어둔 포트로 적으면 된다. 나는 둘 다 같은 값으로 해서 전부 11111로 적용했다.&lt;/p&gt;
+&lt;p&gt;잘 적용되었는지 확인하려면 다음 명령어를 입력한다&lt;/p&gt;
+
+          &lt;div class=&quot;gatsby-remark-prismjs-copy-button-container&quot;&gt;
+            &lt;div class=&quot;gatsby-remark-prismjs-copy-button&quot; tabindex=&quot;0&quot; role=&quot;button&quot; aria-pressed=&quot;false&quot; onclick=&quot;gatsbyRemarkCopyToClipboard(this, this.parentNode.nextElementSibling)&quot;&gt;
+              Copy
+            &lt;/div&gt;
+          &lt;/div&gt;
+          
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;netsh interface portproxy show all&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 423px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/15efbf42a64fcdbd88b547be9786950b/f687d/image-6.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 25.316455696202528%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABJklEQVR42kWQTU/CYBCEW0BA8DOUFi2K2IIFGgi2BRRB45l4a+kHoNAWAfX/H8e8i4mHJ7uHyczsctK9B8GKUB3vID+sUX3+gvy4hvr6A8FcoTycQOq9QTCWEK0QUi+C1I8g9iKU+jGKZgh5+EnaTMMHJ7QdnHVXOO9+kEjqx+AVBwnVQaLmgFdt5Fo+rkcbXAxiCjxsBeAUGwlGbYpkbUqTVx1wYtfFUXuBTMNDtulTCiOvz8Dd2sRJZ4GCsW+Q02cUkrpzcdye700UmybtZWuGghkhrXnIaD5S9SmKVoib8ZYMknUXBWNJ7ZgZgzVkIcrLN/L6HGnN/294aQaQh1v6ATNlMDE7PdsMSHjaecfV0waV0Q6V0ZZgYaVBTNcdaN7fexz8AvhtoBIq6Ql+AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/15efbf42a64fcdbd88b547be9786950b/f687d/image-6.png&quot;
+        srcset=&quot;/static/15efbf42a64fcdbd88b547be9786950b/c26ae/image-6.png 158w,
+/static/15efbf42a64fcdbd88b547be9786950b/6bdcf/image-6.png 315w,
+/static/15efbf42a64fcdbd88b547be9786950b/f687d/image-6.png 423w&quot;
+        sizes=&quot;(max-width: 423px) 100vw, 423px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&quot;방화벽-설정&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%B0%A9%ED%99%94%EB%B2%BD-%EC%84%A4%EC%A0%95&quot; aria-label=&quot;방화벽 설정 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;방화벽 설정&lt;/h2&gt;
+&lt;p&gt;포트프록시 설정을 했는데도 연결이 안되어서 이리저리 찾아본 결과, 간단하게도 미니 PC의 방화벽 설정을 해야한다.&lt;/p&gt;
+&lt;p&gt;인바운드, 아웃바운드 규칙을 모두 만들어주어야 한다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 582px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4a6717965f0847f3041e8ade533984aa/7c1cd/image-7.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 95.56962025316456%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAYAAACQjC21AAAACXBIWXMAAAsTAAALEwEAmpwYAAACKElEQVR42p1U2W7iQBDk/79lxUseVlqEFGmTLCgIiRtz2BgwtmfAF1e4VFF1dhDKAlnloTx2u7umqqftXBD4CJWCUiGCIMB2u8XhcMB+v8dut5P74/GI45Gx3TnG1YA1p9MJjUYDOa000jTFbDYTwiRJsFgsEEUx0jSBY9sYDAYYDoeIogjLLIPWWu7HYxe248DzZkLaarWQC4NACoIwgO/7sIdD2LYt4DPJ+72eJIdhiLe3rRBNplN4noc0yzCZTBCG6kPhXGshrNXraDabGI/HopQKCEPK+/l8LjDPWZaJuziOsd1spD7HF87Iwch1JVAulwUkorVu15JNHLHmCabTqWxKIraI68YQaj0/7zIajaRXJDAqfD+Q/hqllwpJ9g8hE0jIBFqnEqUUlsulEJVKJfR6PekfSRmjSq43CU3Q9M30h7aYRNUk7ff7oo65rLth+WNsmMCidrstp0ZCKqpUKqjX63BdV1rCd2zJlwpJyiCxXq/FMpWSgDCjxDxuZoju9tCyLJk3KqUiWu10OkJI5VRqrFMh625aJqGxzFXJ56jOX4U5FHMgjF+1zESz02q1EtAuYwamJZ9jVy1TxWWCgdn9f3CT8Lv4FmEshX/Xe4Ts4We715AmMbI0kTW58n5z+XMws3cPOl7C1zHCRYoo4RzG58Pi6PEg5ffFC8eEM3gLXcvCrz81/Pj5iIfHVzy91vDy9BvPL8+oVqsoFAooFovI5/N4BzhahxeJ8HCBAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/4a6717965f0847f3041e8ade533984aa/7c1cd/image-7.png&quot;
+        srcset=&quot;/static/4a6717965f0847f3041e8ade533984aa/c26ae/image-7.png 158w,
+/static/4a6717965f0847f3041e8ade533984aa/6bdcf/image-7.png 315w,
+/static/4a6717965f0847f3041e8ade533984aa/7c1cd/image-7.png 582w&quot;
+        sizes=&quot;(max-width: 582px) 100vw, 582px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;다른 설정은 건드릴 필요가 없고, 인바운드에는 포트포워딩에서 적용한 내부포트를, 아웃바운드에서는 ssh 설정에서 열어둔 포트로 설정하면 된다.&lt;/p&gt;
+&lt;h1 id=&quot;서버-배포&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%9C%EB%B2%84-%EB%B0%B0%ED%8F%AC&quot; aria-label=&quot;서버 배포 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;서버 배포&lt;/h1&gt;
+&lt;p&gt;SSH를 사용하기 위해 포트포워딩을 했던 것처럼, 미니 PC의 다른 포트를 열어서 연결해주면 된다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/feb175f3d490b0cda0234c077c7317b9/108f8/image-2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 15.18987341772152%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA4UlEQVR42h3LTUvCYADA8X3V6OBpeWgUbq7UzeGC1XeQ6gPU6FBKEEHRSYRW9MLeNKfR1mQ+j53+Uaff6acc90+wOxau06PdauP2XCxzj8OGSbeh4+1bOLrBgdnCtWwsy+bI89C0bZpGE8fuou3u0FFVTl0HZTYNSeMnpskzkz+zd5LbAVGtRmrohPU6yZZKuLHJ5OaS4GVEGgWMR3c83F+TxgFJ9Mjr25jPfIYiRIlY5UiRI1cF8qdEfMRU/jlyOKDyzxAXPmJ4hcwzynKBqL4oi4zFPPm/a1Gw/J6zlkt+AXmFv7KM2sxIAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/feb175f3d490b0cda0234c077c7317b9/f058b/image-2.png&quot;
+        srcset=&quot;/static/feb175f3d490b0cda0234c077c7317b9/c26ae/image-2.png 158w,
+/static/feb175f3d490b0cda0234c077c7317b9/6bdcf/image-2.png 315w,
+/static/feb175f3d490b0cda0234c077c7317b9/f058b/image-2.png 630w,
+/static/feb175f3d490b0cda0234c077c7317b9/108f8/image-2.png 777w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;WSL HTTP 규칙이 서버에 접근하도록 만드는 포트포워딩 규칙이다.&lt;/p&gt;
+&lt;p&gt;방화벽 설정 또한 인바운드, 아웃바운드 모두 만들어 준다.&lt;/p&gt;
+&lt;h2 id=&quot;nginx-설정&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#nginx-%EC%84%A4%EC%A0%95&quot; aria-label=&quot;nginx 설정 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Nginx 설정&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Nginx 설치 과정은 생략한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;미니 PC에서 &lt;code class=&quot;language-text&quot;&gt;vi /etc/nginx/sites-enabled/default&lt;/code&gt;를 실행해서 아래 설정을 제일 하단에 추가한다.&lt;/p&gt;
+
+          &lt;div class=&quot;gatsby-remark-prismjs-copy-button-container&quot;&gt;
+            &lt;div class=&quot;gatsby-remark-prismjs-copy-button&quot; tabindex=&quot;0&quot; role=&quot;button&quot; aria-pressed=&quot;false&quot; onclick=&quot;gatsbyRemarkCopyToClipboard(this, this.parentNode.nextElementSibling)&quot;&gt;
+              Copy
+            &lt;/div&gt;
+          &lt;/div&gt;
+          
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;server {
+        listen &amp;lt;포트번호&gt;;
+
+        # 이 밑으로는 테스트를 위해 간단하게 적은 것임
+
+        root /var/www/html;
+        # Add index.php to the list if you are using PHP
+        index index.html index.htm index.nginx-debian.html;
+
+        server_name test_server;
+
+        location / {
+                # First attempt to serve request as file, then
+                # as directory, then fall back to displaying a 404.
+                try_files $uri $uri/ =404;
+        }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;그리고 &lt;code class=&quot;language-text&quot;&gt;sudo service nginx start&lt;/code&gt;를 해서 nginx를 실행하고 localhost:포트번호로 접근이 되는지 확인한다.&lt;/p&gt;
+&lt;p&gt;이제 내 IP:포트포워딩한 포트번호로 접근하면 역시나 접근이 안된다! 앞서서 SSH 설정할 때 portproxy를 썼던 걸 또 해야한다.&lt;/p&gt;
+
+          &lt;div class=&quot;gatsby-remark-prismjs-copy-button-container&quot;&gt;
+            &lt;div class=&quot;gatsby-remark-prismjs-copy-button&quot; tabindex=&quot;0&quot; role=&quot;button&quot; aria-pressed=&quot;false&quot; onclick=&quot;gatsbyRemarkCopyToClipboard(this, this.parentNode.nextElementSibling)&quot;&gt;
+              Copy
+            &lt;/div&gt;
+          &lt;/div&gt;
+          
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;netsh interface portproxy &lt;span class=&quot;token function&quot;&gt;add&lt;/span&gt; v4tov4 &lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;
+&lt;span class=&quot;token assign-left variable&quot;&gt;listenport&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;포트포워딩한 내부 포트&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token assign-left variable&quot;&gt;listenaddress&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0.0&lt;/span&gt;.0.0 &lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;
+&lt;span class=&quot;token assign-left variable&quot;&gt;connectport&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;listen에 적혀있는 포트&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token assign-left variable&quot;&gt;connectaddress&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;WSL IP&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/f378af648d93b9919dff1b433c656397/ea7fb/image-8.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.32911392405063%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABh0lEQVR42o2SS28TMRSF89/Zs0TsWPKQeGTDAjYFVSBRFjwWrRAKVGqCJkkn87A9tq/tD3mclDRVUa90NL4j+5tzfWbCXsUU0V7hgh3lY9Gu38neIu01k32gjx4rw7hOKRFCous0fddzl8rnbwCN14QQiDHQKc2vi4pqudybItH6SCfpQKDEXQeGGLB+IMa451KuuQgJdEikVNYxQaJobQ+Avd65i1fv5vMFs9nsqv8yN7z5obYfLPfuvBuRtXNMMsD74uLV2yPuP3pMtboc+9OfF9x78JInz56PvQswfXfCw6dTjBTiol1wfH7MSq9ovDDJY2Xlmv0+5+jDR5ptCHW94cX0NV+/fS/jhsTn0zPen3xiyHTAOsuimiPiqf1BKE4cXd8QQxk5iGAHjbUl+WEwKKVo9EDXKzJysJ560zI44dLflrKE8S61sfxZblivyxWwDaAPCRNzqjkgMKk8b6Tso8OK+efYC9WyoW3aO/6HB8CcmBGFRBndSlawSHTj5v8p7zWi+Qu9R1bLCQ8SgwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/f378af648d93b9919dff1b433c656397/f058b/image-8.png&quot;
+        srcset=&quot;/static/f378af648d93b9919dff1b433c656397/c26ae/image-8.png 158w,
+/static/f378af648d93b9919dff1b433c656397/6bdcf/image-8.png 315w,
+/static/f378af648d93b9919dff1b433c656397/f058b/image-8.png 630w,
+/static/f378af648d93b9919dff1b433c656397/ea7fb/image-8.png 788w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;위 사진을 참고하면, listenport=pppp connectport=qqqq가 되겠다.&lt;/p&gt;
+&lt;p&gt;이제 외부에서 내 IP와 특정 포트로 요청을 넣으면 서버에게 요청이 전달되어 응답이 돌아온다!&lt;/p&gt;
+&lt;p&gt;만약 Nginx가 아니라 Spring Tomcat으로 배포하려 한다면 Tomcat 설정에서 포트만 적절히 바꿔서 배포하면 될 것 같다.&lt;/p&gt;
+&lt;h1 id=&quot;todo&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#todo&quot; aria-label=&quot;todo permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;TODO&lt;/h1&gt;
+&lt;p&gt;Github Action으로 CI/CD 구축하는 방법과 Docker를 사용했을 때 네트워크 설정하는 방법을 공부해야겠다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[24-2-21 Spring Dependency Injection]]></title><description><![CDATA[DIP Dependency Inversion Principle, 의존성 주입 원칙은 SOLID…]]></description><link>https://10cheon00.github.io/til/24-2-21-Spring-Dependency-Injection/</link><guid isPermaLink="false">https://10cheon00.github.io/til/24-2-21-Spring-Dependency-Injection/</guid><pubDate>Wed, 21 Feb 2024 06:49:05 GMT</pubDate><content:encoded>&lt;h1 id=&quot;dip&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#dip&quot; aria-label=&quot;dip permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;DIP&lt;/h1&gt;
 &lt;p&gt;Dependency Inversion Principle, 의존성 주입 원칙은 SOLID 원칙 중 마지막에 속하는 원칙이다.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;의존성 역전 원칙에서 말하는, 유연성이 극대화된 시스템이란 소스 코드 의존성이 추상에 의존하며 구체에는 의존하지 않는 시스템이다. (클린 아키텍처, 92p)&lt;/p&gt;
@@ -5133,91 +5534,7 @@ CssSyntaxError
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;한 줄밖에 없는 파일이 열리는데 바로 보이는 &lt;code class=&quot;language-text&quot;&gt;lineComment&lt;/code&gt;의 값을 &lt;code class=&quot;language-text&quot;&gt;&quot;&quot;&lt;/code&gt;로 바꾸면 해결된다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Annotation]]></title><description><![CDATA[Annotation은 영어로 번역했을 때 주석이라는 뜻을 갖는다. 주석은 코드의 흐름에 영향을 주지 않는다. 하지만 코드를 보는 사람으로 하여금 어떤 코드인지 이해하게 만들고 함수 또는 라이브러리를 어떤 상황에 써야하는지 설명한다. Java…]]></description><link>https://10cheon00.github.io/java/annotation/</link><guid isPermaLink="false">https://10cheon00.github.io/java/annotation/</guid><pubDate>Mon, 06 Nov 2023 12:01:06 GMT</pubDate><content:encoded>&lt;p&gt;Annotation은 영어로 번역했을 때 주석이라는 뜻을 갖는다. 주석은 코드의 흐름에 영향을 주지 않는다. 하지만 코드를 보는 사람으로 하여금 어떤 코드인지 이해하게 만들고 함수 또는 라이브러리를 어떤 상황에 써야하는지 설명한다.&lt;/p&gt;
-&lt;p&gt;Java의 어노테이션도 이와 비슷하다. 프로그램에 직접적으로 영향을 주지 않지만 다른 라이브러리나 툴이 그 프로그램을 어떻게 쓸 수 있는지 제시한다. 어노테이션은 런타임에 영향을 준다고 한다.&lt;/p&gt;
-&lt;h1 id=&quot;선언-및-사용-방법&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%A0%EC%96%B8-%EB%B0%8F-%EC%82%AC%EC%9A%A9-%EB%B0%A9%EB%B2%95&quot; aria-label=&quot;선언 및 사용 방법 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;선언 및 사용 방법&lt;/h1&gt;
-
-          &lt;div class=&quot;gatsby-remark-prismjs-copy-button-container&quot;&gt;
-            &lt;div class=&quot;gatsby-remark-prismjs-copy-button&quot; tabindex=&quot;0&quot; role=&quot;button&quot; aria-pressed=&quot;false&quot; onclick=&quot;gatsbyRemarkCopyToClipboard(this, this.parentNode.nextElementSibling)&quot;&gt;
-              Copy
-            &lt;/div&gt;
-          &lt;/div&gt;
-          
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token annotation punctuation&quot;&gt;@interface&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;NewAnnotation&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;설명을 넣어주세요&quot;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;token annotation punctuation&quot;&gt;@NewAnnotation&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
-    id &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-    name &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;새로운 Annotation&quot;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Foo&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token comment&quot;&gt;// ...&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;선언할 때에는 &lt;code class=&quot;language-text&quot;&gt;@interface&lt;/code&gt; 타입으로 선언하고, 사용할 때에는 어노테이션을 선언할 때 정의한 속성에 맞게 파라미터를 괄호 안에 넣어준다. &lt;code class=&quot;language-text&quot;&gt;default&lt;/code&gt;로 기본값 선언을 해두었다면 별도로 인자를 넣지 않아도 된다.&lt;/p&gt;
-&lt;p&gt;속성을 정의하지 않은 어노테이션도 있다.&lt;/p&gt;
-
-          &lt;div class=&quot;gatsby-remark-prismjs-copy-button-container&quot;&gt;
-            &lt;div class=&quot;gatsby-remark-prismjs-copy-button&quot; tabindex=&quot;0&quot; role=&quot;button&quot; aria-pressed=&quot;false&quot; onclick=&quot;gatsbyRemarkCopyToClipboard(this, this.parentNode.nextElementSibling)&quot;&gt;
-              Copy
-            &lt;/div&gt;
-          &lt;/div&gt;
-          
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token annotation punctuation&quot;&gt;@interface&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;NoArgumentAnnotation&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;token annotation punctuation&quot;&gt;@NoArgumentAnnotation&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Foo&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token comment&quot;&gt;// ...&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;괄호 없이 어노테이션 이름만 붙여준다.&lt;/p&gt;
-&lt;p&gt;속성이 한 개인 어노테이션이라면 속성명을 넣지 않고 그냥 파라미터를 넣는다.&lt;/p&gt;
-
-          &lt;div class=&quot;gatsby-remark-prismjs-copy-button-container&quot;&gt;
-            &lt;div class=&quot;gatsby-remark-prismjs-copy-button&quot; tabindex=&quot;0&quot; role=&quot;button&quot; aria-pressed=&quot;false&quot; onclick=&quot;gatsbyRemarkCopyToClipboard(this, this.parentNode.nextElementSibling)&quot;&gt;
-              Copy
-            &lt;/div&gt;
-          &lt;/div&gt;
-          
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token annotation punctuation&quot;&gt;@interface&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;OneArgumentAnnotation&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;token annotation punctuation&quot;&gt;@OneArgumentAnnotation&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Person&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token comment&quot;&gt;// ...&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;이렇게 어노테이션 선언을 했는데, 클래스나 객체가 어노테이션을 갖는지 확인하려면 &lt;code class=&quot;language-text&quot;&gt;java.lang.reflect&lt;/code&gt; 패키지를 이용해야 한다. 공식 문서를 참조하면 아래의 코드는 &lt;code class=&quot;language-text&quot;&gt;args[0]&lt;/code&gt;가 가리키는 클래스로부터 &lt;code class=&quot;language-text&quot;&gt;@Test&lt;/code&gt;를 갖는 모든 함수를 실행한 다음, 에러를 검출하여 전체 테스트 케이스를 돌려보고 있다.&lt;/p&gt;
-
-          &lt;div class=&quot;gatsby-remark-prismjs-copy-button-container&quot;&gt;
-            &lt;div class=&quot;gatsby-remark-prismjs-copy-button&quot; tabindex=&quot;0&quot; role=&quot;button&quot; aria-pressed=&quot;false&quot; onclick=&quot;gatsbyRemarkCopyToClipboard(this, this.parentNode.nextElementSibling)&quot;&gt;
-              Copy
-            &lt;/div&gt;
-          &lt;/div&gt;
-          
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token import&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;java&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;lang&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;reflect&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;RunTests&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-   &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; args&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; passed &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; failed &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-      &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Method&lt;/span&gt; m &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Class&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;forName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;args&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getMethods&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-         &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;m&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;isAnnotationPresent&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Test&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;token keyword&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-               m&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;invoke&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-               passed&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Throwable&lt;/span&gt; ex&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-               &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Test %s failed: %s %n&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; m&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; ex&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getCause&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-               failed&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-         &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-      &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Passed: %d, Failed %d%n&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; passed&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; failed&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-   &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;hr&gt;
-&lt;h1 id=&quot;참고-문헌&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%B0%B8%EA%B3%A0-%EB%AC%B8%ED%97%8C&quot; aria-label=&quot;참고 문헌 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;참고 문헌&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&quot;https://docs.oracle.com/javase/8/docs/technotes/guides/language/annotations.html&quot;&gt;Annotations | Oracle Help Center&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[WSL에서 Intellij 인덱싱이 끝나지 않을 때]]></title><description><![CDATA[Spring Initializr를 이용해 간단한 설정파일들을 받은 후 WSL에 설치되어있는 JDK를 이용해 프로젝트를 불러오려고 했다.  Gradle 설정은 이렇게 해두었다. 사진에는 짤렸는데 Add SDK 항목에서 WSL에 JDK…]]></description><link>https://10cheon00.github.io/posts/WSL에서-IntelliJ-인덱싱이-끝나지-않을-때/</link><guid isPermaLink="false">https://10cheon00.github.io/posts/WSL에서-IntelliJ-인덱싱이-끝나지-않을-때/</guid><pubDate>Mon, 06 Nov 2023 12:01:06 GMT</pubDate><content:encoded>
+&lt;p&gt;한 줄밖에 없는 파일이 열리는데 바로 보이는 &lt;code class=&quot;language-text&quot;&gt;lineComment&lt;/code&gt;의 값을 &lt;code class=&quot;language-text&quot;&gt;&quot;&quot;&lt;/code&gt;로 바꾸면 해결된다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[WSL에서 Intellij 인덱싱이 끝나지 않을 때]]></title><description><![CDATA[Spring Initializr를 이용해 간단한 설정파일들을 받은 후 WSL에 설치되어있는 JDK를 이용해 프로젝트를 불러오려고 했다.  Gradle 설정은 이렇게 해두었다. 사진에는 짤렸는데 Add SDK 항목에서 WSL에 JDK…]]></description><link>https://10cheon00.github.io/posts/WSL에서-IntelliJ-인덱싱이-끝나지-않을-때/</link><guid isPermaLink="false">https://10cheon00.github.io/posts/WSL에서-IntelliJ-인덱싱이-끝나지-않을-때/</guid><pubDate>Mon, 06 Nov 2023 12:01:06 GMT</pubDate><content:encoded>
           &lt;div class=&quot;gatsby-remark-prismjs-copy-button-container&quot;&gt;
             &lt;div class=&quot;gatsby-remark-prismjs-copy-button&quot; tabindex=&quot;0&quot; role=&quot;button&quot; aria-pressed=&quot;false&quot; onclick=&quot;gatsbyRemarkCopyToClipboard(this, this.parentNode.nextElementSibling)&quot;&gt;
               Copy
@@ -5305,7 +5622,91 @@ IntelliJ Idea 2023.2.4&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
           
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;fsnotifier-wsl
 idea64.exe&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;파일이나 폴더를 제외시키는건 딱히 효과가 없었고 프로세스를 제외시키는 것이 효과가 있었다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[컴퓨터 구조론 (2) - 명령어 구조]]></title><description><![CDATA[2023년 2학기 컴퓨터 구조론 수업을 듣고 정리한 내용입니다. 수업 교재는 컴퓨터 구조 및 설계 RISC-V 2판입니다. 컴퓨터는 명령어에 의해 동작한다. CPU…]]></description><link>https://10cheon00.github.io/computer-organization/컴퓨터-구조론-(2)-명령어-구조/</link><guid isPermaLink="false">https://10cheon00.github.io/computer-organization/컴퓨터-구조론-(2)-명령어-구조/</guid><pubDate>Thu, 26 Oct 2023 07:48:34 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;파일이나 폴더를 제외시키는건 딱히 효과가 없었고 프로세스를 제외시키는 것이 효과가 있었다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Annotation]]></title><description><![CDATA[Annotation은 영어로 번역했을 때 주석이라는 뜻을 갖는다. 주석은 코드의 흐름에 영향을 주지 않는다. 하지만 코드를 보는 사람으로 하여금 어떤 코드인지 이해하게 만들고 함수 또는 라이브러리를 어떤 상황에 써야하는지 설명한다. Java…]]></description><link>https://10cheon00.github.io/java/annotation/</link><guid isPermaLink="false">https://10cheon00.github.io/java/annotation/</guid><pubDate>Mon, 06 Nov 2023 12:01:06 GMT</pubDate><content:encoded>&lt;p&gt;Annotation은 영어로 번역했을 때 주석이라는 뜻을 갖는다. 주석은 코드의 흐름에 영향을 주지 않는다. 하지만 코드를 보는 사람으로 하여금 어떤 코드인지 이해하게 만들고 함수 또는 라이브러리를 어떤 상황에 써야하는지 설명한다.&lt;/p&gt;
+&lt;p&gt;Java의 어노테이션도 이와 비슷하다. 프로그램에 직접적으로 영향을 주지 않지만 다른 라이브러리나 툴이 그 프로그램을 어떻게 쓸 수 있는지 제시한다. 어노테이션은 런타임에 영향을 준다고 한다.&lt;/p&gt;
+&lt;h1 id=&quot;선언-및-사용-방법&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%A0%EC%96%B8-%EB%B0%8F-%EC%82%AC%EC%9A%A9-%EB%B0%A9%EB%B2%95&quot; aria-label=&quot;선언 및 사용 방법 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;선언 및 사용 방법&lt;/h1&gt;
+
+          &lt;div class=&quot;gatsby-remark-prismjs-copy-button-container&quot;&gt;
+            &lt;div class=&quot;gatsby-remark-prismjs-copy-button&quot; tabindex=&quot;0&quot; role=&quot;button&quot; aria-pressed=&quot;false&quot; onclick=&quot;gatsbyRemarkCopyToClipboard(this, this.parentNode.nextElementSibling)&quot;&gt;
+              Copy
+            &lt;/div&gt;
+          &lt;/div&gt;
+          
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token annotation punctuation&quot;&gt;@interface&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;NewAnnotation&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;설명을 넣어주세요&quot;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token annotation punctuation&quot;&gt;@NewAnnotation&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+    id &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    name &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;새로운 Annotation&quot;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Foo&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// ...&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;선언할 때에는 &lt;code class=&quot;language-text&quot;&gt;@interface&lt;/code&gt; 타입으로 선언하고, 사용할 때에는 어노테이션을 선언할 때 정의한 속성에 맞게 파라미터를 괄호 안에 넣어준다. &lt;code class=&quot;language-text&quot;&gt;default&lt;/code&gt;로 기본값 선언을 해두었다면 별도로 인자를 넣지 않아도 된다.&lt;/p&gt;
+&lt;p&gt;속성을 정의하지 않은 어노테이션도 있다.&lt;/p&gt;
+
+          &lt;div class=&quot;gatsby-remark-prismjs-copy-button-container&quot;&gt;
+            &lt;div class=&quot;gatsby-remark-prismjs-copy-button&quot; tabindex=&quot;0&quot; role=&quot;button&quot; aria-pressed=&quot;false&quot; onclick=&quot;gatsbyRemarkCopyToClipboard(this, this.parentNode.nextElementSibling)&quot;&gt;
+              Copy
+            &lt;/div&gt;
+          &lt;/div&gt;
+          
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token annotation punctuation&quot;&gt;@interface&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;NoArgumentAnnotation&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token annotation punctuation&quot;&gt;@NoArgumentAnnotation&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Foo&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// ...&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;괄호 없이 어노테이션 이름만 붙여준다.&lt;/p&gt;
+&lt;p&gt;속성이 한 개인 어노테이션이라면 속성명을 넣지 않고 그냥 파라미터를 넣는다.&lt;/p&gt;
+
+          &lt;div class=&quot;gatsby-remark-prismjs-copy-button-container&quot;&gt;
+            &lt;div class=&quot;gatsby-remark-prismjs-copy-button&quot; tabindex=&quot;0&quot; role=&quot;button&quot; aria-pressed=&quot;false&quot; onclick=&quot;gatsbyRemarkCopyToClipboard(this, this.parentNode.nextElementSibling)&quot;&gt;
+              Copy
+            &lt;/div&gt;
+          &lt;/div&gt;
+          
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token annotation punctuation&quot;&gt;@interface&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;OneArgumentAnnotation&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token annotation punctuation&quot;&gt;@OneArgumentAnnotation&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Person&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// ...&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이렇게 어노테이션 선언을 했는데, 클래스나 객체가 어노테이션을 갖는지 확인하려면 &lt;code class=&quot;language-text&quot;&gt;java.lang.reflect&lt;/code&gt; 패키지를 이용해야 한다. 공식 문서를 참조하면 아래의 코드는 &lt;code class=&quot;language-text&quot;&gt;args[0]&lt;/code&gt;가 가리키는 클래스로부터 &lt;code class=&quot;language-text&quot;&gt;@Test&lt;/code&gt;를 갖는 모든 함수를 실행한 다음, 에러를 검출하여 전체 테스트 케이스를 돌려보고 있다.&lt;/p&gt;
+
+          &lt;div class=&quot;gatsby-remark-prismjs-copy-button-container&quot;&gt;
+            &lt;div class=&quot;gatsby-remark-prismjs-copy-button&quot; tabindex=&quot;0&quot; role=&quot;button&quot; aria-pressed=&quot;false&quot; onclick=&quot;gatsbyRemarkCopyToClipboard(this, this.parentNode.nextElementSibling)&quot;&gt;
+              Copy
+            &lt;/div&gt;
+          &lt;/div&gt;
+          
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token import&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;java&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;lang&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;reflect&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;RunTests&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+   &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; args&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; passed &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; failed &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Method&lt;/span&gt; m &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Class&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;forName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;args&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getMethods&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+         &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;m&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;isAnnotationPresent&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Test&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;token keyword&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+               m&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;invoke&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+               passed&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Throwable&lt;/span&gt; ex&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+               &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Test %s failed: %s %n&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; m&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; ex&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getCause&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+               failed&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+         &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Passed: %d, Failed %d%n&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; passed&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; failed&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+   &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;참고-문헌&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%B0%B8%EA%B3%A0-%EB%AC%B8%ED%97%8C&quot; aria-label=&quot;참고 문헌 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; width=&quot;16&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;참고 문헌&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://docs.oracle.com/javase/8/docs/technotes/guides/language/annotations.html&quot;&gt;Annotations | Oracle Help Center&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[컴퓨터 구조론 (2) - 명령어 구조]]></title><description><![CDATA[2023년 2학기 컴퓨터 구조론 수업을 듣고 정리한 내용입니다. 수업 교재는 컴퓨터 구조 및 설계 RISC-V 2판입니다. 컴퓨터는 명령어에 의해 동작한다. CPU…]]></description><link>https://10cheon00.github.io/computer-organization/컴퓨터-구조론-(2)-명령어-구조/</link><guid isPermaLink="false">https://10cheon00.github.io/computer-organization/컴퓨터-구조론-(2)-명령어-구조/</guid><pubDate>Thu, 26 Oct 2023 07:48:34 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;2023년 2학기 컴퓨터 구조론 수업을 듣고 정리한 내용입니다. 수업 교재는 &lt;a href=&quot;https://product.kyobobook.co.kr/detail/S000060622658&quot;&gt;컴퓨터 구조 및 설계 RISC-V 2판&lt;/a&gt;입니다.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;컴퓨터는 명령어에 의해 동작한다. CPU는 메모리에 저장된 명령어를 불러와 해석하고 연산한다.&lt;/p&gt;
